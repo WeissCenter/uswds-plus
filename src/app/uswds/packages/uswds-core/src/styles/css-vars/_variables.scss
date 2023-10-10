@@ -11,16 +11,15 @@
     // Sizes
 
     @include cssVarsFromProp($project-border-radius, 'usa-border-radius');
-    @include nestedCssVars((
-        "border-radius-1px": 'root-border-radius-1px',
-        "border-radius-2px": 'root-border-radius-2px',
-        "border-radius-05": 'root-border-radius-05',
-        "border-radius-1": 'root-border-radius-1',
-        "border-radius-105": 'root-border-radius-105',
-        "border-radius-2": 'root-border-radius-2',
-        "border-radius-205": 'root-border-radius-205',
-        "border-radius-3": 'root-border-radius-3'
-    ));
+    @include nestedCssVars(("border-radius-1px": 'root-border-radius-1px',
+            "border-radius-2px": 'root-border-radius-2px',
+            "border-radius-05": 'root-border-radius-05',
+            "border-radius-1": 'root-border-radius-1',
+            "border-radius-105": 'root-border-radius-105',
+            "border-radius-2": 'root-border-radius-2',
+            "border-radius-205": 'root-border-radius-205',
+            "border-radius-3": 'root-border-radius-3'
+        ));
     @include cssVarsFromProp($project-spacing-standard, 'usa-spacing');
     @include nestedCssVars(("column-gap-sm": 'spacing-'+ $theme-column-gap-sm,
             "column-gap-md": 'spacing-'+ $theme-column-gap-md,
@@ -39,7 +38,34 @@
 
     // Typography
 
+    $project-font-names: (
+            "ui",
+            "heading",
+            "body",
+            "code",
+            "alt",
+            "sans",
+            "serif",
+            "mono"
+        );
+
     @include cssVarsFromProp($project-font-stacks, 'usa-font');
+
+    @each $font in $project-font-names {
+        // Create variables specifically for utility class generation
+        @include nestedCssVars((
+                "font-size-"+ #{$font} + "-3xs": "font-size-3xs",
+                "font-size-"+ #{$font} + "-2xs": "font-size-2xs",
+                "font-size-"+ #{$font} + "-xs": "font-size-xs",
+                "font-size-"+ #{$font} + "-sm": "font-size-sm",
+                "font-size-"+ #{$font} + "-md": "font-size-md",
+                "font-size-"+ #{$font} + "-lg": "font-size-lg",
+                "font-size-"+ #{$font} + "-xl": "font-size-xl",
+                "font-size-"+ #{$font} + "-2xl": "font-size-2xl",
+                "font-size-"+ #{$font} + "-3xl": "font-size-3xl",
+            ));
+    }
+
     @include nestedCssVars(("font-lead": 'font-'+ $theme-lead-font-family,
             "font-prose": 'font-'+ $theme-prose-font-family,
         ));
@@ -119,8 +145,7 @@
     @include cssVarsFromProp($tokens-color-global);
     @include cssVarsFromProp($tokens-color-basic);
     // @include cssVarsFromRef($project-defaults);
-    @include nestedCssVars((
-            "body-background": $theme-body-background-color,
+    @include nestedCssVars(("body-background": $theme-body-background-color,
             "bg-color": 'body-background', // include for backwards compatibility
             "link-color": $theme-link-color,
             "link-hover-color": $theme-link-hover-color,
@@ -132,6 +157,7 @@
             "text-color": $theme-text-color,
             "text-reverse-color": $theme-text-reverse-color,
             "base-ink": "base-darkest",
+            "base": "base-base",
             "ink": "base-ink",
             "primary": "primary-base",
             "secondary": "secondary-base",
@@ -171,7 +197,7 @@
             "white": "color-global-white",
             "black": "color-global-black",
             "transparent": "color-global-transparent",
-            ));
+        ));
 
     // Components
 
@@ -335,7 +361,9 @@
     // * $theme-card-margin-bottom: 4 !default;
     // * $theme-card-padding-perimeter: 3 !default;
     // * $theme-card-padding-y: 2 !default;
-    @include nestedCssVars((card-border-color: $theme-card-border-color,
+    @include nestedCssVars((card-background: "base-lightest",
+            card-text-color: "base-ink",
+            card-border-color: $theme-card-border-color,
             card-border-radius: 'border-radius-'+ $theme-card-border-radius,
             card-border-width: 'spacing-'+ $theme-card-border-width,
             card-gap: 'spacing-'+ $theme-card-gap,
@@ -525,7 +553,7 @@
     // * $theme-pagination-button-border-radius: "md" !default;
     // * $theme-pagination-button-border-width: 1px !default;
     // * $theme-pagination-font-family: "ui" !default;
-    @include nestedCssVars((pagination-button-background-color: 'body-background-color',
+    @include nestedCssVars((pagination-button-background-color: 'body-background',
             pagination-button-current-background-color: 'ink',
             pagination-button-border-radius: 'border-radius-'+ $theme-pagination-button-border-radius,
             pagination-button-border-width: 'spacing-'+ $theme-pagination-button-border-width,
@@ -605,7 +633,7 @@
         ));
 
 
-            // Table
+    // Table
 
     // Existing USWDS variables
     // * $theme-table-border-color: "ink" !default;
@@ -619,34 +647,33 @@
     // * $theme-table-sorted-stripe-background-color: "blue-cool-10v" !default;
     // * $theme-table-sorted-icon-color: default !default;
     // * $theme-table-unsorted-icon-color: "base" !default;
-    @include nestedCssVars((
-        table-border-color: $theme-table-border-color,
-        table-border-width: 'spacing-2px',
-        table-header-background-color: $theme-table-header-background-color,
-        table-header-text-color: if($theme-table-header-text-color=="default",
+    @include nestedCssVars((table-border-color: $theme-table-border-color,
+            table-border-width: 'spacing-2px',
+            table-header-background-color: $theme-table-header-background-color,
+            table-header-text-color: if($theme-table-header-text-color=="default",
                 "text-color", $theme-table-header-text-color),
-        table-stripe-background-color: $theme-table-stripe-background-color,
-        table-stripe-text-color: if($theme-table-stripe-text-color=="default",
+            table-stripe-background-color: $theme-table-stripe-background-color,
+            table-stripe-text-color: if($theme-table-stripe-text-color=="default",
                 "text-color", $theme-table-stripe-text-color),
-        table-text-color: if($theme-table-text-color=="default",
+            table-text-color: if($theme-table-text-color=="default",
                 "text-color", $theme-table-text-color),
-        table-text-hover-color: 'base-dark',
-        table-sorted-header-background-color: $theme-table-sorted-header-background-color,
-        table-sorted-header-text-color: 'text-color',
-        table-sorted-background-color: $theme-table-sorted-background-color,
-        table-sorted-stripe-background-color: 'accent-cool-lighter',
-        table-sorted-icon-color: if($theme-table-sorted-icon-color=="default",
+            table-text-hover-color: 'base-dark',
+            table-sorted-header-background-color: $theme-table-sorted-header-background-color,
+            table-sorted-header-text-color: 'text-color',
+            table-sorted-background-color: $theme-table-sorted-background-color,
+            table-sorted-stripe-background-color: 'accent-cool-lighter',
+            table-sorted-icon-color: if($theme-table-sorted-icon-color=="default",
                 "text-color", $theme-table-sorted-icon-color),
-        table-unsorted-icon-color: "base",
-        table-unsorted-icon-hover-color: "base-dark",
-        table-cell-padding-y: 'spacing-1',
-        table-cell-compact-padding-y: 'spacing-05',
-        table-cell-padding-x: 'spacing-2',
-        table-cell-compact-padding-x: 'spacing-1',
-));
+            table-unsorted-icon-color: "base",
+            table-unsorted-icon-hover-color: "base-dark",
+            table-cell-padding-y: 'spacing-1',
+            table-cell-compact-padding-y: 'spacing-05',
+            table-cell-padding-x: 'spacing-2',
+            table-cell-compact-padding-x: 'spacing-1',
+        ));
 
 
-            // Summary box
+    // Summary box
 
     // Existing USWDS variables
     // * $theme-summary-box-background-color: "info-lighter" !default;
@@ -656,23 +683,22 @@
     // * $theme-summary-box-font-family: "ui" !default;
     // * $theme-summary-box-link-color: default !default;
     // * $theme-summary-box-text-color: default !default;
-    @include nestedCssVars((
-        summary-box-background-color: $theme-summary-box-background-color,
-        summary-box-border-color: $theme-summary-box-border-color,
-        summary-box-border-width: 'spacing-'+ $theme-summary-box-border-width,
-        summary-box-border-radius: 'border-radius-'+ $theme-summary-box-border-radius,
-        summary-box-font-family: 'font-'+ $theme-summary-box-font-family,
-        summary-box-font-size: 'font-size-sm',
-        summary-box-heading-font-size: 'font-size-lg',
-        summary-box-font-weight: 'font-weight-normal',
-        summary-box-line-height: 'line-height-2',
-        summary-box-link-color: 'link-color',
-        summary-box-link-hover-color: 'link-hover-color',
-        summary-box-link-visited-color: 'link-visited-color',
-        summary-box-text-color: 'text-color',
-        summary-box-padding-y: 'spacing-205',
-        summary-box-padding-x: 'spacing-205',    
-));
+    @include nestedCssVars((summary-box-background-color: $theme-summary-box-background-color,
+            summary-box-border-color: $theme-summary-box-border-color,
+            summary-box-border-width: 'spacing-'+ $theme-summary-box-border-width,
+            summary-box-border-radius: 'border-radius-'+ $theme-summary-box-border-radius,
+            summary-box-font-family: 'font-'+ $theme-summary-box-font-family,
+            summary-box-font-size: 'font-size-sm',
+            summary-box-heading-font-size: 'font-size-lg',
+            summary-box-font-weight: 'font-weight-normal',
+            summary-box-line-height: 'line-height-2',
+            summary-box-link-color: 'link-color',
+            summary-box-link-hover-color: 'link-hover-color',
+            summary-box-link-visited-color: 'link-visited-color',
+            summary-box-text-color: 'text-color',
+            summary-box-padding-y: 'spacing-205',
+            summary-box-padding-x: 'spacing-205',
+        ));
 
 
     // Step indicator
