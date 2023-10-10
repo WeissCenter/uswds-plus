@@ -10,7 +10,17 @@
 
     // Sizes
 
-    @include cssVarsFromProp($all-border-radius, 'usa-border-radius');
+    @include cssVarsFromProp($project-border-radius, 'usa-border-radius');
+    @include nestedCssVars((
+        "border-radius-1px": 'root-border-radius-1px',
+        "border-radius-2px": 'root-border-radius-2px',
+        "border-radius-05": 'root-border-radius-05',
+        "border-radius-1": 'root-border-radius-1',
+        "border-radius-105": 'root-border-radius-105',
+        "border-radius-2": 'root-border-radius-2',
+        "border-radius-205": 'root-border-radius-205',
+        "border-radius-3": 'root-border-radius-3'
+    ));
     @include cssVarsFromProp($project-spacing-standard, 'usa-spacing');
     @include nestedCssVars(("column-gap-sm": 'spacing-'+ $theme-column-gap-sm,
             "column-gap-md": 'spacing-'+ $theme-column-gap-md,
@@ -109,7 +119,8 @@
     @include cssVarsFromProp($tokens-color-global);
     @include cssVarsFromProp($tokens-color-basic);
     // @include cssVarsFromRef($project-defaults);
-    @include nestedCssVars(("body-background": $theme-body-background-color,
+    @include nestedCssVars((
+            "body-background": $theme-body-background-color,
             "bg-color": 'body-background', // include for backwards compatibility
             "link-color": $theme-link-color,
             "link-hover-color": $theme-link-hover-color,
@@ -119,7 +130,48 @@
             "link-reverse-hover-color": $theme-link-reverse-hover-color,
             "link-reverse-active-color": $theme-link-reverse-active-color,
             "text-color": $theme-text-color,
-            "text-reverse-color": $theme-text-reverse-color));
+            "text-reverse-color": $theme-text-reverse-color,
+            "base-ink": "base-darkest",
+            "ink": "base-ink",
+            "primary": "primary-base",
+            "secondary": "secondary-base",
+            "accent-cool": "accent-cool-base",
+            "accent-warm": "accent-warm-base",
+            "info": "info-base",
+            "success": "success-base",
+            "warning": "warning-base",
+            "error": "error-base",
+            "emergency": "emergency-base",
+            "red": "color-red-vivid-50",
+            "red-warm": "color-red-warm-vivid-50",
+            "orange-warm": "color-orange-warm-vivid-40",
+            "orange": "color-orange-vivid-40",
+            "gold": "color-gold-vivid-40",
+            "yellow": "color-yellow-vivid-10",
+            "green-warm": "color-green-warm-vivid-50",
+            "green": "color-green-vivid-50",
+            "green-cool": "color-green-cool-vivid-50",
+            "mint": "color-mint-vivid-30",
+            "mint-cool": "color-mint-cool-vivid-30",
+            "cyan": "color-cyan-vivid-40",
+            "blue": "color-blue-vivid-50",
+            "blue-warm": "color-blue-warm-vivid-50",
+            "indigo-cool": "color-indigo-cool-vivid-50",
+            "indigo": "color-indigo-vivid-50",
+            "indigo-warm": "color-indigo-warm-vivid-50",
+            "violet": "color-violet-vivid-50",
+            "violet-warm": "color-violet-warm-vivid-50",
+            "magenta": "color-magenta-vivid-50",
+            "gray-cool": "color-gray-cool-50",
+            "gray": "color-gray-50",
+            "gray-warm": "color-gray-warm-50",
+            "black-transparent": "color-black-transparent-5",
+            "white-transparent": "color-white-transparent-5",
+            "disabled": "disabled-base",
+            "white": "color-global-white",
+            "black": "color-global-black",
+            "transparent": "color-global-transparent",
+            ));
 
     // Components
 
