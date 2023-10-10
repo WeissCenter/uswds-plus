@@ -1,0 +1,13 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+.usa-hint {
+  @extend %block-input-general;
+  // color: color("base");
+  color: cssVar("base");
+}
+
+.usa-hint--required {
+  // color: color("error-dark");
+  color: cssVar("error-dark");
+}

@@ -1,0 +1,309 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../src/app/uswds/src/stylesheets/uswds.scss';
+
+
+// TODO: Figure out how to integrate this file running itself via the uswds.scss kick-off file
+@import '../src/app/uswds/packages/uswds-core/src/styles/css-vars/variables';
+
+[data-theme="dark"] {
+--usa-base-lightest: #1b1b1b;
+  --usa-base-lighter: #3d4551;
+  --usa-base-light: #565c65;
+  --usa-base: #71767a;
+  --usa-base-dark: #a9aeb1;
+  --usa-base-darker: #dfe1e2;
+  --usa-base-darkest: #f0f0f0;
+
+  --usa-ink: #f0f0f0;
+
+  --usa-primary-lightest: false;
+  --usa-primary-lighter: #162e51;
+  --usa-primary-light: #1a4480;
+  --usa-primary: #005ea2;
+  --usa-primary-vivid: #0050d8;
+  --usa-primary-dark: #73b3e7;
+  --usa-primary-darker: #d9e8f6;
+  --usa-primary-darkest: false;
+
+  --usa-secondary-lightest: false;
+  --usa-secondary-lighter: #8b0a03;
+  --usa-secondary-light: #b50909;
+  --usa-secondary: #d83933;
+  --usa-secondary-vivid: #e41d3d;
+  --usa-secondary-dark: #f2938c;
+  --usa-secondary-darker: #f3e1e4;
+  --usa-secondary-darkest: false;
+
+  --usa-accent-warm-darkest: false;
+  --usa-accent-warm-darker: #d56a49;
+  --usa-accent-warm-dark: #ff8000;
+  --usa-accent-warm: #ffbe2e;
+  --usa-accent-warm-light: #ffe06d;
+  --usa-accent-warm-lighter: #f7d8b5;
+  --usa-accent-warm-lightest: false;
+
+  --usa-accent-cool-darkest: false;
+  --usa-accent-cool-darker: #b3d3e4;
+  --usa-accent-cool-dark: #87b9cc;
+  --usa-accent-cool: #00bde3;
+  --usa-accent-cool-light: #7fdbea;
+  --usa-accent-cool-lighter: #d2eff6;
+  --usa-accent-cool-lightest: false;
+
+  --usa-error-lighter: #6f3331;
+  --usa-error-light: #b50909;
+  --usa-error: #d54309;
+  --usa-error-dark: #f39268;
+  --usa-error-darker: #f4e3db;
+
+  --usa-warning-lighter: #292918;
+  --usa-warning-light: #423f12;
+  --usa-warning: #665900;
+  --usa-warning-dark: #9f7c00;
+  --usa-warning-darker: #faf3d1;
+
+  --usa-success-lighter: #216e1f;
+  --usa-success-light: #008817;
+  --usa-success: #00a91c;
+  --usa-success-dark: #70e17b;
+  --usa-success-darker: #ecf3ec;
+
+  --usa-info-lighter: #2e6276;
+  --usa-info-light: #009ec1;
+  --usa-info: #00bde3;
+  --usa-info-dark: #99deea;
+  --usa-info-darker: #e7f6f8;
+
+  --usa-disabled-lighter: #1b1b1b;
+  --usa-disabled-light: #454545;
+  --usa-disabled: #757575;
+  --usa-disabled-dark: #919191;
+  --usa-disabled-darker: #c9c9c9;
+
+  --usa-emergency: #665900;
+  --usa-emergency-dark: #9f7c00;
+
+  --usa-transparent: transparent;
+  --usa-black: black;
+  --usa-white: white;
+
+  --usa-red: #d72d79;
+  --usa-red-warm: false;
+
+  --usa-orange-warm: false;
+  --usa-orange: #e66f0e;
+
+  --usa-gold: #ffbe2e;
+  --usa-yellow: #fee685;
+
+  --usa-green-warm: false;
+  --usa-green: #538200;
+
+  --usa-green-cool: false;
+  --usa-mint: #04c585;
+
+  --usa-mint-cool: false;
+  --usa-cyan: #00bde3;
+
+  --usa-blue: #0076d6;
+  --usa-blue-warm: false;
+
+  --usa-indigo-cool: false;
+  --usa-indigo: #676cc8;
+
+  --usa-indigo-warm: false;
+  --usa-violet: #8168b3;
+
+  --usa-violet-warm: false;
+  --usa-magenta: #e52207;
+
+  --usa-gray-cool: false;
+
+  --usa-body-background: var(--usa-black);
+}
+
+[data-theme="monochrome"] {
+    --usa-base-lightest: #f0f0f0;
+    --usa-base-lighter: #d0d0d0;
+    --usa-base-light: #a0a0a0;
+    --usa-base: #808080;
+    --usa-base-dark: #606060;
+    --usa-base-darker: #404040;
+    --usa-base-darkest: #202020;
+  
+    --usa-ink: #000000;
+  
+    --usa-primary-lightest: #ffffff;
+    --usa-primary-lighter: #e0e0e0;
+    --usa-primary-light: #c0c0c0;
+    --usa-primary: #808080;
+    --usa-primary-vivid: #404040;
+    --usa-primary-dark: #202020;
+    --usa-primary-darker: #101010;
+    --usa-primary-darkest: #000000;
+  
+    --usa-secondary-lightest: #ffffff;
+    --usa-secondary-lighter: #e0e0e0;
+    --usa-secondary-light: #c0c0c0;
+    --usa-secondary: #808080;
+    --usa-secondary-vivid: #404040;
+    --usa-secondary-dark: #202020;
+    --usa-secondary-darker: #101010;
+    --usa-secondary-darkest: #000000;
+  
+    --usa-accent-warm-darkest: #000000;
+    --usa-accent-warm-darker: #303030;
+    --usa-accent-warm-dark: #606060;
+    --usa-accent-warm: #909090;
+    --usa-accent-warm-light: #b0b0b0;
+    --usa-accent-warm-lighter: #c0c0c0;
+    --usa-accent-warm-lightest: #e0e0e0;
+  
+    --usa-accent-cool-darkest: #000000;
+    --usa-accent-cool-darker: #303030;
+    --usa-accent-cool-dark: #606060;
+    --usa-accent-cool: #909090;
+    --usa-accent-cool-light: #b0b0b0;
+    --usa-accent-cool-lighter: #c0c0c0;
+    --usa-accent-cool-lightest: #e0e0e0;
+  
+    --usa-error-lighter: #e0e0e0;
+    --usa-error-light: #c0c0c0;
+    --usa-error: #808080;
+    --usa-error-dark: #606060;
+    --usa-error-darker: #404040;
+  
+    --usa-warning-lighter: #f0f0e0;
+    --usa-warning-light: #e0e080;
+    --usa-warning: #c0c040;
+    --usa-warning-dark: #a0a000;
+    --usa-warning-darker: #606020;
+  
+    --usa-success-lighter: #e0f0e0;
+    --usa-success-light: #80c080;
+    --usa-success: #108010;
+    --usa-success-dark: #106010;
+    --usa-success-darker: #204020;
+  
+    --usa-info-lighter: #e0f0f0;
+    --usa-info-light: #80c0c0;
+    --usa-info: #108080;
+    --usa-info-dark: #106060;
+    --usa-info-darker: #204040;
+  
+    --usa-disabled-lighter: #e0e0e0;
+    --usa-disabled-light: #c0c0c0;
+    --usa-disabled: #808080;
+    --usa-disabled-dark: #606060;
+    --usa-disabled-darker: #404040;
+  
+    --usa-emergency: #505050;
+    --usa-emergency-dark: #202020;
+  
+    --usa-transparent: transparent;
+    --usa-black: black;
+    --usa-white: white;
+  
+    --usa-red: #404040;
+    --usa-red-warm: #404040;
+  
+    --usa-orange-warm: #404040;
+    --usa-orange: #505050;
+  
+    --usa-gold: #606060;
+    --usa-yellow: #808080;
+  
+    --usa-green-warm: #404040;
+    --usa-green: #505050;
+  
+    --usa-green-cool: #404040;
+    --usa-mint: #505050;
+  
+    --usa-mint-cool: #404040;
+    --usa-cyan: #505050;
+  
+    --usa-blue: #505050;
+    --usa-blue-warm: #404040;
+  
+    --usa-indigo-cool: #404040;
+    --usa-indigo: #505050;
+  
+    --usa-indigo-warm: #404040;
+    --usa-violet: #505050;
+  
+    --usa-violet-warm: #404040;
+    --usa-magenta: #505050;
+  
+    --usa-gray-cool: #505050;
+}
+
+[data-theme="mint"] {
+    --usa-primary-lighter: #a5d6bd;
+    --usa-primary-light: #62c0a8;
+    --usa-primary: #04c585;
+    --usa-primary-vivid: #038066;
+    --usa-primary-dark: #027368;
+    --usa-primary-darker: #016379;
+    --usa-primary-darkest: #005a8a;
+  
+    --usa-accent-warm-darker: #2c4739;
+    --usa-accent-warm-dark: #0e5142;
+    --usa-accent-warm: #26a277;
+    --usa-accent-warm-light: #48c59c;
+    --usa-accent-warm-lighter: #abe8cf;
+  
+    --usa-accent-cool-darker: #04697a; 
+    --usa-accent-cool-dark: #035469;  
+    --usa-accent-cool: #014b61;      
+    --usa-accent-cool-light: #24a3b3;  
+    --usa-accent-cool-lighter: #80d9df; 
+}
+
+[data-font-size="125"] {
+    --usa-type-scale-micro: calc(10px * 1.25);
+    --usa-type-scale-1: calc(12px * 1.25);
+    --usa-type-scale-2: calc(13px * 1.25);
+    --usa-type-scale-3: calc(14px * 1.25);
+    --usa-type-scale-4: calc(15px * 1.25);
+    --usa-type-scale-5: calc(16px * 1.25);
+    --usa-type-scale-6: calc(17px * 1.25);
+    --usa-type-scale-7: calc(18px * 1.25);
+    --usa-type-scale-8: calc(20px * 1.25);
+    --usa-type-scale-9: calc(22px * 1.25);
+    --usa-type-scale-10: calc(24px * 1.25);
+    --usa-type-scale-11: calc(28px * 1.25);
+    --usa-type-scale-12: calc(32px * 1.25);
+    --usa-type-scale-13: calc(36px * 1.25);
+    --usa-type-scale-14: calc(40px * 1.25);
+    --usa-type-scale-15: calc(48px * 1.25);
+    --usa-type-scale-16: calc(56px * 1.25);
+    --usa-type-scale-17: calc(64px * 1.25);
+    --usa-type-scale-18: calc(80px * 1.25);
+    --usa-type-scale-19: calc(120px * 1.25);
+    --usa-type-scale-20: calc(140px * 1.25);
+}
+
+[data-font-size="150"] {
+    --usa-type-scale-micro: calc(10px * 1.5);
+    --usa-type-scale-1: calc(12px * 1.5);
+    --usa-type-scale-2: calc(13px * 1.5);
+    --usa-type-scale-3: calc(14px * 1.5);
+    --usa-type-scale-4: calc(15px * 1.5);
+    --usa-type-scale-5: calc(16px * 1.5);
+    --usa-type-scale-6: calc(17px * 1.5);
+    --usa-type-scale-7: calc(18px * 1.5);
+    --usa-type-scale-8: calc(20px * 1.5);
+    --usa-type-scale-9: calc(22px * 1.5);
+    --usa-type-scale-10: calc(24px * 1.5);
+    --usa-type-scale-11: calc(28px * 1.5);
+    --usa-type-scale-12: calc(32px * 1.5);
+    --usa-type-scale-13: calc(36px * 1.5);
+    --usa-type-scale-14: calc(40px * 1.5);
+    --usa-type-scale-15: calc(48px * 1.5);
+    --usa-type-scale-16: calc(56px * 1.5);
+    --usa-type-scale-17: calc(64px * 1.5);
+    --usa-type-scale-18: calc(80px * 1.5);
+    --usa-type-scale-19: calc(120px * 1.5);
+    --usa-type-scale-20: calc(140px * 1.5);
+}

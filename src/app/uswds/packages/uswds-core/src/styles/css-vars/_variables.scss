@@ -1,0 +1,679 @@
+@use "./utilities/functions"as *;
+@use "./utilities/mixins"as *;
+@use "../settings/"as settings;
+@use "../variables/project-defaults"as *;
+@use "../../../../uswds-utilities/src/styles/palettes/font-palettes"as *;
+
+// TODO: Distinction between system vars and semantic vars? How do we want to handle this in a polished, final environment?
+
+:root {
+
+    // Sizes
+
+    @include cssVarsFromProp($all-border-radius, 'usa-border-radius');
+    @include cssVarsFromProp($project-spacing-standard, 'usa-spacing');
+    @include nestedCssVars(("column-gap-sm": 'spacing-'+ $theme-column-gap-sm,
+            "column-gap-md": 'spacing-'+ $theme-column-gap-md,
+            "column-gap-lg": 'spacing-'+ $theme-column-gap-lg,
+            "column-gap-mobile": 'spacing-'+ $theme-column-gap-mobile,
+            "column-gap-desktop": 'spacing-'+ $theme-column-gap-desktop,
+            "grid-container-max-width": 'spacing-'+ $theme-grid-container-max-width,
+            "site-margins-breakpoint": 'spacing-'+ $theme-site-margins-breakpoint,
+            "site-margins-width": 'spacing-'+ $theme-site-margins-width,
+            "site-margins-mobile-width": 'spacing-'+ $theme-site-margins-mobile-width,
+            "size-touch-target": 'spacing-'+ $size-touch-target,
+        ));
+    @include cssVarsFromProp(("full": '100%', ), 'usa-spacing');
+    // @debug $project-spacing-standard;
+
+
+    // Typography
+
+    @include cssVarsFromProp($project-font-stacks, 'usa-font');
+    @include nestedCssVars(("font-lead": 'font-'+ $theme-lead-font-family,
+            "font-prose": 'font-'+ $theme-prose-font-family,
+        ));
+    @include nestedCssVars(("font-size-3xs": 'type-scale-'+ $theme-type-scale-3xs,
+            "font-size-2xs": 'type-scale-'+ $theme-type-scale-2xs,
+            "font-size-xs": 'type-scale-'+ $theme-type-scale-xs,
+            "font-size-sm": 'type-scale-'+ $theme-type-scale-sm,
+            "font-size-md": 'type-scale-'+ $theme-type-scale-md,
+            "font-size-lg": 'type-scale-'+ $theme-type-scale-lg,
+            "font-size-xl": 'type-scale-'+ $theme-type-scale-xl,
+            "font-size-2xl": 'type-scale-'+ $theme-type-scale-2xl,
+            "font-size-3xl": 'type-scale-'+ $theme-type-scale-3xl,
+            "font-size-body": 'font-size-'+ $theme-body-font-size,
+            "font-size-h1": 'font-size-'+ $theme-h1-font-size,
+            "font-size-h2": 'font-size-'+ $theme-h2-font-size,
+            "font-size-h3": 'font-size-'+ $theme-h3-font-size,
+            "font-size-h4": 'font-size-'+ $theme-h4-font-size,
+            "font-size-h5": 'font-size-'+ $theme-h5-font-size,
+            "font-size-h6": 'font-size-'+ $theme-h6-font-size,
+            "font-size-display": 'font-size-'+ $theme-display-font-size,
+            "font-size-lead": 'font-size-'+ $theme-lead-font-size,
+            "font-size-small": 'font-size-'+ $theme-small-font-size, // note: i understand the distinction between the two (system var vs semantic var), but it doesn't feel right to have the naming like this: "font-size-sm" vs "font-size-small"
+        ));
+    @include nestedCssVars(("line-height-body": 'line-height-'+ $theme-body-line-height,
+            "line-height-heading": 'line-height-'+ $theme-heading-line-height,
+            "line-height-lead": 'line-height-'+ $theme-lead-line-height,
+
+        ));
+    @include nestedCssVars(("heading-margin-top": 'spacing-205',
+            "paragraph-margin-top": 'spacing-2',
+
+        ));
+    @include cssVarsFromProp($system-type-scale, 'usa-type-scale');
+    @include cssVarsFromProp($project-font-weights, 'usa-font-weight');
+    @include cssVarsFromProp($system-line-height, 'usa-line-height');
+    @include cssVarsFromRef(('1':$system-measure-smaller,
+            '2':$system-measure-small,
+            '3':$system-measure-base,
+            '4':$system-measure-large,
+            '5':$system-measure-larger,
+            '6':$system-measure-largest), null, 'usa-measure');
+    @include nestedCssVars(("measure-smaller": 'measure-1',
+            "measure-small": 'measure-2',
+            "measure-base": 'measure-3',
+            "measure-large": 'measure-4',
+            "measure-larger": 'measure-5',
+            "measure-largest": 'measure-6',
+        ));
+    @include cssVarsFromProp($project-cap-heights, 'usa-cap-height');
+
+    // @debug $project-type-scale;
+
+
+    // Other
+    // Putting "easing" here for now since I found it as a one-off in the USWDS project-easing.scss file
+    // TODO: Gather together other "one-off" variables as I find them and then properly categorize them
+    // TODO: Make the hardcoded 'usa' prefix a customizable variable
+    @include cssVarsFromProp(('easing':$project-easing));
+    @include nestedCssVars(('focus-width': 'spacing-05',
+            'focus-offset': 'spacing-'+ $theme-focus-offset,
+        ));
+    @include cssVarsFromProp(('focus-style': $theme-focus-style,
+            'focus-color': '#52daf2',
+        ));
+    @include cssVarsFromProp(('box-shadow-none': 'none',
+            'box-shadow-1': '0 var(--usa-spacing-1px) var(--usa-spacing-05) 0 rgba(0, 0, 0, 0.1)',
+            'box-shadow-2': '0 var(--usa-spacing-05) var(--usa-spacing-1) 0 rgba(0, 0, 0, 0.1)',
+            'box-shadow-3': '0 var(--usa-spacing-1) var(--usa-spacing-2) 0 rgba(0, 0, 0, 0.1)',
+            'box-shadow-4': '0 var(--usa-spacing-105) var(--usa-spacing-3) 0 rgba(0, 0, 0, 0.1)',
+            'box-shadow-5': '0 var(--usa-spacing-2) var(--usa-spacing-4) 0 rgba(0, 0, 0, 0.1)'
+        ));
+
+
+    // Colors
+
+    @include cssVarsFromProp($project-color-shortcodes);
+    @include cssVarsFromProp($tokens-color-global);
+    @include cssVarsFromProp($tokens-color-basic);
+    // @include cssVarsFromRef($project-defaults);
+    @include nestedCssVars(("body-background": $theme-body-background-color,
+            "bg-color": 'body-background', // include for backwards compatibility
+            "link-color": $theme-link-color,
+            "link-hover-color": $theme-link-hover-color,
+            "link-active-color": $theme-link-active-color,
+            "link-visited-color": 'violet',
+            "link-reverse-color": $theme-link-reverse-color,
+            "link-reverse-hover-color": $theme-link-reverse-hover-color,
+            "link-reverse-active-color": $theme-link-reverse-active-color,
+            "text-color": $theme-text-color,
+            "text-reverse-color": $theme-text-reverse-color));
+
+    // Components
+
+    // Making the decision here to scope the components at the :root level, allowing us to override them both at the component level for individual styling, but also en masse at the global level when we want to change the entire USWDS theme by including new CSS variables without having to inject them as SASS variables and recompile the USWDS SCSS
+
+    // Accordion
+
+    // Existing USWDS variables
+    // * $theme-accordion-background-color: "default" !default;
+    // * $theme-accordion-border-color: "base-lightest" !default;
+    // * $theme-accordion-border-width: 0.5 !default;
+    // * $theme-accordion-button-background-color: "base-lightest" !default;
+    // * $theme-accordion-font-family: "body" !default;
+    @include nestedCssVars((accordion-background: if($theme-accordion-background-color=="default",
+                "body-background", $theme-accordion-background-color),
+            accordion-padding-y: 'spacing-2',
+            accordion-padding-x: 'spacing-205',
+            accordion-button-background: $theme-accordion-button-background-color,
+            accordion-button-icon-size: 'spacing-3',
+            accordion-button-active-background: "base-lighter",
+            accordion-button-padding-y: 'spacing-2',
+            accordion-button-padding-x: 'spacing-205',
+            accordion-border-width: 'spacing-05',
+            accordion-border-color: $theme-accordion-border-color,
+            accordion-font-family: 'font-'+ $theme-accordion-font-family,
+            accordion-font-size: 'font-size-body',
+            accordion-line-height: 'line-height-body',
+            accordion-border-radius: 'border-radius-lg',
+        ));
+
+
+    // Alert
+
+    // Existing USWDS variables
+    // * $theme-alert-bar-width: 1 !default;
+    // * $theme-alert-font-family: "ui" !default;
+    // * $theme-alert-icon-size: 4 !default;
+    // * $theme-alert-padding-x: 2.5 !default;
+    // * $theme-alert-padding-y: 2 !default;
+    // * $theme-alert-text-color: default !default;
+    // * $theme-alert-text-reverse-color: default !default;
+    // * $theme-alert-link-color: default !default;
+    // * $theme-alert-link-reverse-color: default !default;
+    // * $theme-site-alert-max-width: "desktop" !default;
+    @include nestedCssVars((alert-bar-width: 'spacing-'+ $theme-alert-bar-width,
+            alert-font-family: 'font-'+ $theme-alert-font-family,
+            alert-heading-font-size: 'font-size-lg',
+            alert-font-size: 'font-size-body',
+            alert-line-height: 'line-height-2',
+            alert-icon-size: 'spacing-'+ $theme-alert-icon-size,
+            alert-slim-icon-size: 'spacing-3',
+            alert-padding-y: 'spacing-'+ $theme-alert-padding-y,
+            alert-padding-x: 'spacing-205',
+            alert-text-color: if($theme-alert-text-color=="default",
+                "text-color", $theme-alert-text-color),
+            alert-text-reverse-color: if($theme-alert-text-reverse-color=="default",
+                "text-reverse-color", $theme-alert-text-reverse-color),
+            alert-link-color: if($theme-alert-link-color=="default",
+                "link-color", $theme-alert-link-color),
+            alert-link-reverse-color: if($theme-alert-link-reverse-color=="default",
+                "link-reverse-color", $theme-alert-link-reverse-color),
+            alert-max-width: 'spacing-'+ $theme-site-alert-max-width,
+            alert-border-radius: 'border-radius-lg',
+        ));
+    //TODO: make the prefix for this dynamic
+    @include cssVarsFromProp(('alert-optical-factor': 'calc(var(--usa-alert-icon-size) / 6)',
+            'alert-icon-optical-padding': 'calc(var(--usa-alert-padding-x) - var(--usa-alert-optical-factor))',
+            'alert-slim-icon-optical-padding': 'calc(var(--usa-alert-padding-x) - calc(var(--usa-alert-slim-icon-size) / 6))',
+        ));
+
+
+    // Banner
+    //TODO: grid container variables
+
+    // Existing USWDS variables
+    // * $theme-banner-background-color: "base-lightest" !default;
+    // * $theme-banner-font-family: "ui" !default;
+    // * $theme-banner-link-color: default !default;
+    // * $theme-banner-max-width: "desktop" !default;
+    @include nestedCssVars((banner-background: $theme-banner-background-color,
+            banner-font-family: 'font-'+ $theme-banner-font-family,
+            banner-font-size: 'font-size-3xs',
+            banner-font-weight: 'font-weight-normal',
+            banner-line-height: 'line-height-2',
+            banner-max-width: 'spacing-'+ $theme-banner-max-width,
+        ));
+
+
+    // Breadcrumbs
+
+    // Existing USWDS variables
+    // * $theme-breadcrumb-background-color: "default" !default;
+    // * $theme-breadcrumb-font-size: "sm" !default;
+    // * $theme-breadcrumb-font-family: "body" !default;
+    // * $theme-breadcrumb-link-color: default !default;
+    // * $theme-breadcrumb-min-width: "mobile-lg" !default;
+    // * $theme-breadcrumb-padding-bottom: 2 !default;
+    // * $theme-breadcrumb-padding-top: 2 !default;
+    // * $theme-breadcrumb-padding-x: 0 !default;
+    // * $theme-breadcrumb-separator-color: "base" !default;
+    @include nestedCssVars((breadcrumb-background: if($theme-breadcrumb-background-color=="default",
+                "body-background", $theme-breadcrumb-background-color),
+            breadcrumb-font-family: 'font-'+ $theme-breadcrumb-font-family,
+            breadcrumb-font-size: 'font-size-sm',
+            breadcrumb-font-weight: 'font-weight-normal',
+            breadcrumb-line-height: 'line-height-2',
+            breadcrumb-link-color: 'link-color',
+            breadcrumb-link-hover-color: 'link-hover-color',
+            breadcrumb-link-active-color: 'link-active-color',
+            breadcrumb-link-visited-color: 'link-visited-color',
+            breadcrumb-min-width: 'spacing-'+ $theme-breadcrumb-min-width,
+            breadcrumb-padding-top: 'spacing-'+ $theme-breadcrumb-padding-top,
+            breadcrumb-padding-bottom: 'spacing-'+ $theme-breadcrumb-padding-bottom,
+            breadcrumb-padding-x: 'spacing-'+ $theme-breadcrumb-padding-x,
+            breadcrumb-separator-color: 'base',
+            breadcrumb-gap: 'spacing-105',
+            breadcrumb-icon-height: 'spacing-2',
+            breadcrumb-icon-spacing: 'spacing-0',
+        ));
+
+
+    // Button
+
+    // Existing USWDS variables
+    // * $theme-button-font-family: "ui" !default;
+    // * $theme-button-border-radius: "md" !default;
+    // * $theme-button-small-width: 6 !default;
+    // * $theme-button-stroke-width: 2px !default;
+    @include nestedCssVars((button-inverse-color: $theme-link-reverse-color,
+            button-inverse-hover-color: $theme-link-reverse-hover-color,
+            button-inverse-active-color: $theme-link-reverse-active-color,
+            button-font-family: 'font-'+ $theme-button-font-family,
+            button-font-weight: 'font-weight-bold',
+            button-font-size: 'font-size-body',
+            button-lg-font-size: 'font-size-lg',
+            button-line-height: 'line-height-body',
+            button-border-radius: 'border-radius-'+ $theme-button-border-radius,
+            button-lg-border-radius: 'border-radius-'+ $theme-button-border-radius,
+            button-stroke-width: 'spacing-'+ $theme-button-stroke-width,
+            button-outline-offset: 'spacing-05',
+            button-margin-right: 'spacing-1',
+            button-padding-y: 'spacing-105',
+            button-lg-padding-y: 'spacing-2',
+            button-padding-x: 'spacing-205',
+            button-lg-padding-x: 'spacing-3',
+            button-small-width: 'spacing-'+ $theme-button-small-width,
+        ));
+
+
+    // Card
+
+    // Existing USWDS variables
+    // * $theme-card-border-color: "base-lighter" !default;
+    // * $theme-card-border-radius: "lg" !default;
+    // * $theme-card-border-width: 2px !default;
+    // * $theme-card-gap: 2 !default;
+    // * $theme-card-flag-min-width: "tablet" !default;
+    // * $theme-card-flag-image-width: "card-lg" !default;
+    // * $theme-card-font-family: "body" !default;
+    // * $theme-card-header-typeset: "heading", "lg", 2 !default;
+    // * $theme-card-margin-bottom: 4 !default;
+    // * $theme-card-padding-perimeter: 3 !default;
+    // * $theme-card-padding-y: 2 !default;
+    @include nestedCssVars((card-border-color: $theme-card-border-color,
+            card-border-radius: 'border-radius-'+ $theme-card-border-radius,
+            card-border-width: 'spacing-'+ $theme-card-border-width,
+            card-gap: 'spacing-'+ $theme-card-gap,
+            card-margin-x: 'spacing-1',
+            card-flag-min-width: 'spacing-'+ $theme-card-flag-min-width,
+            card-flag-image-width: 'spacing-'+ $theme-card-flag-image-width,
+            card-font-family: 'font-'+ $theme-card-font-family,
+            card-font-size: 'font-size-body',
+            card-font-weight: 'font-weight-normal',
+            card-line-height: 'line-height-body',
+            card-header-font-family: 'font-heading',
+            card-header-font-size: 'font-size-lg',
+            card-header-font-weight: 'font-weight-bold',
+            card-header-line-height: 'line-height-heading',
+            card-margin-bottom: 'spacing-'+ $theme-card-margin-bottom,
+            card-padding-perimeter: 'spacing-'+ $theme-card-padding-perimeter,
+            card-padding-y: 'spacing-'+ $theme-card-padding-y,
+            card-padding-body-x: 'spacing-'+ $theme-card-padding-perimeter,
+            card-padding-body-y: 'spacing-1',
+        ));
+
+
+    // Form and input
+    // $theme-checkbox-border-radius: "sm" !default;
+    // $theme-form-font-family: "ui" !default;
+    // $theme-input-background-color: default !default;
+    // $theme-input-line-height: 3 !default;
+    // $theme-input-max-width: "mobile-lg" !default;
+    // $theme-input-select-border-width: 2px !default;
+    // $theme-input-select-size: 2.5 !default;
+    // $theme-input-state-border-width: 0.5 !default;
+    // $theme-input-tile-border-radius: "md" !default;
+    // $theme-input-tile-border-width: 2px !default;
+    @include nestedCssVars((input-background-color: if($theme-input-background-color=="default",
+                "body-background",
+                $theme-input-background-color),
+            input-border-color: 'base-lighter',
+            input-border-width: 'spacing-05',
+            checkbox-border-radius: 'border-radius-'+ $theme-checkbox-border-radius,
+            input-border-radius: 'border-radius-0',
+            input-line-height: 'line-height-'+ $theme-input-line-height,
+            input-height: 'spacing-4',
+            input-large-height: 'spacing-6',
+            input-padding-y: 'spacing-05',
+            input-padding-x: 'spacing-1',
+            input-max-width: 'spacing-'+ $theme-input-max-width,
+            input-select-border-width: 'spacing-'+ $theme-input-select-border-width,
+            input-select-size: 'spacing-205',
+            input-tile-border-radius: 'border-radius-'+ $theme-input-tile-border-radius,
+            input-tile-border-width: 'spacing-'+ $theme-input-tile-border-width,
+            form-font-family: 'font-'+ $theme-form-font-family,
+        ));
+    @include cssVarsFromProp((search-min-width: 27ch,
+        ));
+
+    // Collection
+
+    // Existing USWDS variables
+    // * $theme-collection-font-family: "ui" !default;
+    // * $theme-collection-header-typeset: "ui", "md", 3 !default;
+    @include nestedCssVars((collection-font-family: 'font-'+ $theme-collection-font-family,
+            collection-header-font-family: 'font-ui',
+            collection-header-font-size: 'font-size-md',
+            collection-header-line-height: 'line-height-3'
+        ));
+
+
+    // Footer
+
+    // Existing USWDS variables
+    // * $theme-footer-font-family: "body" !default;
+    // * $theme-footer-max-width: "desktop" !default;
+    @include nestedCssVars((footer-font-family: 'font-'+ $theme-footer-font-family,
+            footer-max-width: 'spacing-'+ $theme-footer-max-width,
+        ));
+
+
+    // Header
+
+    // Existing USWDS variables
+    // * $theme-header-font-family: "ui" !default;
+    // * $theme-header-logo-text-width: 33% !default;
+    // * $theme-header-max-width: "desktop" !default;
+    // * $theme-header-min-width: "desktop" !default;
+    @include nestedCssVars((header-font-family: 'font-'+ $theme-header-font-family,
+            header-max-width: 'spacing-'+ $theme-header-max-width,
+            header-min-width: 'spacing-'+ $theme-header-min-width,
+        ));
+    @include cssVarsFromProp(('header-logo-text-width': $theme-header-logo-text-width));
+
+
+    // TODO Identifier
+
+
+    // In-page navigation
+
+    // Existing USWDS variables
+    // * $theme-in-page-nav-background-color: "default" !default;
+    // * $theme-in-page-nav-background-padding: 2 !default;
+    // * $theme-in-page-nav-background-radius: "lg" !default;
+    // * $theme-in-page-nav-bar-color: "default" !default;
+    // * $theme-in-page-nav-bar-width: "05" !default;
+    // * $theme-in-page-nav-font-family: "ui" !default;
+    // * $theme-in-page-nav-link-color: "default" !default;
+    // * $theme-in-page-nav-main-content-max-width: "desktop" !default;
+    // * $theme-in-page-nav-margin-left: 4 !default;
+    // * $theme-in-page-nav-margin-top: 2.5 !default;
+    // * $theme-in-page-nav-top: 4 !default;
+    @include nestedCssVars((in-page-nav-background-color: 'body-background',
+            in-page-nav-background-padding: 'spacing-2',
+            in-page-nav-border-radius: 'border-radius-lg',
+            in-page-nav-bar-border-color: 'base-lighter',
+            in-page-nav-bar-border-width: 'spacing-1px',
+            in-page-nav-text-color: 'text-color',
+            in-page-nav-current-color: 'primary',
+            in-page-nav-bar-width: 'spacing-05',
+            in-page-nav-font-family: 'font-ui',
+            in-page-nav-font-size: 'font-size-2xs',
+            in-page-nav-font-weight: 'font-weight-bold',
+            in-page-nav-sub-item-font-weight: 'font-weight-normal',
+            in-page-nav-line-height: 'line-height-2',
+            in-page-nav-link-color: 'link-color',
+            in-page-nav-link-active-color: 'link-active-color',
+            in-page-nav-main-content-max-width: 'spacing-desktop',
+            in-page-nav-margin-left: 'spacing-4',
+            in-page-nav-margin-top: 'spacing-205',
+            in-page-nav-top: 'spacing-4',
+        ));
+
+
+    // Modal
+
+    // Existing USWDS variables
+    // * $theme-modal-border-radius: "lg" !default;
+    // * $theme-modal-default-max-width: "mobile-lg" !default;
+    // * $theme-modal-lg-content-max-width: "tablet" !default;
+    // * $theme-modal-lg-max-width: "tablet-lg" !default;
+    @include nestedCssVars((modal-border-radius: 'border-radius-'+ $theme-modal-border-radius,
+            modal-border-color: 'base-lighter',
+            modal-border-width: 'spacing-05',
+            modal-padding-y: 'spacing-2',
+            modal-large-padding-y: 'spacing-4',
+            modal-padding-x: 'spacing-205',
+            modal-large-padding-x: 'spacing-5',
+            modal-default-max-width: 'spacing-'+ $theme-modal-default-max-width,
+            modal-lg-content-max-width: 'spacing-'+ $theme-modal-lg-content-max-width,
+            modal-lg-max-width: 'spacing-'+ $theme-modal-lg-max-width,
+            modal-background-color: 'white',
+            modal-text-color: 'text-color',
+            modal-close-icon-size: 'spacing-3',
+            modal-close-icon-color: 'base',
+            modal-close-icon-hover-color: 'ink',
+            modal-footer-margin-top: 'spacing-3',
+        ));
+    @include cssVarsFromProp(('modal-overlay-background-color': 'rgba(0, 0, 0, 0.7)'));
+
+
+    // Nav
+
+    // Existing USWDS variables
+    // * $theme-navigation-font-family: "ui" !default;
+    // * $theme-megamenu-columns: 3 !default;
+    @include nestedCssVars((navigation-font-family: 'font-'+ $theme-navigation-font-family,
+            navigation-border-radius: 'border-radius-0',
+            navigation-background-color: 'white',
+            navigation-hover-background-color: 'base-lightest',
+            navigation-link-padding-y: 'spacing-2',
+            navigation-link-padding-x: 'spacing-2',
+            navigation-link-color: 'base-dark',
+            navigation-link-hover-color: 'primary',
+            navigation-active-background-color: 'primary',
+            navigation-active-text-color: 'white',
+            navigation-submenu-background-color: 'primary-darker',
+            navigation-submenu-width: 'spacing-card-lg',
+            navigation-submenu-color: 'white',
+            navigation-submenu-hover-color: 'white',
+            navigation-sliding-panel-width: 'spacing-card-lg',
+            navigation-sliding-panel-padding: 'spacing-1',
+        ));
+    @include cssVarsFromProp((megamenu-columns: 3));
+
+    // Pagination
+
+    // Existing USWDS variables
+    // * $theme-pagination-background-color: "default" !default;
+    // * $theme-pagination-breakpoint: "tablet" !default;
+    // * $theme-pagination-button-border-radius: "md" !default;
+    // * $theme-pagination-button-border-width: 1px !default;
+    // * $theme-pagination-font-family: "ui" !default;
+    @include nestedCssVars((pagination-button-background-color: 'body-background-color',
+            pagination-button-current-background-color: 'ink',
+            pagination-button-border-radius: 'border-radius-'+ $theme-pagination-button-border-radius,
+            pagination-button-border-width: 'spacing-'+ $theme-pagination-button-border-width,
+            pagination-font-family: 'font-'+ $theme-pagination-font-family,
+            pagination-font-size: 'font-size-sm',
+            pagination-font-weight: 'font-weight-normal',
+            pagination-line-height: 'line-height-1',
+            pagination-breakpoint: 'spacing-'+ $theme-pagination-breakpoint,
+            pagination-margin-y: 'spacing-2',
+            pagination-margin-x: 'spacing-05',
+            pagination-target-size: 'spacing-5',
+            pagination-button-padding: 'spacing-1',
+            pagination-button-text-color: 'link-color',
+            pagination-button-current-text-color: 'white',
+            pagination-button-text-hover-color: 'link-hover-color',
+            pagination-button-border-color: 'base-light',
+            pagination-button-current-border-color: 'ink',
+            pagination-button-border-hover-color: 'link-hover-color',
+            pagination-button-current-border-hover-color: 'link-hover-color',
+            pagination-icon-size: 'spacing-205',
+        ));
+
+
+    // Process list
+
+    // Existing USWDS variables
+    // * $theme-process-list-counter-background-color: "white" !default;
+    // * $theme-process-list-counter-border-color: "ink" !default;
+    // * $theme-process-list-counter-border-width: 0.5 !default;
+    // * $theme-process-list-counter-font-family: "ui" !default;
+    // * $theme-process-list-counter-font-size: "lg" !default;
+    // * $theme-process-list-counter-gap-color: "white" !default;
+    // * $theme-process-list-counter-gap-width: 0.5 !default;
+    // * $theme-process-list-counter-size: 5 !default;
+    // * $theme-process-list-counter-text-color: "ink" !default;
+    // * $theme-process-list-connector-color: "primary-lighter" !default;
+    // * $theme-process-list-connector-width: 1 !default;
+    // * $theme-process-list-font-family: "ui" !default;
+    // * $theme-process-list-font-size: "sm" !default;
+    // * $theme-process-list-heading-color: "ink" !default;
+    // * $theme-process-list-heading-font-family: "ui" !default;
+    // * $theme-process-list-heading-font-size: "lg" !default;
+    @include nestedCssVars((process-list-counter-background-color: $theme-process-list-counter-background-color,
+            process-list-counter-border-color: $theme-process-list-counter-border-color,
+            process-list-counter-border-width: 'spacing-'+ $theme-process-list-counter-border-width,
+            process-list-counter-font-family: 'font-'+ $theme-process-list-counter-font-family,
+            process-list-counter-font-size: 'font-size-lg',
+            process-list-counter-gap-color: $theme-process-list-counter-gap-color,
+            process-list-counter-gap-width: 'spacing-'+ $theme-process-list-counter-gap-width,
+            process-list-counter-size: 'spacing-'+ $theme-process-list-counter-size,
+            process-list-counter-text-color: 'text-color',
+            process-list-connector-color: $theme-process-list-connector-color,
+            process-list-connector-width: 'spacing-'+ $theme-process-list-connector-width,
+            process-list-font-family: 'font-'+ $theme-process-list-font-family,
+            process-list-font-size: 'font-size-sm',
+            process-list-heading-color: 'text-color',
+            process-list-heading-font-family: 'font-'+ $theme-process-list-heading-font-family,
+            process-list-heading-font-size: 'font-size-lg',
+        ));
+
+
+    // Tooltip
+
+    // Existing USWDS variables
+    // * $theme-tooltip-background-color: "ink" !default;
+    // * $theme-tooltip-font-color: "base-lightest" !default;
+    // * $theme-tooltip-font-size: "xs" !default;
+    @include nestedCssVars((tooltip-background-color: 'mint',
+            tooltip-text-color: 'ink',
+            tooltip-font-size: 'font-size-xs',
+            tooltip-font-weight: 'font-weight-medium',
+            tooltip-line-height: 'line-height-3',
+            tooltip-padding-y: 'spacing-05',
+            tooltip-padding-x: 'spacing-1',
+            tooltip-border-radius: 'border-radius-sm',
+            tooltip-triangle-size: 'spacing-05',
+        ));
+
+
+            // Table
+
+    // Existing USWDS variables
+    // * $theme-table-border-color: "ink" !default;
+    // * $theme-table-header-background-color: "base-lighter" !default;
+    // * $theme-table-header-text-color: default !default;
+    // * $theme-table-stripe-background-color: "base-lightest" !default;
+    // * $theme-table-stripe-text-color: default !default;
+    // * $theme-table-text-color: default !default;
+    // * $theme-table-sorted-header-background-color: "accent-cool-light" !default;
+    // * $theme-table-sorted-background-color: "accent-cool-lighter" !default;
+    // * $theme-table-sorted-stripe-background-color: "blue-cool-10v" !default;
+    // * $theme-table-sorted-icon-color: default !default;
+    // * $theme-table-unsorted-icon-color: "base" !default;
+    @include nestedCssVars((
+        table-border-color: $theme-table-border-color,
+        table-border-width: 'spacing-2px',
+        table-header-background-color: $theme-table-header-background-color,
+        table-header-text-color: if($theme-table-header-text-color=="default",
+                "text-color", $theme-table-header-text-color),
+        table-stripe-background-color: $theme-table-stripe-background-color,
+        table-stripe-text-color: if($theme-table-stripe-text-color=="default",
+                "text-color", $theme-table-stripe-text-color),
+        table-text-color: if($theme-table-text-color=="default",
+                "text-color", $theme-table-text-color),
+        table-text-hover-color: 'base-dark',
+        table-sorted-header-background-color: $theme-table-sorted-header-background-color,
+        table-sorted-header-text-color: 'text-color',
+        table-sorted-background-color: $theme-table-sorted-background-color,
+        table-sorted-stripe-background-color: 'accent-cool-lighter',
+        table-sorted-icon-color: if($theme-table-sorted-icon-color=="default",
+                "text-color", $theme-table-sorted-icon-color),
+        table-unsorted-icon-color: "base",
+        table-unsorted-icon-hover-color: "base-dark",
+        table-cell-padding-y: 'spacing-1',
+        table-cell-compact-padding-y: 'spacing-05',
+        table-cell-padding-x: 'spacing-2',
+        table-cell-compact-padding-x: 'spacing-1',
+));
+
+
+            // Summary box
+
+    // Existing USWDS variables
+    // * $theme-summary-box-background-color: "info-lighter" !default;
+    // * $theme-summary-box-border-color: "info-light" !default;
+    // * $theme-summary-box-border-width: 1px !default;
+    // * $theme-summary-box-border-radius: "md" !default;
+    // * $theme-summary-box-font-family: "ui" !default;
+    // * $theme-summary-box-link-color: default !default;
+    // * $theme-summary-box-text-color: default !default;
+    @include nestedCssVars((
+        summary-box-background-color: $theme-summary-box-background-color,
+        summary-box-border-color: $theme-summary-box-border-color,
+        summary-box-border-width: 'spacing-'+ $theme-summary-box-border-width,
+        summary-box-border-radius: 'border-radius-'+ $theme-summary-box-border-radius,
+        summary-box-font-family: 'font-'+ $theme-summary-box-font-family,
+        summary-box-font-size: 'font-size-sm',
+        summary-box-heading-font-size: 'font-size-lg',
+        summary-box-font-weight: 'font-weight-normal',
+        summary-box-line-height: 'line-height-2',
+        summary-box-link-color: 'link-color',
+        summary-box-link-hover-color: 'link-hover-color',
+        summary-box-link-visited-color: 'link-visited-color',
+        summary-box-text-color: 'text-color',
+        summary-box-padding-y: 'spacing-205',
+        summary-box-padding-x: 'spacing-205',    
+));
+
+
+    // Step indicator
+
+    // Existing USWDS variables
+    // * $step-indicator-background-color: "white" !default;
+    // * $theme-step-indicator-counter-gap: 0.5 !default;
+    // * $theme-step-indicator-counter-border-width: 0.5 !default;
+    // * $theme-step-indicator-font-family: "ui" !default;
+    // * $theme-step-indicator-heading-color: "ink" !default;
+    // * $theme-step-indicator-heading-font-family: "ui" !default;
+    // * $theme-step-indicator-heading-font-size: "lg" !default;
+    // * $theme-step-indicator-heading-font-size-small: "md" !default;
+    // * $theme-step-indicator-label-font-size: "sm" !default;
+    // * $theme-step-indicator-min-width: "tablet" !default;
+    // * $theme-step-indicator-segment-color-pending: "gray-40" !default;
+    // * $theme-step-indicator-segment-color-complete: "primary-darker" !default;
+    // * $theme-step-indicator-segment-color-current: "primary" !default;
+    // * $theme-step-indicator-segment-gap: 2px !default;
+    // * $theme-step-indicator-segment-height: 1 !default;
+    // * $theme-step-indicator-text-pending-color: "base-dark" !default;
+
+    // Variables scoped within the step indicator SCSS file
+    // $step-indicator-label-margin-top: 1;
+    // $step-indicator-margin-bottom: 4;
+    // $step-indicator-header-margin-top: 4;
+    // $step-indicator-header-margin-top-sm: 2;
+    // $step-indicator-segment-height-mobile: 1;
+    // $step-indicator-counter-size: 5;
+    // $step-indicator-counter-size-sm: 3;
+    @include nestedCssVars((step-indicator-background-color: 'body-background',
+            step-indicator-counter-gap: 'spacing-05',
+            step-indicator-counter-border-width: 'spacing-05',
+            step-indicator-font-family: 'font-'+ $theme-step-indicator-font-family,
+            step-indicator-heading-color: 'text-color',
+            step-indicator-heading-font-family: 'font-'+ $theme-step-indicator-heading-font-family,
+            step-indicator-heading-font-size: 'font-size-lg',
+            step-indicator-heading-font-size-small: 'font-size-md',
+            step-indicator-label-font-size: 'font-size-sm',
+            step-indicator-min-width: 'spacing-'+ $theme-step-indicator-min-width,
+            step-indicator-segment-color-pending: 'base-lighter',
+            step-indicator-segment-color-complete: 'secondary-darker',
+            step-indicator-segment-color-current: 'accent-cool-dark',
+            step-indicator-segment-gap: 'spacing-2px',
+            step-indicator-segment-height: 'spacing-1',
+            step-indicator-segment-max-width: 'spacing-card-lg',
+            step-indicator-text-pending-color: 'base-dark',
+            step-indicator-label-margin-top: 'spacing-1',
+            step-indicator-margin-bottom: 'spacing-4',
+            step-indicator-header-margin-top: 'spacing-4',
+            step-indicator-header-margin-top-sm: 'spacing-2',
+            step-indicator-segment-height-mobile: 'spacing-1',
+            step-indicator-counter-size: 'spacing-5',
+            step-indicator-counter-size-sm: 'spacing-3',
+        ));
+}

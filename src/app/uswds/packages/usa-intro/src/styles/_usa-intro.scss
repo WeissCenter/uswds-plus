@@ -1,0 +1,17 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+.usa-intro {
+  // @include typeset(
+  //   $theme-lead-font-family,
+  //   $theme-lead-font-size,
+  //   $theme-lead-line-height
+  // );
+  font-family: cssVar(font-heading);
+  font-size: cssVar(font-size-lead);
+  line-height: cssVar(line-height-lead);
+  // font-weight: $theme-font-weight-normal;
+  font-weight: cssVar(font-weight-normal);
+  // max-width: measure($theme-lead-measure);
+  max-width: cssVar(measure-largest);
+}

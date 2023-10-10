@@ -1,0 +1,16 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+@include override-prose {
+  .usa-input-list {
+    @include add-list-reset;
+
+    li {
+      // line-height: line-height(
+      //   $theme-form-font-family,
+      //   $theme-input-line-height
+      // );
+      line-height: cssVar("input-line-height");
+    }
+  }
+}

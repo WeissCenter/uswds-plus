@@ -1,0 +1,101 @@
+/**
+ *  Retrieve a css variable value with prefix
+ *
+ *  Usage
+ *
+ *      .selector {
+ *          color: cssVar(primary-lightest);
+ *      }
+ *
+ *  Will result in
+ *
+ *      .selector {
+ *          color: var(--usa-primary-lightest);
+ *      }
+ */
+ @function cssVar($name, $prefix: usa) {
+    @return var(--#{$prefix}-#{$name});
+}
+
+
+/**
+ *  Flatten a nested Sass map with specified optional prefix.
+ *
+ *  Usage:
+ *
+ *      $system-colors: (
+ *          "blue-cool": (
+ *              5: #fafafa,
+ *              10: #eaeaea,
+ *              "vivid":(
+ *                  5: #fff,
+ *                  10: #fafafa,
+ *              )
+ *          ),
+ *          "blue-warm": (
+ *              5: #fafafa,
+ *              10: #eaeaea,
+ *              "vivid":(
+ *                  5: #fff,
+ *                  10: #fafafa,
+ *              )
+ *          )
+ *      )
+ *
+ *   $flattened: flatten-map($system-colors);
+ *
+ *   Results in:
+ *
+ *      (
+ *          "blue-cool-5": #fafafa,
+ *          "blue-cool-10": #eaeaea,
+ *          "blue-cool-vivid-5": #fff,
+ *          "blue-cool-vivid-10": #fafafa,
+ *          "blue-warm-5": #fafafa,
+ *          "blue-warm-10": #eaeaea,
+ *          "blue-warm-vivid-5": #fff,
+ *          "blue-warm-vivid-10": #fafafa,
+ *      )
+ */
+ @function flatten-map($map, $prefix: "") {
+    $flattened: ();
+  
+    @each $key, $value in $map {
+      $new-prefix: if($prefix == "", $key, #{$prefix}-#{$key});
+  
+      @if type-of($value) == map {
+        $flattened: map-merge($flattened, flatten-map($value, $new-prefix));
+      } @else {
+        $flattened: map-merge($flattened, (
+          $new-prefix: $value
+        ));
+      }
+    }
+  
+    @return $flattened;
+  }
+
+  // Strip the period from a number
+  @function strip-period($value) {
+    // This is a quick way to check for the 0.5 spacing units and strip the period
+    // Find the index of the character to remove
+    // 'Stringify' the value first
+    $value: #{$value};
+    $periodIndex: str-index($value, '.');
+  
+    // Check if the character is present in the string
+    @if $periodIndex {
+      // Custom logic to account for generating the correct spacing unit
+      @if str-index($value, "0.5") {
+        $value: '05';
+      }
+      @else if str-index($value, "1.5") {
+        $value: '105';
+      }
+      @else if str-index($value, "2.5") {
+        $value: '205';
+      }
+    }
+  
+    @return $value;
+  }

@@ -1,0 +1,165 @@
+@use "uswds-core" as *;
+@use "sass:color";
+@use "sass:list";
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+.usa-in-page-nav-container {
+  align-items: flex-start;
+  display: flex;
+
+  // Set main landmark max width to ensure in-page nav will fit
+  main {
+    // max-width: units($theme-in-page-nav-main-content-max-width);
+    max-width: cssVar(in-page-nav-main-content-max-width);
+    width: 100%;
+  }
+}
+
+.usa-in-page-nav {
+  // @include set-text-from-bg(
+  //   $bg-color: $theme-in-page-nav-background-color,
+  //   $context: "In-page navigation text color"
+  // );
+  color: cssVar(in-page-nav-text-color);
+  display: none;
+  // margin-left: units($theme-in-page-nav-margin-left);
+  margin-left: cssVar(in-page-nav-margin-left);
+  // margin-top: units($theme-in-page-nav-margin-top);
+  margin-top: cssVar(in-page-nav-margin-top);
+  // max-width: units("card-lg");
+  max-width: cssVar(spacing-card-lg);
+  order: 2;
+  position: sticky;
+  // top: units($theme-in-page-nav-top);
+  top: cssVar(in-page-nav-top);
+  width: 100%;
+
+  @include at-media("tablet") {
+    display: block;
+  }
+}
+
+.usa-in-page-nav__nav {
+  // @include set-text-and-bg(
+  //   $theme-in-page-nav-background-color,
+  //   $context: "In-page navigation background"
+  // );
+  background-color: cssVar(in-page-nav-background-color);
+  color: cssVar(in-page-nav-text-color);
+  // border-radius: radius($theme-in-page-nav-background-radius);
+  border-radius: cssVar(in-page-nav-background-radius);
+  // padding: units($theme-in-page-nav-background-padding);
+  padding: cssVar(in-page-nav-background-padding);
+}
+
+.usa-in-page-nav__heading {
+  // TODO: This could be a setting?
+  // @include typeset("ui", "2xs", 3);
+  font-family: cssVar(in-page-nav-font-family);
+  font-size: cssVar(in-page-nav-font-size);
+  font-weight: cssVar(in-page-nav-font-weight);
+  line-height: cssVar(in-page-nav-line-height);
+  // @include u-font-weight("bold");
+  // margin-bottom: units(2);
+  margin-bottom: cssVar(spacing-2);
+  // margin-top: 0;
+  margin-top: cssVar(spacing-0);
+  // padding: 0;
+  padding: cssVar(spacing-0);
+}
+
+.usa-in-page-nav__list {
+  @include border-box-sizing;
+  @include nav-list("sidenav");
+  // border-left: units(1px) solid
+  //   color.adjust(
+  //     color(
+  //       get-color-token-from-bg(
+  //         $bg-color: $theme-in-page-nav-background-color,
+  //         $context: "In-page navigation rail"
+  //       )
+  //     ),
+  //     $alpha: -0.75
+  //   );
+  border-left: cssVar(in-page-nav-bar-border-width) solid cssVar(in-page-nav-bar-border-color);
+  padding: 0;
+
+  // specificity to override sidenav styles
+  a:not(.usa-button) {
+    &:not(.usa-current) {
+      // @include set-link-from-bg(
+      //   $bg-color: $theme-in-page-nav-background-color,
+      //   $preferred-link-color: $theme-in-page-nav-link-color,
+      //   $context: "In-page-navigation link"
+      // );
+      color: cssVar(in-page-nav-link-color);
+
+      &:visited {
+        // color: color(
+        //   list.nth(
+        //     get-link-tokens-from-bg(
+        //       $bg-color: $theme-in-page-nav-background-color,
+        //       $preferred-link-token: $theme-in-page-nav-link-color,
+        //       $context: "In-page-navigation link"
+        //     ),
+        //     1
+        //   )
+        // );
+        color: cssVar(in-page-nav-link-color-visited);
+      }
+    }
+
+    &.usa-current {
+      // @include set-text-from-bg(
+      //   $bg-color: $theme-in-page-nav-background-color,
+      //   $context: "In-page-navigation current color"
+      // );
+      color: cssVar(in-page-nav-current-color);
+      font-weight: inherit;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      background-color: unset;
+    }
+
+    &.usa-current {
+      position: static;
+
+      &::after {
+        // background-color: color(
+        //   get-color-token-from-bg(
+        //     $bg-color: $theme-in-page-nav-background-color,
+        //     $preferred-text-token: $theme-in-page-nav-bar-color,
+        //     $context: "In-page navigation bar"
+        //   )
+        // );
+        background-color: cssVar(in-page-nav-current-color);
+        border-radius: 0;
+        // bottom: units(-1px);
+        bottom: cssVar(spacing-neg-1px);
+        left: 0;
+        top: 0;
+        // width: units($theme-in-page-nav-bar-width);
+        width: cssVar(in-page-nav-bar-width);
+        z-index: z(100);
+      }
+    }
+  }
+}
+
+.usa-in-page-nav__item {
+  // @include typeset($theme-in-page-nav-font-family, "2xs", 2);
+  font-family: cssVar(in-page-nav-font-family);
+  font-size: cssVar(in-page-nav-font-size);
+  font-weight: cssVar(in-page-nav-font-weight);
+  line-height: cssVar(in-page-nav-line-height);
+  border: none;
+  // font-weight: bold;
+  position: relative;
+
+  &.usa-in-page-nav__item--sub-item {
+    // font-weight: normal;
+    font-weight: cssVar(in-page-nav-sub-item-font-weight);
+  }
+}

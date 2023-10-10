@@ -1,0 +1,68 @@
+@use "../../functions"as *;
+@use "../../css-vars/utilities/functions"as *;
+
+@mixin add-bar($weight: 1,
+  $color: "ink",
+  $side: "left",
+  $radius: 0,
+  $offset-x: 0,
+  $offset-y: 0) {
+  $weight: if($weight==null, 1, $weight);
+  $color: if($color==null, "ink", $color);
+  $side: if($side==null, "left", $side);
+  $radius: if($radius==null, 0, $radius);
+  $offset-x: if($offset-x==null, 0, $offset-x);
+  $offset-y: if($offset-y==null, 0, $offset-y);
+
+  position: relative;
+
+  $weight: #{$weight};
+  $weight: "spacing-"+ strip-period($weight);
+  $offset-x: #{$offset-x};
+  $offset-x: "spacing-"+ strip-period($offset-x);
+  $offset-y: #{$offset-y};
+  $offset-y: "spacing-"+ strip-period($offset-y);
+
+  &::after {
+    // background-color: color($color);
+    background-color: cssVar($color);
+    // border-radius: radius($radius);
+    border-radius: cssVar('border-radius-'+ $radius);
+    content: "";
+    display: block;
+    position: absolute;
+
+    @if $side==("left"or "right") {
+      // bottom: units($offset-y);
+      bottom: cssVar($offset-y);
+      // top: units($offset-y);
+      top: cssVar($offset-y);
+      // width: units($weight);
+      width: cssVar($weight);
+
+      // #{unquote($side)}: units($offset-x);
+      #{unquote($side)}: cssVar($offset-x);
+    }
+
+    @else {
+      // height: units($weight);
+      height: cssVar($weight);
+      // left: units($offset-x);
+      left: cssVar($offset-x);
+      // right: units($offset-x);
+      right: cssVar($offset-x);
+      // #{unquote($side)}: units($offset-y);
+      #{unquote($side)}: cssVar($offset-y);
+
+      @media (forced-colors: active) {
+        background-color: ButtonText;
+      }
+    }
+  }
+}
+
+@mixin remove-bar {
+  &::after {
+    display: none;
+  }
+}

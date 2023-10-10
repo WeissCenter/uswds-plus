@@ -1,0 +1,47 @@
+@use "../../functions" as *;
+@use "../../mixins/utilities" as *;
+@use "../../settings" as *;
+@use "../../css-vars/utilities/functions" as *;
+
+@mixin usa-list {
+  @include u-margin-y(1em);
+  line-height: line-height($theme-body-font-family, $theme-body-line-height);
+  // padding-left: 3ch;
+  padding-left: cssVar('spacing-105');
+
+  &:last-child {
+    // margin-bottom: 0;
+    margin-bottom: cssVar('spacing-0');
+  }
+
+  ul,
+  ol {
+    // margin-top: 0.25em;
+    margin-top: cssVar('spacing-05');
+
+  }
+}
+
+@mixin usa-list-item {
+  // margin-bottom: 0.25em;
+  margin-bottom: cssVar('spacing-05');
+  // max-width: measure($theme-text-measure);
+  max-width: cssVar('measure-base');
+
+
+  &:last-child {
+    // margin-bottom: 0;
+    margin-bottom: cssVar('spacing-0');
+  }
+}
+
+@mixin usa-list-styles {
+  ul,
+  ol {
+    @include usa-list;
+
+    li {
+      @include usa-list-item;
+    }
+  }
+}

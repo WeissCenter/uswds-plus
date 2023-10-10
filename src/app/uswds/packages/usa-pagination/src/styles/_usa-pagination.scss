@@ -1,0 +1,216 @@
+@use "sass:math";
+@use "sass:list";
+@use "sass:color";
+
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+$pagination-context: "Pagination";
+$pagination-margin-x: 0.5 !default;
+$pagination-margin-y: 2 !default;
+$pagination-margin-padding: 1 !default;
+$pagination-target-size: 5 !default;
+
+$pagination-current-color: get-color-token-from-bg(
+  $theme-pagination-background-color
+);
+
+$pagination-link-tokens: get-link-tokens-from-bg(
+  $theme-pagination-background-color,
+  $theme-link-reverse-color,
+  $theme-link-color,
+  $context: $pagination-context
+);
+
+$pagination-link-token: list.nth($pagination-link-tokens, 1);
+$pagination-hover-token: list.nth($pagination-link-tokens, 2);
+
+// Pagination
+// ---------------------------------
+.usa-pagination {
+  // @include u-margin-y($pagination-margin-y);
+  @include u-margin-y(pagination-margin-y);
+  // @include typeset($theme-pagination-font-family);
+  font-family: cssVar(pagination-font-family);
+  font-size: cssVar(pagination-font-size);
+  line-height: cssVar(pagination-line-height);
+  // @include set-text-and-bg(
+  //   $theme-pagination-background-color,
+  //   $context: $pagination-context
+  // );
+  color: cssVar(pagination-text-color);
+  display: flex;
+  justify-content: center;
+}
+
+// TODO: Pull out magic number into vars? Could this better?
+.usa-pagination .usa-icon {
+  // height: px-to-rem(18px);
+  height: cssVar(pagination-icon-size);
+  // width: px-to-rem(18px);
+  width: cssVar(pagination-icon-size);
+}
+
+// Shared styles
+// ---------------------------------
+
+// Pagination nav
+// ---------------------------------
+.usa-pagination__list {
+  @include add-list-reset;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: auto;
+}
+
+// Pagination nav items
+// 1. Prevents chromium browsers from adding additional vertical whitespace
+.usa-pagination__item {
+  display: inline-flex; // 1
+  // height: units($pagination-target-size);
+  height: cssVar(pagination-target-size);
+  justify-content: center;
+  // line-height: 1;
+  line-height: cssVar(pagination-line-height);
+  // margin-left: units($pagination-margin-x);
+  margin-left: cssVar(pagination-margin-x);
+  // margin-right: units($pagination-margin-x);
+  margin-right: cssVar(pagination-margin-x);
+  // min-width: units($pagination-target-size);
+  min-width: cssVar(pagination-target-size);
+
+  @include at-media($theme-pagination-breakpoint) {
+    flex: 1 0 auto; // flex: 1 won't work in IE11
+  }
+}
+
+// Don't show previous and next at mobile.
+// Functionality exists with page buttons.
+.usa-pagination__arrow {
+  display: none;
+  @include at-media($theme-pagination-breakpoint) {
+    display: inherit;
+  }
+}
+
+.usa-pagination__previous-page {
+  @include at-media($theme-pagination-breakpoint) {
+    // margin-right: units(math.div($pagination-target-size, 2));
+    margin-right: calc(cssVar(pagination-target-size) / 2);
+  }
+}
+
+.usa-pagination__next-page {
+  @include at-media($theme-pagination-breakpoint) {
+    // margin-left: units(math.div($pagination-target-size, 2));
+    margin-left: calc(cssVar(pagination-target-size) / 2);
+  }
+}
+
+.usa-pagination__link {
+  align-items: center;
+  // color: color($pagination-link-token);
+  color: cssVar(pagination-button-text-color);
+  display: inline-flex;
+  text-decoration: none;
+
+  &[disabled] {
+    opacity: 0.4 !important;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    // color: color($pagination-hover-token);
+    color: cssVar(pagination-button-text-hover-color);
+    text-decoration: underline;
+  }
+
+  &:visited {
+    // color: color($pagination-link-token);
+    color: cssVar(pagination-button-text-color);
+  }
+}
+
+.usa-pagination__button {
+  align-items: center;
+  // border-color: color.adjust(color($pagination-current-color), $alpha: -0.8);
+  border-color: cssVar(pagination-button-border-color);
+
+  // border-radius: radius($theme-pagination-button-border-radius);
+  border-radius: cssVar(pagination-button-border-radius);
+  border-style: solid;
+  // border-width: units($theme-pagination-button-border-width);
+  border-width: cssVar(pagination-button-border-width);
+  // color: color($pagination-link-token);
+  color: cssVar(pagination-button-text-color);
+  display: inline-flex;
+  justify-content: center;
+  // padding: units($pagination-margin-padding);
+  padding: cssVar(pagination-button-padding);
+  text-decoration: none;
+  width: 100%;
+  background-color: cssVar(pagination-button-background-color);
+
+  &:hover,
+  &:focus,
+  &:active {
+    // color: color($pagination-hover-token);
+    color: cssVar(pagination-button-text-hover-color);
+    // border-color: color($pagination-hover-token);
+    border-color: cssVar(pagination-button-border-hover-color);
+
+    @media (forced-colors: active) {
+      border: $border-high-contrast;
+    }
+  }
+}
+
+.usa-pagination .usa-current {
+  // $text-color: if(
+  //   $theme-pagination-background-color == "default",
+  //   $theme-body-background-color,
+  //   $theme-pagination-background-color
+  // );
+  // background-color: color($pagination-current-color);
+  background-color: cssVar(pagination-button-current-background-color);
+  // border-color: transparent;
+  border-color: cssVar(pagination-button-current-border-color);
+  // color: color($text-color);
+  color: cssVar(pagination-button-current-text-color);
+
+  @media (forced-colors: active) {
+    border: $border-high-contrast;
+    color: buttonText;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    // background-color: color($pagination-current-color);
+    background-color: cssVar(pagination-button-current-background-color);
+    // color: color($text-color);
+    color: cssVar(pagination-button-current-text-color);
+    text-decoration: none;
+
+    @media (forced-colors: active) {
+      color: buttontext;
+    }
+  }
+}
+
+.usa-pagination__overflow {
+  align-items: center;
+  align-self: stretch;
+  display: inherit;
+  user-select: none;
+  // padding: units($pagination-margin-padding);
+  padding: cssVar(pagination-button-padding);
+}
+
+// ---------------------------------
+// Variants
+// ---------------------------------

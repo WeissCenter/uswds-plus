@@ -1,0 +1,28 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+.usa-dark-background {
+  // background-color: color("base-darker");
+  background-color: cssVar(base-darker);
+
+  p,
+  span {
+    // color: color($theme-text-reverse-color);
+    color: cssVar(text-reverse-color);
+  }
+
+  a {
+    // color: color($theme-link-reverse-color);
+    color: cssVar(link-reverse-color);
+
+    &:visited {
+      // color: color($theme-link-reverse-color);
+      color: cssVar(link-reverse-color);
+    }
+
+    &:hover {
+      // color: color($theme-link-reverse-hover-color);
+      color: cssVar(link-reverse-hover-color);
+    }
+  }
+}

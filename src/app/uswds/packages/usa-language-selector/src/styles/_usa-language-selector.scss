@@ -1,0 +1,128 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+.usa-language {
+  @include u-flex("row", "align-center", "justify-end");
+  display: flex;
+  // padding: 0 0 units(0.5) units(1);
+  padding: cssVar(spacing-0) cssVar(spacing-0) cssVar(spacing-05) cssVar(spacing-1);
+  width: 100%;
+
+  &--small {
+    .usa-button {
+      @include u-padding-x(1.5);
+      @include u-padding-y(0);
+      // font-size: font-size($theme-header-font-family, "3xs");
+      font-size: cssVar(font-size-3xs);
+      // height: units(4);
+      height: cssVar(spacing-4);
+      // margin-top: 0.3rem;
+      margin-top: cssVar(spacing-05);
+      // min-width: units($theme-button-small-width);
+      min-width: cssVar(button-small-width);
+    }
+  }
+}
+
+.usa-language-container {
+  @include u-flex("align-center", "justify-end");
+  display: flex;
+}
+
+.usa-nav-container {
+  .usa-language-container {
+    align-self: center;
+    // margin-left: units(0);
+    margin-left: cssVar(spacing-0);
+    position: absolute;
+    // right: units(10);
+    right: cssVar(spacing-10);
+    // top: units(2);
+    top: cssVar(spacing-2);
+
+    @include at-media($theme-header-min-width) {
+      align-self: flex-end;
+      // margin-left: units(1.5);
+      margin-left: cssVar(spacing-105);
+      // margin-bottom: units(1);
+      margin-bottom: cssVar(spacing-1);
+      position: relative;
+      right: inherit;
+      // top: units(-2px);
+      top: cssVar(spacing-neg-2px);
+    }
+  }
+}
+
+.usa-language__link {
+  // margin-right: units(0);
+  margin-right: cssVar(spacing-0);
+}
+
+.usa-language__primary {
+  width: auto;
+}
+
+.usa-language__primary-item:last-of-type {
+  position: relative;
+
+  .usa-language__submenu {
+    @include u-pin-right;
+  }
+}
+
+.usa-language__submenu {
+  @include add-list-reset;
+  @include nav-sublist;
+  // background-color: color("primary-darker");
+  background-color: cssVar("primary-darker");
+  position: absolute;
+  // width: units("card-lg");
+  width: cssVar(spacing-card-lg);
+  z-index: z-index(400);
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  .usa-language__submenu-item {
+    a {
+      // color: color("white");
+      color: cssVar("white");
+      display: block;
+      // line-height: line-height($theme-navigation-font-family, 3);
+      line-height: cssVar(line-height-3);
+      // padding: 0;
+      // padding: units(1);
+      padding: cssVar(spacing-1);
+      text-decoration: none;
+
+      &:focus {
+        // outline-offset: units("neg-05");
+        outline-offset: cssVar(spacing-neg-05);
+      }
+
+      &:hover {
+        // color: color("white");
+        color: cssVar("white");
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.usa-language__submenu-list {
+  @include unstyled-list;
+
+  .usa-language__submenu-list-item {
+    // margin: 0;
+    margin: cssVar(spacing-0);
+    // font-size: font-size($theme-navigation-font-family, "2xs");
+    font-size: cssVar(font-size-2xs);
+
+    a {
+      // line-height: line-height($theme-navigation-font-family, 3);
+      line-height: cssVar(line-height-3);
+    }
+  }
+}

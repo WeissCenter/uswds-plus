@@ -1,0 +1,28 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+.usa-form-group {
+  // margin-top: units(3);
+  margin-top: cssVar(spacing-3);
+
+
+  // Let form-group handle top margin
+  .usa-label:first-child {
+    // margin-top: 0;
+    margin-top: cssVar(spacing-0);
+  }
+}
+
+// Block input elements
+.usa-form-group--error {
+  // @include u-border-left(0.5, "error-dark");
+  border: cssVar(spacing-05) solid cssVar("error-dark");
+  // padding-left: units(2);
+  padding-left: cssVar(spacing-2);
+  position: relative;
+
+  @include at-media("desktop") {
+    // margin-left: units(-2.5);
+    margin-left: cssVar(spacing-neg-205);
+  }
+}

@@ -1,0 +1,81 @@
+@use "sass:list";
+@use "../../functions"as *;
+@use "../../css-vars/utilities/functions"as *;
+
+// Outputs border-width of $value width
+@mixin u-border-width($value...) {
+  $value: unpack($value);
+  $important: null;
+  // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-spacing' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'border-width', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "border-width") {
+    $value: "spacing-" + strip-period($value);
+  }
+
+  @if has-important($value) {
+    $value: remove($value, "!important");
+
+    @if list.length($value)==1 {
+      $value: de-list($value);
+    }
+
+    $important: " !important";
+  }
+
+  // border-width: get-uswds-value("border-width", $value) #{$important};
+  border-width: cssVar($value);
+}
+
+@mixin u-border-x-width($value...) {
+  $value: unpack($value);
+  $important: null;
+  // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-spacing' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'border-width', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "border-width") {
+    $value: "spacing-" + strip-period($value);
+  }
+  @if has-important($value) {
+    $value: remove($value, "!important");
+
+    @if list.length($value)==1 {
+      $value: de-list($value);
+    }
+
+    $important: " !important";
+  }
+
+  // border-left-width: get-uswds-value("border-width", $value) #{$important};
+  // border-right-width: get-uswds-value("border-width", $value) #{$important};
+  border-left-width: cssVar($value);
+  border-right-width: cssVar($value);
+}
+
+@mixin u-border-y-width($value...) {
+  $value: unpack($value);
+  $important: null;
+  // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-spacing' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'border-width', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "border-width") {
+    $value: "spacing-" + strip-period($value);
+  }
+  @if has-important($value) {
+    $value: remove($value, "!important");
+
+    @if list.length($value)==1 {
+      $value: de-list($value);
+    }
+
+    $important: " !important";
+  }
+
+  // border-bottom-width: get-uswds-value("border-width", $value) #{$important};
+  // border-top-width: get-uswds-value("border-width", $value) #{$important};
+  border-bottom-width: cssVar($value);
+  border-top-width: cssVar($value);
+}

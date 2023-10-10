@@ -1,0 +1,32 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+.usa-label {
+  // @include typeset(
+  //   $theme-form-font-family,
+  //   $theme-body-font-size,
+  //   $theme-input-line-height
+  // );
+  font-family: cssVar(form-font-family);
+  font-size: cssVar(font-size-body);
+  line-height: cssVar(input-line-height);
+  display: block;
+  // font-weight: font-weight("normal");
+  font-weight: cssVar(font-weight-normal);
+  // margin-top: units(3);
+  margin-top: cssVar(spacing-3);
+  // max-width: units($theme-input-max-width);
+  max-width: cssVar(input-max-width);
+}
+
+.usa-label--error {
+  // font-weight: font-weight("bold");
+  font-weight: cssVar(font-weight-bold);
+  // margin-top: 0;
+  margin-top: cssVar(spacing-0);
+}
+
+.usa-label--required {
+  // color: color("error-dark");
+  color: cssVar(error-dark);
+}

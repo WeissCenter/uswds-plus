@@ -1,0 +1,9 @@
+@use "uswds-core/src/styles/mixins/helpers/set-text-and-bg" as *;
+@use "uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+body {
+  // @include set-text-and-bg($context: "Body");
+  color: cssVar(ink);
+  background-color: cssVar(body-background);
+  overflow-x: hidden;
+}

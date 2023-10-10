@@ -1,0 +1,118 @@
+@use "sass:list";
+@use "../../functions" as *;
+@use "../../css-vars/utilities/functions" as *;
+
+// Outputs border-radius
+
+@mixin u-radius($value...) {
+  $value: unpack($value);
+  $important: null;
+    // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-border-radius' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'border-radius', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "border-radius") {
+    $value: "border-radius-" + strip-period($value);
+  }
+  @if has-important($value) {
+    $value: remove($value, "!important");
+    @if list.length($value) == 1 {
+      $value: de-list($value);
+    }
+    $important: " !important";
+  }
+  // border-radius: get-uswds-value("border-radius", $value) #{$important};
+  border-radius: cssVar($value);
+}
+
+@mixin u-radius-bottom($value...) {
+  $value: unpack($value);
+  $important: null;
+      // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-border-radius' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'border-radius', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "border-radius") {
+    $value: "border-radius-" + strip-period($value);
+  }
+  @if has-important($value) {
+    $value: remove($value, "!important");
+    @if list.length($value) == 1 {
+      $value: de-list($value);
+    }
+    $important: " !important";
+  }
+  // border-bottom-left-radius: get-uswds-value("border-radius", $value) #{$important};
+  // border-bottom-right-radius: get-uswds-value("border-radius", $value) #{$important};
+  border-bottom-left-radius: cssVar($value);
+  border-bottom-right-radius: cssVar($value);
+}
+
+@mixin u-radius-left($value...) {
+  $value: unpack($value);
+  $important: null;
+      // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-border-radius' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'border-radius', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "border-radius") {
+    $value: "border-radius-" + strip-period($value);
+  }
+  @if has-important($value) {
+    $value: remove($value, "!important");
+    @if list.length($value) == 1 {
+      $value: de-list($value);
+    }
+    $important: " !important";
+  }
+  // border-bottom-left-radius: get-uswds-value("border-radius", $value) #{$important};
+  // border-top-left-radius: get-uswds-value("border-radius", $value) #{$important};
+  border-bottom-left-radius: cssVar($value);
+  border-top-left-radius: cssVar($value);
+}
+
+@mixin u-radius-right($value...) {
+  $value: unpack($value);
+  $important: null;
+      // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-border-radius' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'border-radius', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "border-radius") {
+    $value: "border-radius-" + strip-period($value);
+  }
+  @if has-important($value) {
+    $value: remove($value, "!important");
+    @if list.length($value) == 1 {
+      $value: de-list($value);
+    }
+    $important: " !important";
+  }
+  // border-bottom-right-radius: get-uswds-value("border-radius", $value) #{$important};
+  // border-top-right-radius: get-uswds-value("border-radius", $value) #{$important};
+  border-bottom-right-radius: cssVar($value);
+  border-top-right-radius: cssVar($value);
+}
+
+@mixin u-radius-top($value...) {
+  $value: unpack($value);
+  $important: null;
+      // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-border-radius' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'border-radius', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "border-radius") {
+    $value: "border-radius-" + strip-period($value);
+  }
+  @if has-important($value) {
+    $value: remove($value, "!important");
+    @if list.length($value) == 1 {
+      $value: de-list($value);
+    }
+    $important: " !important";
+  }
+  // border-top-left-radius: get-uswds-value("border-radius", $value) #{$important};
+  // border-top-right-radius: get-uswds-value("border-radius", $value) #{$important};
+  border-top-left-radius: cssVar($value);
+  border-top-right-radius: cssVar($value);
+}

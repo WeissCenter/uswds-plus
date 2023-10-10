@@ -1,0 +1,123 @@
+@use '../../functions/utilities/color.scss'as *;
+
+/**
+ * Usage:
+ *
+ * @include cssVarsFromProp((
+ *  color: #33b5e5,
+ *  background-color: #ff500a,
+ * ));
+ *
+ * Will result in
+ *
+ * root {
+ *    --${prefix}-color: #33b5e5;
+ *    --${prefix}-background-color: #ff500a;
+ * }
+ *
+ */
+@mixin cssVarsFromProp($css_variables, $prefix: usa) {
+
+    @each $name,
+    $value in $css_variables {
+        --#{$prefix}-#{$name}: #{$value};
+    }
+
+}
+
+/**
+ * Usage:
+ *
+ * Sets var to reference another var
+ *
+ * @include nestedCssVars((
+ *  "theme-banner-background-color": $theme-banner-background-color
+ * ));
+ *
+ * Will result in
+ *
+ * root {
+ *    --${prefix}-theme-banner-background-color: var(--${prefix}-base-light);
+ * }
+ *
+ */
+@mixin nestedCssVars($css_variables, $prefix: usa) {
+    @each $name,
+    $value in $css_variables {
+        --#{$prefix}-#{$name}: var(--#{$prefix}-#{$value});
+    }
+}
+
+/**
+ * Usage:
+ *
+ * Finds referenced value for passed in variable, allowing you to set 
+ * the value to the source value rather than setting "base-darkest" as a string
+ *
+ * @include cssVarsFromRef((
+ *  "bg-color": settings.$theme-body-background-color,
+ *  "base-ink": settings.$theme-color-base-ink
+ * ));
+ *
+ * Will result in
+ *
+ * root {
+ *    --${prefix}-bg-color: white;
+ *    --${prefix}-base-ink: ##1b1b1b;
+ * } 
+ *
+ * @include cssVarsFromRef((
+ *  "bg-color": settings.$theme-body-background-color,
+ *  "base-ink": settings.$theme-color-base-ink
+ * ), spacing, 'usa-spacing');
+ *
+ * Will result in
+ *
+ * root {
+ *    --usa-spacing-0: white;
+ *    --${prefix}-base-ink: ##1b1b1b;
+ * }
+ *
+ */
+ @mixin cssVarsFromRef($css_variables, $type: color, $prefix: usa) {
+    @each $name, $value in $css_variables {
+      $resolved-value: null;
+      
+      @if $type == color {
+        $resolved-value: color($value);
+      } @else if $type == radius {
+        // Still testing this out, might not be necessary if i find the right mapped collections to use instead of having to pull references here
+        $resolved-value: if(unitless($value), #{$value}px, $value);
+      } @else {
+        $resolved-value: $value;
+      }
+      
+      --#{$prefix}-#{$name}: #{$resolved-value};
+    }
+  }
+
+/**
+ * Usage:
+ *
+ * Updates an existing CSS variable, allowing you to scope 
+    the value for that variable within a class
+ * 
+ * .button {
+ *   background-color: cssVar(theme-color-primary);
+ *   &.__monochrome {
+ *       @include cssVarUpdate(theme-color-primary, #000);
+ *   }
+ * }
+ *
+ * Will result in
+ *
+ * .button {
+ *   background-color: var(--usa-theme-color-primary);
+ *   &.__monochrome {
+ *       --usa-theme-color-primary: #000;
+ * }
+ *
+ */
+@mixin updateCssVar ($name, $value: '', $prefix: usa) {
+    --#{$prefix}-#{$name}: #{$value};
+}

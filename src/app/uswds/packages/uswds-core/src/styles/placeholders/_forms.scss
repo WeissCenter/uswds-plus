@@ -1,0 +1,42 @@
+@use "../settings" as *;
+@use "../functions" as *;
+@use "../mixins" as *;
+@use "../variables/border-high-contrast.scss" as *;
+@use "../css-vars/utilities/functions" as *;
+
+// Helpers
+$input-select-margin-right: 1.5;
+
+%block-input-general {
+  @include border-box-sizing;
+  // @include typeset(
+  //   $theme-form-font-family,
+  //   $theme-body-font-size,
+  //   $theme-input-line-height
+  // );
+  font-family: cssVar('form-font-family');
+  font-size: cssVar('font-size-body');
+  line-height: cssVar('input-line-height');
+}
+
+%block-input-styles {
+  // @include u-border(1px, "base-dark");
+  border: cssVar(spacing-1px) solid cssVar(base-dark);
+  appearance: none;
+  // border-radius: 0;
+  border-radius: cssVar(input-border-radius);
+  // color: color("ink"); // standardize on firefox
+  color: cssVar(ink);
+  display: block;
+  // height: units(5);
+  min-height: cssVar(input-height);
+  // margin-top: units(1);
+  margin-top: cssVar(spacing-1);
+  // max-width: units($theme-input-max-width);
+  max-width: cssVar(input-max-width);
+  // padding: units(1);
+  // padding: cssVar(spacing-1);
+  padding: cssVar(input-padding-y) cssVar(input-padding-x);
+  background-color: cssVar(input-background-color);
+  width: 100%;
+}

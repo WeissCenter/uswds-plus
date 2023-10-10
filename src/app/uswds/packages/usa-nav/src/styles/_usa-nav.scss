@@ -1,0 +1,550 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+// Navigation helpers
+// ---------------------------------
+
+@mixin primary-nav-link {
+  // line-height: line-height($theme-navigation-font-family, 1);
+  line-height: cssVar('line-height-1');
+  // padding: units(2);
+  padding: cssVar(navigation-link-padding-y) cssVar(navigation-link-padding-x);
+}
+
+$nav-link-color: "base-dark";
+$sliding-panel-width: "card-lg";
+$nav-link-accordion-icon-size: 2.5;
+$nav-link-arrow-icon-size: 2;
+
+// Maps for icon masks
+$place-icon-defaults: (
+  "color": ButtonText,
+  "svg-height": 24,
+  "svg-width": 24,
+);
+
+$-chevron-icon-defaults: map-merge(
+  $place-icon-defaults,
+  (
+    "height": units($nav-link-arrow-icon-size),
+  )
+);
+
+$-mobile-icon-defaults: map-merge(
+  $place-icon-defaults,
+  (
+    "height": units($nav-link-accordion-icon-size),
+  )
+);
+
+$-add-icon: map-merge(
+  $-mobile-icon-defaults,
+  (
+    "name": "add",
+  )
+);
+
+$-remove-icon: map-merge(
+  $-mobile-icon-defaults,
+  (
+    "name": "remove",
+  )
+);
+
+$close-icon: map-merge(
+  $-mobile-icon-defaults,
+  (
+    "name": "close",
+  )
+);
+
+$expand-more-icon: map-merge(
+  $-chevron-icon-defaults,
+  (
+    "name": "expand_more",
+  )
+);
+
+$expand-less-icon: map-merge(
+  $-chevron-icon-defaults,
+  (
+    "name": "expand_less",
+  )
+);
+
+// TODO: Collect animations in a common location?
+@keyframes slidein-left {
+  from {
+    // transform: translateX(units($sliding-panel-width));
+    transform: translateX(cssVar(sliding-panel-width));
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+// Header navigation
+// ---------------------------------
+.usa-nav {
+  // @include typeset($theme-navigation-font-family, null, 1);
+  font-family: cssVar('navigation-font-family');
+  font-size: cssVar('font-size-body');
+  line-height: cssVar('line-height-1');
+
+  @include at-media-max($theme-header-min-width) {
+    @include u-pin("right");
+    @include u-pin("y");
+    position: fixed;
+    // background: color("white");
+    background: cssVar(navigation-background-color);
+    // border-right: 0;
+    border-right: cssVar(spacing-0);
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;
+    // padding: units(2);
+    padding: cssVar(navigation-sliding-panel-padding);
+    // width: units($sliding-panel-width);
+    width: cssVar(sliding-panel-width);
+    z-index: z-index(500);
+
+    &.is-visible {
+      animation: slidein-left 0.3s ease-in-out;
+      display: flex;
+    }
+  }
+
+  @include at-media($theme-header-min-width) {
+    float: right;
+    position: relative;
+  }
+
+  .usa-search {
+    @include at-media($theme-header-min-width) {
+      // margin-left: units(2);
+      margin-left: cssVar(navigation-sliding-panel-padding);
+    }
+  }
+
+  .usa-accordion {
+    // @include typeset($theme-navigation-font-family, null, 1);
+    font-family: cssVar('navigation-font-family');
+    font-size: cssVar('font-size-body');
+    line-height: cssVar('line-height-1');
+  }
+}
+
+// Primary navigation
+// ---------------------------------
+
+.usa-nav__primary {
+  // Until the $theme-header-width,
+  // use the usa-nav-list styles for the slide-in nav
+  @include at-media-max($theme-header-min-width) {
+    @include nav-list("nav");
+    // margin-top: units(3);
+    margin-top: cssVar(spacing-3);
+    order: 2;
+
+    a {
+      @include u-padding-y(1.5);
+    }
+  }
+
+  // At $theme-header-width and wider...
+  @include at-media($theme-header-min-width) {
+    display: flex;
+  }
+
+  // all nav items in the nav
+  .usa-nav__primary-item {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  // just level 1 nav items...
+  > .usa-nav__primary-item {
+    // line-height: line-height($theme-navigation-font-family, 2);
+    line-height: cssVar('line-height-2');
+
+    @include at-media($theme-header-min-width) {
+      // font-size: font-size($theme-navigation-font-family, "2xs");
+      font-size: cssVar('font-size-2xs');
+      // line-height: line-height($theme-navigation-font-family, 1);
+      line-height: cssVar('line-height-1');
+    }
+
+    // ...and their direct links
+    > a {
+      @include at-media($theme-header-min-width) {
+        @include primary-nav-link;
+        // color: color($nav-link-color);
+        color: cssVar(navigation-link-color);
+        display: block;
+        // font-weight: font-weight("bold");
+        font-weight: cssVar(font-weight-bold);
+        border-radius: cssVar(navigation-border-radius);
+
+        &:hover {
+          // color: color("primary");
+          color: cssVar(navigation-link-hover-color);
+        }
+      }
+    }
+  }
+
+  a {
+    @include at-media($theme-header-min-width) {
+      @include u-padding-y(1);
+    }
+  }
+
+  button {
+    $button-vertical-offset: 53%; // XXX: Magic number
+
+    @include button-unstyled;
+    position: relative; // Anchor spans chevron pseudo element
+    // color: color($nav-link-color);
+    color: cssVar(navigation-link-color);
+    // font-weight: font-weight("normal");
+    font-weight: cssVar(font-weight-normal);
+    // line-height: line-height($theme-navigation-font-family, 2);
+    line-height: cssVar('line-height-2');
+    // padding: units(1.5) units(2);
+    padding: cssVar(navigation-link-padding-y) cssVar(navigation-link-padding-x);
+    text-decoration: none;
+    border-radius: cssVar(navigation-border-radius);
+
+    @include at-media($theme-header-min-width) {
+      @include primary-nav-link;
+      // font-size: font-size($theme-navigation-font-family, "2xs");
+      font-size: cssVar('font-size-2xs');
+      // font-weight: font-weight("bold");
+      font-weight: cssVar(font-weight-bold);
+    }
+
+    @media (forced-colors: active) {
+      forced-color-adjust: auto;
+    }
+
+    &:hover {
+      // color: color("primary");
+      color: cssVar(navigation-link-hover-color);
+      // background-color: color("base-lightest");
+      background-color: cssVar(navigation-hover-background-color);
+      text-decoration: none;
+
+      @include at-media($theme-header-min-width) {
+        // background-color: transparent;
+        background-color: cssVar(navigation-hover-background-color);
+      }
+    }
+
+    // Remove icon set from usa-accordion.
+    // Also removed in _usa-banner.scss.
+    &[aria-expanded="false"],
+    &[aria-expanded="false"]:hover,
+    &[aria-expanded="true"],
+    &[aria-expanded="true"]:hover {
+      background-image: none;
+
+      @media (forced-colors: active) {
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    &[aria-expanded="false"] {
+      span {
+        @include place-icon($-add-icon, "after");
+
+        &::after {
+          position: absolute;
+          right: 0;
+
+          &:hover {
+            background-color: buttonText;
+          }
+        }
+      }
+
+      @include at-media($theme-header-min-width) {
+        span {
+          @include place-icon($expand-more-icon, "after");
+
+          &::after {
+            right: units(1.5);
+          }
+        }
+      }
+
+      &:hover {
+        @include at-media($theme-header-min-width) {
+          span::after {
+            // background-color: color(blue-warm-70v);
+            background-color: cssVar(primary);
+
+            @media (forced-colors: active) {
+              background-color: ButtonText;
+            }
+          }
+        }
+      }
+    }
+
+    &[aria-expanded="true"] {
+      span {
+        @include place-icon($-remove-icon, "after");
+
+        &::after {
+          position: absolute;
+          right: 0;
+
+          @media (forced-colors: active) {
+            background-color: ButtonText;
+          }
+        }
+      }
+
+      @include at-media($theme-header-min-width) {
+        background-image: none;
+        // background-color: color("primary-darker");
+        background-color: cssVar(navigation-active-background-color);
+        // color: color("white");
+        color: cssVar(navigation-active-text-color);
+
+        @include at-media($theme-header-min-width) {
+          span {
+            @include place-icon($expand-less-icon, "after");
+            &::after {
+              right: units(1.5);
+              // background-color: white;
+              // background-color: cssVar('white');
+              background-color: cssVar(navigation-background-color);
+              @media (forced-colors: active) {
+                background-color: ButtonText;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .usa-accordion__button {
+    border-radius: cssVar(navigation-border-radius);
+    span {
+      @include at-media($theme-header-min-width) {
+        margin-right: 0;
+        // padding-right: units(2);
+        padding-right: cssVar(navigation-link-padding-y) cssVar(navigation-link-padding-x);
+      }
+    }
+  }
+}
+
+// Secondary navigation
+// ---------------------------------
+
+.usa-nav__secondary {
+  // margin-top: units(2);
+  margin-top: cssVar(spacing-2);
+
+  @include at-media($theme-header-min-width) {
+    @include u-flex("column", "align-end");
+    // bottom: units(8); // XXX magic number
+    bottom: cssVar(spacing-8);
+    display: flex;
+    // font-size: font-size($theme-navigation-font-family, "2xs");
+    font-size: cssVar('font-size-2xs');
+    // margin-top: units(1);
+    margin-top: cssVar(spacing-1);
+    // min-width: calc(
+    //   #{$theme-search-min-width} + #{units($theme-button-small-width)}
+    // );
+    min-width: calc(
+      cssVar(search-min-width) + cssVar(button-small-width)
+    );
+    position: absolute;
+    // right: units($theme-site-margins-width);
+    right: cssVar(site-margins-width);
+  }
+
+  .usa-search {
+    // margin-top: units(2);
+    margin-top: cssVar(spacing-2);
+    width: 100%;
+
+    @include at-media($theme-header-min-width) {
+      // margin-left: 0;
+      margin-left: cssVar(spacing-0);
+      // margin-top: units(1);
+      margin-top: cssVar(spacing-1);
+    }
+  }
+}
+
+.usa-nav__secondary-links {
+  @include add-list-reset;
+  // line-height: line-height($theme-navigation-font-family, 3);
+  line-height: cssVar('line-height-3');
+  // margin-top: units(3);
+  margin-top: cssVar(spacing-3);
+
+  @include at-media($theme-header-min-width) {
+    // column-gap: units(1);
+    column-gap: cssVar(spacing-1);
+    display: flex;
+    flex-flow: row nowrap;
+    // line-height: line-height($theme-navigation-font-family, 1);
+    line-height: cssVar('line-height-1');
+    // margin-bottom: units(0.5);
+    margin-bottom: cssVar(spacing-05);
+    // margin-top: 0;
+    margin-top: cssVar(spacing-0);
+  }
+
+  .usa-nav__secondary-item {
+    @include at-media($theme-header-min-width) {
+      // padding-left: units(0.5);
+      padding-left: cssVar(spacing-05);
+
+      & + .usa-nav__secondary-item {
+        // border-left: 1px solid color("base-lighter");
+        border-left: cssVar(spacing-1px) solid cssVar(base-lighter);
+        // padding-left: units(1);
+        padding-left: cssVar(spacing-1);
+      }
+    }
+  }
+
+  a {
+    // color: color("base");
+    color: cssVar("base");
+    display: inline-block;
+    // font-size: font-size($theme-navigation-font-family, "2xs");
+    font-size: cssVar('font-size-2xs');
+    text-decoration: none;
+
+    &:hover {
+      // color: color("primary");
+      color: cssVar("primary");
+      text-decoration: underline;
+    }
+  }
+}
+
+// Navigation dropdowns
+// ---------------------------------
+
+.usa-nav__submenu {
+  @include at-media-max($theme-header-min-width) {
+    @include nav-sublist;
+  }
+
+  @include at-media($theme-header-min-width) {
+    @include add-list-reset;
+    // background-color: color("primary-darker");
+    background-color: cssVar(navigation-submenu-background-color);
+    // width: units("card-lg");
+    width: cssVar(navigation-submenu-width); 
+    position: absolute;
+    z-index: z-index(400);
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  .usa-nav__submenu-item {
+    @include at-media($theme-header-min-width) {
+      a {
+        // color: color("white");
+        color: cssVar(navigation-submenu-color);
+        // line-height: line-height($theme-navigation-font-family, 3);
+        line-height: cssVar('line-height-3');
+        display: block;
+        // padding: units(1);
+        padding: cssVar(spacing-1);
+
+        &:focus {
+          // outline-offset: units("neg-05");
+          outline-offset: cssVar(spacing-neg-05);
+        }
+
+        &:hover {
+          // color: color("white");
+          color: cssVar(navigation-submenu-hover-color);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.usa-nav__submenu-list {
+  @include unstyled-list;
+
+  .usa-nav__submenu-list-item {
+    // margin: 0;
+    margin: cssVar(spacing-0);
+    // font-size: font-size($theme-navigation-font-family, "2xs");
+    font-size: cssVar('font-size-2xs');
+
+    a {
+      // line-height: line-height($theme-navigation-font-family, 3);
+      line-height: cssVar('line-height-3');
+    }
+  }
+}
+
+// Navigation close button
+// ---------------------------------
+
+.usa-nav__close {
+  @include button-unstyled;
+  @include u-square($size-touch-target);
+  background-image: none;
+  color: currentColor;
+  flex: none;
+  float: right;
+  // margin: units(-1.5) units(-2) units(2) auto;
+  margin: cssVar(spacing-neg-105) cssVar(spacing-neg-2) cssVar(spacing-2) auto;
+  text-align: center;
+
+  @media (forced-colors: active) {
+    @include place-icon($close-icon, "before");
+    &::before {
+      background-color: buttonText;
+    }
+  }
+
+  &:hover {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  @include at-media($theme-header-min-width) {
+    display: none;
+  }
+
+  img {
+    // width: units(3);
+    width: cssVar(spacing-3);
+
+    @media (forced-colors: active) {
+      display: none;
+    }
+  }
+
+  + * {
+    clear: both;
+  }
+}
+
+.usa-js-mobile-nav--active {
+  overflow: hidden;
+}

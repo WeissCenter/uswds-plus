@@ -1,0 +1,26 @@
+@use "sass:list";
+@use "../../functions" as *;
+@use "../../css-vars/utilities/functions" as *;
+
+// Outputs line-height
+
+@mixin u-font-weight($value...) {
+  $value: unpack($value);
+  $important: null;
+      // Check to see if the value it a token or a string
+  // If token, then we need to add 'usa-spacing' prefix, otherwise pass it straight in
+  // Best way i can think to do that right now is to check and see if the value contains the word 'font-weight', if not it's a pre-established USWDS var
+  $value: #{$value};
+  @if not str-index($value, "font-weight") {
+    $value: "font-weight-" + strip-period($value);
+  }
+  @if has-important($value) {
+    $value: remove($value, "!important");
+    @if list.length($value) == 1 {
+      $value: de-list($value);
+    }
+    $important: " !important";
+  }
+  // font-weight: get-uswds-value("font-weight", $value...) #{$important};
+  font-weight: cssVar($value);
+}

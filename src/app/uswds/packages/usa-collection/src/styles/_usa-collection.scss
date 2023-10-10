@@ -1,0 +1,130 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+$collection-thumb-width: 10;
+$collection-thumb-width-mobile: 8;
+$collection-thumb-margin: 2;
+
+@include override-prose {
+  .usa-collection {
+    // @include typeset($theme-collection-font-family, "sm", 3);
+    font-family: cssVar(collection-font-family);
+    font-size: cssVar(font-size-sm);
+    line-height: cssVar(line-height-3);
+    @include usa-list;
+    @include u-padding-left(0);
+  }
+
+  .usa-collection__item {
+    @include usa-list-item;
+    @include unstyled-list;
+    @include u-align-items("align-start");
+    @include u-border-top(1px);
+    @include u-display("flex");
+    @include u-margin-y(2);
+    @include u-padding-top(2);
+  }
+}
+
+.usa-collection__img,
+.usa-collection__calendar-date {
+  @include media-block-img;
+  // width: units($collection-thumb-width-mobile);
+  width: cssVar(spacing-8);
+  // margin-right: units($collection-thumb-margin);
+  margin-right: cssVar(spacing-2);
+
+  @include at-media("tablet") {
+    // width: units($collection-thumb-width);
+    width: cssVar(spacing-10);
+  }
+}
+
+.usa-collection__body {
+  @include u-flex(1);
+}
+
+.usa-collection__heading {
+  // @include typeset($theme-collection-header-typeset);
+  font-family: cssVar(collection-header-font-family);
+  font-size: cssVar(collection-header-font-size);
+  line-height: cssVar(collection-header-line-height);
+  @include u-margin-bottom(0);
+  @include u-margin-top(0);
+}
+
+.usa-collection__description {
+  @include u-margin-y(1);
+}
+
+.usa-collection__meta {
+  @include unstyled-list;
+  @include u-margin-top(0.5);
+}
+
+.usa-collection__meta-item {
+  @include u-margin-top(0.5);
+  // @include typeset("ui", "2xs", 3);
+  font-family: cssVar(font-family-ui);
+  font-size: cssVar(font-size-2xs);
+  line-height: cssVar(line-height-3);
+  display: block;
+  margin-right: units(1);
+
+  &.usa-tag {
+    @include u-bg("base-lighter");
+    @include u-line-height("ui", 1);
+    @include u-padding-y(0.5);
+    @include u-text("ink");
+    display: inline-block;
+    margin-top: units(0.5);
+
+    &--new {
+      @include u-bg("accent-warm-dark");
+      @include u-text("white");
+    }
+  }
+}
+
+.usa-collection__calendar-date {
+  text-decoration: none;
+}
+
+.usa-collection__calendar-date-month,
+.usa-collection__calendar-date-day {
+  // @include u-font("ui", 6);
+  font-family: cssVar(font-ui);
+  font-size: cssVar(font-size-md);
+  display: block;
+  // font-weight: fw("bold");
+  font-weight: cssVar("font-weight-bold");
+  padding: units(0.5);
+  text-align: center;
+
+  @include at-media("tablet") {
+    padding: units(1);
+  }
+}
+
+.usa-collection__calendar-date-month {
+  @include u-radius-top("sm");
+  // background-color: color("primary");
+  background-color: cssVar("primary");
+  // color: color("white");
+  color: cssVar("white");
+}
+
+.usa-collection__calendar-date-day {
+  @include u-radius-bottom("sm");
+  // border: 1px solid color("primary");
+  border: cssVar(spacing-1px) solid cssVar("primary");
+  // color: color("primary");
+  color: cssVar("primary");
+}
+
+.usa-collection--condensed {
+  .usa-collection__item {
+    @include u-margin-y(1);
+    @include u-padding-top(1);
+  }
+}

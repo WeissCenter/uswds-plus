@@ -1,0 +1,130 @@
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+// Variables
+$triangle-size: 5px;
+
+/* Tooltips */
+.usa-tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.usa-tooltip__trigger {
+  cursor: pointer;
+
+  > svg {
+    display: block;
+    pointer-events: none;
+  }
+}
+
+.usa-tooltip__body,
+.usa-tooltip__body--top {
+  transition: opacity 0.08s ease-in-out;
+  // background-color: color($theme-tooltip-background-color);
+  background-color: cssVar(tooltip-background-color);
+  // border-radius: radius($theme-button-border-radius);
+  border-radius: cssVar(button-border-radius);
+  // color: color($theme-tooltip-font-color);
+  color: cssVar(tooltip-text-color);
+  display: none;
+  // font-size: size("ui", $theme-tooltip-font-size);
+  font-size: cssVar(tooltip-font-size);
+  // padding: units(1);
+  padding: cssVar(tooltip-padding-y) cssVar(tooltip-padding-x);
+  pointer-events: none;
+  width: auto;
+  white-space: pre;
+  z-index: 100000;
+  position: absolute;
+  /* positioning is completed with JS */
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    // border-left: $triangle-size solid transparent;
+    border-left: cssVar(tooltip-triangle-size) solid transparent;
+    // border-right: $triangle-size solid transparent;
+    border-right: cssVar(tooltip-triangle-size) solid transparent;
+    // border-top: $triangle-size solid color($theme-tooltip-background-color);
+    border-top: cssVar(tooltip-triangle-size) solid cssVar(tooltip-background-color);
+    position: absolute;
+    // bottom: -$triangle-size;
+    bottom: calc(-1 * cssVar(tooltip-triangle-size));
+    left: 50%;
+    // margin-left: -$triangle-size;
+    margin-left: calc(-1 * cssVar(tooltip-triangle-size));
+  }
+}
+
+.usa-tooltip__body--wrap {
+  width: 100%;
+  white-space: normal;
+  text-align: center;
+  min-width: calc(100vw / 2);
+}
+
+.usa-tooltip__body.is-set {
+  display: block;
+}
+
+.usa-tooltip__body.is-visible {
+  opacity: 1;
+}
+
+.usa-tooltip__body--bottom {
+  &:after {
+    // border-left: $triangle-size solid transparent;
+    border-left: cssVar(tooltip-triangle-size) solid transparent;
+    // border-right: $triangle-size solid transparent;
+    border-right: cssVar(tooltip-triangle-size) solid transparent;
+    // border-bottom: $triangle-size solid color($theme-tooltip-background-color);
+    border-bottom: cssVar(tooltip-triangle-size) solid cssVar(tooltip-background-color);
+    border-top: 0;
+    bottom: auto;
+    // top: -$triangle-size;
+    top: calc(-1 * cssVar(tooltip-triangle-size));
+  }
+}
+
+.usa-tooltip__body--right {
+  &:after {
+    // border-top: $triangle-size solid transparent;
+    // border-bottom: $triangle-size solid transparent;
+    // border-right: $triangle-size solid color($theme-tooltip-background-color);
+    border-top: cssVar(tooltip-triangle-size) solid transparent;
+    border-bottom: cssVar(tooltip-triangle-size) solid transparent;
+    border-right: cssVar(tooltip-triangle-size) solid cssVar(tooltip-background-color);
+    border-left: 0;
+    right: auto;
+    top: 50%;
+    bottom: 0;
+    // left: -$triangle-size;
+    left: calc(-1 * cssVar(tooltip-triangle-size));
+    // margin: -$triangle-size 0 0 0;
+    margin: calc(-1 * cssVar(tooltip-triangle-size)) 0 0 0;
+  }
+}
+
+.usa-tooltip__body--left {
+  &:after {
+    // border-top: $triangle-size solid transparent;
+    // border-bottom: $triangle-size solid transparent;
+    // border-left: $triangle-size solid color($theme-tooltip-background-color);
+    border-top: cssVar(tooltip-triangle-size) solid transparent;
+    border-bottom: cssVar(tooltip-triangle-size) solid transparent;
+    border-left: cssVar(tooltip-triangle-size) solid cssVar(tooltip-background-color);
+    border-right: 0;
+    // right: -$triangle-size;
+    right: calc(-1 * cssVar(tooltip-triangle-size));
+    top: 50%;
+    bottom: 0;
+    left: auto;
+    // margin: -$triangle-size 0 0 0;
+    margin: calc(-1 * cssVar(tooltip-triangle-size)) 0 0 0;
+  }
+}

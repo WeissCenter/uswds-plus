@@ -1,0 +1,86 @@
+@use "sass:list";
+
+@use "uswds-core" as *;
+@use "../../../uswds-core/src/styles/css-vars/utilities/functions" as *;
+
+$summary-box-context: "Summary Box";
+
+.usa-summary-box {
+  // @include typeset($theme-summary-box-font-family);
+  font-family: cssVar('summary-box-font-family');
+  font-size: cssVar('summary-box-font-size');
+  line-height: cssVar('summary-box-line-height');
+
+  @include border-box-sizing;
+  // @include set-text-and-bg(
+  //   $theme-summary-box-background-color,
+  //   $theme-summary-box-text-color,
+  //   $context: $summary-box-context
+  // );
+  background-color: cssVar(summary-box-background-color);
+  color: cssVar(summary-box-text-color);
+  // @include u-radius($theme-summary-box-border-radius);
+  border-radius: cssVar(summary-box-border-radius);
+  // border: $theme-summary-box-border-width color($theme-summary-box-border-color)
+  //   solid;
+  border: cssVar(summary-box-border-width) solid cssVar(summary-box-border-color);
+  // padding: units(3);
+  padding: cssVar(summary-box-padding-y) cssVar(summary-box-padding-x);
+  position: relative;
+
+  .usa-list {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  * + & {
+    // margin-top: units(2);
+    margin-top: cssVar(spacing-2);
+  }
+}
+
+.usa-summary-box__heading {
+  // @include typeset($theme-summary-box-font-family, "lg", 2);
+  font-family: cssVar(summary-box-font-family);
+  font-size: cssVar(summary-box-heading-font-size);
+  line-height: cssVar(line-height-2);
+  margin-top: 0;
+  // margin-bottom: units(1);
+  margin-bottom: cssVar(spacing-1);
+}
+
+.usa-summary-box__text {
+  @include u-margin-y(0);
+}
+
+.usa-summary-box__text:only-child {
+  // margin-bottom: $theme-summary-box-border-width;
+  margin-bottom: cssVar(summary-box-border-width);
+  // padding-top: units(0.5);
+  padding-top: cssVar(spacing-05);
+}
+
+.usa-summary-box__link {
+  // @include set-link-from-bg(
+  //   $theme-summary-box-background-color,
+  //   $theme-summary-box-link-color,
+  //   $context: $summary-box-context
+  // );
+  color: cssVar(summary-box-link-color);
+  &[href^="#"] {
+    $link-tokens: get-link-tokens-from-bg(
+      $theme-summary-box-background-color,
+      $theme-summary-box-link-color,
+      $context: $summary-box-context
+    );
+    &:visited {
+      // color: color(list.nth($link-tokens, 1));
+      color: cssVar(summary-box-link-color-visited);
+    }
+    &:hover {
+      // color: color(list.nth($link-tokens, 2));
+      color: cssVar(summary-box-link-color-hover);
+    }
+  }
+}
