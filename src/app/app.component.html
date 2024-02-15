@@ -1,114 +1,32 @@
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-<section class="usa-banner" aria-label="Official website of the United States government">
-  <div class="usa-accordion">
-    <header class="usa-banner__header">
-      <div class="usa-banner__inner">
-        <div class="grid-col-auto">
-          <img aria-hidden="true" class="usa-banner__header-flag" src="/assets/img/us_flag_small.png" alt="" />
-        </div>
-        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
-          <p class="usa-banner__header-text">
-            An official website of the United States government
-          </p>
-          <p class="usa-banner__header-action">Here’s how you know</p>
-        </div>
-        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false"
-          aria-controls="gov-banner-default">
-          <span class="usa-banner__button-text">Here’s how you know</span>
-        </button>
-      </div>
-    </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
-      <div class="grid-row grid-gap-lg">
-        <div class="usa-banner__guidance tablet:grid-col-6">
-          <img class="usa-banner__icon usa-media-block__img" src="/assets/img/icon-dot-gov.svg" role="img" alt=""
-            aria-hidden="true" />
-          <div class="usa-media-block__body">
-            <p>
-              <strong>Official websites use .gov</strong><br />A
-              <strong>.gov</strong> website belongs to an official government
-              organization in the United States.
-            </p>
-          </div>
-        </div>
-        <div class="usa-banner__guidance tablet:grid-col-6">
-          <img class="usa-banner__icon usa-media-block__img" src="/assets/img/icon-https.svg" role="img" alt=""
-            aria-hidden="true" />
-          <div class="usa-media-block__body">
-            <p>
-              <strong>Secure .gov websites use HTTPS</strong><br />A
-              <strong>lock</strong> (
-              <span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64"
-                  class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description" focusable="false">
-                  <title id="banner-lock-title">Lock</title>
-                  <desc id="banner-lock-description">
-                    Locked padlock icon
-                  </desc>
-                  <path fill="#000000" fill-rule="evenodd"
-                    d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
-                </svg> </span>) or <strong>https://</strong> means you’ve safely connected to
-              the .gov website. Share sensitive information only on official,
-              secure websites.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <div class="usa-overlay"></div>
-<header class="usa-header usa-header--extended">
+<header class="usa-header margin-top-3 usa-header--extended">
   <div class="usa-navbar">
     <div class="usa-logo">
-      <em class="usa-logo__text"><a href="/" title="Mark's Super Neat Site">Mark's Super Neat Site</a></em>
+      <em class="usa-logo__text"><a href="/" title="Mark's Super Neat Site">US/AEM/WDS</a></em>
     </div>
     <button type="button" class="usa-menu-btn">Menu</button>
   </div>
   <nav aria-label="Primary navigation" class="usa-nav">
     <div class="usa-nav__inner">
       <button type="button" class="usa-nav__close">
-        <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+        <img src="/assets/usa-icons/close.svg" role="img" alt="Close" />
       </button>
       <ul class="usa-nav__primary usa-accordion">
         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false"
-            aria-controls="extended-nav-section-one">
-            <span>&lt;Current section&gt;</span>
-          </button>
-          <ul id="extended-nav-section-one" class="usa-nav__submenu">
-            <li class="usa-nav__submenu-item">
-              <a href="javascript:void(0);"><span>&lt;Navigation link&gt;</span></a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="javascript:void(0);"><span>&lt;Navigation link&gt;</span></a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="javascript:void(0);"><span>&lt;Navigation link&gt;</span></a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="javascript:void(0);"><span>&lt;Navigation link&gt;</span></a>
-            </li>
-          </ul>
+          <a routerLink="components" routerLinkActive="usa-current" class="usa-nav-link">
+            <span>
+              Components
+            </span>
+          </a>
         </li>
         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false"
-            aria-controls="extended-nav-section-two">
-            <span>&lt;Section&gt;</span>
-          </button>
-          <ul id="extended-nav-section-two" class="usa-nav__submenu">
-            <li class="usa-nav__submenu-item">
-              <a href="javascript:void(0);"><span>&lt;Navigation link&gt;</span></a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="javascript:void(0);"><span>&lt;Navigation link&gt;</span></a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="javascript:void(0);"><span>&lt;Navigation link&gt;</span></a>
-            </li>
-          </ul>
-        </li>
-        <li class="usa-nav__primary-item">
-          <a href="javascript:void(0);" class="usa-nav-link"><span>&lt;Simple link&gt;</span></a>
+          <a routerLink="core" routerLinkActive="usa-current" class="usa-nav-link">
+            <span>
+              Core
+            </span>
+          </a>
         </li>
       </ul>
       <div class="usa-nav__secondary">
@@ -118,7 +36,7 @@
             <label class="usa-sr-only" for="search-field">Search</label>
             <input class="usa-input" id="search-field" type="search" name="search" />
             <button class="usa-button" type="submit">
-              <img src="/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+              <img src="/assets/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
             </button>
           </form>
         </section>
@@ -126,1476 +44,317 @@
     </div>
   </nav>
 </header>
-<main id="main-content">
-  <section class="usa-hero" aria-label="Introduction">
+<div class="grid-container">
+
+  <router-outlet></router-outlet>
+  <div class="usa-section">
     <div class="grid-container">
-      <div class="usa-hero__callout">
-        <h1 class="usa-hero__heading">
-          <span class="usa-hero__heading--alt">Hero callout:</span>Bring
-          attention to a project priority
-        </h1>
-        <p>
-          Support the callout with some short explanatory text. You don’t need
-          more than a couple of sentences.
-        </p>
-        <a class="usa-button" href="">Call to action</a>
-      </div>
-    </div>
-  </section>
-  <section class="usa-section">
-    <div class="grid-container">
-      <ul class="usa-card-group">
-        <li class="usa-card tablet:grid-col-4">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Card</h2>
-            </div>
-            <div class="usa-card__body">
+      <div class="grid-row grid-gap">
+        <div class="display-flex flex-column gap-2 desktop:grid-col-2">
+          <div class="display-flex flex-column gap-1">
+            <h5>Font size</h5>
+            <button class="usa-button usa-button--outline" (click)="setA11y('font-size', 'default')">Default</button>
+            <button class="usa-button usa-button--outline" (click)="setA11y('font-size','large')">Large</button>
+            <button class="usa-button usa-button--outline" (click)="setA11y('font-size','larger')">Larger</button>
+            <button class="usa-button usa-button--outline" (click)="setA11y('font-size','largest')">Largest</button>
+          </div>
+          <div class="display-flex flex-column margin-top-1 gap-1">
+            <h5>Readability</h5>
+            <button class="usa-button usa-button--outline" (click)="setA11y('line-height', 'default')">Default</button>
+            <button class="usa-button usa-button--outline" (click)="setA11y('line-height','large')">Large</button>
+            <button class="usa-button usa-button--outline" (click)="setA11y('line-height','larger')">Larger</button>
+            <button class="usa-button usa-button--outline" (click)="setA11y('line-height','largest')">Largest</button>
+          </div>
+          <div class="display-flex flex-column margin-top-1 gap-1">
+            <h5>Font family</h5>
+            <button class="usa-button usa-button--outline" (click)="setA11y('font-family', 'default')">Default</button>
+            <button class="usa-button usa-button--outline" (click)="setA11y('font-family','dyslexic')">Dyslexia
+              friendly</button>
+            <button class="usa-button usa-button--outline" (click)="setA11y('font-family','mono')">Monospace</button>
+          </div>
+        </div>
+        <main class="display-flex flex-column usa-prose desktop:grid-col-9 usa-layout-docs" id="main-content">
+          <h1>Page heading (h1)</h1>
+          <p class="usa-intro usa-lead">
+            The page heading communicates the main focus of the page. Make your
+            page heading descriptive and keep it succinct.
+          </p>
+          <h2 id="section-heading-h2">Section heading (h2)</h2>
+          <p>
+            These headings introduce, respectively, sections and subsections
+            within your body copy. As you create these headings, follow the same
+            guidelines that you use when writing section headings: Be succinct,
+            descriptive, and precise.
+          </p>
+          <h3 id="section-heading-h3">Subsection heading (h3)</h3>
+          <p>
+            The particulars of your body copy will be determined by the topic of
+            your page. Regardless of topic, it’s a good practice to follow the
+            inverted pyramid structure when writing copy: Begin with the
+            information that’s most important to your users and then present
+            information of less importance.
+          </p>
+          <p>
+            Keep each section and subsection focused — a good approach is to
+            include one theme (topic) per section.
+          </p>
+          <h4 id="section-heading-h4">Subsection heading (h4)</h4>
+          <p>
+            Use the side navigation menu to help your users quickly skip to
+            different sections of your page. The menu is best suited to
+            displaying a hierarchy with one to three levels and, as we
+            mentioned, to display the sub-navigation of a given page.
+          </p>
+          <p>
+            Read the full documentation on our side navigation on the component
+            page.
+          </p>
+          <h5 id="section-heading-h5">Heading (h5)</h5>
+          <h6 id="section-heading-h6">Heading (h6)</h6>
+          <form class="usa-form usa-form--large">
+            <fieldset class="usa-fieldset">
+              <legend class="usa-legend usa-legend--large">Mailing address</legend>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
-                tenetur quo cupiditate, eaque qui officia recusandae.
+                Required fields are marked with an asterisk (<abbr title="required"
+                  class="usa-hint usa-hint--required">*</abbr>).
+              </p>
+              <label class="usa-label" for="mailing-address-1">Street address</label>
+              <input class="usa-input" id="mailing-address-1" name="mailing-address-1"
+                placeholder="Street address..." />
+              <label class="usa-label" for="mailing-address-2">Street address line 2</label>
+              <input class="usa-input" id="mailing-address-2" name="mailing-address-2" />
+              <label class="usa-label" for="city">City
+                <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+              <input class="usa-input" id="city" name="city" required />
+              <label class="usa-label" for="state">State, territory, or military post
+                <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+              <select class="usa-select" id="state" name="state">
+                <option value>- Select -</option>
+                <option value="AL">AL - Alabama</option>
+                <option value="AK">AK - Alaska</option>
+                <option value="AS">AS - American Samoa</option>
+                <option value="AZ">AZ - Arizona</option>
+                <option value="AR">AR - Arkansas</option>
+                <option value="CA">CA - California</option>
+                <option value="CO">CO - Colorado</option>
+                <option value="CT">CT - Connecticut</option>
+                <option value="DE">DE - Delaware</option>
+                <option value="DC">DC - District of Columbia</option>
+                <option value="FL">FL - Florida</option>
+                <option value="GA">GA - Georgia</option>
+                <option value="GU">GU - Guam</option>
+                <option value="HI">HI - Hawaii</option>
+                <option value="ID">ID - Idaho</option>
+                <option value="IL">IL - Illinois</option>
+                <option value="IN">IN - Indiana</option>
+                <option value="IA">IA - Iowa</option>
+                <option value="KS">KS - Kansas</option>
+                <option value="KY">KY - Kentucky</option>
+                <option value="LA">LA - Louisiana</option>
+                <option value="ME">ME - Maine</option>
+                <option value="MD">MD - Maryland</option>
+                <option value="MA">MA - Massachusetts</option>
+                <option value="MI">MI - Michigan</option>
+                <option value="MN">MN - Minnesota</option>
+                <option value="MS">MS - Mississippi</option>
+                <option value="MO">MO - Missouri</option>
+                <option value="MT">MT - Montana</option>
+                <option value="NE">NE - Nebraska</option>
+                <option value="NV">NV - Nevada</option>
+                <option value="NH">NH - New Hampshire</option>
+                <option value="NJ">NJ - New Jersey</option>
+                <option value="NM">NM - New Mexico</option>
+                <option value="NY">NY - New York</option>
+                <option value="NC">NC - North Carolina</option>
+                <option value="ND">ND - North Dakota</option>
+                <option value="MP">MP - Northern Mariana Islands</option>
+                <option value="OH">OH - Ohio</option>
+                <option value="OK">OK - Oklahoma</option>
+                <option value="OR">OR - Oregon</option>
+                <option value="PA">PA - Pennsylvania</option>
+                <option value="PR">PR - Puerto Rico</option>
+                <option value="RI">RI - Rhode Island</option>
+                <option value="SC">SC - South Carolina</option>
+                <option value="SD">SD - South Dakota</option>
+                <option value="TN">TN - Tennessee</option>
+                <option value="TX">TX - Texas</option>
+                <option value="UM">UM - United States Minor Outlying Islands</option>
+                <option value="UT">UT - Utah</option>
+                <option value="VT">VT - Vermont</option>
+                <option value="VI">VI - Virgin Islands</option>
+                <option value="VA">VA - Virginia</option>
+                <option value="WA">WA - Washington</option>
+                <option value="WV">WV - West Virginia</option>
+                <option value="WI">WI - Wisconsin</option>
+                <option value="WY">WY - Wyoming</option>
+                <option value="AA">AA - Armed Forces Americas</option>
+                <option value="AE">AE - Armed Forces Africa</option>
+                <option value="AE">AE - Armed Forces Canada</option>
+                <option value="AE">AE - Armed Forces Europe</option>
+                <option value="AE">AE - Armed Forces Middle East</option>
+                <option value="AP">AP - Armed Forces Pacific</option>
+              </select>
+              <label class="usa-label" for="zip">ZIP code</label>
+              <input class="usa-input usa-input--medium" id="zip" name="zip" pattern="[\d]{5}(-[\d]{4})?" />
+              <label class="usa-label" for="urbanization">Urbanization (Puerto Rico only)</label>
+              <input class="usa-input" id="urbanization" name="urbanization" />
+            </fieldset>
+          </form>
+          <div class="usa-accordion margin-top-10">
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="a1">
+                First Amendment
+              </button>
+            </h4>
+            <div id="a1" class="usa-accordion__content usa-prose">
+              <p>
+                Congress shall make no law respecting an establishment of religion, or
+                prohibiting the free exercise thereof; or abridging the freedom of speech,
+                or of the press; or the right of the people peaceably to assemble, and to
+                petition the Government for a redress of grievances.
               </p>
             </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button">Visit Florida Keys</a>
-            </div>
-          </div>
-        </li>
-        <li class="usa-card tablet:grid-col-4">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Card with Media</h2>
-            </div>
-            <div class="usa-card__media">
-              <div class="usa-card__img">
-                <img
-                  src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-                  alt="A placeholder image"
-                />
-              </div>
-            </div>
-            <div class="usa-card__body">
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="a2">
+                Second Amendment
+              </button>
+            </h4>
+            <div id="a2" class="usa-accordion__content usa-prose">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
-                tenetur quo cupiditate, eaque qui officia recusandae.
+                A well regulated Militia, being necessary to the security of a free State,
+                the right of the people to keep and bear Arms, shall not be infringed.
+              </p>
+              <ul>
+                <li>This is a list item</li>
+                <li>Another list item</li>
+              </ul>
+            </div>
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="a3">
+                Third Amendment
+              </button>
+            </h4>
+            <div id="a3" class="usa-accordion__content usa-prose">
+              <p>
+                No Soldier shall, in time of peace be quartered in any house, without the
+                consent of the Owner, nor in time of war, but in a manner to be prescribed
+                by law.
               </p>
             </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button">Visit Florida Keys</a>
-            </div>
-          </div>
-        </li>
-        <li class="usa-card tablet:grid-col-4 usa-card--header-first">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Media with header first</h2>
-            </div>
-            <div class="usa-card__media usa-card__media--exdent">
-              <div class="usa-card__img">
-                <img
-                  src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-                  alt="A placeholder image"
-                />
-              </div>
-            </div>
-            <div class="usa-card__body">
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="a4">
+                Fourth Amendment
+              </button>
+            </h4>
+            <div id="a4" class="usa-accordion__content usa-prose">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                possimus similique nemo odit doloremque laudantium?
+                The right of the people to be secure in their persons, houses, papers, and
+                effects, against unreasonable searches and seizures, shall not be
+                violated, and no Warrants shall issue, but upon probable cause, supported
+                by Oath or affirmation, and particularly describing the place to be
+                searched, and the persons or things to be seized.
               </p>
             </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button">Visit Florida Keys</a>
-            </div>
-          </div>
-        </li>
-        <li class="usa-card tablet:grid-col-4">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Inset media</h2>
-            </div>
-            <div class="usa-card__media usa-card__media--inset">
-              <div class="usa-card__img">
-                <img
-                  src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-                  alt="A placeholder image"
-                />
-              </div>
-            </div>
-            <div class="usa-card__body">
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="a5">
+                Fifth Amendment
+              </button>
+            </h4>
+            <div id="a5" class="usa-accordion__content usa-prose">
               <p>
-                Etiam vitae sodales metus. Fusce id orci dignissim, efficitur risus
-                eget, tempus odio. Donec lectus ante, auctor eget cursus sed,
-                convallis quis magna. Orci varius natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. Mauris mattis tellus
-                bibendum aliquet malesuada.
+                No person shall be held to answer for a capital, or otherwise infamous
+                crime, unless on a presentment or indictment of a Grand Jury, except in
+                cases arising in the land or naval forces, or in the Militia, when in
+                actual service in time of War or public danger; nor shall any person be
+                subject for the same offence to be twice put in jeopardy of life or limb;
+                nor shall be compelled in any criminal case to be a witness against
+                himself, nor be deprived of life, liberty, or property, without due
+                process of law; nor shall private property be taken for public use,
+                without just compensation.
               </p>
             </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button">Visit Florida Keys</a>
-            </div>
           </div>
-        </li>
-        <li class="usa-card tablet:grid-col-4">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Exdent media</h2>
-            </div>
-            <div class="usa-card__media usa-card__media--exdent">
-              <div class="usa-card__img">
-                <img
-                  src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
-                  alt="A placeholder image"
-                />
-              </div>
-            </div>
-            <div class="usa-card__body">
+
+          <div class="usa-accordion margin-top-2 usa-accordion--bordered">
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="b-a1">
+                First Amendment
+              </button>
+            </h4>
+            <div id="b-a1" class="usa-accordion__content usa-prose">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                possimus similique nemo odit doloremque laudantium?
+                Congress shall make no law respecting an establishment of religion, or
+                prohibiting the free exercise thereof; or abridging the freedom of speech,
+                or of the press; or the right of the people peaceably to assemble, and to
+                petition the Government for a redress of grievances.
               </p>
             </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button">Visit Florida Keys</a>
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="b-a2">
+                Second Amendment
+              </button>
+            </h4>
+            <div id="b-a2" class="usa-accordion__content usa-prose">
+              <p>
+                A well regulated Militia, being necessary to the security of a free State,
+                the right of the people to keep and bear Arms, shall not be infringed.
+              </p>
+              <ul>
+                <li>This is a list item</li>
+                <li>Another list item</li>
+              </ul>
+            </div>
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="b-a3">
+                Third Amendment
+              </button>
+            </h4>
+            <div id="b-a3" class="usa-accordion__content usa-prose">
+              <p>
+                No Soldier shall, in time of peace be quartered in any house, without the
+                consent of the Owner, nor in time of war, but in a manner to be prescribed
+                by law.
+              </p>
+            </div>
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="b-a4">
+                Fourth Amendment
+              </button>
+            </h4>
+            <div id="b-a4" class="usa-accordion__content usa-prose">
+              <p>
+                The right of the people to be secure in their persons, houses, papers, and
+                effects, against unreasonable searches and seizures, shall not be
+                violated, and no Warrants shall issue, but upon probable cause, supported
+                by Oath or affirmation, and particularly describing the place to be
+                searched, and the persons or things to be seized.
+              </p>
+            </div>
+            <h4 class="usa-accordion__heading">
+              <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="b-a5">
+                Fifth Amendment
+              </button>
+            </h4>
+            <div id="b-a5" class="usa-accordion__content usa-prose">
+              <p>
+                No person shall be held to answer for a capital, or otherwise infamous
+                crime, unless on a presentment or indictment of a Grand Jury, except in
+                cases arising in the land or naval forces, or in the Militia, when in
+                actual service in time of War or public danger; nor shall any person be
+                subject for the same offence to be twice put in jeopardy of life or limb;
+                nor shall be compelled in any criminal case to be a witness against
+                himself, nor be deprived of life, liberty, or property, without due
+                process of law; nor shall private property be taken for public use,
+                without just compensation.
+              </p>
             </div>
           </div>
-        </li>
-      </ul>
-      <h3>Color</h3>
-      <button type="button" class="usa-button" (click)="setTheme('light')">Apply Default Theme</button>
-      <button type="button" class="usa-button" (click)="setTheme('dark')">Apply "Dark" Theme</button>
-      <button type="button" class="usa-button" (click)="setTheme('monochrome')">Apply "Monochrome" Theme</button>
-      <button type="button" class="usa-button" (click)="setTheme('mint')">Apply "Mint" Theme</button>
-      <h3>Font Size</h3>
-      <button type="button" class="usa-button" (click)="seFontSize('')">Apply Default</button>
-      <button type="button" class="usa-button" (click)="seFontSize('125')">Apply 125%</button>
-      <button type="button" class="usa-button" (click)="seFontSize('150')">Apply 150%</button>
-    </div>
-
-  </section>
-  <section class="usa-section">
-    <div class="grid-container">
-      <table class="usa-table">
-        <caption>
-          Bordered table
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Document title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Declaration of Independence</th>
-            <td>
-              Statement adopted by the Continental Congress declaring independence
-              from the British Empire.
-            </td>
-            <td>1776</td>
-          </tr>
-          <tr>
-            <th scope="row">Bill of Rights</th>
-            <td>
-              The first ten amendments of the U.S. Constitution guaranteeing rights
-              and freedoms.
-            </td>
-            <td>1791</td>
-          </tr>
-          <tr>
-            <th scope="row">Declaration of Sentiments</th>
-            <td>
-              A document written during the Seneca Falls Convention outlining the
-              rights that American women should be entitled to as citizens.
-            </td>
-            <td>1848</td>
-          </tr>
-          <tr>
-            <th scope="row">Emancipation Proclamation</th>
-            <td>
-              An executive order granting freedom to slaves in designated southern
-              states.
-            </td>
-            <td>1863</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="usa-table usa-table--striped">
-        <caption>
-          Bordered table with horizontal stripes
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Document title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Declaration of Independence</th>
-            <td>
-              Statement adopted by the Continental Congress declaring independence
-              from the British Empire.
-            </td>
-            <td>1776</td>
-          </tr>
-          <tr>
-            <th scope="row">Bill of Rights</th>
-            <td>
-              The first ten amendments of the U.S. Constitution guaranteeing rights
-              and freedoms.
-            </td>
-            <td>1791</td>
-          </tr>
-          <tr>
-            <th scope="row">Declaration of Sentiments</th>
-            <td>
-              A document written during the Seneca Falls Convention outlining the
-              rights that American women should be entitled to as citizens.
-            </td>
-            <td>1848</td>
-          </tr>
-          <tr>
-            <th scope="row">Emancipation Proclamation</th>
-            <td>
-              An executive order granting freedom to slaves in designated southern
-              states.
-            </td>
-            <td>1863</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="usa-table usa-table--borderless">
-        <caption>
-          Borderless table: A borderless table can be useful when you want the
-          information to feel more a part of the text it accompanies and extends.
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Document title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Declaration of Independence</th>
-            <td>
-              Statement adopted by the Continental Congress declaring independence
-              from the British Empire.
-            </td>
-            <td>1776</td>
-          </tr>
-          <tr>
-            <th scope="row">Bill of Rights</th>
-            <td>
-              The first ten amendments of the U.S. Constitution guaranteeing rights
-              and freedoms.
-            </td>
-            <td>1791</td>
-          </tr>
-          <tr>
-            <th scope="row">Declaration of Sentiments</th>
-            <td>
-              A document written during the Seneca Falls Convention outlining the
-              rights that American women should be entitled to as citizens.
-            </td>
-            <td>1848</td>
-          </tr>
-          <tr>
-            <th scope="row">Emancipation Proclamation</th>
-            <td>
-              An executive order granting freedom to slaves in designated southern
-              states.
-            </td>
-            <td>1863</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="usa-table-container--scrollable" tabindex="0">
-        <table class="usa-table">
-          <caption>
-            Scrollable table
-          </caption>
-          <colgroup>
-            <col />
-          </colgroup>
-          <colgroup span="2"></colgroup>
-          <colgroup span="2"></colgroup>
-          <thead>
-            <tr>
-              <th rowspan="2">Federal Budget<br />Baseline Projections</th>
-              <th colspan="2" scope="colgroup" class="text-center">2017</th>
-              <th colspan="2" scope="colgroup" class="text-center">2018</th>
-              <th colspan="2" scope="colgroup" class="text-center">2019</th>
-              <th colspan="2" scope="colgroup" class="text-center">2020</th>
-              <th colspan="2" scope="colgroup" class="text-center">2021</th>
-              <th colspan="2" scope="colgroup" class="text-center">Hist. Avg.</th>
-            </tr>
-            <tr>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-            </tr>
-          </thead>
-          <tr>
-            <th scope="row">Revenue</th>
-            <td class="font-mono-sm text-tabular text-right">17.2%</td>
-            <td class="font-mono-sm text-tabular text-right">3,316</td>
-            <td class="font-mono-sm text-tabular text-right">16.4%</td>
-            <td class="font-mono-sm text-tabular text-right">3,338</td>
-            <td class="font-mono-sm text-tabular text-right">16.3%</td>
-            <td class="font-mono-sm text-tabular text-right">3,490</td>
-            <td class="font-mono-sm text-tabular text-right">16.7%</td>
-            <td class="font-mono-sm text-tabular text-right">3,678</td>
-            <td class="font-mono-sm text-tabular text-right">16.7%</td>
-            <td class="font-mono-sm text-tabular text-right">3,827</td>
-            <td class="font-mono-sm text-tabular text-right">17.4%</td>
-            <td class="font-mono-sm text-tabular text-right">3,381</td>
-          </tr>
-          <tr>
-            <th scope="row">Outlays</th>
-            <td class="font-mono-sm text-tabular text-right">20.6%</td>
-            <td class="font-mono-sm text-tabular text-right">3,982</td>
-            <td class="font-mono-sm text-tabular text-right">20.2%</td>
-            <td class="font-mono-sm text-tabular text-right">4,142</td>
-            <td class="font-mono-sm text-tabular text-right">21.0%</td>
-            <td class="font-mono-sm text-tabular text-right">4,470</td>
-            <td class="font-mono-sm text-tabular text-right">21.3%</td>
-            <td class="font-mono-sm text-tabular text-right">4,685</td>
-            <td class="font-mono-sm text-tabular text-right">21.6%</td>
-            <td class="font-mono-sm text-tabular text-right">4,949</td>
-            <td class="font-mono-sm text-tabular text-right">20.3%</td>
-            <td class="font-mono-sm text-tabular text-right">4,198</td>
-          </tr>
-          <tr>
-            <th scope="row">Budget Deficit</th>
-            <td class="font-mono-sm text-tabular text-right">-3.5%</td>
-            <td class="font-mono-sm text-tabular text-right">-665</td>
-            <td class="font-mono-sm text-tabular text-right">-3.8%</td>
-            <td class="font-mono-sm text-tabular text-right">-804</td>
-            <td class="font-mono-sm text-tabular text-right">-4.6%</td>
-            <td class="font-mono-sm text-tabular text-right">-981</td>
-            <td class="font-mono-sm text-tabular text-right">-4.6%</td>
-            <td class="font-mono-sm text-tabular text-right">-1,008</td>
-            <td class="font-mono-sm text-tabular text-right">-4.9%</td>
-            <td class="font-mono-sm text-tabular text-right">-1,123</td>
-            <td class="font-mono-sm text-tabular text-right">-2.9%</td>
-            <td class="font-mono-sm text-tabular text-right">-483</td>
-          </tr>
-          <tr>
-            <th scope="row">Debt Held by Public</th>
-            <td class="font-mono-sm text-tabular text-right">76.0%</td>
-            <td class="font-mono-sm text-tabular text-right">14,665</td>
-            <td class="font-mono-sm text-tabular text-right">77.4%</td>
-            <td class="font-mono-sm text-tabular text-right">15,688</td>
-            <td class="font-mono-sm text-tabular text-right">79.2%</td>
-            <td class="font-mono-sm text-tabular text-right">16,762</td>
-            <td class="font-mono-sm text-tabular text-right">80.9%</td>
-            <td class="font-mono-sm text-tabular text-right">17,872</td>
-            <td class="font-mono-sm text-tabular text-right">83.1%</td>
-            <td class="font-mono-sm text-tabular text-right">18,998</td>
-            <td class="font-mono-sm text-tabular text-right">41.7%</td>
-            <td class="font-mono-sm text-tabular text-right">8,065</td>
-          </tr>
-        </table>
-      </div>
-      <p>* in billions of dollars. Data for illustration purposes only.</p>
-
-      <div class="usa-table-container--scrollable" tabindex="0">
-        <table class="usa-table usa-table--striped">
-          <caption>
-            Scrollable table with horizontal stripes
-          </caption>
-          <colgroup>
-            <col />
-          </colgroup>
-          <colgroup span="2"></colgroup>
-          <colgroup span="2"></colgroup>
-          <thead>
-            <tr>
-              <th rowspan="2">Federal Budget<br />Baseline Projections</th>
-              <th colspan="2" scope="colgroup" class="text-center">2017</th>
-              <th colspan="2" scope="colgroup" class="text-center">2018</th>
-              <th colspan="2" scope="colgroup" class="text-center">2019</th>
-              <th colspan="2" scope="colgroup" class="text-center">2020</th>
-              <th colspan="2" scope="colgroup" class="text-center">2021</th>
-              <th colspan="2" scope="colgroup" class="text-center">Hist. Avg.</th>
-            </tr>
-            <tr>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-            </tr>
-          </thead>
-          <tr>
-            <th scope="row">Revenue</th>
-            <td class="font-mono-sm text-tabular text-right">17.2%</td>
-            <td class="font-mono-sm text-tabular text-right">3,316</td>
-            <td class="font-mono-sm text-tabular text-right">16.4%</td>
-            <td class="font-mono-sm text-tabular text-right">3,338</td>
-            <td class="font-mono-sm text-tabular text-right">16.3%</td>
-            <td class="font-mono-sm text-tabular text-right">3,490</td>
-            <td class="font-mono-sm text-tabular text-right">16.7%</td>
-            <td class="font-mono-sm text-tabular text-right">3,678</td>
-            <td class="font-mono-sm text-tabular text-right">16.7%</td>
-            <td class="font-mono-sm text-tabular text-right">3,827</td>
-            <td class="font-mono-sm text-tabular text-right">17.4%</td>
-            <td class="font-mono-sm text-tabular text-right">3,381</td>
-          </tr>
-          <tr>
-            <th scope="row">Outlays</th>
-            <td class="font-mono-sm text-tabular text-right">20.6%</td>
-            <td class="font-mono-sm text-tabular text-right">3,982</td>
-            <td class="font-mono-sm text-tabular text-right">20.2%</td>
-            <td class="font-mono-sm text-tabular text-right">4,142</td>
-            <td class="font-mono-sm text-tabular text-right">21.0%</td>
-            <td class="font-mono-sm text-tabular text-right">4,470</td>
-            <td class="font-mono-sm text-tabular text-right">21.3%</td>
-            <td class="font-mono-sm text-tabular text-right">4,685</td>
-            <td class="font-mono-sm text-tabular text-right">21.6%</td>
-            <td class="font-mono-sm text-tabular text-right">4,949</td>
-            <td class="font-mono-sm text-tabular text-right">20.3%</td>
-            <td class="font-mono-sm text-tabular text-right">4,198</td>
-          </tr>
-          <tr>
-            <th scope="row">Budget Deficit</th>
-            <td class="font-mono-sm text-tabular text-right">-3.5%</td>
-            <td class="font-mono-sm text-tabular text-right">-665</td>
-            <td class="font-mono-sm text-tabular text-right">-3.8%</td>
-            <td class="font-mono-sm text-tabular text-right">-804</td>
-            <td class="font-mono-sm text-tabular text-right">-4.6%</td>
-            <td class="font-mono-sm text-tabular text-right">-981</td>
-            <td class="font-mono-sm text-tabular text-right">-4.6%</td>
-            <td class="font-mono-sm text-tabular text-right">-1,008</td>
-            <td class="font-mono-sm text-tabular text-right">-4.9%</td>
-            <td class="font-mono-sm text-tabular text-right">-1,123</td>
-            <td class="font-mono-sm text-tabular text-right">-2.9%</td>
-            <td class="font-mono-sm text-tabular text-right">-483</td>
-          </tr>
-          <tr>
-            <th scope="row">Debt Held by Public</th>
-            <td class="font-mono-sm text-tabular text-right">76.0%</td>
-            <td class="font-mono-sm text-tabular text-right">14,665</td>
-            <td class="font-mono-sm text-tabular text-right">77.4%</td>
-            <td class="font-mono-sm text-tabular text-right">15,688</td>
-            <td class="font-mono-sm text-tabular text-right">79.2%</td>
-            <td class="font-mono-sm text-tabular text-right">16,762</td>
-            <td class="font-mono-sm text-tabular text-right">80.9%</td>
-            <td class="font-mono-sm text-tabular text-right">17,872</td>
-            <td class="font-mono-sm text-tabular text-right">83.1%</td>
-            <td class="font-mono-sm text-tabular text-right">18,998</td>
-            <td class="font-mono-sm text-tabular text-right">41.7%</td>
-            <td class="font-mono-sm text-tabular text-right">8,065</td>
-          </tr>
-        </table>
-      </div>
-      <p>* in billions of dollars. Data for illustration purposes only.</p>
-
-      <div class="usa-table-container--scrollable" tabindex="0">
-        <table class="usa-table usa-table--compact">
-          <caption>
-            Compact scrollable table
-          </caption>
-          <colgroup>
-            <col />
-          </colgroup>
-          <colgroup span="2"></colgroup>
-          <colgroup span="2"></colgroup>
-          <thead>
-            <tr>
-              <th rowspan="2">Federal Budget<br />Baseline Projections</th>
-              <th colspan="2" scope="colgroup" class="text-center">2017</th>
-              <th colspan="2" scope="colgroup" class="text-center">2018</th>
-              <th colspan="2" scope="colgroup" class="text-center">2019</th>
-              <th colspan="2" scope="colgroup" class="text-center">2020</th>
-              <th colspan="2" scope="colgroup" class="text-center">2021</th>
-              <th colspan="2" scope="colgroup" class="text-center">Hist. Avg.</th>
-            </tr>
-            <tr>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-            </tr>
-          </thead>
-          <tr>
-            <th scope="row">Revenue</th>
-            <td class="font-mono-sm text-tabular text-right">17.2%</td>
-            <td class="font-mono-sm text-tabular text-right">3,316</td>
-            <td class="font-mono-sm text-tabular text-right">16.4%</td>
-            <td class="font-mono-sm text-tabular text-right">3,338</td>
-            <td class="font-mono-sm text-tabular text-right">16.3%</td>
-            <td class="font-mono-sm text-tabular text-right">3,490</td>
-            <td class="font-mono-sm text-tabular text-right">16.7%</td>
-            <td class="font-mono-sm text-tabular text-right">3,678</td>
-            <td class="font-mono-sm text-tabular text-right">16.7%</td>
-            <td class="font-mono-sm text-tabular text-right">3,827</td>
-            <td class="font-mono-sm text-tabular text-right">17.4%</td>
-            <td class="font-mono-sm text-tabular text-right">3,381</td>
-          </tr>
-          <tr>
-            <th scope="row">Outlays</th>
-            <td class="font-mono-sm text-tabular text-right">20.6%</td>
-            <td class="font-mono-sm text-tabular text-right">3,982</td>
-            <td class="font-mono-sm text-tabular text-right">20.2%</td>
-            <td class="font-mono-sm text-tabular text-right">4,142</td>
-            <td class="font-mono-sm text-tabular text-right">21.0%</td>
-            <td class="font-mono-sm text-tabular text-right">4,470</td>
-            <td class="font-mono-sm text-tabular text-right">21.3%</td>
-            <td class="font-mono-sm text-tabular text-right">4,685</td>
-            <td class="font-mono-sm text-tabular text-right">21.6%</td>
-            <td class="font-mono-sm text-tabular text-right">4,949</td>
-            <td class="font-mono-sm text-tabular text-right">20.3%</td>
-            <td class="font-mono-sm text-tabular text-right">4,198</td>
-          </tr>
-          <tr>
-            <th scope="row">Budget Deficit</th>
-            <td class="font-mono-sm text-tabular text-right">-3.5%</td>
-            <td class="font-mono-sm text-tabular text-right">-665</td>
-            <td class="font-mono-sm text-tabular text-right">-3.8%</td>
-            <td class="font-mono-sm text-tabular text-right">-804</td>
-            <td class="font-mono-sm text-tabular text-right">-4.6%</td>
-            <td class="font-mono-sm text-tabular text-right">-981</td>
-            <td class="font-mono-sm text-tabular text-right">-4.6%</td>
-            <td class="font-mono-sm text-tabular text-right">-1,008</td>
-            <td class="font-mono-sm text-tabular text-right">-4.9%</td>
-            <td class="font-mono-sm text-tabular text-right">-1,123</td>
-            <td class="font-mono-sm text-tabular text-right">-2.9%</td>
-            <td class="font-mono-sm text-tabular text-right">-483</td>
-          </tr>
-          <tr>
-            <th scope="row">Debt Held by Public</th>
-            <td class="font-mono-sm text-tabular text-right">76.0%</td>
-            <td class="font-mono-sm text-tabular text-right">14,665</td>
-            <td class="font-mono-sm text-tabular text-right">77.4%</td>
-            <td class="font-mono-sm text-tabular text-right">15,688</td>
-            <td class="font-mono-sm text-tabular text-right">79.2%</td>
-            <td class="font-mono-sm text-tabular text-right">16,762</td>
-            <td class="font-mono-sm text-tabular text-right">80.9%</td>
-            <td class="font-mono-sm text-tabular text-right">17,872</td>
-            <td class="font-mono-sm text-tabular text-right">83.1%</td>
-            <td class="font-mono-sm text-tabular text-right">18,998</td>
-            <td class="font-mono-sm text-tabular text-right">41.7%</td>
-            <td class="font-mono-sm text-tabular text-right">8,065</td>
-          </tr>
-        </table>
-      </div>
-      <p>* in billions of dollars. Data for illustration purposes only.</p>
-
-      <div class="usa-table-container--scrollable" tabindex="0">
-        <table class="usa-table usa-table--compact usa-table--striped">
-          <caption>
-            Compact scrollable table with horizontal stripes
-          </caption>
-          <colgroup>
-            <col />
-          </colgroup>
-          <colgroup span="2"></colgroup>
-          <colgroup span="2"></colgroup>
-          <thead>
-            <tr>
-              <th rowspan="2">Federal Budget<br />Baseline Projections</th>
-              <th colspan="2" scope="colgroup" class="text-center">2017</th>
-              <th colspan="2" scope="colgroup" class="text-center">2018</th>
-              <th colspan="2" scope="colgroup" class="text-center">2019</th>
-              <th colspan="2" scope="colgroup" class="text-center">2020</th>
-              <th colspan="2" scope="colgroup" class="text-center">2021</th>
-              <th colspan="2" scope="colgroup" class="text-center">Hist. Avg.</th>
-            </tr>
-            <tr>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-              <th scope="col" class="text-right">%GDP</th>
-              <th scope="col" class="text-right">USD*</th>
-            </tr>
-          </thead>
-          <tr>
-            <th scope="row">Revenue</th>
-            <td class="font-mono-sm text-tabular text-right">17.2%</td>
-            <td class="font-mono-sm text-tabular text-right">3,316</td>
-            <td class="font-mono-sm text-tabular text-right">16.4%</td>
-            <td class="font-mono-sm text-tabular text-right">3,338</td>
-            <td class="font-mono-sm text-tabular text-right">16.3%</td>
-            <td class="font-mono-sm text-tabular text-right">3,490</td>
-            <td class="font-mono-sm text-tabular text-right">16.7%</td>
-            <td class="font-mono-sm text-tabular text-right">3,678</td>
-            <td class="font-mono-sm text-tabular text-right">16.7%</td>
-            <td class="font-mono-sm text-tabular text-right">3,827</td>
-            <td class="font-mono-sm text-tabular text-right">17.4%</td>
-            <td class="font-mono-sm text-tabular text-right">3,381</td>
-          </tr>
-          <tr>
-            <th scope="row">Outlays</th>
-            <td class="font-mono-sm text-tabular text-right">20.6%</td>
-            <td class="font-mono-sm text-tabular text-right">3,982</td>
-            <td class="font-mono-sm text-tabular text-right">20.2%</td>
-            <td class="font-mono-sm text-tabular text-right">4,142</td>
-            <td class="font-mono-sm text-tabular text-right">21.0%</td>
-            <td class="font-mono-sm text-tabular text-right">4,470</td>
-            <td class="font-mono-sm text-tabular text-right">21.3%</td>
-            <td class="font-mono-sm text-tabular text-right">4,685</td>
-            <td class="font-mono-sm text-tabular text-right">21.6%</td>
-            <td class="font-mono-sm text-tabular text-right">4,949</td>
-            <td class="font-mono-sm text-tabular text-right">20.3%</td>
-            <td class="font-mono-sm text-tabular text-right">4,198</td>
-          </tr>
-          <tr>
-            <th scope="row">Budget Deficit</th>
-            <td class="font-mono-sm text-tabular text-right">-3.5%</td>
-            <td class="font-mono-sm text-tabular text-right">-665</td>
-            <td class="font-mono-sm text-tabular text-right">-3.8%</td>
-            <td class="font-mono-sm text-tabular text-right">-804</td>
-            <td class="font-mono-sm text-tabular text-right">-4.6%</td>
-            <td class="font-mono-sm text-tabular text-right">-981</td>
-            <td class="font-mono-sm text-tabular text-right">-4.6%</td>
-            <td class="font-mono-sm text-tabular text-right">-1,008</td>
-            <td class="font-mono-sm text-tabular text-right">-4.9%</td>
-            <td class="font-mono-sm text-tabular text-right">-1,123</td>
-            <td class="font-mono-sm text-tabular text-right">-2.9%</td>
-            <td class="font-mono-sm text-tabular text-right">-483</td>
-          </tr>
-          <tr>
-            <th scope="row">Debt Held by Public</th>
-            <td class="font-mono-sm text-tabular text-right">76.0%</td>
-            <td class="font-mono-sm text-tabular text-right">14,665</td>
-            <td class="font-mono-sm text-tabular text-right">77.4%</td>
-            <td class="font-mono-sm text-tabular text-right">15,688</td>
-            <td class="font-mono-sm text-tabular text-right">79.2%</td>
-            <td class="font-mono-sm text-tabular text-right">16,762</td>
-            <td class="font-mono-sm text-tabular text-right">80.9%</td>
-            <td class="font-mono-sm text-tabular text-right">17,872</td>
-            <td class="font-mono-sm text-tabular text-right">83.1%</td>
-            <td class="font-mono-sm text-tabular text-right">18,998</td>
-            <td class="font-mono-sm text-tabular text-right">41.7%</td>
-            <td class="font-mono-sm text-tabular text-right">8,065</td>
-          </tr>
-        </table>
-      </div>
-      <p>* in billions of dollars. Data for illustration purposes only.</p>
-      <div class="table-example-container">
-        <div class="width-mobile">
-          <table class="usa-table usa-table--stacked">
-            <caption>
-              Bordered table
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Document title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Declaration of Independence
-                </th>
-                <td data-label="Description">
-                  Statement adopted by the Continental Congress declaring independence
-                  from the British Empire.
-                </td>
-                <td data-label="Year">1776</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">Bill of Rights</th>
-                <td data-label="Description">
-                  The first ten amendments of the U.S. Constitution guaranteeing rights
-                  and freedoms.
-                </td>
-                <td data-label="Year">1791</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Declaration of Sentiments
-                </th>
-                <td data-label="Description">
-                  A document written during the Seneca Falls Convention outlining the
-                  rights that American women should be entitled to as citizens.
-                </td>
-                <td data-label="Year">1848</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Emancipation Proclamation
-                </th>
-                <td data-label="Description">
-                  An executive order granting freedom to slaves in designated southern
-                  states.
-                </td>
-                <td data-label="Year">1863</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="width-mobile">
-          <table class="usa-table usa-table--stacked usa-table--borderless">
-            <caption>
-              Stacked borderless table (when on a
-              <span class="text-no-wrap">mobile-width</span>
-              screen)
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Document title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Declaration of Independence
-                </th>
-                <td data-label="Description">
-                  Statement adopted by the Continental Congress declaring independence
-                  from the British Empire.
-                </td>
-                <td data-label="Year">1776</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">Bill of Rights</th>
-                <td data-label="Description">
-                  The first ten amendments of the U.S. Constitution guaranteeing rights
-                  and freedoms.
-                </td>
-                <td data-label="Year">1791</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Declaration of Sentiments
-                </th>
-                <td data-label="Description">
-                  A document written during the Seneca Falls Convention outlining the
-                  rights that American women should be entitled to as citizens.
-                </td>
-                <td data-label="Year">1848</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Emancipation Proclamation
-                </th>
-                <td data-label="Description">
-                  An executive order granting freedom to slaves in designated southern
-                  states.
-                </td>
-                <td data-label="Year">1863</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="width-mobile">
-          <table class="usa-table usa-table--stacked-header">
-            <caption>
-              Stacked bordered table with headers (when on a mobile-width screen)
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Document title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Declaration of Independence
-                </th>
-                <td data-label="Description">
-                  Statement adopted by the Continental Congress declaring independence
-                  from the British Empire.
-                </td>
-                <td data-label="Year">1776</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">Bill of Rights</th>
-                <td data-label="Description">
-                  The first ten amendments of the U.S. Constitution guaranteeing rights
-                  and freedoms.
-                </td>
-                <td data-label="Year">1791</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Declaration of Sentiments
-                </th>
-                <td data-label="Description">
-                  A document written during the Seneca Falls Convention outlining the
-                  rights that American women should be entitled to as citizens.
-                </td>
-                <td data-label="Year">1848</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Emancipation Proclamation
-                </th>
-                <td data-label="Description">
-                  An executive order granting freedom to slaves in designated southern
-                  states.
-                </td>
-                <td data-label="Year">1863</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="width-mobile">
-          <table class="usa-table usa-table--stacked-header usa-table--borderless">
-            <caption>
-              Stacked borderless table with headers (when on a mobile-width screen)
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Document title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Declaration of Independence
-                </th>
-                <td data-label="Description">
-                  Statement adopted by the Continental Congress declaring independence
-                  from the British Empire.
-                </td>
-                <td data-label="Year">1776</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">Bill of Rights</th>
-                <td data-label="Description">
-                  The first ten amendments of the U.S. Constitution guaranteeing rights
-                  and freedoms.
-                </td>
-                <td data-label="Year">1791</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Declaration of Sentiments
-                </th>
-                <td data-label="Description">
-                  A document written during the Seneca Falls Convention outlining the
-                  rights that American women should be entitled to as citizens.
-                </td>
-                <td data-label="Year">1848</td>
-              </tr>
-              <tr>
-                <th data-label="Document title" scope="row">
-                  Emancipation Proclamation
-                </th>
-                <td data-label="Description">
-                  An executive order granting freedom to slaves in designated southern
-                  states.
-                </td>
-                <td data-label="Year">1863</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="usa-table-container--scrollable" tabindex="0">
-        <table class="usa-table">
-          <caption>
-            Recently admitted US states (sortable table example)
-          </caption>
-          <thead>
-            <tr>
-              <th data-sortable scope="col" role="columnheader">Name</th>
-              <th data-sortable scope="col" role="columnheader" aria-sort="descending">
-                Order admitted to union
-              </th>
-              <th data-sortable scope="col" role="columnheader">
-                Date of ratification vote
-              </th>
-              <th data-sortable scope="col" role="columnheader">
-                Date admitted to union
-              </th>
-              <th data-sortable scope="col" role="columnheader">
-                Percent of voters in favor of ratification
-              </th>
-              <th data-sortable scope="col" role="columnheader">
-                Votes cast in favor of ratification
-              </th>
-              <th data-sortable scope="col" role="columnheader">
-                Estimated population at time of admission
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" role="rowheader">Hawaii</th>
-              <td data-sort-value="50">50th</td>
-              <td data-sort-value="331844400">Jun. 27, 1959</td>
-              <td data-sort-value="327092400">Aug. 21, 1959</td>
-              <td data-sort-value="0.943" class="font-mono-sm text-tabular text-right">
-                94.3%
-              </td>
-              <td data-sort-value="132773" class="font-mono-sm text-tabular text-right">
-                132,773
-              </td>
-              <td data-sort-value="632772" class="font-mono-sm text-tabular text-right">
-                632,772
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" role="rowheader">Alaska</th>
-              <td data-sort-value="49">49th</td>
-              <td data-sort-value="431978400">Apr. 24, 1956</td>
-              <td data-sort-value="346960800">Jan. 3, 1959</td>
-              <td data-sort-value="0.681" class="font-mono-sm text-tabular text-right">
-                68.1%
-              </td>
-              <td data-sort-value="17477" class="font-mono-sm text-tabular text-right">
-                17,477
-              </td>
-              <td data-sort-value="226167" class="font-mono-sm text-tabular text-right">
-                226,167
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" role="rowheader">Arizona</th>
-              <td data-sort-value="48">48th</td>
-              <td data-sort-value="1858528800">Feb. 9, 1911</td>
-              <td data-sort-value="1826560800">Feb. 14, 1912</td>
-              <td data-sort-value="0.787" class="font-mono-sm text-tabular text-right">
-                78.7%
-              </td>
-              <td data-sort-value="12187" class="font-mono-sm text-tabular text-right">
-                12,187
-              </td>
-              <td data-sort-value="204354" class="font-mono-sm text-tabular text-right">
-                204,354
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" role="rowheader">New Mexico</th>
-              <td data-sort-value="47">47th</td>
-              <td data-sort-value="1835287200">Nov. 5, 1911</td>
-              <td data-sort-value="1829930400">Jan. 6, 1912</td>
-              <td data-sort-value="0.703" class="font-mono-sm text-tabular text-right">
-                70.3%
-              </td>
-              <td data-sort-value="31742" class="font-mono-sm text-tabular text-right">
-                31,742
-              </td>
-              <td data-sort-value="327301" class="font-mono-sm text-tabular text-right">
-                327,301
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" role="rowheader">Oklahoma</th>
-              <td data-sort-value="46">46th</td>
-              <td data-sort-value="1965751200">Sep. 17, 1907</td>
-              <td data-sort-value="1960567200">Nov. 16, 1907</td>
-              <td data-sort-value="0.712" class="font-mono-sm text-tabular text-right">
-                71.2%
-              </td>
-              <td data-sort-value="180333" class="font-mono-sm text-tabular text-right">
-                180,333
-              </td>
-              <td data-sort-value="1657155" class="font-mono-sm text-tabular text-right">
-                1,657,155
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" role="rowheader">Utah</th>
-              <td data-sort-value="45">45th</td>
-              <td data-sort-value="2340122400">Nov. 5, 1895</td>
-              <td data-sort-value="2334938400">Jan. 4, 1896</td>
-              <td data-sort-value="0.805" class="font-mono-sm text-tabular text-right">
-                80.5%
-              </td>
-              <td data-sort-value="31305" class="font-mono-sm text-tabular text-right">
-                31,305
-              </td>
-              <td data-sort-value="210779" class="font-mono-sm text-tabular text-right">
-                210,779
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="usa-sr-only usa-table__announcement-region" aria-live="polite"></div>
-        <p class="margin-bottom-3">Data for illustration purposes only.</p>
-      </div>
-      <div class="usa-table-container--scrollable" tabindex="0">
-        <table class="usa-table usa-table--striped">
-          <caption>
-            Sortable striped table with various content types
-          </caption>
-          <thead>
-            <tr>
-              <th data-sortable scope="col" role="columnheader">Alphabetical</th>
-              <th data-sortable scope="col" role="columnheader">Month</th>
-              <th data-sortable scope="col" role="columnheader">Percent</th>
-              <th data-sortable scope="col" role="columnheader">Count</th>
-              <th data-sortable scope="col" role="columnheader">Rank (Ordinal)</th>
-              <th data-sortable scope="col" role="columnheader">Rank (Cardinal)</th>
-              <th data-sortable scope="col" role="columnheader">Unix Timestamp</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Tango</th>
-              <td data-sort-value="3">March</td>
-              <td data-sort-value="0.206" class="font-mono-sm text-tabular text-right">
-                20.6%
-              </td>
-              <td data-sort-value="23612" class="font-mono-sm text-tabular text-right">
-                23,612
-              </td>
-              <td data-sort-value="3">Third</td>
-              <td data-sort-value="3">3rd</td>
-              <td data-sort-value="1332884673452">March 27, 2012</td>
-            </tr>
-            <tr>
-              <th scope="row">Foxtrot</th>
-              <td data-sort-value="4">April</td>
-              <td data-sort-value="0.026" class="font-mono-sm text-tabular text-right">
-                2.6%
-              </td>
-              <td data-sort-value="-32" class="font-mono-sm text-tabular text-right">
-                -32
-              </td>
-              <td data-sort-value="1">First</td>
-              <td data-sort-value="1">1st</td>
-              <td data-sort-value="1617974313232">April 9, 2021</td>
-            </tr>
-            <tr>
-              <th scope="row">Hilo</th>
-              <td data-sort-value="1">January</td>
-              <td data-sort-value="-0.036" class="font-mono-sm text-tabular text-right">
-                -3.6%
-              </td>
-              <td data-sort-value="0.002" class="font-mono-sm text-tabular text-right">
-                0.002
-              </td>
-              <td data-sort-value="2">Second</td>
-              <td>2nd</td>
-              <td data-sort-value="1611169964684">January 20, 2021</td>
-            </tr>
-            <tr>
-              <th scope="row">Bravo</th>
-              <td data-sort-value="12">December</td>
-              <td data-sort-value="-3.006" class="font-mono-sm text-tabular text-right">
-                -300.6%
-              </td>
-              <td data-sort-value="0" class="font-mono-sm text-tabular text-right">
-                0
-              </td>
-              <td data-sort-value="4">Fourth</td>
-              <td data-sort-value="4">4th</td>
-              <td data-sort-value="1608114345343">December 16, 2020</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="usa-sr-only usa-table__announcement-region" aria-live="polite"></div>
-      </div>
-      <div class="usa-table-container--scrollable" tabindex="0">
-        <table class="usa-table usa-table--borderless">
-          <caption>
-            Sortable borderless table with various content types
-          </caption>
-          <thead>
-            <tr>
-              <th data-sortable scope="col" role="columnheader">Alphabetical</th>
-              <th data-sortable scope="col" role="columnheader">Month</th>
-              <th data-sortable scope="col" role="columnheader">Percent</th>
-              <th data-sortable scope="col" role="columnheader">Count</th>
-              <th data-sortable scope="col" role="columnheader">Rank (Ordinal)</th>
-              <th data-sortable scope="col" role="columnheader">Rank (Cardinal)</th>
-              <th data-sortable scope="col" role="columnheader">Unix Timestamp</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Tango</th>
-              <td data-sort-value="3">March</td>
-              <td data-sort-value="0.206" class="font-mono-sm text-tabular text-right">
-                20.6%
-              </td>
-              <td data-sort-value="23612" class="font-mono-sm text-tabular text-right">
-                23,612
-              </td>
-              <td data-sort-value="3">Third</td>
-              <td data-sort-value="3">3rd</td>
-              <td data-sort-value="1332884673452">March 27, 2012</td>
-            </tr>
-            <tr>
-              <th scope="row">Foxtrot</th>
-              <td data-sort-value="4">April</td>
-              <td data-sort-value="0.026" class="font-mono-sm text-tabular text-right">
-                2.6%
-              </td>
-              <td data-sort-value="-32" class="font-mono-sm text-tabular text-right">
-                -32
-              </td>
-              <td data-sort-value="1">First</td>
-              <td data-sort-value="1">1st</td>
-              <td data-sort-value="1617974313232">April 9, 2021</td>
-            </tr>
-            <tr>
-              <th scope="row">Hilo</th>
-              <td data-sort-value="1">January</td>
-              <td data-sort-value="-0.036" class="font-mono-sm text-tabular text-right">
-                -3.6%
-              </td>
-              <td data-sort-value="0.002" class="font-mono-sm text-tabular text-right">
-                0.002
-              </td>
-              <td data-sort-value="2">Second</td>
-              <td>2nd</td>
-              <td data-sort-value="1611169964684">January 20, 2021</td>
-            </tr>
-            <tr>
-              <th scope="row">Bravo</th>
-              <td data-sort-value="12">December</td>
-              <td data-sort-value="-3.006" class="font-mono-sm text-tabular text-right">
-                -300.6%
-              </td>
-              <td data-sort-value="0" class="font-mono-sm text-tabular text-right">
-                0
-              </td>
-              <td data-sort-value="4">Fourth</td>
-              <td data-sort-value="4">4th</td>
-              <td data-sort-value="1608114345343">December 16, 2020</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="usa-sr-only usa-table__announcement-region" aria-live="polite"></div>
+        </main>
       </div>
     </div>
-    <div class="grid-container">
-      <h3 class="site-preview-heading">Default</h3>
-      <div class="usa-summary-box" role="region" aria-labelledby="summary-box-key-information">
-        <div class="usa-summary-box__body">
-          <h3 class="usa-summary-box__heading" id="summary-box-key-information">
-            Key information
-          </h3>
-          <div class="usa-summary-box__text">
-            <ul class="usa-list">
-              <li>
-                If you are under a winter storm warning,
-                <a class="usa-summary-box__link" href="">find shelter</a> right away.
-              </li>
-              <li>
-                Sign up for
-                <a class="usa-summary-box__link" href="">your community’s warning system</a>.
-              </li>
-              <li>
-                Learn the signs of, and basic treatments for,
-                <a class="usa-summary-box__link" href="">frostbite</a> and
-                <a class="usa-summary-box__link" href="">hypothermia</a>.
-              </li>
-              <li>
-                Gather emergency supplies for your
-                <a class="usa-summary-box__link" href="">home</a> and your
-                <a class="usa-summary-box__link" href="">car</a>.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <h3 class="site-preview-heading">Default</h3>
-      <div class="usa-step-indicator" aria-label="progress">
-        <ol class="usa-step-indicator__segments">
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Personal information <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Household status <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--current" aria-current="true">
-            <span class="usa-step-indicator__segment-label">Supporting documents</span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Signature <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Review and submit <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-        </ol>
-        <div class="usa-step-indicator__header">
-          <h4 class="usa-step-indicator__heading">
-            <span class="usa-step-indicator__heading-counter"><span class="usa-sr-only">Step</span>
-              <span class="usa-step-indicator__current-step">3</span>
-              <span class="usa-step-indicator__total-steps">of 5</span> </span><span
-              class="usa-step-indicator__heading-text">Supporting documents</span>
-          </h4>
-        </div>
-      </div>
+  </div>
 
-      <h3 class="site-preview-heading">No labels</h3>
-      <div class="usa-step-indicator usa-step-indicator--no-labels" aria-label="progress">
-        <ol class="usa-step-indicator__segments">
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Personal information <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Household status <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
-            <span class="usa-step-indicator__segment-label">Supporting documents</span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Signature <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Review and submit <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-        </ol>
-        <div class="usa-step-indicator__header">
-          <h4 class="usa-step-indicator__heading">
-            <span class="usa-step-indicator__heading-counter"><span class="usa-sr-only">Step</span>
-              <span class="usa-step-indicator__current-step">3</span>
-              <span class="usa-step-indicator__total-steps">of 5</span> </span><span
-              class="usa-step-indicator__heading-text">Supporting documents</span>
-          </h4>
-        </div>
-      </div>
-
-      <h3 class="site-preview-heading">Centered</h3>
-      <div class="usa-step-indicator usa-step-indicator--center" aria-label="progress">
-        <ol class="usa-step-indicator__segments">
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Personal information <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Household status <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--current" aria-current="true">
-            <span class="usa-step-indicator__segment-label">Supporting documents</span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Signature <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Review and submit <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-        </ol>
-        <div class="usa-step-indicator__header">
-          <h4 class="usa-step-indicator__heading">
-            <span class="usa-step-indicator__heading-counter"><span class="usa-sr-only">Step</span>
-              <span class="usa-step-indicator__current-step">3</span>
-              <span class="usa-step-indicator__total-steps">of 5</span> </span><span
-              class="usa-step-indicator__heading-text">Supporting documents</span>
-          </h4>
-        </div>
-      </div>
-
-      <h3 class="site-preview-heading">Counters</h3>
-      <div class="usa-step-indicator usa-step-indicator--counters" aria-label="progress">
-        <ol class="usa-step-indicator__segments">
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Personal information <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Household status <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--current" aria-current="true">
-            <span class="usa-step-indicator__segment-label">Supporting documents</span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Signature <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Review and submit <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-        </ol>
-        <div class="usa-step-indicator__header">
-          <h4 class="usa-step-indicator__heading">
-            <span class="usa-step-indicator__heading-counter"><span class="usa-sr-only">Step</span>
-              <span class="usa-step-indicator__current-step">3</span>
-              <span class="usa-step-indicator__total-steps">of 5</span> </span><span
-              class="usa-step-indicator__heading-text">Supporting documents</span>
-          </h4>
-        </div>
-      </div>
-
-      <h3 class="site-preview-heading">Small counters</h3>
-      <div class="usa-step-indicator usa-step-indicator--counters-sm" aria-label="progress">
-        <ol class="usa-step-indicator__segments">
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Personal information <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Household status <span
-                class="usa-sr-only">completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--current" aria-current="true">
-            <span class="usa-step-indicator__segment-label">Supporting documents</span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Signature <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-          <li class="usa-step-indicator__segment">
-            <span class="usa-step-indicator__segment-label">Review and submit <span class="usa-sr-only">not
-                completed</span></span>
-          </li>
-        </ol>
-        <div class="usa-step-indicator__header">
-          <h4 class="usa-step-indicator__heading">
-            <span class="usa-step-indicator__heading-counter"><span class="usa-sr-only">Step</span>
-              <span class="usa-step-indicator__current-step">3</span>
-              <span class="usa-step-indicator__total-steps">of 5</span> </span><span
-              class="usa-step-indicator__heading-text">Supporting documents</span>
-          </h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="grid-container usa-section">
-    <div class="grid-row grid-gap">
-      <div class="tablet:grid-col-4">
-        <h2 class="font-heading-xl margin-top-0 tablet:margin-bottom-0">
-          A tagline highlights your approach
-        </h2>
-      </div>
-      <div class="tablet:grid-col-8 usa-prose">
-        <p>
-          The tagline should inspire confidence and interest, focusing on the
-          value that your overall approach offers to your audience. Use a
-          heading typeface and keep your tagline to just a few words, and
-          don’t confuse or mystify.
-        </p>
-        <p>
-          Use the right side of the grid to explain the tagline a bit more.
-          What are your goals? How do you do your work? Write in the present
-          tense, and stay brief here. People who are interested can find
-          details on internal pages.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="usa-graphic-list usa-section usa-section--dark">
-    <div class="grid-container">
-      <div class="usa-graphic-list__row grid-row grid-gap">
-        <div class="usa-media-block tablet:grid-col">
-          <img class="usa-media-block__img" src="/assets/img/circle-124.png" alt="Alt text" />
-          <div class="usa-media-block__body">
-            <h2 class="usa-graphic-list__heading">
-              Graphic headings can vary.
-            </h2>
-            <p>
-              Graphic headings can be used a few different ways, depending on
-              what your landing page is for. Highlight your values, specific
-              program areas, or results.
-            </p>
-          </div>
-        </div>
-        <div class="usa-media-block tablet:grid-col">
-          <img class="usa-media-block__img" src="/assets/img/circle-124.png" alt="Alt text" />
-          <div class="usa-media-block__body">
-            <h2 class="usa-graphic-list__heading">
-              Stick to 6 or fewer words.
-            </h2>
-            <p>
-              Keep body text to about 30 words. They can be shorter, but try
-              to be somewhat balanced across all four. It creates a clean
-              appearance with good spacing.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="usa-graphic-list__row grid-row grid-gap">
-        <div class="usa-media-block tablet:grid-col">
-          <img class="usa-media-block__img" src="/assets/img/circle-124.png" alt="Alt text" />
-          <div class="usa-media-block__body">
-            <h2 class="usa-graphic-list__heading">
-              Never highlight anything without a goal.
-            </h2>
-            <p>
-              For anything you want to highlight here, understand what your
-              users know now, and what activity or impression you want from
-              them after they see it.
-            </p>
-          </div>
-        </div>
-        <div class="usa-media-block tablet:grid-col">
-          <img class="usa-media-block__img" src="/assets/img/circle-124.png" alt="Alt text" />
-          <div class="usa-media-block__body">
-            <h2 class="usa-graphic-list__heading">Could also have 2 or 6.</h2>
-            <p>
-              In addition to your goal, find out your users’ goals. What do
-              they want to know or do that supports your mission? Use these
-              headings to show those.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="test-section-id" class="usa-section">
-    <div class="grid-container">
-      <h2 class="font-heading-xl margin-y-0">Section heading</h2>
-      <p class="usa-intro">
-        Everything up to this point should help people understand your agency
-        or project: who you are, your goal or mission, and how you approach
-        it. Use this section to encourage them to act. Describe why they
-        should get in touch here, and use an active verb on the button below.
-        “Get in touch,” “Learn more,” and so on.
-      </p>
-      <a class="usa-button usa-button--big" href="">Call to action</a>
-    </div>
-  </section>
-</main>
+</div>
 <footer class="usa-footer">
   <div class="grid-container usa-footer__return-to-top">
     <a href="#">Return to top</a>
@@ -1643,7 +402,7 @@
               mobile-lg:grid-col-6 mobile-lg:grid-gap-2
             ">
           <div class="mobile-lg:grid-col-auto">
-            <img class="usa-footer__logo-img" src="/assets/img/logo-img.png" alt="" />
+            <img class="usa-footer__logo-img" src="/assets/logo-img.png" alt="" />
           </div>
           <div class="mobile-lg:grid-col-auto">
             <p class="usa-footer__logo-heading">&lt;Name of Agency&gt;</p>
@@ -1653,23 +412,23 @@
           <div class="usa-footer__social-links grid-row grid-gap-1">
             <div class="grid-col-auto">
               <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon"
-                  src="/assets/img/usa-icons/facebook.svg" alt="Facebook" /></a>
+                  src="/assets/usa-icons/facebook.svg" alt="Facebook" /></a>
             </div>
             <div class="grid-col-auto">
               <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon"
-                  src="/assets/img/usa-icons/twitter.svg" alt="Twitter" /></a>
+                  src="/assets/usa-icons/twitter.svg" alt="Twitter" /></a>
             </div>
             <div class="grid-col-auto">
               <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon"
-                  src="/assets/img/usa-icons/youtube.svg" alt="YouTube" /></a>
+                  src="/assets/usa-icons/youtube.svg" alt="YouTube" /></a>
             </div>
             <div class="grid-col-auto">
               <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon"
-                  src="/assets/img/usa-icons/instagram.svg" alt="Instagram" /></a>
+                  src="/assets/usa-icons/instagram.svg" alt="Instagram" /></a>
             </div>
             <div class="grid-col-auto">
               <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon"
-                  src="/assets/img/usa-icons/rss_feed.svg" alt="RSS" /></a>
+                  src="/assets/usa-icons/rss_feed.svg" alt="RSS" /></a>
             </div>
           </div>
           <p class="usa-footer__contact-heading">
@@ -1695,7 +454,7 @@
     <div class="usa-identifier__container">
       <div class="usa-identifier__logos">
         <a href="javascript:void(0)" class="usa-identifier__logo"><img class="usa-identifier__logo-img"
-            src="/assets/img/circle-gray-20.svg" alt="&lt;Parent agency&gt; logo" role="img" /></a>
+            src="/assets/circle-gray-20.svg" alt="&lt;Parent agency&gt; logo" role="img" /></a>
       </div>
       <section class="usa-identifier__identity" aria-label="Agency description">
         <p class="usa-identifier__identity-domain">domain.gov</p>
@@ -1742,3 +501,15 @@
     </div>
   </section>
 </div>
+<section
+  class="display-flex gap-105 width-full padding-0 position-fixed top-0 z-100 bg-body flex-align-center border-bottom-2px border-base-lighter flex-justify-center">
+  <ul class="usa-button-group"
+    style="--usa-button-padding-y:var(--usa-spacing-2px);--usa-button-padding-x:var(--usa-spacing-1)">
+    <li class="usa-button-group__item" *ngFor="let theme of availableThemes">
+      <button type="button"
+        [ngClass]="{'usa-primary': currentTheme === theme, 'usa-button--outline': currentTheme !== theme}"
+        (click)="setTheme(theme)" class="usa-button text-capitalize">{{theme}}</button>
+    </li>
+  </ul>
+
+</section>

@@ -1,0 +1,382 @@
+:root {
+    --usa-card-border-width: var(--usa-spacing-2px);
+    --usa-card-header-font-weight: var(--usa-font-weight-bold);
+    --usa-card-font-weight: var(--usa-font-weight-normal);  --usa-card-padding-body-y: var(--usa-spacing-1);
+    --usa-card-padding-body-x: var(--usa-spacing-3);
+    --usa-card-padding-y: var(--usa-spacing-2);
+    --usa-card-padding-perimeter: var(--usa-spacing-3);
+    --usa-card-margin-bottom:var(--usa-spacing-4);
+    --usa-card-margin-x: var(--usa-spacing-1);
+    --usa-card-flag-image-width: var(--usa-spacing-card-lg);
+    --usa-card-flag-min-width: var(--usa-spacing-tablet);
+    --usa-card-gap: var(--usa-spacing-2);
+    --usa-card-border-color: var(--usa-border-color-base);
+    --usa-card-text-color: var(--usa-base-ink);
+    --usa-card-background-color: var(--usa-base-lightest);
+    --usa-card-header-line-height: var(--usa-line-height-2);
+    --usa-card-header-font-size: var(--usa-font-size-lg);
+    --usa-card-line-height: var(--usa-line-height-body);
+    --usa-card-border-radius: var(--usa-border-radius-lg);
+    --usa-card-header-font-family: var(--usa-font-heading);
+    --usa-card-font-size: var(--usa-body-font-size);
+    --usa-card-font-family: var(--usa-font-body);
+}
+
+.usa-card-group,
+.usa-prose .usa-card-group {
+    margin-bottom: 0;
+    margin-top: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.usa-card-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-left: var(--usa-card-margin-x);
+    margin-right: var(--usa-card-margin-x);
+}
+
+@media all and (min-width: 40em) {
+    .usa-card-group {
+        flex-direction: row;
+    }
+}
+
+.usa-card {
+    margin-bottom: var(--usa-card-margin-bottom);
+    max-width: var(--usa-spacing-none);
+}
+
+.usa-card:last-child {
+    margin-bottom: var(--usa-card-margin-bottom);
+}
+
+@media all and (min-width: 40em) {
+    .usa-card {
+        margin-bottom: var(--usa-card-margin-bottom);
+    }
+
+    .usa-card:last-child {
+        margin-bottom: var(--usa-card-margin-bottom);
+    }
+}
+
+.usa-prose .usa-card {
+    margin-bottom: var(--usa-card-margin-bottom);
+    max-width: var(--usa-spacing-0);
+}
+
+.usa-prose .usa-card:last-child {
+    margin-bottom: var(--usa-card-margin-bottom);
+}
+
+@media all and (min-width: 40em) {
+    .usa-prose .usa-card {
+        margin-bottom: var(--usa-card-margin-bottom);
+    }
+
+    .usa-prose .usa-card:last-child {
+        margin-bottom: var(--usa-card-margin-bottom);
+    }
+}
+
+.usa-card__container {
+    background-color: var(--usa-card-background);
+    color: var(--usa-card-text-color);
+    font-size: var(--usa-card-font-size);
+    font-family: var(--usa-card-font-family);
+    line-height: var(--usa-card-line-height);
+    border: var(--usa-card-border-width) solid var(--usa-card-border-color);
+    display: flex;
+    height: var(--usa-sizing-full);
+    flex-direction: column;
+    margin-left: var(--usa-card-margin-x);
+    margin-right: var(--usa-card-margin-x);
+    position: relative;
+    border-radius: var(--usa-card-border-radius);
+}
+
+.usa-card:not(.usa-card--flag) .usa-card__container>:only-child {
+    padding: var(--usa-card-padding-perimeter);
+}
+
+.usa-card .usa-card__img {
+    display: block;
+}
+
+.usa-card__header {
+    padding-bottom: var(--usa-spacing-1);
+    padding-top: var(--usa-card-padding-perimeter);
+    padding-left: var(--usa-card-padding-perimeter);
+    padding-right: var(--usa-card-padding-perimeter);
+}
+
+.usa-card__header:last-child {
+    padding-bottom: var(--usa-card-padding-perimeter);
+}
+
+.usa-card__heading {
+    font-size: var(--usa-font-size-lg);
+    font-family: var(--usa-font-heading);
+    line-height: var(--usa-line-height-2);
+    margin: var(--usa-spacing-0);
+}
+
+.usa-card__media {
+    order: -1;
+    min-height: 1px;
+}
+
+.usa-card__img {
+    border-top-right-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+    border-top-left-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+    background-color: var(--usa-base-lightest);
+    position: relative;
+    overflow: hidden;
+}
+
+.usa-card__img img {
+    display: block;
+    height: var(--usa-spacing-full);
+    width: var(--usa-spacing-full);
+    object-fit: cover;
+}
+
+.usa-card__media--inset {
+    padding-top: var(--usa-card-padding-perimeter);
+    padding-left: var(--usa-card-padding-perimeter);
+    padding-right: var(--usa-card-padding-perimeter);
+}
+
+.usa-card__media--inset .usa-card__img {
+    border-radius: var(--usa-border-radius-0);
+}
+
+.usa-card__body {
+    flex: 1 1 0%;
+    padding-left: var(--usa-card-padding-body-x);
+    padding-right: var(--usa-card-padding-body-x);
+    padding-bottom: var(--usa-card-padding-body-y);
+    padding-top: var(--usa-card-padding-body-y);
+    flex-basis: auto;
+}
+
+.usa-card__body:last-child {
+    padding-bottom: var(--usa-card-padding-perimeter);
+}
+
+.usa-card__body:first-child {
+    padding-top: var(--usa-card-padding-perimeter);
+}
+
+.usa-card__body:only-child {
+    padding-bottom: var(--usa-card-padding-perimeter);
+    padding-top: var(--usa-card-padding-perimeter);
+}
+
+.usa-card__footer {
+    padding-bottom: var(--usa-card-padding-perimeter);
+    padding-top: var(--usa-card-padding-body-y);
+    padding-left: var(--usa-card-padding-perimeter);
+    padding-right: var(--usa-card-padding-perimeter);
+}
+
+.usa-card__footer .usa-button:only-of-type {
+    margin-right: var(--usa-spacing-0);
+}
+
+.usa-card__header>:last-child,
+.usa-card__body>:last-child {
+    padding-bottom: var(--usa-spacing-0);
+    margin-bottom: var(--usa-spacing-0);
+}
+
+.usa-card__header>:first-child,
+.usa-card__body>:first-child {
+    margin-top: var(--usa-spacing-0);
+    padding-top: var(--usa-spacing-0);
+}
+
+.usa-card__header>:only-child,
+.usa-card__body>:only-child {
+    margin-bottom: var(--usa-spacing-0);
+    margin-top: var(--usa-spacing-0);
+    padding-bottom: var(--usa-spacing-0);
+    padding-top: var(--usa-spacing-0);
+}
+
+.usa-card__header--exdent,
+.usa-card__media--exdent,
+.usa-card__body--exdent,
+.usa-card__footer--exdent {
+    margin-inline: calc(var(--usa-card-border-width) * -1);
+}
+
+.usa-card__header--exdent>*,
+.usa-card__body--exdent>*,
+.usa-card__footer--exdent>* {
+    padding-left: var(--usa-spacing-card-border-width);
+    padding-right: var(--usa-spacing-card-border-width);
+}
+
+.usa-card__media--exdent {
+    margin-top: calc(var(--usa-card-border-width) * -1);
+}
+
+.usa-card__media--exdent .usa-card__img {
+    border-top-left-radius: var(--usa-card-border-radius);
+    border-top-right-radius: var(--usa-card-border-radius);
+}
+
+.usa-card--header-first .usa-card__header {
+    border-top-right-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+    border-top-left-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+    padding-bottom: var(--usa-card-padding-y);
+}
+
+.usa-card--header-first .usa-card__header--exdent {
+    border-top-left-radius: var(--usa-card-border-radius);
+    border-top-right-radius: var(--usa-card-border-radius);
+    margin-top: calc(var(--usa-card-border-width) * -1);
+}
+
+.usa-card--header-first .usa-card__media--inset {
+    padding-top: var(--usa-spacing-0);
+}
+
+.usa-card--header-first .usa-card__media {
+    order: 0;
+}
+
+.usa-card--header-first .usa-card__img {
+    border-radius: var(--usa-border-radius-0);
+}
+
+.usa-card--header-first .usa-card__body {
+    padding-top: var(--usa-card-padding-y);
+}
+
+@media all and (min-width: 40em) {
+    .usa-card--flag .usa-card__media {
+        display: flex;
+        overflow: hidden;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: var(--usa-card-flag-image-width);
+    }
+
+    .usa-card--flag .usa-card__img {
+        border-radius: var(--usa-border-radius-0);
+        border-top-left-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+        border-bottom-left-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+    }
+
+    .usa-card--flag .usa-card__header,
+    .usa-card--flag .usa-card__body,
+    .usa-card--flag .usa-card__footer {
+        margin-left: var(--usa-spacing-card-lg);
+    }
+
+    .usa-card--flag .usa-card__media--exdent {
+        margin: calc(var(--usa-card-border-width) * -1)
+    }
+
+    .usa-card--flag .usa-card__media--exdent .usa-card__img {
+        border-bottom-left-radius: var(--usa-card-border-radius);
+        border-top-left-radius: var(--usa-card-border-radius);
+    }
+
+    .usa-card--flag .usa-card__media--inset {
+        padding-right: var(--usa-spacing-0);
+        padding-bottom: var(--usa-card-padding-perimeter);
+    }
+
+    .usa-card--flag .usa-card__media--inset .usa-card__img {
+        border-radius: var(--usa-border-radius-0);
+    }
+
+    .usa-card--flag.usa-card--header-first .usa-card__header {
+        padding-bottom: var(--usa-card-padding-body-y);
+    }
+
+    .usa-card--flag.usa-card--header-first .usa-card__body {
+        padding-top: var(--usa-card-padding-body-y);
+    }
+
+    .usa-card--flag.usa-card--header-first .usa-card__media--inset {
+        padding-top: var(--usa-card-padding-perimeter);
+    }
+
+    .usa-card--flag.usa-card--media-right .usa-card__media {
+        left: var(--usa-spacing-auto);
+        right: var(--usa-spacing-0);
+    }
+
+    .usa-card--flag.usa-card--media-right .usa-card__media--inset {
+        padding-left: var(--usa-spacing-0);
+        padding-right: var(--usa-card-padding-perimeter);
+    }
+
+    .usa-card--flag.usa-card--media-right .usa-card__media--inset .usa-card__img {
+        border-radius: var(--usa-border-radius-0);
+    }
+
+    .usa-card--flag.usa-card--media-right .usa-card__img {
+        border-radius: var(--usa-border-radius-0);
+        border-top-right-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+        border-bottom-right-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+    }
+
+    .usa-card--flag.usa-card--media-right .usa-card__header,
+    .usa-card--flag.usa-card--media-right .usa-card__body,
+    .usa-card--flag.usa-card--media-right .usa-card__footer {
+        margin-left: var(--usa-spacing-0);
+        margin-right: var(--usa-spacing-card-lg);
+    }
+
+    .usa-card--flag.usa-card--media-right .usa-card__img {
+        border-radius: var(--usa-border-radius-0);
+        border-bottom-right-radius: var(--usa-card-border-radius);
+        border-top-right-radius: var(--usa-card-border-radius);
+    }
+}
+
+.usa-card:not(.usa-card--flag).usa-card__media--set-aspect {
+    box-sizing: border-box;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+@supports (aspect-ratio: 1) {
+    .usa-card:not(.usa-card--flag).usa-card__media--set-aspect {
+        height: inherit;
+        padding: inherit;
+        aspect-ratio: 1.7777777778;
+        max-width: 100%;
+    }
+
+    .usa-card:not(.usa-card--flag).usa-card__media--set-aspect>* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    img.usa-card:not(.usa-card--flag).usa-card__media--set-aspect,
+    .usa-card:not(.usa-card--flag).usa-card__media--set-aspect>img {
+        object-fit: cover;
+    }
+}
+
+.usa-card:not(.usa-card--flag).usa-card__media--set-aspect .usa-card__img {
+    position: absolute;
+    inset: 0;
+}

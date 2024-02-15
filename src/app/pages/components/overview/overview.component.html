@@ -1,0 +1,14 @@
+
+<h1>Components</h1>
+<ul class="usa-card-group flex-row margin-top-4">
+    <li class="usa-card grid-col-6 tablet:grid-col-2 desktop:grid-col-4 margin-bottom-2" [attr.aria-label]="item.name" *ngFor="let item of components">
+        <div class="usa-card__container">
+          <header class="usa-card__header">
+            <h3 class="usa-card__heading font-heading-md"><a [routerLink]="'/components/' + item.route">{{item.name}}</a></h3>
+          </header>
+          <div class="usa-card__body">
+            <p class="font-xs">{{item.desc}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>

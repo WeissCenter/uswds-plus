@@ -1,0 +1,28 @@
+<app-token-table [label]="tokenKey" [data]="defaultTokenArr"></app-token-table>
+<app-token-table [label]="tokenKey" [colors]="true" type="css" [data]="defaultCSSVars"></app-token-table>
+<app-token-form [hostEl]="el" [currentTheme]="currentTheme" [tokenArr]="currentTokenArr" [tokenKey]="tokenKey"></app-token-form>
+
+<div class="display-flex flex-column gap-2px margin-y-4">
+
+  <div class="bg-accent-warm-lightest display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">Accent warm lightest</p>
+  </div>
+  <div class="bg-accent-warm-lighter display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">Accent warm lighter</p>
+  </div>
+  <div class="bg-accent-warm-light display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">Accent warm light</p>
+  </div>
+  <div class="bg-accent-warm display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">Accent warm</p>
+  </div>
+  <div class="bg-accent-warm-dark display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">Accent warm dark</p>
+  </div>
+  <div class="bg-accent-warm-darker display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">Accent warm darker</p>
+  </div>
+  <div class="bg-accent-warm-darkest display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">Accent warm darkest</p>
+  </div>
+</div>

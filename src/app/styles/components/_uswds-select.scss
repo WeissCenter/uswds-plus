@@ -1,0 +1,99 @@
+:root {
+    --usa-input-select-border-width: var( --usa-input-border-width);
+}
+
+.usa-select {
+    background-image: url($assets-path + 'usa-icons/unfold_more.svg'), linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--usa-input-background-color);
+    background-position: right var(--usa-spacing-05) center;
+    background-size:  var(--usa-input-select-size);
+    padding-right:  var(--usa-spacing-4);
+    position: relative;
+    border: var( --usa-input-select-border-width) solid var(--usa-input-border-color);
+}
+
+
+.usa-select::-ms-expand {
+    display: none;
+}
+
+.usa-select:-webkit-autofill {
+    -webkit-appearance: menulist;
+    appearance: menulist
+}
+
+.usa-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 black
+}
+
+.usa-select[multiple] {
+    height: auto;
+    background-image: none;
+    padding-right: 0
+}
+
+.usa-select option {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.usa-select:disabled,
+.usa-select[aria-disabled=true] {
+    background-color: var(--usa-disabled-lighter);
+    color: var(--usa-disabled-dark);
+    cursor: not-allowed;
+    opacity: 1
+}
+
+.usa-select:disabled:hover,
+.usa-select:disabled:active,
+.usa-select:disabled:focus,
+.usa-select:disabled.usa-focus,
+.usa-select[aria-disabled=true]:hover,
+.usa-select[aria-disabled=true]:active,
+.usa-select[aria-disabled=true]:focus,
+.usa-select[aria-disabled=true].usa-focus {
+    background-color: var(--usa-disabled-lighter);
+    color: var(--usa-disabled-dark)
+}
+
+@media (forced-colors: active) {
+
+    .usa-select:disabled,
+    .usa-select[aria-disabled=true] {
+        border: 0;
+        color: GrayText
+    }
+
+    .usa-select:disabled:hover,
+    .usa-select:disabled:active,
+    .usa-select:disabled:focus,
+    .usa-select:disabled.usa-focus,
+    .usa-select[aria-disabled=true]:hover,
+    .usa-select[aria-disabled=true]:active,
+    .usa-select[aria-disabled=true]:focus,
+    .usa-select[aria-disabled=true].usa-focus {
+        color: GrayText
+    }
+}
+
+@media (forced-colors: active) {
+
+    .usa-select:disabled,
+    .usa-select[aria-disabled=true] {
+        border: 2px solid GrayText
+    }
+}
+
+@media (forced-colors: active) {
+    .usa-select {
+        -webkit-appearance: listbox;
+        appearance: listbox;
+        background-image: none;
+        padding-right: 0
+    }
+}

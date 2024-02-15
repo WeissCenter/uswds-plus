@@ -1,0 +1,137 @@
+:root {
+    --usa-link-reverse-active-color: var(--usa-color-global-white);
+    --usa-link-visited-color: var(--usa-color-violet-vivid-70);
+    --usa-link-reverse-hover-color: var(--usa-base-lightest);
+    --usa-link-reverse-color: var(--usa-base-lighter);
+    --usa-link-active-color: var(--usa-primary-darker);
+    --usa-link-hover-color: var(--usa-primary-dark);
+    --usa-link-color: var(--usa-primary-base);
+    --usa-link-focus-offset: 0;
+}
+
+.usa-link {
+    color: var(--usa-link-color);
+    text-decoration: underline;
+    &[disabled] {
+        color: var(--usa-disabled-base);
+        cursor: not-allowed;
+        text-decoration: none;
+        &:active, &:hover, &:focus {
+            color: var(--usa-disabled-base);
+            text-decoration: none;
+        }
+    }
+}
+
+.usa-link:visited {
+    color: var(--usa-link-visited-color);
+}
+
+.usa-link:hover {
+    color: var(--usa-link-hover-color);
+}
+
+.usa-link:active {
+    color: var(--usa-link-active-color);
+}
+
+.usa-link:focus {
+    outline: var(--usa-focus-width) var(--usa-focus-style) var(--usa-focus-color);
+    outline-offset: var(--usa-link-focus-offset);
+}
+
+.usa-link--external {
+    display: inline;
+}
+
+.usa-link--external:before {
+    position: absolute;
+    left: -999em;
+    right: auto;
+    content: "External.";
+}
+
+.usa-link--external[target=_blank]:before {
+    position: absolute;
+    left: -999em;
+    right: auto;
+    content: "External, opens in a new tab.";
+}
+
+.usa-link--external:after {
+    background-image: url($assets-path + 'launch.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: var(--usa-sizing-2);
+    display: inline-block;
+    height: var(--usa-sizing-2);
+    width: var(--usa-sizing-2);
+    content: "";
+    display: inline;
+    margin-top: .7ex;
+    margin-left: var(--usa-spacing-2px);
+    padding-left: 1.75ex;
+    vertical-align: middle;
+}
+
+@supports ((-webkit-mask: url()) or (mask: url())) {
+    .usa-link--external:after {
+        background: none;
+        background-color: currentColor;
+        mask-image: url($assets-path + 'launch.svg'), linear-gradient(transparent, transparent);
+        -webkit-mask-position: center center;
+        mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
+        mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
+    }
+}
+
+.usa-link--external.usa-link--alt {
+    display: inline;
+}
+
+.usa-link--external.usa-link--alt:before {
+    position: absolute;
+    left: -999em;
+    right: auto;
+    content: "External.";
+}
+
+.usa-link--external.usa-link--alt[target=_blank]:before {
+    position: absolute;
+    left: -999em;
+    right: auto;
+    content: "External, opens in a new tab.";
+}
+
+.usa-link--external.usa-link--alt:after {
+    background-image: url($assets-path + 'launch--white.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: var(--usa-sizing-2);
+    display: inline-block;
+    height: var(--usa-sizing-2);
+    width: var(--usa-sizing-2);
+    content: "";
+    display: inline;
+    margin-top: .7ex;
+    margin-left: var(--usa-spacing-2px);
+    padding-left: 1.75ex;
+    vertical-align: middle;
+}
+
+@supports ((-webkit-mask: url()) or (mask: url())) {
+    .usa-link--external.usa-link--alt:after {
+        background: none;
+        background-color: currentColor;
+        mask-image: url($assets-path + 'launch.svg'), linear-gradient(transparent, transparent);
+        -webkit-mask-position: center center;
+        mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
+        mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
+    }
+}

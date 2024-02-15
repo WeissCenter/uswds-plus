@@ -1,0 +1,300 @@
+:root {
+    --usa-combo-box-option-background-color: var(--usa-input-background-color);
+    --usa-combo-box-option-color: var(--usa-input-color);
+    --usa-combo-box-option-border-color: var(--usa-input-border-color);
+    --usa-combo-box-option-hover-background-color: var(--usa-base-lightest);
+    --usa-combo-box-option-hover-color: var(--usa-input-color);
+    --usa-combo-box-option-hover-border-color: var(--usa-input-border-color);
+    --usa-combo-box-option-selected-background-color: var(--usa-primary);
+    --usa-combo-box-option-selected-color: var(--usa-white);
+    --usa-combo-box-option-selected-border-color: var(--usa-primary);
+    --usa-combo-box-option-selected-hover-background-color: var(--usa-primary-dark);
+    --usa-combo-box-option-selected-hover-color: var(--usa-combo-box-option-selected-color);
+    --usa-combo-box-option-selected-hover-border-color: var(--usa-primary-dark);
+    --usa-combo-box-option-padding-y: var(--usa-spacing-1);
+    --usa-combo-box-option-padding-x: var( --usa-input-padding-x);
+    --usa-combo-box-option-border-width: var(--usa-input-border-width);
+    --usa-combo-box-list-border-radius: var(--usa-input-border-radius);
+}
+.usa-combo-box {
+    max-width: var(--usa-input-max-width);
+    position: relative;
+    .usa-select {
+        position:absolute;
+    }
+}
+
+.usa-combo-box--pristine .usa-combo-box__input {
+    padding-right: calc(var(--usa-sizing-4) + var(--usa-spacing-2));
+}
+
+.usa-combo-box--pristine .usa-combo-box__input::-ms-clear {
+    display: none;
+}
+
+.usa-combo-box--pristine .usa-combo-box__clear-input {
+    display: block;
+}
+
+@media (forced-colors: active) {
+    .usa-combo-box--pristine .usa-combo-box__clear-input {
+        background-image: url($assets-path + 'usa-icons/close.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: var(--usa-sizing-2);
+        display: inline-block;
+        height: var(--usa-sizing-2);
+        width: var(--usa-sizing-2);
+        width: auto;
+        top: var(--usa-spacing-1);
+    }
+
+    @supports ((-webkit-mask: url()) or (mask: url())) {
+        .usa-combo-box--pristine .usa-combo-box__clear-input {
+            background: none;
+            background-color: currentColor;
+            mask-image: url($assets-path + 'usa-icons/close.svg'), linear-gradient(transparent, transparent);
+            -webkit-mask-position: center center;
+            mask-position: center center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
+            mask-size: var(--usa-sizing-2) var(--usa-sizing-2)
+        }
+    }
+}
+
+.usa-combo-box__input {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 0;
+    max-width: none;
+    padding-right: calc(var(--usa-sizing-4) + var(--usa-spacing-2));
+}
+
+.usa-combo-box__input:disabled,
+.usa-combo-box__input[aria-disabled=true] {
+    background-color: var(--usa-disabled-lighter);
+    color: var(--usa-disabled-dark);
+    cursor: not-allowed;
+    opacity: 1;
+    -webkit-text-fill-color: var(--usa-disabled-dark);
+}
+
+.usa-combo-box__input:disabled:hover,
+.usa-combo-box__input:disabled:active,
+.usa-combo-box__input:disabled:focus,
+.usa-combo-box__input:disabled.usa-focus,
+.usa-combo-box__input[aria-disabled=true]:hover,
+.usa-combo-box__input[aria-disabled=true]:active,
+.usa-combo-box__input[aria-disabled=true]:focus,
+.usa-combo-box__input[aria-disabled=true].usa-focus {
+    background-color: var(--usa-disabled-lighter);
+    color: var(--usa-disabled-dark);
+}
+
+@media (forced-colors: active) {
+
+    .usa-combo-box__input:disabled,
+    .usa-combo-box__input[aria-disabled=true] {
+        border: 0;
+        color: GrayText;
+    }
+
+    .usa-combo-box__input:disabled:hover,
+    .usa-combo-box__input:disabled:active,
+    .usa-combo-box__input:disabled:focus,
+    .usa-combo-box__input:disabled.usa-focus,
+    .usa-combo-box__input[aria-disabled=true]:hover,
+    .usa-combo-box__input[aria-disabled=true]:active,
+    .usa-combo-box__input[aria-disabled=true]:focus,
+    .usa-combo-box__input[aria-disabled=true].usa-focus {
+        color: GrayText;
+    }
+}
+
+@media (forced-colors: active) {
+
+    .usa-combo-box__input:disabled,
+    .usa-combo-box__input[aria-disabled=true] {
+        border: var(--usa-input-border-width) solid GrayText;
+    }
+}
+
+.usa-combo-box__input:disabled::placeholder,
+.usa-combo-box__input[aria-disabled=true]::placeholder {
+    opacity: 1;
+    color: var(--usa-disabled-dark);
+}
+
+.usa-combo-box__input:disabled~.usa-combo-box__input-button-separator,
+.usa-combo-box__input[aria-disabled=true]~.usa-combo-box__input-button-separator {
+    background-color: var(--usa-disabled-dark);
+    cursor: not-allowed;
+}
+
+button.usa-combo-box__toggle-list:focus,
+button.usa-combo-box__clear-input:focus {
+    outline-offset: -4px;
+}
+
+button.usa-combo-box__toggle-list:disabled,
+button.usa-combo-box__toggle-list[aria-disabled=true],
+button.usa-combo-box__clear-input:disabled,
+button.usa-combo-box__clear-input[aria-disabled=true] {
+    cursor: not-allowed;
+}
+
+.usa-combo-box__toggle-list__wrapper:focus,
+.usa-combo-box__clear-input__wrapper:focus {
+    outline: 0;
+}
+
+.usa-combo-box__toggle-list,
+.usa-combo-box__clear-input {
+    background-color: transparent;
+    background-position: center;
+    background-size: auto var(--usa-sizing-4);
+    height: var( --usa-input-height);
+    border: none;
+    bottom: 0;
+    cursor: pointer;
+    margin-bottom: 0;
+    opacity: .6;
+    padding: 0;
+    width: var(--usa-sizing-4);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+
+.usa-combo-box__clear-input {
+    background-image: url($assets-path + 'usa-icons/close.svg'), linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    display: none;
+    right: calc(var(--usa-sizing-4) + var(--usa-spacing-2));
+}
+
+.usa-combo-box__toggle-list {
+    background-image: url($assets-path + 'usa-icons/expand_more.svg'), linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-size: auto var(--usa-sizing-4);
+    right: calc(var(--usa-spacing-1) + var(--usa-input-border-width));
+}
+
+@media (forced-colors: active) {
+    .usa-combo-box__toggle-list {
+        background-image: url($assets-path + 'usa-icons/expand_more.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: var(--usa-spacing-1rem);
+        display: inline-block;
+        height: var(--usa-sizing-4);
+        width: var(--usa-sizing-4);
+        height: auto;
+        width: auto
+    }
+
+    @supports ((-webkit-mask: url()) or (mask: url())) {
+        .usa-combo-box__toggle-list {
+            background: none;
+            background-color: currentColor;
+            mask-image: url($assets-path + 'usa-icons/expand_more.svg'), linear-gradient(transparent, transparent);
+            -webkit-mask-position: center center;
+            mask-position: center center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: var(--usa-sizing-4) var(--usa-sizing-4);
+            mask-size: var(--usa-sizing-4) var(--usa-sizing-4);
+        }
+    }
+
+    .usa-combo-box__toggle-list:disabled,
+    .usa-combo-box__toggle-list[aria-disabled=true] {
+        background-color: GrayText;
+    }
+}
+
+.usa-combo-box__input-button-separator {
+    background-color: var(--usa-input-border-color);
+    position: absolute;
+    top: 0;
+    height: calc(100% - var(--usa-spacing-2));
+    margin-bottom: var(--usa-spacing-1);
+    margin-top: var(--usa-spacing-1);
+    width: var(--usa-input-border-width);
+    right: calc(var(--usa-sizing-4) + var(--usa-spacing-2));
+    box-sizing: border-box;
+    z-index: 200;
+}
+
+@media (forced-colors: active) {
+    .usa-combo-box__input-button-separator {
+        background-color: ButtonText
+    }
+}
+
+.usa-combo-box__list {
+    border: var(--usa-input-border-width) solid var(--usa-input-border-color);
+    background-color: var(--usa-combo-box-option-background-color);
+    border-radius: var(--usa-combo-box-list-border-radius);
+    border-top: 0;
+    margin: 0;
+    max-height: var(--usa-sizing-mobile-lg);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 300;
+}
+
+.usa-combo-box__list:focus {
+    outline: 0;
+}
+
+.usa-combo-box__list-option {
+    border-bottom: var(--usa-combo-box-option-border-width) solid var(--usa-combo-box-option-border-color);
+    cursor: pointer;
+    display: block;
+    background-color: var(--usa-combo-box-option-background-color);
+    color: var(--usa-combo-box-option-color);
+    padding: var(--usa-combo-box-option-padding-y) var(--usa-combo-box-option-padding-x);
+    &:hover {
+        background-color: var(--usa-combo-box-option-hover-background-color);
+        color: var(--usa-combo-box-option-hover-color);
+        border-color: var(--usa-combo-box-option-hover-border-color);
+    }
+    &:last-of-type {
+        border-bottom: none;
+    }
+}
+
+.usa-combo-box__list-option--focused {
+    outline: var(--usa-focus-width) var(--usa-focus-style) var(--usa-focus-color);
+    outline-offset: var(--usa-focus-offset);
+    position: relative;
+    z-index: 100;
+}
+
+.usa-combo-box__list-option--focused:focus {
+    outline-offset: -4px;
+}
+
+.usa-combo-box__list-option--selected {
+    background-color: var(--usa-combo-box-option-selected-background-color);
+    border-color: var(--usa-combo-box-option-selected-border-color);
+    color: var(--usa-combo-box-option-selected-color);
+    &:hover {
+        background-color: var(--usa-combo-box-option-selected-hover-background-color);
+        border-color: var(--usa-combo-box-option-selected-hover-border-color);
+        color: var(--usa-combo-box-option-selected-hover-color);
+    
+    }
+}
+
+.usa-combo-box__list-option--no-results {
+    cursor: not-allowed;
+    display: block;
+    padding: var(--usa-combo-box-option-padding-y) var(--usa-combo-box-option-padding-x);
+}

@@ -1,0 +1,78 @@
+// Cleaned up typography styles
+
+// TODO: Mobile font size variants
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.usa-prose {
+
+
+    h1 {
+        line-height: var(--usa-h1-font-line-height);
+        font-size: var(--usa-h1-font-size);
+        font-family: var(--usa-h1-font-family);
+        font-weight: var(--usa-h1-font-weight);
+        letter-spacing: var(--usa-h1-font-letter-spacing);
+    }
+
+    h2 {
+        line-height: var(--usa-h2-font-line-height);
+        font-size: var(--usa-h2-font-size);
+        font-family: var(--usa-h2-font-family);
+        font-weight: var(--usa-h2-font-weight);
+        letter-spacing: var(--usa-h2-font-letter-spacing);
+    }
+
+    h3 {
+        line-height: var(--usa-h3-font-line-height);
+        font-size: var(--usa-h3-font-size);
+        font-family: var(--usa-h3-font-family);
+        font-weight: var(--usa-h3-font-weight);
+        letter-spacing: var(--usa-h3-font-letter-spacing);
+    }
+
+    h4 {
+        line-height: var(--usa-h4-font-line-height);
+        font-size: var(--usa-h4-font-size);
+        font-family: var(--usa-h4-font-family);
+        font-weight: var(--usa-h4-font-weight);
+        letter-spacing: var(--usa-h4-font-letter-spacing);
+    }
+
+    h5 {
+        line-height: var(--usa-h5-font-line-height);
+        font-size: var(--usa-h5-font-size);
+        font-family: var(--usa-h5-font-family);
+        font-weight: var(--usa-h5-font-weight);
+        letter-spacing: var(--usa-h5-font-letter-spacing);
+    }
+
+    h6 {
+        line-height: var(--usa-h6-font-line-height);
+        font-size: var(--usa-h6-font-size);
+        font-family: var(--usa-h6-font-family);
+        font-weight: var(--usa-h6-font-weight);
+        letter-spacing: var(--usa-h6-font-letter-spacing);
+    }
+
+    p {
+        line-height: var(--usa-body-font-line-height);
+        font-size: var(--usa-body-font-size);
+        font-family: var(--usa-body-font-family);
+        font-weight: var(--usa-body-font-weight);
+        letter-spacing: var(--usa-body-font-letter-spacing);
+    }
+
+}
+
+b,
+strong {
+    font-weight: var(--usa-font-weight-semibold);
+}

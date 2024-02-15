@@ -1,0 +1,365 @@
+import { ThemeTokens } from '../../../../interfaces/tokens';
+
+export const key = 'input';
+
+// --usa-input-font-family: var(--usa-font-ui);
+//     --usa-input-font-size: var(--usa-body-font-size);
+//     --usa-input-font-weight: var(--usa-font-weight-normal);
+//     --usa-input-line-height: var(--usa-line-height-3);
+// --usa-input-letter-spacing: var(--usa-body-font-letter-spacing);
+//     --usa-input-height: var(--usa-sizing-5);
+//     --usa-input-select-size: var(--usa-sizing-205);
+//     --usa-input-max-width: var(--usa-sizing-mobile-lg);
+//     --usa-input-margin-top: var(--usa-spacing-1);
+//     --usa-input-padding-x: var(--usa-spacing-1);
+//     --usa-input-padding-y: var(--usa-spacing-05);
+//     --usa-input-large-height: var(--usa-spacing-6);
+//     --usa-input-border-width: var(--usa-usa-border-width-sm);
+//     --usa-input-border-color: var(--usa-base-light);
+//     --usa-input-border-color-hover: var(--usa-base);
+//     --usa-input-color: var(--usa-ink);
+//     --usa-input-placeholder-color: var(--usa-base-light);
+//     --usa-input-background-color: var(--usa-body-background);
+//     --usa-input-border-radius: var(--usa-border-radius-0);
+//     --usa-search-min-width: 27ch;
+//     --usa-input-disabled-border-color: var(--usa-disabled-light);
+//     --usa-input-disabled-border-color-hover: var(--usa-input-disabled-border-color);
+//     --usa-input-disabled-color: var(--usa-disabled);
+//     --usa-input-disabled-background-color: var(--usa-disabled-lighter);
+// --usa-input-label-font-size: var(--usa-font-size-xs);
+// --usa-input-label-font-family: var(--usa-font-ui);
+// --usa-input-label-font-weight: var(--usa-font-weight-normal);
+// --usa-input-label-color: var(--usa-base-dark);
+// --usa-input-label-line-height: var(--usa-line-height-3);
+// --usa-input-label-margin-bottom: var(--usa-spacing-05);
+// --usa-input-label-margin-top: var(--usa-spacing-1);
+// --usa-input-select-caret-color: var(--usa-input-color);
+
+const tokens: ThemeTokens = {
+  base: {
+    'font-family': {
+      value: '{font.ui}',
+      type: 'fontFamilies',
+      description: 'Font family',
+    },
+    'font-size': {
+      value: '{body-font.size}',
+      type: 'fontSizes',
+      description: 'Font size',
+    },
+    'font-weight': {
+      value: '{font-weight.normal}',
+      type: 'fontWeights',
+      description: 'Font weight',
+    },
+    'line-height': {
+      value: '{line-height.3}',
+      type: 'lineHeights',
+      description: 'Line height',
+    },
+    'letter-spacing': {
+      value: '{body-font.letter-spacing}',
+      type: 'letterSpacing',
+      description: 'Letter spacing',
+    },
+    height: {
+      value: '{sizing.5}',
+      type: 'sizes',
+      description: 'Height',
+    },
+    'select-size': {
+      value: '{sizing.205}',
+      type: 'sizes',
+      description: 'Select size',
+    },
+    'max-width': {
+      value: '{sizing.mobile-lg}',
+      type: 'sizes',
+      description: 'Max width',
+    },
+    'margin-top': {
+      value: '{spacing.1}',
+      type: 'spacing',
+      description: 'Margin top',
+    },
+    'padding-x': {
+      value: '{spacing.1}',
+      type: 'spacing',
+      description: 'Padding x',
+    },
+    'padding-y': {
+      value: '{spacing.05}',
+      type: 'spacing',
+      description: 'Padding y',
+    },
+    'large-height': {
+      value: '{spacing.6}',
+      type: 'spacing',
+      description: 'Large height',
+    },
+    'border-width': {
+      value: '{border-width.sm}',
+      type: 'borderWidths',
+      description: 'Border width',
+    },
+    'border-color': {
+      value: '{border-color.base}',
+      type: 'colors',
+      description: 'Border color',
+    },
+    'border-color-hover': {
+      value: '{border-color.base}',
+      type: 'colors',
+      description: 'Border color hover',
+    },
+    color: {
+      value: '{ink}',
+      type: 'colors',
+      description: 'Color',
+    },
+    'placeholder-color': {
+      value: '{base.light}',
+      type: 'colors',
+      description: 'Placeholder color',
+    },
+    'background-color': {
+      value: '{body.background}',
+      type: 'colors',
+      description: 'Background color',
+    },
+    'border-radius': {
+      value: '{border-radius.0}',
+      type: 'borderRadius',
+      description: 'Border radius',
+    },
+    'search-min-width': {
+      value: '27ch',
+      type: 'sizes',
+      description: 'Search min width',
+    },
+    'disabled-border-color': {
+      value: '{disabled.light}',
+      type: 'colors',
+      description: 'Disabled border color',
+    },
+    'disabled-border-color-hover': {
+      value: '{input.disabled-border-color}',
+      type: 'colors',
+      description: 'Disabled border color hover',
+    },
+    'disabled-color': {
+      value: '{disabled}',
+      type: 'colors',
+      description: 'Disabled color',
+    },
+    'disabled-background-color': {
+      value: '{disabled.lighter}',
+      type: 'colors',
+      description: 'Disabled background color',
+    },
+    'label-font-size': {
+      value: '{font-size.xs}',
+      type: 'fontSizes',
+      description: 'Label font size',
+    },
+    'label-font-family': {
+      value: '{font.ui}',
+      type: 'fontFamilies',
+      description: 'Label font family',
+    },
+    'label-font-weight': {
+      value: '{font-weight.normal}',
+      type: 'fontWeights',
+      description: 'Label font weight',
+    },
+    'label-color': {
+      value: '{base.dark}',
+      type: 'colors',
+      description: 'Label color',
+    },
+    'label-line-height': {
+      value: '{line-height.3}',
+      type: 'lineHeights',
+      description: 'Label line height',
+    },
+    'label-margin-bottom': {
+      value: '{spacing.0}',
+      type: 'spacing',
+      description: 'Label margin bottom',
+    },
+    'label-margin-top': {
+      value: '{spacing.2}',
+      type: 'spacing',
+      description: 'Label margin top',
+    },
+    'select-caret-color': {
+      value: '{input.color}',
+      type: 'colors',
+      description: 'Select caret color',
+    },
+  },
+  coi: {
+    'font-family': {
+      value: '{font.ui}',
+      type: 'fontFamilies',
+      description: 'Font family',
+    },
+    'font-size': {
+      value: '{body-font.size}',
+      type: 'fontSizes',
+      description: 'Font size',
+    },
+    'font-weight': {
+      value: '{font-weight.medium}',
+      type: 'fontWeights',
+      description: 'Font weight',
+    },
+    'line-height': {
+      value: '{line-height.3}',
+      type: 'lineHeights',
+      description: 'Line height',
+    },
+    'letter-spacing': {
+      value: '{body-font.letter-spacing}',
+      type: 'letterSpacing',
+      description: 'Letter spacing',
+    },  
+    height: {
+      value: '{sizing.6}',
+      type: 'sizes',
+      description: 'Height',
+    },
+    'select-size': {
+      value: '{sizing.3}',
+      type: 'sizes',
+      description: 'Select size',
+    },
+    'select-caret-color': {
+      value: '{input.color}',
+      type: 'colors',
+      description: 'Select caret color',
+    },
+    'max-width': {
+      value: '{sizing.mobile-lg}',
+      type: 'sizes',
+      description: 'Max width',
+    },
+    'margin-top': {
+      value: '{spacing.1}',
+      type: 'spacing',
+      description: 'Margin top',
+    },
+    'padding-x': {
+      value: '{spacing.2}',
+      type: 'spacing',
+      description: 'Padding x',
+    },
+    'padding-y': {
+      value: '{spacing.1}',
+      type: 'spacing',
+      description: 'Padding y',
+    },
+    'large-height': {
+      value: '{sizing.7}',
+      type: 'sizing',
+      description: 'Large height',
+    },
+    'border-width': {
+      value: '{border-width.0}',
+      type: 'borderWidths',
+      description: 'Border width',
+    },
+    'border-color': {
+      value: '{border-color.base}',
+      type: 'colors',
+      description: 'Border color',
+    },
+    'border-color-hover': {
+      value: '{border-color.base}',
+      type: 'colors',
+      description: 'Border color hover',
+    },
+    color: {
+      value: '{black}',
+      type: 'colors',
+      description: 'Color',
+    },
+    'placeholder-color': {
+      value: '{base.dark}',
+      type: 'colors',
+      description: 'Placeholder color',
+    },
+    'background-color': {
+      value: '{base.lighter}',
+      type: 'colors',
+      description: 'Background color',
+    },
+    'border-radius': {
+      value: '{border-radius.md}',
+      type: 'borderRadius',
+      description: 'Border radius',
+    },
+    'search-min-width': {
+      value: '27ch',
+      type: 'sizes',
+      description: 'Search min width',
+    },
+    'disabled-border-color': {
+      value: '{disabled.light}',
+      type: 'colors',
+      description: 'Disabled border color',
+    },
+    'disabled-border-color-hover': {
+      value: '{input.disabled-border-color}',
+      type: 'colors',
+      description: 'Disabled border color hover',
+    },
+    'disabled-color': {
+      value: '{disabled}',
+      type: 'colors',
+      description: 'Disabled color',
+    },
+    'disabled-background-color': {
+      value: '{disabled.lighter}',
+      type: 'colors',
+      description: 'Disabled background color',
+    },
+    'label-font-size': {
+      value: '{font-size.md}',
+      type: 'fontSizes',
+      description: 'Label font size',
+    },
+    'label-font-family': {
+      value: '{font.ui}',
+      type: 'fontFamilies',
+      description: 'Label font family',
+    },
+    'label-font-weight': {
+      value: '{font-weight.medium}',
+      type: 'fontWeights',
+      description: 'Label font weight',
+    },
+    'label-color': {
+      value: '{base.dark}',
+      type: 'colors',
+      description: 'Label color',
+    },
+    'label-line-height': {
+      value: '{line-height.3}',
+      type: 'lineHeights',
+      description: 'Label line height',
+    },
+    'label-margin-bottom': {
+      value: '{spacing.0}',
+      type: 'spacing',
+      description: 'Label margin bottom',
+    },
+    'label-margin-top': {
+      value: '{spacing.0}',
+      type: 'spacing',
+      description: 'Label margin top',
+    },
+  },
+};
+
+export default tokens;

@@ -1,0 +1,64 @@
+:root {
+    --a11y-font-size-modifier: 1;
+    --a11y-line-height-modifier: 1;
+    --a11y-letter-spacing-modifier: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
+
+.a11y-font {
+    --usa-font-sans: 'Lexend', sans-serif !important;
+    --usa-font-serif: 'Lexend', sans-serif !important;
+    --usa-font-mono: 'Lexend', sans-serif !important;
+}
+
+[data-font-family="dyslexic"] {
+    --usa-font-sans: 'Lexend' !important;
+    --usa-font-serif: 'Lexend', sans-serif !important;
+    --usa-font-mono: 'Lexend', sans-serif !important;
+}
+
+[data-font-family="mono"] {
+    --usa-font-sans: var(--usa-font-mono) !important;
+    --usa-font-serif: var(--usa-font-mono) !important;
+}
+
+[data-font-size="default"] {
+    --a11y-font-size-modifier: 1;
+    --a11y-line-height-modifier: 1;
+}
+
+[data-font-size="large"] {
+    --a11y-font-size-modifier: 1.2;
+    --a11y-line-height-modifier: 1;
+}
+
+[data-font-size="larger"] {
+    --a11y-font-size-modifier: 1.4;
+    --a11y-line-height-modifier: 1.1;
+}
+
+[data-font-size="largest"] {
+    --a11y-font-size-modifier: 1.6;
+    --a11y-line-height-modifier: 1.1;
+}
+
+[data-line-height="default"] {
+    --a11y-line-height-modifier: 1;
+    --a11y-letter-spacing-modifier: 1;
+}
+
+[data-line-height="large"] {
+    --a11y-line-height-modifier: 1.2;
+    --a11y-letter-spacing-modifier: 2;
+}
+
+[data-line-height="larger"] {
+    --a11y-line-height-modifier: 1.4;
+    --a11y-letter-spacing-modifier: 3;
+}
+
+[data-line-height="largest"] {
+    --a11y-line-height-modifier: 1.6;
+    --a11y-letter-spacing-modifier: 4;
+}

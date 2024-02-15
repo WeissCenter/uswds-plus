@@ -1,0 +1,119 @@
+:root {
+    --usa-form-font-family: var( --usa-input-font-family);
+
+    --usa-input-font-family: var(--usa-font-ui);
+    --usa-input-font-size: var(--usa-body-font-size);
+    --usa-input-font-weight: var(--usa-font-weight-normal);
+    --usa-input-line-height: var(--usa-line-height-3);
+    --usa-input-letter-spacing: var(--usa-body-font-letter-spacing);
+    --usa-input-height: var(--usa-sizing-5);
+    --usa-input-select-size: var(--usa-sizing-205);
+    --usa-input-select-caret-color: var(--usa-input-color);
+    --usa-input-max-width: var(--usa-sizing-mobile-lg);
+    --usa-input-margin-top: var(--usa-spacing-1);
+    --usa-input-padding-x: var(--usa-spacing-1);
+    --usa-input-padding-y: var(--usa-spacing-05);
+    --usa-input-large-height: var(--usa-spacing-6);
+    --usa-input-border-width: var(--usa-border-width-sm);
+    --usa-input-border-color: var(--usa-border-color-base);
+    --usa-input-border-color-hover: var(--usa-border-color-dark);
+    --usa-input-color: var(--usa-ink);
+    --usa-input-placeholder-color: var(--usa-base-light);
+    --usa-input-background-color: var(--usa-body-background);
+    --usa-input-border-radius: var(--usa-border-radius-0);
+    --usa-search-min-width: 27ch;
+
+    --usa-input-disabled-border-color: var(--usa-disabled-light);
+    --usa-input-disabled-border-color-hover: var(--usa-input-disabled-border-color);
+    --usa-input-disabled-color: var(--usa-disabled);
+    --usa-input-disabled-background-color: var(--usa-disabled-lighter);
+
+    --usa-input-label-font-size: var(--usa-font-size-xs);
+    --usa-input-label-font-family: var(--usa-font-ui);
+    --usa-input-label-font-weight: var(--usa-font-weight-normal);
+    --usa-input-label-color: var(--usa-base-dark);
+    --usa-input-label-line-height: var(--usa-line-height-3);
+    --usa-input-label-margin-bottom: var(--usa-spacing-05);
+    --usa-input-label-margin-top: var(--usa-spacing-1);
+
+}
+
+.usa-textarea,
+.usa-range,
+.usa-radio__label,
+.usa-input-group,
+.usa-hint,
+.usa-combo-box__input,
+.usa-combo-box__list,
+.usa-select,
+.usa-checkbox__label,
+.usa-fieldset,
+.usa-input {
+    font-family: var( --usa-input-font-family);
+    font-weight: var(--usa-input-font-weight);
+    font-size: var(--usa-input-font-size);
+    line-height: var(--usa-input-line-height);
+    letter-spacing: var(--usa-input-letter-spacing);
+    ::placeholder {
+        color: var(--usa-input-placeholder-color);
+    }
+}
+
+.usa-textarea,
+.usa-range,
+.usa-input-group,
+.usa-combo-box__input,
+.usa-select,
+.usa-input {
+    border: var(--usa-input-border-width) solid var(--usa-input-border-color);
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: var(--usa-input-border-radius);
+    color: var(--usa-input-color);
+    display: block;
+    min-height: var(--usa-input-height);
+    margin-top: var( --usa-input-margin-top);
+    max-width: var(--usa-input-max-width);
+    padding: var(--usa-input-padding-y) var(--usa-input-padding-x);
+    background-color: var(--usa-input-background-color);
+    width: 100%;
+}
+
+input:not([disabled]):focus,
+select:not([disabled]):focus,
+textarea:not([disabled]):focus,
+button:not([disabled]):focus {
+    outline: var(--usa-focus-width) var(--usa-focus-style) var(--usa-focus-color);
+    outline-offset: var(--usa-focus-offset);
+}
+
+.usa-hint {
+    color: var(--usa-base-dark);
+}
+
+.usa-hint--required {
+    color: var(--usa-error-dark);
+}
+
+
+.usa-label {
+    font-family: var(--usa-input-label-font-family);
+    font-size: var(--usa-input-label-font-size);
+    line-height: var(--usa-input-label-line-height);
+    display: block;
+    font-weight: var(--usa-input-label-font-weight);
+    margin-top: var(--usa-input-label-margin-top);
+    margin-bottom: var(--usa-input-label-margin-bottom);
+    max-width: var(--usa-input-max-width);
+    letter-spacing: var(--usa-input-letter-spacing);
+    color: var(--usa-input-label-color);
+}
+
+.usa-label--error {
+    font-weight: var(--usa-font-weight-bold);
+    margin-top: var(--usa-spacing-0)
+}
+
+.usa-label--required {
+    color: var(--usa-error-dark)
+}

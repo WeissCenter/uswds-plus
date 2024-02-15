@@ -1,0 +1,216 @@
+:root {
+    --usa-sidenav-item-font-size: var(--usa-font-size-sm);
+    --usa-sidenav-item-font-family: var(--usa-font-sans);
+    --usa-sidenav-item-font-weight: var(--usa-font-weight-normal);
+    --usa-sidenav-item-font-weight-current: var(--usa-font-weight-bold);
+    --usa-sidenav-item-line-height: var(--usa-line-height-3);
+    --usa-sidenav-item-text-align: left;
+
+    --usa-sidenav-sublist-font-size: var(--usa-font-size-2xs);
+    --usa-sidenav-sublist-font-weight: var(--usa-sidenav-item-font-weight);
+    --usa-sidenav-sublist-font-weight-current: var(--usa-sidenav-item-font-weight-current);
+    --usa-sidenav-sublist-line-height: var(--usa-sidenav-item-line-height);
+    --usa-sidenav-sublist-font-family: var( --usa-sidenav-item-font-family);
+
+    --usa-sidenav-item-background: var(--usa-body-background);
+    --usa-sidenav-item-background-hover: var(--usa-base-lighter);
+    --usa-sidenav-item-background-current: var(--usa-sidenav-item-background);
+
+    --usa-sidenav-sublist-background: var(--usa-sidenav-item-background);
+    --usa-sidenav-sublist-background-hover: var(--usa-sidenav-item-background-hover);
+    --usa-sidenav-sublist-background-current: var(--usa-sidenav-item-background-current);
+
+    --usa-sidenav-item-border-color: var(--usa-border-color-base);
+    --usa-sidenav-item-border-width: var(--usa-border-width-1px);
+
+    --usa-sidenav-sublist-border-color: var(--usa-sidenav-item-border-color);
+    --usa-sidenav-sublist-border-width: var(--usa-sidenav-item-border-width);
+
+    --usa-sidenav-item-padding-x: var(--usa-spacing-2);
+    --usa-sidenav-item-padding-y: var(--usa-spacing-1);
+    --usa-sidenav-item-margin-bottom: var(--usa-spacing-0);
+    --usa-sidenav-item-margin-top: var(--usa-spacing-0);
+
+    --usa-sidenav-item-color: var(--usa-ink);
+    --usa-sidenav-item-color-hover: var(--usa-primary);
+    --usa-sidenav-item-color-current: var(--usa-primary);
+    --usa-sidenav-item-text-decoration: none;
+
+    --usa-sidenav-sublist-item-color: var(--usa-sidenav-item-color);
+    --usa-sidenav-sublist-item-color-hover: var(--usa-sidenav-item-color-hover);
+    --usa-sidenav-sublist-item-color-current: var(--usa-sidenav-item-color-current);
+    --usa-sidenav-sublist-item-text-decoration: var(--usa-sidenav-item-text-decoration);
+
+
+    --usa-sidenav-item-focus-outline-offset: 0;
+
+
+    --usa-sidenav-item-current-indicator-color: var(--usa-primary);
+    --usa-sidenav-item-current-indicator-border-radius: var(--usa-border-radius-pill);
+    --usa-sidenav-item-current-indicator-width: var(--usa-sizing-05);
+    --usa-sidenav-item-current-indicator-position: 0;
+
+    --usa-sidenav-child-padding-left: var(--usa-spacing-4);
+    --usa-sidenav-child-padding-right: var(--usa-spacing-0);
+    --usa-sidenav-child-padding-multiplier: 2;
+
+}
+
+
+.usa-sidenav {
+    margin-bottom: var(--usa-spacing-0);
+    margin-top: var(--usa-spacing-0);
+    list-style-type: none;
+    padding-left: 0;
+    border-bottom: var(--usa-sidenav-item-border-width) solid var(--usa-sidenav-item-border-color);
+    text-align: var(--usa-sidenav-item-text-align);
+}
+
+.usa-sidenav>li {
+    margin-bottom: var(--usa-sidenav-item-margin-top);
+    max-width: unset;
+}
+
+.usa-sidenav__item {
+    border-top: var(--usa-sidenav-item-border-width) solid var(--usa-sidenav-item-border-color);
+    font-size: var(--usa-sidenav-item-font-size);
+    font-family: var(--usa-sidenav-item-font-family);
+    font-weight: var(--usa-sidenav-item-font-weight);
+    line-height: var(--usa-sidenav-item-line-height);
+    background-color: var(--usa-sidenav-item-background);
+    margin-bottom: var(--usa-sidenav-item-margin-bottom);
+    margin-top: var(--usa-sidenav-item-margin-top);
+
+}
+
+.usa-sidenav a:not(.usa-button) {
+    display: block;
+    padding: var(--usa-sidenav-item-padding-y) var(--usa-sidenav-item-padding-x);
+    text-decoration: var(--usa-sidenav-item-text-decoration);
+}
+
+.usa-sidenav a:not(.usa-button):hover {
+    background-color: var(--usa-sidenav-item-background-hover);
+    text-decoration: var(--usa-sidenav-item-text-decoration);
+    color: var(--usa-sidenav-item-color-hover);
+}
+
+.usa-sidenav a:not(.usa-button):not(.usa-current) {
+    color: var(--usa-sidenav-text-color);
+}
+
+.usa-sidenav a:not(.usa-button):not(.usa-current):hover {
+    color: var(--usa-sidenav-item-color-hover);
+}
+
+.usa-sidenav a:not(.usa-button):not(.usa-current):focus {
+    outline-offset: var(--usa-sidenav-item-focus-outline-offset);
+}
+
+.usa-sidenav .usa-current {
+    position: relative;
+    color: var(--usa-sidenav-item-color-current);
+    background-color: var(--usa-sidenav-item-background-current);
+    font-weight: var(--usa-sidenav-item-font-weight-current);
+}
+
+.usa-sidenav .usa-current:after {
+    background-color: var(--usa-sidenav-item-current-indicator-color);
+    border-radius: var(--usa-sidenav-item-current-indicator-border-radius);
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: var(--usa-spacing-05);
+    top: var(--usa-spacing-05);
+    width: var(--usa-sidenav-item-current-indicator-width);
+    left: var(--usa-sidenav-item-current-indicator-position, 0);
+}
+
+@media all and (min-width: 40em) {
+    .usa-sidenav .usa-current {
+        position: relative;
+    }
+
+    .usa-sidenav .usa-current:after {
+        background-color: var(--usa-sidenav-item-current-indicator-color);
+        border-radius: var(--usa-sidenav-item-current-indicator-border-radius);
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: var(--usa-spacing-05);
+        top: var(--usa-spacing-05);
+        width: var(--usa-sidenav-item-current-indicator-width);
+        left: var(--usa-sidenav-item-current-indicator-position, 0);
+    }
+}
+
+.grid-container .usa-sidenav {
+    margin-left: var(--usa-spacing--2);
+    margin-right: var(--usa-spacing--2)
+}
+
+@media all and (min-width: 40em) {
+    .grid-container .usa-sidenav {
+        margin-left: var(--usa-spacing-0);
+        margin-right: var(--usa-spacing-0)
+    }
+}
+
+.usa-sidenav__sublist {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+   
+}
+
+.usa-sidenav__sublist>li {
+    margin-bottom: 0;
+    max-width: unset;
+}
+
+.usa-sidenav__sublist-item, .usa-sidenav__sublist>.usa-sidenav__item {
+    border-top: var(--usa-sidenav-sublist-border-width) solid var(--usa-sidenav-sublist-border-color);
+    font-size: var(--usa-sidenav-sublist-font-size);
+    font-family: var(--usa-sidenav-sublist-font-family);
+    font-weight: var(--usa-sidenav-sublist-font-weight);
+    line-height: var(--usa-sidenav-sublist-line-height);
+    background-color: var(--usa-sidenav-sublist-background);
+    color: var(--usa-sidenav-sublist-item-color);
+
+    &:hover {
+        background-color: var(--usa-sidenav-sublist-background-hover);
+        color: var(--usa-sidenav-sublist-item-color-hover);
+    }
+
+}
+
+.usa-sidenav__sublist-item .usa-current {
+    color: var(--usa-sidenav-sublist-item-color-current);
+    background-color: var(--usa-sidenav-item-background-current);
+    font-weight: var(--usa-sidenav-sublist-font-weight-current);
+}
+
+.usa-sidenav__sublist .usa-current:after {
+    display: none;
+}
+
+@media all and (min-width: 40em) {
+    .usa-sidenav__sublist .usa-current:after {
+        display: none;
+    }
+}
+
+.usa-sidenav__sublist a:not(.usa-button) {
+    padding-left: calc(var(--usa-sidenav-child-padding-left) + var(--usa-sidenav-item-padding-x));
+    padding-right: calc(var(--usa-sidenav-child-padding-right) + var(--usa-sidenav-item-padding-x));
+}
+
+.usa-sidenav__sublist .usa-sidenav__sublist a:not(.usa-button) {
+    padding-left: calc((var(--usa-sidenav-child-padding-left) * var(--usa-sidenav-child-padding-multiplier) + var(--usa-sidenav-item-padding-x)));
+    padding-right: calc((var(--usa-sidenav-child-padding-right) * var(--usa-sidenav-child-padding-multiplier) + var(--usa-sidenav-item-padding-x)));
+}
+
+.usa-sidenav__sublist .usa-sidenav__sublist .usa-sidenav__sublist a:not(.usa-button) {
+    padding-left: calc((var(--usa-sidenav-child-padding-left) * (var(--usa-sidenav-child-padding-multiplier) * 2) + var(--usa-sidenav-item-padding-x)));
+    padding-right: calc((var(--usa-sidenav-child-padding-right) * (var(--usa-sidenav-child-padding-multiplier) * 2) + var(--usa-sidenav-item-padding-x)));
+}

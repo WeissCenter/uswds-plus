@@ -1,0 +1,58 @@
+:root {
+    --usa-sizing-base: calc(var(--usa-font-settings-size-base) / 2);
+    --usa-sizing-none: none;
+    --usa-sizing-auto: auto;
+    --usa-sizing-full: 100%;
+
+    --usa-size-touch-target: var(--usa-sizing-6);
+    --usa-sizing-touch-target: var( --usa-size-touch-target);
+
+    --usa-sizing-neg-15: calc(var(--usa-sizing-base) * -15);
+    --usa-sizing-neg-10: calc(var(--usa-sizing-base) * -10);
+    --usa-sizing-neg-9: calc(var(--usa-sizing-base) * -9);
+    --usa-sizing-neg-8: calc(var(--usa-sizing-base) * -8);
+    --usa-sizing-neg-7: calc(var(--usa-sizing-base) * -7);
+    --usa-sizing-neg-6: calc(var(--usa-sizing-base) * -6);
+    --usa-sizing-neg-5: calc(var(--usa-sizing-base) * -5);
+    --usa-sizing-neg-4: calc(var(--usa-sizing-base) * -4);
+    --usa-sizing-neg-3: calc(var(--usa-sizing-base) * -3);
+    --usa-sizing-neg-205: calc(var(--usa-sizing-base) * -2.5);
+    --usa-sizing-neg-2: calc(var(--usa-sizing-base) * -2);
+    --usa-sizing-neg-105: calc(var(--usa-sizing-base) * -1.5);
+    --usa-sizing-neg-1: calc(var(--usa-sizing-base) * -1);
+    --usa-sizing-neg-05: calc(var(--usa-sizing-base) * -.5);
+    --usa-sizing-neg-2px: calc(var(--usa-sizing-base) * .25 * -1);
+    --usa-sizing-neg-1px: calc(var(--usa-sizing-base) * .125 * -1);
+    --usa-sizing-0: 0;
+    --usa-sizing-1px: calc(var(--usa-sizing-base) * .125);
+    --usa-sizing-2px: calc(var(--usa-sizing-base) * .25);
+    --usa-sizing-05: calc(var(--usa-sizing-base) * .5);
+    --usa-sizing-1: var(--usa-sizing-base);
+    --usa-sizing-105: calc(var(--usa-sizing-base) * 1.5);
+    --usa-sizing-2: calc(var(--usa-sizing-base) * 2);
+    --usa-sizing-205: calc(var(--usa-sizing-base) * 2.5);
+    --usa-sizing-3: calc(var(--usa-sizing-base) * 3);
+    --usa-sizing-4: calc(var(--usa-sizing-base) * 4);
+    --usa-sizing-5: calc(var(--usa-sizing-base) * 5);
+    --usa-sizing-6: calc(var(--usa-sizing-base) * 6);
+    --usa-sizing-7: calc(var(--usa-sizing-base) * 7);
+    --usa-sizing-8: calc(var(--usa-sizing-base) * 8);
+    --usa-sizing-9: calc(var(--usa-sizing-base) * 9);
+    --usa-sizing-10: calc(var(--usa-sizing-base) * 10);
+    --usa-sizing-15: calc(var(--usa-sizing-base) * 15);
+    --usa-sizing-card: calc(var(--usa-sizing-base) * 20);
+    --usa-sizing-card-lg: calc(var(--usa-sizing-base) * 30);
+    --usa-sizing-mobile: calc(var(--usa-sizing-base) * 40);
+    --usa-sizing-mobile-lg: calc(var(--usa-sizing-base) * 60);
+    --usa-sizing-tablet: calc(var(--usa-sizing-base) * 80);
+    --usa-sizing-tablet-lg: calc(var(--usa-sizing-base) * 110);
+    --usa-sizing-desktop: calc(var(--usa-sizing-base) * 128);
+    --usa-sizing-desktop-lg: calc(var(--usa-sizing-base) * 150);
+    --usa-sizing-widescreen: calc(var(--usa-sizing-base) * 175);
+
+    
+
+
+
+
+}

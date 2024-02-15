@@ -1,0 +1,32 @@
+
+<table class="usa-table usa-table--borderless usa-table--striped width-full">
+  <caption class="text-capitalize">{{label}} {{type === 'json' ? 'Tokens' : 'CSS Variables'}}</caption>
+  <thead>
+    <tr>
+      <th scope="col">{{type === 'json' ? 'Token' : 'Variable'}}</th>
+      <th scope="col">Default</th>
+      <th scope="col" *ngIf="type === 'json'">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr *ngFor="let item of data">
+      <th scope="row" class="font-3xs">
+        <code>
+          {{item.name}}
+        </code>
+      </th>
+      <td class="font-3xs">
+        <code class="display-flex flex-align-center gap-1">
+          <span *ngIf="colors" class="height-2 width-2 radius-pill display-flex" [ngStyle]="{backgroundColor: item.value}"></span>
+          {{item.value}}
+        </code>
+      </td>
+      <td *ngIf="type === 'json'">
+        {{item.description}}
+      </td>
+    </tr>
+    
+    
+  </tbody>
+</table>
