@@ -1,0 +1,10 @@
+<app-token-table [label]="tokenKey" [data]="defaultTokenArr"></app-token-table>
+<app-token-table [label]="tokenKey" [colors]="true" type="css" [data]="defaultCSSVars"></app-token-table>
+<app-token-form [hostEl]="el" [currentTheme]="currentTheme" [tokenArr]="currentTokenArr" [tokenKey]="tokenKey"></app-token-form>
+
+<div class="display-flex flex-column gap-2px margin-y-4">
+
+  <div class="bg-body display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="padding-05 text-ink width-auto">Body ink atop body background</p>
+  </div>
+</div>

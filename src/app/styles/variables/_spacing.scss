@@ -1,0 +1,81 @@
+:root {
+
+    --usa-spacing-none: none;
+    --usa-spacing-auto: auto;
+
+    --usa-spacing-touch-target: var(--usa-spacing-8);
+
+    --usa-site-margins-mobile-width: var(--usa-spacing-2);
+    --usa-site-margins-width: var(--usa-spacing-4);
+    --usa-site-margins-breakpoint: var(--usa-spacing-desktop);
+
+    --usa-spacing-neg-15: -120px;
+    --usa-spacing-neg-10: -80px;
+    --usa-spacing-neg-9: -72px;
+    --usa-spacing-neg-8: -64px;
+    --usa-spacing-neg-7: -56px;
+    --usa-spacing-neg-6: -48px;
+    --usa-spacing-neg-5: -40px;
+    --usa-spacing-neg-4: -32px;
+    --usa-spacing-neg-3: -24px;
+    --usa-spacing-neg-205: -20px;
+    --usa-spacing-neg-2: -16px;
+    --usa-spacing-neg-105: -12px;
+    --usa-spacing-neg-1: -8px;
+    --usa-spacing-neg-05: -4px;
+    --usa-spacing-neg-2px: -2px;
+    --usa-spacing-neg-1px: -1px;
+    --usa-spacing-0: 0;
+    --usa-spacing-1px: 1px;
+    --usa-spacing-2px: 2px;
+    --usa-spacing-05: 4px;
+    --usa-spacing-1: 8px;
+    --usa-spacing-105: 12px;
+    --usa-spacing-2: 16px;
+    --usa-spacing-205: 20px;
+    --usa-spacing-3: 24px;
+    --usa-spacing-4: 32px;
+    --usa-spacing-5: 40px;
+    --usa-spacing-6: 48px;
+    --usa-spacing-7: 56px;
+    --usa-spacing-8: 64px;
+    --usa-spacing-9: 72px;
+    --usa-spacing-10: 80px;
+    --usa-spacing-15: 120px;
+    --usa-spacing-card: 160px;
+    --usa-spacing-card-lg: 240px;
+    --usa-spacing-mobile: 320px;
+    --usa-spacing-mobile-lg: 480px;
+    --usa-spacing-tablet: 640px;
+    --usa-spacing-tablet-lg: 880px;
+    --usa-spacing-desktop: 1024px;
+    --usa-spacing-desktop-lg: 1200px;
+    --usa-spacing-widescreen: 1400px;
+    --usa-spacing-full: 100%;
+
+    --usa-z-index-bottom: -100;
+    --usa-z-index-top: 99999;
+    --usa-z-index-auto: auto;
+    --usa-z-index-500: 500;
+    --usa-z-index-400: 400;
+    --usa-z-index-300: 300;
+    --usa-z-index-200: 200;
+    --usa-z-index-100: 100;
+    --usa-z-index-0: 0;
+  
+    --usa-order-last: last;
+    --usa-order-first: first;
+    --usa-order-initial: initial;
+    --usa-order-11: 11;
+    --usa-order-10: 10;
+    --usa-order-9: 9;
+    --usa-order-8: 8;
+    --usa-order-7: 7;
+    --usa-order-6: 6;
+    --usa-order-5: 5;
+    --usa-order-4: 4;
+    --usa-order-3: 3;
+    --usa-order-2: 2;
+    --usa-order-1: 1;
+
+}

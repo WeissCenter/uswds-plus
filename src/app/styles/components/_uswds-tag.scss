@@ -1,0 +1,21 @@
+.usa-tag {
+    font-family: var(--usa-font-ui);
+    font-size: var(--usa-font-size-2xs);
+    color: var(--usa-white);
+    text-transform: uppercase;
+    background-color: var(--usa-base-darkest);
+    border-radius: var(--usa-border-radius-md);
+    margin-right: var(--usa-spacing-1);
+    padding: var(--usa-spacing-05) var(--usa-spacing-1);
+    font-weight: var(--usa-font-weight-medium);
+}
+
+.usa-tag:only-of-type {
+    margin-right: 0;
+}
+
+.usa-tag--big {
+    padding-left: var(--usa-spacing-2);
+    padding-right: var(--usa-spacing-2);
+    font-size: var(--usa-font-size-sm);
+}

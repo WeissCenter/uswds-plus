@@ -1,0 +1,279 @@
+
+:root {
+    --usa-accordion-padding-x: var(--usa-spacing-205);
+    --usa-accordion-padding-y: var(--usa-spacing-2);
+    --usa-accordion-button-icon-size: var(--usa-spacing-3);
+    --usa-accordion-button-active-background: var(--usa-base-lighter);
+    --usa-accordion-button-hover-background: var(--usa-base-lighter);
+    --usa-accordion-button-color: var(--usa-link-color);
+    --usa-accordion-button-active-color: var(--usa-link-active-color);
+    --usa-accordion-button-hover-color: var(--usa-link-hover-color);
+    --usa-accordion-button-background: var(--usa-base-lightest);
+    --usa-accordion-button-padding-x: var(--usa-spacing-205);
+    --usa-accordion-button-padding-y: var(--usa-spacing-2);
+    --usa-accordion-border-width: var(--usa-spacing-05);
+    --usa-accordion-border-color: var(--usa-border-color-base);
+    --usa-accordion-content-color: var(--usa-ink);
+    --usa-accordion-background-color: var(--usa-body-background);
+    --usa-accordion-border-radius: var(--usa-border-radius-0);
+    --usa-accordion-button-line-height: var(--usa-line-height-body);
+    --usa-accordion-button-font-size: var(--usa-body-font-size);
+    --usa-accordion-button-font-weight: var(--usa-font-weight-bold);
+    --usa-accordion-button-font-family: var(--usa-font-body);
+}
+
+.usa-accordion {
+    margin-bottom: var(--usa-spacing-0);
+    margin-top: var(--usa-spacing-0);
+    list-style-type: none;
+    color: var(--usa-ink);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.usa-accordion>li {
+    margin-bottom: 0;
+    max-width: unset;
+}
+
+.usa-accordion>ul li ul {
+    list-style: disc;
+}
+
+.usa-accordion>ul li ul>li>ul {
+    list-style: circle;
+}
+
+.usa-accordion>ul li ul>li>ul>li>ul {
+    list-style: square;
+}
+
+.usa-accordion+.usa-accordion,
+.usa-accordion+.usa-accordion--bordered {
+    margin-top: var(--usa-spacing-1);
+}
+
+.usa-accordion--bordered .usa-accordion__button {
+    border-radius: var(--usa-accordion-border-radius) var(--usa-accordion-border-radius) 0 0;
+}
+
+.usa-accordion--bordered .usa-accordion__content {
+    border-bottom: var(--usa-accordion-border-width) solid var(--usa-accordion-border-color);
+    border-left: var(--usa-accordion-border-width) solid var(--usa-accordion-border-color);
+    border-right: var(--usa-accordion-border-width) solid var(--usa-accordion-border-color);
+    padding-bottom: var(--usa-spacing-2);
+    border-radius: 0 0 var(--usa-accordion-border-radius) var(--usa-accordion-border-radius);
+}
+
+.usa-accordion--bordered .usa-accordion__heading {
+    margin-bottom: var(--usa-spacing-0);
+}
+
+.usa-accordion__heading,
+.usa-prose .usa-accordion__heading {
+    margin: var(--usa-spacing-0);
+    font-family: var(--usa-accordion-button-font-family);
+    font-size: var(--usa-accordion-button-font-size);
+    line-height: var(--usa-accordion-button-line-height);
+    letter-spacing: var(--usa-body-font-letter-spacing);
+}
+
+.usa-accordion__heading:not(:first-child),
+.usa-prose .usa-accordion__heading:not(:first-child) {
+    margin-top: var(--usa-spacing-1);
+}
+
+.usa-accordion__content {
+    background-color: var(--usa-accordion-background-color);
+    margin-top: var(--usa-spacing-0);
+    overflow: auto;
+    padding: var(--usa-accordion-padding-y) var(--usa-accordion-padding-x);
+    color: var(--usa-accordion-content-color);
+    letter-spacing: var(--usa-body-font-letter-spacing);
+}
+
+.usa-accordion__content>*:first-child {
+    margin-top: var(--usa-spacing-0);
+}
+
+.usa-accordion__content>*:last-child {
+    margin-bottom: var(--usa-spacing-0);
+}
+
+.usa-accordion__button {
+    color: var(--usa-accordion-button-color);
+    text-decoration: underline;
+    background-color: var(--usa-transparent);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+    background-color: var(--usa-accordion-button-background);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: var(--usa-accordion-button-font-weight);
+    margin: 0;
+    position: relative;
+    padding: var(--usa-accordion-button-padding-y) calc(var(--usa-accordion-button-padding-x) * 2 + var(--usa-accordion-button-icon-size)) var(--usa-accordion-button-padding-y) var(--usa-accordion-button-padding-x);
+    text-decoration: none;
+    width: 100%;
+    letter-spacing: var(--usa-body-font-letter-spacing);
+    border-radius: var(--usa-accordion-border-radius);
+
+    &:after {
+        content:"";
+        background-image: url($assets-path + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
+        background-repeat: no-repeat;
+        background-position: right var(--usa-accordion-button-padding-x) center;
+        background-size: var(--usa-accordion-button-icon-size);
+        display: inline-block;
+        height: var(--usa-accordion-button-icon-size);
+        width: var(--usa-accordion-button-icon-size);
+        height: 100%;
+        position: absolute;
+        right: var(--usa-accordion-button-padding-x);
+        top: 0;
+    
+    }
+}
+
+@supports ((-webkit-mask: url()) or (mask: url())) {
+    .usa-accordion__button:after {
+        content:"";
+        background: none;
+        background-image: none;
+        background-color: var(--usa-accordion-button-color);
+        mask-image: url($assets-path + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
+        -webkit-mask-position: center center;
+        mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: var(--usa-accordion-button-icon-size) var(--usa-accordion-button-icon-size);
+        mask-size: var(--usa-accordion-button-icon-size) var(--usa-accordion-button-icon-size);
+    }
+    .usa-accordion__button[aria-expanded=false]:after {
+        mask-image: url($assets-path + 'usa-icons/add.svg'), linear-gradient(transparent, transparent);
+    }
+}
+
+.usa-accordion__button:visited {
+    color: var(--usa-link-visited-color);
+}
+
+.usa-accordion__button:focus {
+    outline: var(--usa-focus-width) var(--usa-focus-style) var(--usa-focus-color);
+    outline-offset: var(--usa-focus-offset);
+}
+
+.usa-accordion__button:hover,
+.usa-accordion__button.usa-button--hover,
+.usa-accordion__button:disabled:hover,
+.usa-accordion__button[aria-disabled=true]:hover,
+.usa-accordion__button:disabled.usa-button--hover,
+.usa-accordion__button[aria-disabled=true].usa-button--hover,
+.usa-accordion__button:active,
+.usa-accordion__button.usa-button--active,
+.usa-accordion__button:disabled:active,
+.usa-accordion__button[aria-disabled=true]:active,
+.usa-accordion__button:disabled.usa-button--active,
+.usa-accordion__button[aria-disabled=true].usa-button--active,
+.usa-accordion__button:disabled:focus,
+.usa-accordion__button[aria-disabled=true]:focus,
+.usa-accordion__button:disabled.usa-focus,
+.usa-accordion__button[aria-disabled=true].usa-focus,
+.usa-accordion__button:disabled,
+.usa-accordion__button[aria-disabled=true],
+.usa-accordion__button.usa-button--disabled {
+    --usa-accordion-button-background: var(--usa-accordion-button-hover-background);
+    box-shadow: none;
+    text-decoration: underline;
+    --usa-accordion-button-color: var(--usa-accordion-button-hover-color);
+}
+
+.usa-accordion__button:active {
+    --usa-accordion-button-background: var(--usa-accordion-button-active-background);
+    --usa-accordion-button-color: var(--usa-accordion-button-active-color);
+}
+
+.usa-accordion__button:disabled,
+.usa-accordion__button[aria-disabled=true],
+.usa-accordion__button:disabled:hover,
+.usa-accordion__button[aria-disabled=true]:hover,
+.usa-accordion__button[aria-disabled=true]:focus {
+    --usa-accordion-button-color: var(--usa-disabled);
+}
+
+@media (forced-colors: active) {
+
+    .usa-accordion__button:disabled,
+    .usa-accordion__button[aria-disabled=true],
+    .usa-accordion__button:disabled:hover,
+    .usa-accordion__button[aria-disabled=true]:hover,
+    .usa-accordion__button[aria-disabled=true]:focus {
+        color: var(--usa-disabled)
+    }
+}
+
+.usa-accordion__button:hover {
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+@media (forced-colors: active) {
+    .usa-accordion__button {
+        border: 2px solid transparent;
+        position: relative
+    }
+
+    .usa-accordion__button:before {
+        background-image: url($assets-path + 'usa-icons/remove.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: var(--usa-spacing-105);
+        display: inline-block;
+        height: var();
+        width: var(--usa-spacing-105);
+        height: 100%;
+        position: absolute;
+        right: var(--usa-accordion-button-padding-x);
+        top: 0;
+        content: ""
+    }
+
+    @supports ((-webkit-mask: url()) or (mask: url())) {
+        .usa-accordion__button:before {
+            background: none;
+            background-color: var(--usa-ButtonText);
+            mask-image: url($assets-path + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
+            -webkit-mask-position: center center;
+            mask-position: center center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: var(--usa-spacing-105) var(--usa-spacing-105);
+            mask-size: var(--usa-spacing-105) var(--usa-spacing-105)
+        }
+    }
+}
+
+.usa-accordion__button[aria-expanded=false] {
+    border-radius: var(--usa-accordion-border-radius)
+}
+
+@media (forced-colors: active) {
+    .usa-accordion__button[aria-expanded=false]:before {
+        background-image: url($assets-path + 'usa-icons/add.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: var(--usa-spacing-105);
+        display: inline-block;
+        height: var(--usa-spacing-105);
+        width: var(--usa-spacing-105);
+        height: 100%;
+        position: absolute;
+        right: var(--usa-accordion-button-padding-x);
+        top: 0
+    }
+
+
+}

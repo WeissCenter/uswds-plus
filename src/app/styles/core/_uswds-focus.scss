@@ -1,0 +1,24 @@
+iframe:focus,
+[href]:focus,
+[tabindex]:focus,
+[contentEditable=true]:focus {
+    outline: var(--usa-focus-width) var(--usa-focus-style) var(--usa-focus-color);
+    outline-offset: var(--usa-focus-offset);
+}
+
+.usa-focus {
+    outline: var(--usa-focus-width) var(--usa-focus-style) var(--usa-focus-color);
+    outline-offset: var(--usa-focus-offset)
+}
+
+* {
+    &:hover, &:focus, &:focus-visible, &:focus-within {
+        z-index:9;
+    }
+}
+
+:root {
+    --usa-focus-offset: var(--usa-spacing-05);
+    --usa-focus-width: var(--usa-spacing-05);
+    --usa-focus-style: solid;
+}

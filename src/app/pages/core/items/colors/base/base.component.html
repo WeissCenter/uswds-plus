@@ -1,0 +1,28 @@
+<app-token-table [label]="tokenKey" [data]="defaultTokenArr"></app-token-table>
+<app-token-table [label]="tokenKey" [colors]="true" type="css" [data]="defaultCSSVars"></app-token-table>
+<app-token-form [hostEl]="el" [currentTheme]="currentTheme" [tokenArr]="currentTokenArr" [tokenKey]="tokenKey"></app-token-form>
+
+<div class="display-flex flex-column gap-2px margin-y-4">
+
+  <div class="bg-base-lightest display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">base lightest</p>
+  </div>
+  <div class="bg-base-lighter display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">base lighter</p>
+  </div>
+  <div class="bg-base-light display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">base light</p>
+  </div>
+  <div class="bg-base display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">base</p>
+  </div>
+  <div class="bg-base-dark display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">base dark</p>
+  </div>
+  <div class="bg-base-darker display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">base darker</p>
+  </div>
+  <div class="bg-base-darkest display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">base darkest</p>
+  </div>
+</div>

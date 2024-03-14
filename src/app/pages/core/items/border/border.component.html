@@ -1,0 +1,61 @@
+<app-token-table [label]="tokenKey" [data]="defaultTokenArr"></app-token-table>
+<app-token-table [label]="tokenKey" [colors]="true" type="css" [data]="defaultCSSVars"></app-token-table>
+<app-token-form [hostEl]="el" [currentTheme]="currentTheme" [tokenArr]="currentTokenArr"
+    [tokenKey]="tokenKey"></app-token-form>
+
+<div class="display-flex flex-column gap-2px margin-y-4">
+
+    <div class="display-flex border-base-lighter padding-2 width-full border-1px radius-sm"
+        style="background-color:var(--usa-border-color-lighter)">
+        <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">border lighter</p>
+    </div>
+    <div class="display-flex border-base-lighter padding-2 width-full border-1px radius-sm"
+        style="background-color:var(--usa-border-color-light)">
+        <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">border light</p>
+    </div>
+    <div class="display-flex border-base-lighter padding-2 width-full border-1px radius-sm"
+        style="background-color:var(--usa-border-color-base)">
+        <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">border</p>
+    </div>
+    <div class="display-flex border-base-lighter padding-2 width-full border-1px radius-sm"
+        style="background-color:var(--usa-border-color-dark)">
+        <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">border dark</p>
+    </div>
+    <div class="display-flex border-base-lighter padding-2 width-full border-1px radius-sm"
+        style="background-color:var(--usa-border-color-darker)">
+        <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">border darker</p>
+    </div>
+</div>
+<div class="display-flex flex-row flex-wrap gap-05 margin-y-4">
+
+    <div class="display-flex border border-theme padding-2 width-auto border-width-0 radius-0 bg-primary-lighter">
+        <p class="padding-05 text-black">border 0</p>
+    </div>
+    <div class="display-flex border border-theme padding-2 width-auto border-width-sm radius-0 bg-primary-lighter">
+        <p class="padding-05 text-black">border sm</p>
+    </div>
+    <div class="display-flex border border-theme padding-2 width-auto border-width-md radius-0 bg-primary-lighter">
+        <p class="padding-05 text-black">border md</p>
+    </div>
+    <div class="display-flex border border-theme padding-2 width-auto border-width-lg radius-0 bg-primary-lighter">
+        <p class="padding-05 text-black">border lg</p>
+    </div>
+</div>
+<div class="display-flex flex-row flex-wrap gap-05 margin-y-4">
+
+    <div class="display-flex padding-2 width-auto radius-0 bg-accent-cool-darker">
+        <p class="padding-05 text-white">radius 0</p>
+    </div>
+    <div class="display-flex padding-2 width-auto radius-sm bg-accent-cool-darker">
+        <p class="padding-05 text-white">radius sm</p>
+    </div>
+    <div class="display-flex padding-2 width-auto radius-md bg-accent-cool-darker">
+        <p class="padding-05 text-white">radius md</p>
+    </div>
+    <div class="display-flex padding-2 radius-auto radius-lg bg-accent-cool-darker">
+        <p class="padding-05 text-white">border lg</p>
+    </div>
+    <div class="display-flex padding-2 width-auto radius-pill bg-accent-cool-darker">
+        <p class="padding-05 text-white">radius pill</p>
+    </div>
+</div>

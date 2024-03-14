@@ -1,0 +1,263 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 13 Oct 2023 19:29:34 GMT
+ */
+
+ :root {
+  --usa-secondary-darkest: false;
+  --usa-secondary-lightest: false;
+
+
+  --usa-header-logo-text-width: 33%;
+
+
+  --usa-opacity-100: 1;
+  --usa-opacity-90: .9;
+  --usa-opacity-80: .8;
+  --usa-opacity-70: .7;
+  --usa-opacity-60: .6;
+  --usa-opacity-50: .5;
+  --usa-opacity-40: .4;
+  --usa-opacity-30: .3;
+  --usa-opacity-20: .2;
+  --usa-opacity-10: .1;
+  --usa-opacity-0: 0;
+  --usa-gap-base: 8px;
+  
+
+
+  --usa-flex-fill: 1 1 0;
+  --usa-flex-auto: auto;
+  --usa-flex-12: 12 0 0;
+  --usa-flex-11: 11 0 0;
+  --usa-flex-10: 10 0 0;
+  --usa-flex-9: 9 0 0;
+  --usa-flex-8: 8 0 0;
+  --usa-flex-7: 7 0 0;
+  --usa-flex-6: 6 0 0;
+  --usa-flex-5: 5 0 0;
+  --usa-flex-4: 4 0 0;
+  --usa-flex-3: 3 0 0;
+  --usa-flex-2: 2 0 0;
+  --usa-flex-1: 1 0 0;
+  
+  --usa-box-shadow-none: none;
+  --usa-box-shadow-5: 0 16px 32px 0 rgba(0, 0, 0, 0.1);
+  --usa-box-shadow-4: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+  --usa-box-shadow-3: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  --usa-box-shadow-2: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  --usa-box-shadow-1: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+
+  --usa-tooltip-font-weight: var(--usa-font-weight-medium);
+  --usa-tooltip-text-color: var(--usa-color-global-white);
+  --usa-tooltip-background-color: var(--usa-color-global-black);
+  --usa-text-reverse-color: var(--usa-color-global-white);
+  --usa-summary-box-font-weight: var(--usa-font-weight-normal);
+  --usa-summary-box-border-width: var(--usa-spacing-1px);
+
+  --usa-step-indicator-segment-gap: var(--usa-spacing-2px);
+  
+  --usa-process-list-counter-gap-color: var(--usa-color-global-white);
+  --usa-process-list-counter-background-color: var(--usa-color-global-white);
+
+  --usa-pagination-button-current-text-color: var(--usa-color-global-white);
+  --usa-pagination-font-weight: var(--usa-font-weight-normal);
+  --usa-pagination-button-border-width: var(--usa-spacing-1px);
+  --usa-navigation-submenu-color: var(--usa-color-global-white);
+  --usa-navigation-active-text-color: var(--usa-color-global-white);
+
+
+
+  --usa-input-tile-border-width: var(--usa-spacing-2px);
+
+
+  --usa-in-page-nav-sub-item-font-weight: var(--usa-font-weight-normal);
+  --usa-in-page-nav-font-weight: var(--usa-font-weight-bold);
+  --usa-in-page-nav-bar-border-width: var(--usa-spacing-1px);
+
+
+  --usa-column-gap-sm: var(--usa-spacing-2px);
+
+  --usa-button-stroke-width: var(--usa-spacing-2px);
+  --usa-button-font-weight: var(--usa-font-weight-bold);
+
+ 
+  --usa-tooltip-triangle-size: calc(var(--usa-spacing-05));
+  --usa-tooltip-padding-x: var(--usa-spacing-1);
+  --usa-tooltip-padding-y: calc(var(--usa-spacing-05));
+  --usa-tooltip-line-height: 1.35;
+  --usa-text-color: var(--usa-base-ink);
+  
+  --usa-summary-box-padding-x: calc(var(--usa-spacing-205));
+  --usa-summary-box-padding-y: calc(var(--usa-spacing-205));
+  --usa-summary-box-link-visited-color: var(--usa-link-visited-color);
+  --usa-summary-box-line-height: 1.2;
+  --usa-summary-box-border-color: var(--usa-info-light);
+  --usa-summary-box-background-color: var(--usa-info-lighter);
+  --usa-step-indicator-counter-size-sm: calc(var(--usa-spacing-3));
+  --usa-step-indicator-counter-size: calc(var(--usa-spacing-5));
+  --usa-step-indicator-segment-height-mobile: var(--usa-spacing-1);
+  --usa-step-indicator-header-margin-top-sm: calc(var(--usa-spacing-2));
+  --usa-step-indicator-header-margin-top: calc(var(--usa-spacing-4));
+  --usa-step-indicator-margin-bottom: calc(var(--usa-spacing-4));
+  --usa-step-indicator-label-margin-top: var(--usa-spacing-1);
+  --usa-step-indicator-text-pending-color: var(--usa-base-dark);
+  --usa-step-indicator-segment-max-width: calc(var(--usa-spacing-card-lg));
+  --usa-step-indicator-segment-height: var(--usa-spacing-1);
+  --usa-step-indicator-segment-color-current: var(--usa-accent-cool-dark);
+  --usa-step-indicator-segment-color-complete: var(--usa-secondary-darker);
+  --usa-step-indicator-segment-color-pending: var(--usa-base-lighter);
+  --usa-step-indicator-min-width: calc(var(--usa-spacing-tablet));
+  --usa-step-indicator-counter-border-width: calc(var(--usa-spacing-05));
+  --usa-step-indicator-counter-gap: calc(var(--usa-spacing-05));
+  --usa-step-indicator-background-color: var(--usa-body-background);
+
+  --usa-process-list-connector-width: var(--usa-spacing-1);
+  --usa-process-list-connector-color: var(--usa-primary-lighter);
+  --usa-process-list-counter-size: calc(var(--usa-spacing-5));
+  --usa-process-list-counter-gap-width: calc(var(--usa-spacing-05));
+  --usa-process-list-counter-border-width: calc(var(--usa-spacing-05));
+  --usa-process-list-counter-border-color: var(--usa-base-ink);
+  --usa-paragraph-margin-top:--usa-body-font-paragraph-spacing;
+  --usa-pagination-icon-size: calc(var(--usa-spacing-205));
+  --usa-pagination-button-current-border-color: var(--usa-base-ink);
+  --usa-pagination-button-border-color: var(--usa-base-light);
+  --usa-pagination-button-padding: var(--usa-spacing-1);
+  --usa-pagination-target-size: calc(var(--usa-spacing-5));
+  --usa-pagination-margin-x: calc(var(--usa-spacing-05));
+  --usa-pagination-margin-y: calc(var(--usa-spacing-2));
+  --usa-pagination-breakpoint: calc(var(--usa-spacing-tablet));
+  --usa-pagination-line-height: 1;
+  --usa-pagination-button-current-background-color: var(--usa-base-ink);
+  --usa-pagination-button-background-color: var(--usa-body-background);
+  --usa-navigation-sliding-panel-padding: var(--usa-spacing-1);
+  --usa-navigation-sliding-panel-width: calc(var(--usa-spacing-card-lg));
+  --usa-navigation-submenu-hover-color: var(--usa-primary-lighter);
+  --usa-navigation-submenu-width: calc(var(--usa-spacing-card-lg));
+  --usa-navigation-submenu-background-color: var(--usa-primary-darker);
+  --usa-navigation-link-padding-x: calc(var(--usa-spacing-2));
+  --usa-navigation-link-padding-y: calc(var(--usa-spacing-2));
+  --usa-navigation-active-background-color: var(--usa-primary-base);
+  --usa-navigation-hover-background-color: var(--usa-base-lightest);
+  --usa-navigation-background-color: var(--usa-body-background);
+
+
+
+  --usa-in-page-nav-top: calc(var(--usa-spacing-4));
+  --usa-in-page-nav-margin-top: calc(var(--usa-spacing-205));
+  --usa-in-page-nav-margin-left: calc(var(--usa-spacing-4));
+  --usa-in-page-nav-main-content-max-width: calc(var(--usa-spacing-desktop));
+  --usa-in-page-nav-line-height: 1.2;
+  --usa-in-page-nav-bar-width: calc(var(--usa-spacing-05));
+  --usa-in-page-nav-current-color: var(--usa-primary-base);
+  --usa-in-page-nav-bar-border-color: var(--usa-base-lighter);
+  --usa-in-page-nav-background-padding: calc(var(--usa-spacing-2));
+  --usa-in-page-nav-background-color: var(--usa-body-background);
+  --usa-grid-container-max-width: calc(var(--usa-spacing-desktop));
+  --usa-general-icon-image-size: calc(var(--usa-spacing-2));
+  --usa-footer-max-width: calc(var(--usa-spacing-desktop));
+
+  --usa-column-gap-desktop: calc(var(--usa-spacing-4));
+  --usa-column-gap-mobile: calc(var(--usa-spacing-2));
+  --usa-column-gap-lg: calc(var(--usa-spacing-3));
+  --usa-column-gap-md: calc(var(--usa-spacing-2));
+  --usa-collection-header-line-height: 1.35;
+
+  --usa-button-margin-right: var(--usa-spacing-1);
+  --usa-button-lg-padding-y: calc(var(--usa-spacing-2));
+  --usa-button-lg-padding-x: calc(var(--usa-spacing-3));
+  --usa-button-padding-y: calc(var(--usa-spacing-105));
+  --usa-button-padding-x: calc(var(--usa-spacing-205));
+  --usa-button-outline-offset: calc(var(--usa-spacing-05));
+
+  --usa-button-button-inverse-active-color: var(--usa-link-reverse-active-color);
+
+
+
+  --usa-alert-max-width: calc(var(--usa-spacing-card-lg));
+  --usa-alert-text-reverse-color: var(--usa-base-lightest);
+  --usa-alert-text-color: var(--usa-base-ink);
+  --usa-alert-padding-y: calc(var(--usa-spacing-2));
+  --usa-alert-padding-x: calc(var(--usa-spacing-205));
+  --usa-alert-slim-icon-size: calc(var(--usa-spacing-3));
+  --usa-alert-icon-size: calc(var(--usa-spacing-4));
+  --usa-alert-line-height: 1.2;
+  --usa-alert-bar-width: var(--usa-spacing-1);
+
+
+  --usa-tooltip-border-radius: var(--usa-border-radius-sm);
+  --usa-tooltip-font-size: calc(var(--usa-font-size-xs));
+
+  --usa-summary-box-text-color: var(--usa-text-color);
+  --usa-summary-box-link-hover-color: var(--usa-link-hover-color);
+  --usa-summary-box-link-color: var(--usa-link-color);
+  --usa-summary-box-heading-font-size: calc(var(--usa-font-size-lg));
+  --usa-summary-box-font-size: var(--usa-font-size-sm);
+  --usa-summary-box-border-radius: var(--usa-border-radius-0);
+  --usa-step-indicator-label-font-size: var(--usa-font-size-sm);
+  --usa-step-indicator-heading-font-size-small: calc(var(--usa-font-size-md));
+  --usa-step-indicator-heading-font-size: calc(var(--usa-font-size-lg));
+  --usa-step-indicator-heading-color: var(--usa-text-color);
+  --usa-process-list-heading-font-size: calc(var(--usa-font-size-lg));
+  --usa-process-list-heading-color: var(--usa-text-color);
+  --usa-process-list-font-size: var(--usa-font-size-sm);
+  --usa-process-list-counter-text-color: var(--usa-text-color);
+  --usa-process-list-counter-font-size: calc(var(--usa-font-size-lg));
+  --usa-pagination-button-current-border-hover-color: var(--usa-link-hover-color);
+  --usa-pagination-button-border-hover-color: var(--usa-link-hover-color);
+  --usa-pagination-button-text-hover-color: var(--usa-link-hover-color);
+  --usa-pagination-button-text-color: var(--usa-link-color);
+  --usa-pagination-font-size: var(--usa-font-size-sm);
+  --usa-navigation-link-hover-color: var(--usa-link-hover-color);
+  --usa-navigation-link-color: var(--usa-link-color);
+  --usa-navigation-border-radius: var(--usa-border-radius-0);
+
+  --usa-in-page-nav-link-active-color: var(--usa-link-active-color);
+  --usa-in-page-nav-link-color: var(--usa-link-color);
+  --usa-in-page-nav-font-size: calc(var(--usa-font-size-2xs));
+  --usa-in-page-nav-text-color: var(--usa-text-color);
+  
+  --usa-collection-header-font-size: calc(var(--usa-font-size-md));
+
+  --usa-button-border-radius: var(--usa-border-radius-sm);
+  --usa-button-lg-font-size: calc(var(--usa-font-size-lg));
+  --usa-button-button-inverse-hover-color: var(--usa-link-reverse-hover-color);
+  --usa-button-button-inverse-color: var(--usa-link-reverse-color);
+
+
+
+  --usa-alert-border-radius: var(--usa-border-radius-0);
+  --usa-alert-link-reverse-color: var(--usa-link-reverse-color);
+  --usa-alert-link-color: var(--usa-link-color);
+  --usa-alert-heading-font-size: calc(var(--usa-font-size-lg));
+
+  --usa-summary-box-font-family: var(--usa-font-ui);
+  --usa-step-indicator-heading-font-family: var(--usa-font-ui);
+  --usa-step-indicator-font-family: var(--usa-font-ui);
+  --usa-process-list-heading-font-family: var(--usa-font-ui);
+  --usa-process-list-font-family: var(--usa-font-ui);
+  --usa-process-list-counter-font-family: var(--usa-font-ui);
+  --usa-pagination-font-family: var(--usa-font-ui);
+  --usa-pagination-button-border-radius: calc(var(--usa-border-radius-md));
+  --usa-navigation-font-family: var(--usa-font-ui);
+  --usa-input-tile-border-radius: calc(var(--usa-border-radius-md));
+  --usa-in-page-nav-font-family: var(--usa-font-ui);
+  --usa-in-page-nav-border-radius: var(--usa-border-radius-lg);
+  --usa-header-font-family: var(--usa-font-ui);
+  --usa-footer-font-family: var(--usa-font-ui);
+  --usa-font-size-prose: var(--usa-body-font-size);
+  --usa-font-prose: var(--usa-font-body);
+  --usa-font-display: var(--usa-font-heading);
+  --usa-font-lead: var(--usa-font-heading);
+  --usa-collection-header-font-family: var(--usa-font-ui);
+  --usa-collection-font-family: var(--usa-font-ui);
+
+  --usa-button-lg-border-radius: calc(var(--usa-border-radius-md));
+  --usa-button-font-size: var(--usa-body-font-size);
+  --usa-button-font-family: var(--usa-font-ui);
+
+  --usa-alert-font-size: var(--usa-body-font-size);
+  --usa-alert-font-family: var(--usa-font-ui);
+
+}
+

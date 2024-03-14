@@ -1,0 +1,12 @@
+<form [formGroup]="tokenForm">
+    <div class="grid-row grid-gap-2">
+      <div *ngFor="let token of tokenArr" class="grid-col-12 tablet:grid-col-6">
+        <label class="usa-label" [for]="token.name">{{tokenKey}}-{{ token.name }}</label>
+        <input [id]="token.name" [formControlName]="token.name" class="usa-input">
+      </div>
+    </div>
+    
+      <button type="button" class="usa-button margin-top-2" (click)="applyUpdates()">Preview styles</button>
+      <button type="button" class="usa-button margin-top-2" (click)="resetStyles()">Reset styles</button>
+      <!-- <button type="button" class="usa-button margin-top-2" (click)="generateNewTokenJSON()">New token object</button> -->
+    </form>

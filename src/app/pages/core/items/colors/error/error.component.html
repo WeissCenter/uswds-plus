@@ -1,0 +1,22 @@
+<app-token-table [label]="tokenKey" [data]="defaultTokenArr"></app-token-table>
+<app-token-table [label]="tokenKey" [colors]="true" type="css" [data]="defaultCSSVars"></app-token-table>
+<app-token-form [hostEl]="el" [currentTheme]="currentTheme" [tokenArr]="currentTokenArr" [tokenKey]="tokenKey"></app-token-form>
+
+<div class="display-flex flex-column gap-2px margin-y-4">
+
+  <div class="bg-error-lighter display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">error lighter</p>
+  </div>
+  <div class="bg-error-light display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">error light</p>
+  </div>
+  <div class="bg-error display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">error</p>
+  </div>
+  <div class="bg-error-dark display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">error dark</p>
+  </div>
+  <div class="bg-error-darker display-flex border-base-lighter padding-2 width-full border-1px radius-sm">
+    <p class="bg-body padding-05 border-1px border-base-lighter text-ink width-auto">error darker</p>
+  </div>
+</div>

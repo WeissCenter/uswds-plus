@@ -1,0 +1,2248 @@
+
+.usa-icon-list {
+    font-size: var(--usa-body-font-size);
+    font-family: var(--usa-font-body);
+    line-height: var(--usa-line-height-3);
+    margin-bottom: var(--usa-spacing-0);
+    margin-top: var(--usa-spacing-0);
+    list-style-type: none;
+    padding-left: 0;
+    max-width: var(--usa-measure-5);
+}
+
+.usa-icon-list>li {
+    margin-bottom: 0;
+    max-width: unset;
+}
+
+.usa-icon-list__item {
+    display: flex;
+    position: relative;
+}
+
+.usa-icon-list__item+.usa-icon-list__item {
+    padding-top: var(--usa-spacing-1);
+}
+
+.usa-prose .usa-icon-list {
+    font-size: var(--usa-body-font-size);
+    font-family: var(--usa-font-body);
+    line-height: var(--usa-line-height-body);
+    margin-bottom: var(--usa-spacing-0);
+    margin-top: var(--usa-spacing-0);
+    list-style-type: none;
+    padding-left: 0;
+    max-width: var(--usa-measure-5);
+}
+
+.usa-prose .usa-icon-list>li {
+    margin-bottom: 0;
+    max-width: unset;
+}
+
+.usa-prose .usa-icon-list__item {
+    display: flex;
+    position: relative;
+}
+
+.usa-prose .usa-icon-list__item+.usa-icon-list__item {
+    padding-top: var(--usa-spacing-1);
+}
+
+.usa-icon-list--base-lightest .usa-icon-list__icon {
+    color: var(--usa-base-lightest);
+}
+
+.usa-icon-list--base-lighter .usa-icon-list__icon {
+    color: var(--usa-base-lighter);
+}
+
+.usa-icon-list--base-light .usa-icon-list__icon {
+    color: var(--usa-base-light);
+}
+
+.usa-icon-list--base .usa-icon-list__icon {
+    color: var(--usa-base);
+}
+
+.usa-icon-list--base-dark .usa-icon-list__icon {
+    color: var(--usa-base-dark);
+}
+
+.usa-icon-list--base-darker .usa-icon-list__icon {
+    color: var(--usa-base-darker);
+}
+
+.usa-icon-list--base-darkest .usa-icon-list__icon {
+    color: var(--usa-base-darkest);
+}
+
+.usa-icon-list--primary-lighter .usa-icon-list__icon {
+    color: var(--usa-primary-lighter);
+}
+
+.usa-icon-list--primary-light .usa-icon-list__icon {
+    color: var(--usa-primary-light);
+}
+
+.usa-icon-list--primary .usa-icon-list__icon {
+    color: var(--usa-primary);
+}
+
+.usa-icon-list--primary-vivid .usa-icon-list__icon {
+    color: var(--usa-primary-vivid);
+}
+
+.usa-icon-list--primary-dark .usa-icon-list__icon {
+    color: var(--usa-primary-dark);
+}
+
+.usa-icon-list--primary-darker .usa-icon-list__icon {
+    color: var(--usa-primary-darker);
+}
+
+.usa-icon-list--secondary-lighter .usa-icon-list__icon {
+    color: var(--usa-secondary-lighter);
+}
+
+.usa-icon-list--secondary-light .usa-icon-list__icon {
+    color: var(--usa-secondary-light);
+}
+
+.usa-icon-list--secondary .usa-icon-list__icon {
+    color: var(--usa-secondary);
+}
+
+.usa-icon-list--secondary-vivid .usa-icon-list__icon {
+    color: var(--usa-secondary-vivid);
+}
+
+.usa-icon-list--secondary-dark .usa-icon-list__icon {
+    color: var(--usa-secondary-dark);
+}
+
+.usa-icon-list--secondary-darker .usa-icon-list__icon {
+    color: var(--usa-secondary-darker);
+}
+
+.usa-icon-list--accent-warm-lighter .usa-icon-list__icon {
+    color: var(--usa-accent-warm-lighter);
+}
+
+.usa-icon-list--accent-warm-light .usa-icon-list__icon {
+    color: var(--usa-accent-warm-light);
+}
+
+.usa-icon-list--accent-warm .usa-icon-list__icon {
+    color: var(--usa-accent-warm);
+}
+
+.usa-icon-list--accent-warm-dark .usa-icon-list__icon {
+    color: var(--usa-accent-warm-dark);
+}
+
+.usa-icon-list--accent-warm-darker .usa-icon-list__icon {
+    color: var(--usa-accent-warm-darker);
+}
+
+.usa-icon-list--accent-cool-lighter .usa-icon-list__icon {
+    color: var(--usa-accent-cool-lighter);
+}
+
+.usa-icon-list--accent-cool-light .usa-icon-list__icon {
+    color: var(--usa-accent-cool-light);
+}
+
+.usa-icon-list--accent-cool .usa-icon-list__icon {
+    color: var(--usa-accent-cool);
+}
+
+.usa-icon-list--accent-cool-dark .usa-icon-list__icon {
+    color: var(--usa-accent-cool-dark);
+}
+
+.usa-icon-list--accent-cool-darker .usa-icon-list__icon {
+    color: var(--usa-accent-cool-darker);
+}
+
+.usa-icon-list--error-lighter .usa-icon-list__icon {
+    color: var(--usa-error-lighter);
+}
+
+.usa-icon-list--error-light .usa-icon-list__icon {
+    color: var(--usa-error-light);
+}
+
+.usa-icon-list--error .usa-icon-list__icon {
+    color: var(--usa-error);
+}
+
+.usa-icon-list--error-dark .usa-icon-list__icon {
+    color: var(--usa-error-dark);
+}
+
+.usa-icon-list--error-darker .usa-icon-list__icon {
+    color: var(--usa-error-darker);
+}
+
+.usa-icon-list--warning-lighter .usa-icon-list__icon {
+    color: var(--usa-warning-lighter);
+}
+
+.usa-icon-list--warning-light .usa-icon-list__icon {
+    color: var(--usa-warning-light);
+}
+
+.usa-icon-list--warning .usa-icon-list__icon {
+    color: var(--usa-warning);
+}
+
+.usa-icon-list--warning-dark .usa-icon-list__icon {
+    color: var(--usa-warning-dark);
+}
+
+.usa-icon-list--warning-darker .usa-icon-list__icon {
+    color: var(--usa-warning-darker);
+}
+
+.usa-icon-list--success-lighter .usa-icon-list__icon {
+    color: var(--usa-success-lighter);
+}
+
+.usa-icon-list--success-light .usa-icon-list__icon {
+    color: var(--usa-success-light);
+}
+
+.usa-icon-list--success .usa-icon-list__icon {
+    color: var(--usa-success);
+}
+
+.usa-icon-list--success-dark .usa-icon-list__icon {
+    color: var(--usa-success-dark);
+}
+
+.usa-icon-list--success-darker .usa-icon-list__icon {
+    color: var(--usa-success-darker);
+}
+
+.usa-icon-list--info-lighter .usa-icon-list__icon {
+    color: var(--usa-info-lighter);
+}
+
+.usa-icon-list--info-light .usa-icon-list__icon {
+    color: var(--usa-info-light);
+}
+
+.usa-icon-list--info .usa-icon-list__icon {
+    color: var(--usa-info);
+}
+
+.usa-icon-list--info-dark .usa-icon-list__icon {
+    color: var(--usa-info-dark);
+}
+
+.usa-icon-list--info-darker .usa-icon-list__icon {
+    color: var(--usa-info-darker);
+}
+
+.usa-icon-list--disabled-lighter .usa-icon-list__icon {
+    color: var(--usa-disabled-lighter);
+}
+
+.usa-icon-list--disabled-light .usa-icon-list__icon {
+    color: var(--usa-disabled-light);
+}
+
+.usa-icon-list--disabled .usa-icon-list__icon {
+    color: var(--usa-disabled);
+}
+
+.usa-icon-list--disabled-dark .usa-icon-list__icon {
+    color: var(--usa-disabled-dark);
+}
+
+.usa-icon-list--disabled-darker .usa-icon-list__icon {
+    color: var(--usa-disabled-darker);
+}
+
+.usa-icon-list--emergency .usa-icon-list__icon {
+    color: var(--usa-emergency)l
+}
+
+.usa-icon-list--emergency-dark .usa-icon-list__icon {
+    color: var(--usa-emergency-dark);
+}
+
+.usa-icon-list__icon .usa-icon {
+    display: block;
+    height: var(--usa-spacing-3);
+    position: relative;
+     width: var(--usa-spacing-3);;
+}
+
+.usa-icon-list__content>p,
+.usa-icon-list__content>ul,
+.usa-icon-list__content>ol {
+    font-family: var(--usa-font-body);
+    font-size: var(--usa-font-size-sm);
+    max-width: var(--usa-measure-5);
+}
+
+.usa-icon-list[class*=usa-icon-list--size-] {
+    max-width: var(--usa-measure-none);
+}
+
+.usa-icon-list--size-micro .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-105);
+    width: var(--usa-spacing-105);
+}
+
+.usa-icon-list--size-micro .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var( --usa-font-size-2xs);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-micro .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var( --usa-font-size-2xs);
+}
+
+.usa-icon-list--size-1 .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-105);
+    width: var(--usa-spacing-105);
+}
+
+.usa-icon-list--size-1 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var( --usa-font-size-xs);
+    padding-left: var(--usa-spacing-05);
+}
+
+.usa-icon-list--size-1 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+   font-size: var( --usa-font-size-xs);
+}
+
+.usa-icon-list--size-2 .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-205);
+    width: var(--usa-spacing-205);
+}
+
+.usa-icon-list--size-2 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+   font-size: var( --usa-font-size-sm);
+   padding-left: var(--usa-spacing-05);
+}
+
+.usa-icon-list--size-2 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var( --usa-font-size-sm);
+}
+
+.usa-icon-list--size-3 .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-3);
+    width: var(--usa-spacing-3);
+}
+
+.usa-icon-list--size-3 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-3);
+    padding-left: var(--usa-spacing-05);
+}
+
+.usa-icon-list--size-3 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+     font-size: var(--usa-type-scale-3);
+}
+
+.usa-icon-list--size-4 .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-4);
+    width: var(--usa-spacing-4);
+}
+
+.usa-icon-list--size-4 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+   font-size: var(--usa-font-size-xs);
+   padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-4 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-xs);
+}
+
+.usa-icon-list--size-5 .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-5);
+     width: var(--usa-spacing-5);
+}
+
+.usa-icon-list--size-5 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-sm);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-5 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-sm);
+}
+
+.usa-icon-list--size-6 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-6);
+     width: var(--usa-spacing-6);
+}
+
+.usa-icon-list--size-6 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-md);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-6 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-md);
+}
+
+.usa-icon-list--size-7 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-7);
+     width: var(--usa-spacing-7);
+}
+
+.usa-icon-list--size-7 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-7);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-7 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-type-scale-7);
+}
+
+.usa-icon-list--size-8 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-8);
+     width: var(--usa-spacing-8);
+}
+
+.usa-icon-list--size-8 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: 1.25rem;
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-8 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: 1.22rem
+}
+
+.usa-icon-list--size-9 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-9);
+     width: var(--usa-spacing-9);
+}
+
+.usa-icon-list--size-9 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-lg);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-9 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-lg);
+}
+
+.usa-icon-list--size-10 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-10);
+     width: var(--usa-spacing-10);
+}
+
+.usa-icon-list--size-10 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-10);
+    padding-left: var(--usa-spacing-105);
+}
+
+.usa-icon-list--size-10 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+     font-size: var(--usa-type-scale-10);
+}
+
+.usa-icon-list--size-11 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-11);
+     width: var(--usa-spacing-11);
+}
+
+.usa-icon-list--size-11 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-11);
+    padding-left: var(--usa-spacing-105);
+}
+
+.usa-icon-list--size-11 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+   font-size: var(--usa-type-scale-11);
+}
+
+.usa-icon-list--size-12 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-12);
+     width: var(--usa-spacing-12);;
+}
+
+.usa-icon-list--size-12 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-12);
+    padding-left: var(--usa-spacing-105);
+}
+
+.usa-icon-list--size-12 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+   font-size: var(--usa-type-scale-12);
+}
+
+.usa-icon-list--size-13 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-13);
+     width: var(--usa-spacing-13);
+}
+
+.usa-icon-list--size-13 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+   font-size: var(--usa-type-scale-13);
+    padding-left: var(--usa-spacing-2);
+}
+
+.usa-icon-list--size-13 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-type-scale-13);
+}
+
+.usa-icon-list--size-14 .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-1);
+    width: var(--usa-spacing-1)
+}
+
+.usa-icon-list--size-14 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-14);
+    padding-left: var(--usa-spacing-2);
+}
+
+.usa-icon-list--size-14 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-type-scale-14);
+}
+
+.usa-icon-list--size-15 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-15);
+     width: var(--usa-spacing-15);
+}
+
+.usa-icon-list--size-15 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-15);
+    padding-left: var(--usa-spacing-205);
+}
+
+.usa-icon-list--size-15 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-type-scale-15);
+}
+
+.usa-icon-list--size-16 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-16);
+    width: var(--usa-spacing-16);
+}
+
+.usa-icon-list--size-16 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-16);
+    padding-left: var(--usa-spacing-3);
+}
+
+.usa-icon-list--size-16 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-type-scale-16);
+}
+
+.usa-icon-list--size-17 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-17);
+     width: var(--usa-spacing-17);
+}
+
+.usa-icon-list--size-17 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+   font-size: var(--usa-type-scale-17);
+    padding-left: var(--usa-spacing-3);
+}
+
+.usa-icon-list--size-17 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-type-scale-17);
+}
+
+.usa-icon-list--size-18 .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-18);
+     width: var(--usa-spacing-18);
+}
+
+.usa-icon-list--size-18 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+   font-size: var(--usa-type-scale-18);
+   padding-left: var(--usa-spacing-3);
+}
+
+.usa-icon-list--size-18 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-type-scale-18);
+}
+
+.usa-icon-list--size-19 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-19);
+     width: var(--usa-spacing-19);
+}
+
+.usa-icon-list--size-19 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+   font-size: var(--usa-type-scale-19);
+    padding-left: var(--usa-spacing-4);
+}
+
+.usa-icon-list--size-19 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-type-scale-19);
+}
+
+.usa-icon-list--size-20 .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-20);
+     width: var(--usa-spacing-20);
+}
+
+.usa-icon-list--size-20 .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-type-scale-20);
+    padding-left: var(--usa-spacing-5);
+}
+
+.usa-icon-list--size-20 .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+   font-size: var(--usa-type-scale-20);
+}
+
+.usa-icon-list--size-3xs .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-205);
+    height: var(--usa-spacing-205);
+}
+
+.usa-icon-list--size-3xs .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+   font-size: var( --usa-font-size-3xs);
+   padding-left: var(--usa-spacing-05);
+}
+
+.usa-icon-list--size-3xs .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var( --usa-font-size-3xs);
+}
+
+.usa-icon-list--size-2xs .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-3);
+    width: var(--usa-spacing-3);
+}
+
+.usa-icon-list--size-2xs .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var( --usa-font-size-2xs);
+    padding-left: var(--usa-spacing-05);
+}
+
+.usa-icon-list--size-2xs .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var( --usa-font-size-2xs);
+}
+
+.usa-icon-list--size-xs .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-4);
+    width: var(--usa-spacing-4);
+}
+
+.usa-icon-list--size-xs .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+   font-size: var(--usa-font-size-xs);
+   padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-xs .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-xs);
+}
+
+.usa-icon-list--size-sm .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-3);
+     width: var(--usa-spacing-3);
+}
+
+.usa-icon-list--size-sm .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-sm);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-sm .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-sm);
+}
+
+.usa-icon-list--size-md .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-6);
+     width: var(--usa-spacing-6);
+}
+
+.usa-icon-list--size-md .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-md);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-md .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-md);
+}
+
+.usa-icon-list--size-lg .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-9);
+     width: var(--usa-spacing-9);
+}
+
+.usa-icon-list--size-lg .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-lg);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list--size-lg .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-lg);
+}
+
+.usa-icon-list--size-xl .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-12);
+     width: var(--usa-spacing-12);
+}
+
+.usa-icon-list--size-xl .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-xl);
+    padding-left: var(--usa-spacing-105);
+}
+
+.usa-icon-list--size-xl .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-xl);
+}
+
+.usa-icon-list--size-2xl .usa-icon-list__icon .usa-icon {
+    height: var(--usa-spacing-1);
+    width: var(--usa-spacing-1)
+}
+
+.usa-icon-list--size-2xl .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-2xl);
+    padding-left: var(--usa-spacing-2);
+}
+
+.usa-icon-list--size-2xl .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-2xl);
+}
+
+.usa-icon-list--size-3xl .usa-icon-list__icon .usa-icon {
+     height: var(--usa-spacing-15);
+     width: var(--usa-spacing-15);
+}
+
+.usa-icon-list--size-3xl .usa-icon-list__content {
+    max-width: var(--usa-measure-5);
+    font-size: var(--usa-font-size-3xl);
+    padding-left: var(--usa-spacing-205);
+}
+
+.usa-icon-list--size-3xl .usa-icon-list__content .usa-icon-list__title {
+    font-family: var(--usa-font-heading);
+    font-size: var(--usa-font-size-3xl);
+}
+
+@media all and (min-width: 30em) {
+    .mobile-lg\:usa-icon-list--size-micro .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-105);
+        width: var(--usa-spacing-105)
+    }
+
+    .mobile-lg\:usa-icon-list--size-micro .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-micro);
+        padding-left: var(--usa-spacing-2px);
+    }
+
+    .mobile-lg\:usa-icon-list--size-micro .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-micro);
+    }
+
+    .mobile-lg\:usa-icon-list--size-1 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-105);
+        width: var(--usa-spacing-105)
+    }
+
+    .mobile-lg\:usa-icon-list--size-1 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-1);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .mobile-lg\:usa-icon-list--size-1 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-2 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-205);
+        height: var(--usa-spacing-205);
+    }
+
+    .mobile-lg\:usa-icon-list--size-2 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-2);
+       padding-left: var(--usa-spacing-05);
+    }
+
+    .mobile-lg\:usa-icon-list--size-2 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-2);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+        width: var(--usa-spacing-3);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-3);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+         font-size: var(--usa-type-scale-3);
+    }
+
+    .mobile-lg\:usa-icon-list--size-4 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-4);
+        width: var(--usa-spacing-4);
+    }
+
+    .mobile-lg\:usa-icon-list--size-4 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-4);
+       padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-4 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-4);
+    }
+
+    .mobile-lg\:usa-icon-list--size-5 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+         width: var(--usa-spacing-3);
+    }
+
+    .mobile-lg\:usa-icon-list--size-5 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-5);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-5 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-5);
+    }
+
+    .mobile-lg\:usa-icon-list--size-6 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-6);
+         width: var(--usa-spacing-6);
+    }
+
+    .mobile-lg\:usa-icon-list--size-6 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-6);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-6 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-6);
+    }
+
+    .mobile-lg\:usa-icon-list--size-7 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-7);
+         width: var(--usa-spacing-7);
+    }
+
+    .mobile-lg\:usa-icon-list--size-7 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-7);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-7 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-7);
+    }
+
+    .mobile-lg\:usa-icon-list--size-8 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-8);
+         width: var(--usa-spacing-8);
+    }
+
+    .mobile-lg\:usa-icon-list--size-8 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-8);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-8 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-8);
+    }
+
+    .mobile-lg\:usa-icon-list--size-9 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-9);
+         width: var(--usa-spacing-9);
+    }
+
+    .mobile-lg\:usa-icon-list--size-9 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-9);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-9 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-9);
+    }
+
+    .mobile-lg\:usa-icon-list--size-10 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-10);
+         width: var(--usa-spacing-10);
+    }
+
+    .mobile-lg\:usa-icon-list--size-10 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-10);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .mobile-lg\:usa-icon-list--size-10 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+         font-size: var(--usa-type-scale-10);
+    }
+
+    .mobile-lg\:usa-icon-list--size-11 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-11);
+         width: var(--usa-spacing-11);
+    }
+
+    .mobile-lg\:usa-icon-list--size-11 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-11);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .mobile-lg\:usa-icon-list--size-11 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-11);
+    }
+
+    .mobile-lg\:usa-icon-list--size-12 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-12);
+         width: var(--usa-spacing-12);
+    }
+
+    .mobile-lg\:usa-icon-list--size-12 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-12);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .mobile-lg\:usa-icon-list--size-12 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-12);
+    }
+
+    .mobile-lg\:usa-icon-list--size-13 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-13);
+         width: var(--usa-spacing-13);
+    }
+
+    .mobile-lg\:usa-icon-list--size-13 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-13);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .mobile-lg\:usa-icon-list--size-13 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-13);
+    }
+
+    .mobile-lg\:usa-icon-list--size-14 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-14);
+        width: var(--usa-spacing-14)
+    }
+
+    .mobile-lg\:usa-icon-list--size-14 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-14);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .mobile-lg\:usa-icon-list--size-14 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-14);
+    }
+
+    .mobile-lg\:usa-icon-list--size-15 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-15);
+         width: var(--usa-spacing-15);
+    }
+
+    .mobile-lg\:usa-icon-list--size-15 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-15);
+        padding-left: var(--usa-spacing-205);
+    }
+
+    .mobile-lg\:usa-icon-list--size-15 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-15);
+    }
+
+    .mobile-lg\:usa-icon-list--size-16 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-16);
+        width: var(--usa-spacing-16);
+    }
+
+    .mobile-lg\:usa-icon-list--size-16 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-16);
+        padding-left: var(--usa-spacing-3);
+    }
+
+    .mobile-lg\:usa-icon-list--size-16 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-16);
+    }
+
+    .mobile-lg\:usa-icon-list--size-17 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-17);
+         width: var(--usa-spacing-17);
+    }
+
+    .mobile-lg\:usa-icon-list--size-17 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-17);
+        padding-left: var(--usa-spacing-3);
+    }
+
+    .mobile-lg\:usa-icon-list--size-17 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-17);
+    }
+
+    .mobile-lg\:usa-icon-list--size-18 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-18);
+         width: var(--usa-spacing-18);
+    }
+
+    .mobile-lg\:usa-icon-list--size-18 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-18);
+       padding-left: var(--usa-spacing-3);
+    }
+
+    .mobile-lg\:usa-icon-list--size-18 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-18);
+    }
+
+    .mobile-lg\:usa-icon-list--size-19 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-19);
+         width: var(--usa-spacing-19);
+    }
+
+    .mobile-lg\:usa-icon-list--size-19 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-19);
+        padding-left: var(--usa-spacing-4);
+    }
+
+    .mobile-lg\:usa-icon-list--size-19 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-19);
+    }
+
+    .mobile-lg\:usa-icon-list--size-20 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-20);
+         width: var(--usa-spacing-20);
+    }
+
+    .mobile-lg\:usa-icon-list--size-20 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-20);
+        padding-left: var(--usa-spacing-5);
+    }
+
+    .mobile-lg\:usa-icon-list--size-20 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-20);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-205);
+        height: var(--usa-spacing-205);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var( --usa-font-size-3xs);
+       padding-left: var(--usa-spacing-05);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-3xs);
+    }
+
+    .mobile-lg\:usa-icon-list--size-2xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+        width: var(--usa-spacing-3);
+    }
+
+    .mobile-lg\:usa-icon-list--size-2xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-2xs);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .mobile-lg\:usa-icon-list--size-2xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-2xs);
+    }
+
+    .mobile-lg\:usa-icon-list--size-xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-4);
+        width: var(--usa-spacing-4);
+    }
+
+    .mobile-lg\:usa-icon-list--size-xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-font-size-xs);
+       padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-xs);
+    }
+
+    .mobile-lg\:usa-icon-list--size-sm .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+         width: var(--usa-spacing-3);
+    }
+
+    .mobile-lg\:usa-icon-list--size-sm .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-sm);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-sm .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-sm);
+    }
+
+    .mobile-lg\:usa-icon-list--size-md .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-6);
+         width: var(--usa-spacing-6);
+    }
+
+    .mobile-lg\:usa-icon-list--size-md .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-md);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-md .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-md);
+    }
+
+    .mobile-lg\:usa-icon-list--size-lg .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-9);
+         width: var(--usa-spacing-9);
+    }
+
+    .mobile-lg\:usa-icon-list--size-lg .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-lg);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .mobile-lg\:usa-icon-list--size-lg .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-lg);
+    }
+
+    .mobile-lg\:usa-icon-list--size-xl .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-12);
+         width: var(--usa-spacing-12);
+    }
+
+    .mobile-lg\:usa-icon-list--size-xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-xl);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .mobile-lg\:usa-icon-list--size-xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-xl);
+    }
+
+    .mobile-lg\:usa-icon-list--size-2xl .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-1);
+        width: var(--usa-spacing-1)
+    }
+
+    .mobile-lg\:usa-icon-list--size-2xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-2xl);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .mobile-lg\:usa-icon-list--size-2xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-2xl);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3xl .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-15);
+         width: var(--usa-spacing-15);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-3xl);
+        padding-left: var(--usa-spacing-205);
+    }
+
+    .mobile-lg\:usa-icon-list--size-3xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-3xl);
+    }
+}
+
+@media all and (min-width: 40em) {
+    .tablet\:usa-icon-list--size-micro .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-105);
+        width: var(--usa-spacing-105)
+    }
+
+    .tablet\:usa-icon-list--size-micro .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-micro);
+        padding-left: var(--usa-spacing-2px);
+    }
+
+    .tablet\:usa-icon-list--size-micro .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-micro);
+    }
+
+    .tablet\:usa-icon-list--size-1 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-105);
+        width: var(--usa-spacing-105)
+    }
+
+    .tablet\:usa-icon-list--size-1 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-1);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .tablet\:usa-icon-list--size-1 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-1);
+    }
+
+    .tablet\:usa-icon-list--size-2 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-205);
+        height: var(--usa-spacing-205);
+    }
+
+    .tablet\:usa-icon-list--size-2 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-2);
+       padding-left: var(--usa-spacing-05);
+    }
+
+    .tablet\:usa-icon-list--size-2 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-2);
+    }
+
+    .tablet\:usa-icon-list--size-3 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+        width: var(--usa-spacing-3);
+    }
+
+    .tablet\:usa-icon-list--size-3 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-3);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .tablet\:usa-icon-list--size-3 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+         font-size: var(--usa-type-scale-3);
+    }
+
+    .tablet\:usa-icon-list--size-4 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-4);
+        width: var(--usa-spacing-4);
+    }
+
+    .tablet\:usa-icon-list--size-4 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-4);
+       padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-4 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-4);
+    }
+
+    .tablet\:usa-icon-list--size-5 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+         width: var(--usa-spacing-3);;
+    }
+
+    .tablet\:usa-icon-list--size-5 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-5);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-5 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-5);
+    }
+
+    .tablet\:usa-icon-list--size-6 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-6);
+         width: var(--usa-spacing-6);
+    }
+
+    .tablet\:usa-icon-list--size-6 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-6);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-6 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-6);
+    }
+
+    .tablet\:usa-icon-list--size-7 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-7);
+         width: var(--usa-spacing-7);
+    }
+
+    .tablet\:usa-icon-list--size-7 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-7);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-7 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-7);
+    }
+
+    .tablet\:usa-icon-list--size-8 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-8);
+         width: var(--usa-spacing-8);
+    }
+
+    .tablet\:usa-icon-list--size-8 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-8);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-8 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-8);
+    }
+
+    .tablet\:usa-icon-list--size-9 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-9);
+         width: var(--usa-spacing-9);
+    }
+
+    .tablet\:usa-icon-list--size-9 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-9);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-9 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-9);
+    }
+
+    .tablet\:usa-icon-list--size-10 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-10);
+         width: var(--usa-spacing-10);
+    }
+
+    .tablet\:usa-icon-list--size-10 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-10);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .tablet\:usa-icon-list--size-10 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+         font-size: var(--usa-type-scale-10);
+    }
+
+    .tablet\:usa-icon-list--size-11 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-11);
+         width: var(--usa-spacing-11);
+    }
+
+    .tablet\:usa-icon-list--size-11 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-11);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .tablet\:usa-icon-list--size-11 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-11);
+    }
+
+    .tablet\:usa-icon-list--size-12 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-12);
+         width: var(--usa-spacing-12);
+    }
+
+    .tablet\:usa-icon-list--size-12 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-12);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .tablet\:usa-icon-list--size-12 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-12);
+    }
+
+    .tablet\:usa-icon-list--size-13 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-13);
+         width: var(--usa-spacing-13);
+    }
+
+    .tablet\:usa-icon-list--size-13 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-13);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .tablet\:usa-icon-list--size-13 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-13);
+    }
+
+    .tablet\:usa-icon-list--size-14 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-1);
+        width: var(--usa-spacing-1)
+    }
+
+    .tablet\:usa-icon-list--size-14 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-14);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .tablet\:usa-icon-list--size-14 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-14);
+    }
+
+    .tablet\:usa-icon-list--size-15 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-15);
+         width: var(--usa-spacing-15);
+    }
+
+    .tablet\:usa-icon-list--size-15 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-15);
+        padding-left: var(--usa-spacing-205);
+    }
+
+    .tablet\:usa-icon-list--size-15 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-15);
+    }
+
+    .tablet\:usa-icon-list--size-16 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-16);
+        width: var(--usa-spacing-16);
+    }
+
+    .tablet\:usa-icon-list--size-16 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-16);
+        padding-left: var(--usa-spacing-3);
+    }
+
+    .tablet\:usa-icon-list--size-16 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-16);
+    }
+
+    .tablet\:usa-icon-list--size-17 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-17);
+         width: var(--usa-spacing-17);
+    }
+
+    .tablet\:usa-icon-list--size-17 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-17);
+        padding-left: var(--usa-spacing-3);
+    }
+
+    .tablet\:usa-icon-list--size-17 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-17);
+    }
+
+    .tablet\:usa-icon-list--size-18 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-18);
+         width: var(--usa-spacing-18);
+    }
+
+    .tablet\:usa-icon-list--size-18 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-18);
+       padding-left: var(--usa-spacing-3);
+    }
+
+    .tablet\:usa-icon-list--size-18 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-18);
+    }
+
+    .tablet\:usa-icon-list--size-19 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-19);
+         width: var(--usa-spacing-19);
+    }
+
+    .tablet\:usa-icon-list--size-19 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-19);
+        padding-left: var(--usa-spacing-4);
+    }
+
+    .tablet\:usa-icon-list--size-19 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-19);
+    }
+
+    .tablet\:usa-icon-list--size-20 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-20);
+         width: var(--usa-spacing-20);
+    }
+
+    .tablet\:usa-icon-list--size-20 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-20);
+        padding-left: var(--usa-spacing-5);
+    }
+
+    .tablet\:usa-icon-list--size-20 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-20);
+    }
+
+    .tablet\:usa-icon-list--size-3xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-205);
+        height: var(--usa-spacing-205);
+    }
+
+    .tablet\:usa-icon-list--size-3xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var( --usa-font-size-3xs);
+       padding-left: var(--usa-spacing-05);
+    }
+
+    .tablet\:usa-icon-list--size-3xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-3xs);
+    }
+
+    .tablet\:usa-icon-list--size-2xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+        width: var(--usa-spacing-3);
+    }
+
+    .tablet\:usa-icon-list--size-2xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-2xs);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .tablet\:usa-icon-list--size-2xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-2xs);
+    }
+
+    .tablet\:usa-icon-list--size-xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-4);
+        width: var(--usa-spacing-4);
+    }
+
+    .tablet\:usa-icon-list--size-xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-font-size-xs);
+       padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-xs);
+    }
+
+    .tablet\:usa-icon-list--size-sm .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+         width: var(--usa-spacing-3);
+    }
+
+    .tablet\:usa-icon-list--size-sm .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-sm);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-sm .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-sm);
+    }
+
+    .tablet\:usa-icon-list--size-md .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-6);
+         width: var(--usa-spacing-6);
+    }
+
+    .tablet\:usa-icon-list--size-md .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-md);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-md .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-md);
+    }
+
+    .tablet\:usa-icon-list--size-lg .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-9);
+         width: var(--usa-spacing-9);
+    }
+
+    .tablet\:usa-icon-list--size-lg .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-lg);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .tablet\:usa-icon-list--size-lg .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-lg);
+    }
+
+    .tablet\:usa-icon-list--size-xl .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-12);
+         width: var(--usa-spacing-12);
+    }
+
+    .tablet\:usa-icon-list--size-xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-xl);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .tablet\:usa-icon-list--size-xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-xl);
+    }
+
+    .tablet\:usa-icon-list--size-2xl .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-1);
+        width: var(--usa-spacing-1)
+    }
+
+    .tablet\:usa-icon-list--size-2xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-2xl);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .tablet\:usa-icon-list--size-2xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-2xl);
+    }
+
+    .tablet\:usa-icon-list--size-3xl .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-15);
+         width: var(--usa-spacing-15);
+    }
+
+    .tablet\:usa-icon-list--size-3xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-3xl);
+        padding-left: var(--usa-spacing-205);
+    }
+
+    .tablet\:usa-icon-list--size-3xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-3xl);
+    }
+}
+
+@media all and (min-width: 64em) {
+    .desktop\:usa-icon-list--size-micro .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-105);
+        width: var(--usa-spacing-105)
+    }
+
+    .desktop\:usa-icon-list--size-micro .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-micro);
+        padding-left: var(--usa-spacing-2px);
+    }
+
+    .desktop\:usa-icon-list--size-micro .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-micro);
+    }
+
+    .desktop\:usa-icon-list--size-1 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-105);
+        width: var(--usa-spacing-105)
+    }
+
+    .desktop\:usa-icon-list--size-1 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-1);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .desktop\:usa-icon-list--size-1 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-1);
+    }
+
+    .desktop\:usa-icon-list--size-2 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-205);
+        height: var(--usa-spacing-205);
+    }
+
+    .desktop\:usa-icon-list--size-2 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-2);
+       padding-left: var(--usa-spacing-05);
+    }
+
+    .desktop\:usa-icon-list--size-2 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-2);
+    }
+
+    .desktop\:usa-icon-list--size-3 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+        width: var(--usa-spacing-3);
+    }
+
+    .desktop\:usa-icon-list--size-3 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-3);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .desktop\:usa-icon-list--size-3 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+         font-size: var(--usa-type-scale-3);
+    }
+
+    .desktop\:usa-icon-list--size-4 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-4);
+        width: var(--usa-spacing-4);
+    }
+
+    .desktop\:usa-icon-list--size-4 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-4);
+       padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-4 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-4);
+    }
+
+    .desktop\:usa-icon-list--size-5 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+         width: var(--usa-spacing-3);
+    }
+
+    .desktop\:usa-icon-list--size-5 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-5);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-5 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-5);
+    }
+
+    .desktop\:usa-icon-list--size-6 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-6);
+         width: var(--usa-spacing-6);
+    }
+
+    .desktop\:usa-icon-list--size-6 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-6);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-6 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-6);
+    }
+
+    .desktop\:usa-icon-list--size-7 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-7);
+         width: var(--usa-spacing-7);
+    }
+
+    .desktop\:usa-icon-list--size-7 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-7);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-7 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-7);
+    }
+
+    .desktop\:usa-icon-list--size-8 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-8);
+         width: var(--usa-spacing-8);
+    }
+
+    .desktop\:usa-icon-list--size-8 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-8);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-8 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-8);
+    }
+
+    .desktop\:usa-icon-list--size-9 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-9);
+         width: var(--usa-spacing-9);
+    }
+
+    .desktop\:usa-icon-list--size-9 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-9);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-9 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-9);
+    }
+
+    .desktop\:usa-icon-list--size-10 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-10);
+         width: var(--usa-spacing-10);
+    }
+
+    .desktop\:usa-icon-list--size-10 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-10);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .desktop\:usa-icon-list--size-10 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+         font-size: var(--usa-type-scale-10);
+    }
+
+    .desktop\:usa-icon-list--size-11 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-11);
+         width: var(--usa-spacing-11);
+    }
+
+    .desktop\:usa-icon-list--size-11 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-11);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .desktop\:usa-icon-list--size-11 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-11);
+    }
+
+    .desktop\:usa-icon-list--size-12 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-12);
+         width: var(--usa-spacing-12);
+    }
+
+    .desktop\:usa-icon-list--size-12 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-12);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .desktop\:usa-icon-list--size-12 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-12);
+    }
+
+    .desktop\:usa-icon-list--size-13 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-13);
+         width: var(--usa-spacing-13);
+    }
+
+    .desktop\:usa-icon-list--size-13 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-13);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .desktop\:usa-icon-list--size-13 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-13);
+    }
+
+    .desktop\:usa-icon-list--size-14 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-1);
+        width: var(--usa-spacing-1)
+    }
+
+    .desktop\:usa-icon-list--size-14 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-14);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .desktop\:usa-icon-list--size-14 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-14);
+    }
+
+    .desktop\:usa-icon-list--size-15 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-15);
+         width: var(--usa-spacing-15);
+    }
+
+    .desktop\:usa-icon-list--size-15 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-15);
+        padding-left: var(--usa-spacing-205);
+    }
+
+    .desktop\:usa-icon-list--size-15 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-15);
+    }
+
+    .desktop\:usa-icon-list--size-16 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-16);
+        width: var(--usa-spacing-16);
+    }
+
+    .desktop\:usa-icon-list--size-16 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-16);
+        padding-left: var(--usa-spacing-3);
+    }
+
+    .desktop\:usa-icon-list--size-16 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-16);
+    }
+
+    .desktop\:usa-icon-list--size-17 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-17);
+         width: var(--usa-spacing-17);
+    }
+
+    .desktop\:usa-icon-list--size-17 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-17);
+        padding-left: var(--usa-spacing-3);
+    }
+
+    .desktop\:usa-icon-list--size-17 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-17);
+    }
+
+    .desktop\:usa-icon-list--size-18 .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-18);
+         width: var(--usa-spacing-18);
+    }
+
+    .desktop\:usa-icon-list--size-18 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-18);
+       padding-left: var(--usa-spacing-3);
+    }
+
+    .desktop\:usa-icon-list--size-18 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-18);
+    }
+
+    .desktop\:usa-icon-list--size-19 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-19);
+         width: var(--usa-spacing-19);
+    }
+
+    .desktop\:usa-icon-list--size-19 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-type-scale-19);
+        padding-left: var(--usa-spacing-4);
+    }
+
+    .desktop\:usa-icon-list--size-19 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-type-scale-19);
+    }
+
+    .desktop\:usa-icon-list--size-20 .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-20);
+         width: var(--usa-spacing-20);
+    }
+
+    .desktop\:usa-icon-list--size-20 .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-type-scale-20);
+        padding-left: var(--usa-spacing-5);
+    }
+
+    .desktop\:usa-icon-list--size-20 .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+       font-size: var(--usa-type-scale-20);
+    }
+
+    .desktop\:usa-icon-list--size-3xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-205);
+        height: var(--usa-spacing-205);
+    }
+
+    .desktop\:usa-icon-list--size-3xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var( --usa-font-size-3xs);
+       padding-left: var(--usa-spacing-05);
+    }
+
+    .desktop\:usa-icon-list--size-3xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-3xs);
+    }
+
+    .desktop\:usa-icon-list--size-2xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+        width: var(--usa-spacing-3);
+    }
+
+    .desktop\:usa-icon-list--size-2xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-2xs);
+        padding-left: var(--usa-spacing-05);
+    }
+
+    .desktop\:usa-icon-list--size-2xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-2xs);
+    }
+
+    .desktop\:usa-icon-list--size-xs .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-4);
+        width: var(--usa-spacing-4);
+    }
+
+    .desktop\:usa-icon-list--size-xs .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+       font-size: var(--usa-font-size-xs);
+       padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-xs .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-xs);
+    }
+
+    .desktop\:usa-icon-list--size-sm .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-3);
+         width: var(--usa-spacing-3);
+    }
+
+    .desktop\:usa-icon-list--size-sm .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-sm);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-sm .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-sm);
+    }
+
+    .desktop\:usa-icon-list--size-md .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-6);
+         width: var(--usa-spacing-6);
+    }
+
+    .desktop\:usa-icon-list--size-md .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-md);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-md .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-md);
+    }
+
+    .desktop\:usa-icon-list--size-lg .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-9);
+         width: var(--usa-spacing-9);
+    }
+
+    .desktop\:usa-icon-list--size-lg .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var(--usa-font-size-lg);
+        padding-left: var(--usa-spacing-1);
+    }
+
+    .desktop\:usa-icon-list--size-lg .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var(--usa-font-size-lg);
+    }
+
+    .desktop\:usa-icon-list--size-xl .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-12);
+         width: var(--usa-spacing-12);
+    }
+
+    .desktop\:usa-icon-list--size-xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-xl);
+        padding-left: var(--usa-spacing-105);
+    }
+
+    .desktop\:usa-icon-list--size-xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-xl);
+    }
+
+    .desktop\:usa-icon-list--size-2xl .usa-icon-list__icon .usa-icon {
+        height: var(--usa-spacing-1);
+        width: var(--usa-spacing-1)
+    }
+
+    .desktop\:usa-icon-list--size-2xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-2xl);
+        padding-left: var(--usa-spacing-2);
+    }
+
+    .desktop\:usa-icon-list--size-2xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-2xl);
+    }
+
+    .desktop\:usa-icon-list--size-3xl .usa-icon-list__icon .usa-icon {
+         height: var(--usa-spacing-15);
+         width: var(--usa-spacing-15);
+    }
+
+    .desktop\:usa-icon-list--size-3xl .usa-icon-list__content {
+        max-width: var(--usa-measure-5);
+        font-size: var( --usa-font-size-3xl);
+        padding-left: var(--usa-spacing-205);
+    }
+
+    .desktop\:usa-icon-list--size-3xl .usa-icon-list__content .usa-icon-list__title {
+        font-family: var(--usa-font-heading);
+        font-size: var( --usa-font-size-3xl);
+    }
+}
+
+.usa-icon-list__title {
+    font-size: var(--usa-font-size-sm);
+    font-family: var(--usa-font-heading);
+    line-height: var(--usa-line-height-2);
+    margin-bottom: 0rem;
+    padding-top: var(--usa-spacing-2);
+}
+
+.usa-icon-list__title+* {
+    margin-top: var(--usa-spacing-1);
+}
+
+.usa-icon-list__content {
+    font-size: var(--usa-font-size-sm);
+    padding-left: var(--usa-spacing-1);
+}
+
+.usa-icon-list__content>*:first-child {
+    margin-top: 0;
+}
+
+.usa-icon-list__content>*:last-child {
+    margin-bottom: 0;
+}
+
+.usa-icon-list__content ul li {
+    list-style-type: disc;
+}
