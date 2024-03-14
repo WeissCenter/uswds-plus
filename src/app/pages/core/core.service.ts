@@ -155,6 +155,11 @@ export class CoreService {
         },
         
       ]
+    },
+    {
+      name: 'Spacing',
+      route: 'spacing',
+      desc: 'Spacing is used to convey meaning, illustrate relationships, and communicate status.',
     }
   ];
 

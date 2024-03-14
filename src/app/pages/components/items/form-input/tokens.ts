@@ -63,17 +63,17 @@ const tokens: ThemeTokens = {
       description: 'Letter spacing',
     },
     height: {
-      value: '{sizing.5}',
+      value: '{spacing.5}',
       type: 'sizes',
       description: 'Height',
     },
     'select-size': {
-      value: '{sizing.205}',
+      value: '{spacing.205}',
       type: 'sizes',
       description: 'Select size',
     },
     'max-width': {
-      value: '{sizing.mobile-lg}',
+      value: '{spacing.mobile-lg}',
       type: 'sizes',
       description: 'Max width',
     },
@@ -103,12 +103,12 @@ const tokens: ThemeTokens = {
       description: 'Border width',
     },
     'border-color': {
-      value: '{border-color.base}',
+      value: '{ink}',
       type: 'colors',
       description: 'Border color',
     },
     'border-color-hover': {
-      value: '{border-color.base}',
+      value: '{ink}',
       type: 'colors',
       description: 'Border color hover',
     },
@@ -118,12 +118,12 @@ const tokens: ThemeTokens = {
       description: 'Color',
     },
     'placeholder-color': {
-      value: '{base.light}',
+      value: '{base}',
       type: 'colors',
       description: 'Placeholder color',
     },
     'background-color': {
-      value: '{body.background}',
+      value: '{white}',
       type: 'colors',
       description: 'Background color',
     },
@@ -158,32 +158,204 @@ const tokens: ThemeTokens = {
       description: 'Disabled background color',
     },
     'label-font-size': {
-      value: '{font-size.xs}',
+      value: '{body-font.size}',
       type: 'fontSizes',
       description: 'Label font size',
     },
     'label-font-family': {
-      value: '{font.ui}',
+      value: '{body-font.family}',
       type: 'fontFamilies',
       description: 'Label font family',
     },
     'label-font-weight': {
-      value: '{font-weight.normal}',
+      value: '{body-font.weight}',
       type: 'fontWeights',
       description: 'Label font weight',
     },
     'label-color': {
-      value: '{base.dark}',
+      value: '{ink}',
       type: 'colors',
       description: 'Label color',
     },
     'label-line-height': {
-      value: '{line-height.3}',
+      value: '{body-font.line-height}',
       type: 'lineHeights',
       description: 'Label line height',
     },
+    'label-letter-spacing': {
+      value: '{body-font.letter-spacing}',
+      type: 'letterSpacing',
+      description: 'Label letter spacing',
+    },
     'label-margin-bottom': {
-      value: '{spacing.0}',
+      value: '{spacing.05}',
+      type: 'spacing',
+      description: 'Label margin bottom',
+    },
+    'label-margin-top': {
+      value: '{spacing.2}',
+      type: 'spacing',
+      description: 'Label margin top',
+    },
+    'select-caret-color': {
+      value: '{input.color}',
+      type: 'colors',
+      description: 'Select caret color',
+    },
+  },
+  adapt: {
+    'font-family': {
+      value: '{font.ui}',
+      type: 'fontFamilies',
+      description: 'Font family',
+    },
+    'font-size': {
+      value: '{body-font.size}',
+      type: 'fontSizes',
+      description: 'Font size',
+    },
+    'font-weight': {
+      value: '{font-weight.normal}',
+      type: 'fontWeights',
+      description: 'Font weight',
+    },
+    'line-height': {
+      value: '{line-height.4}',
+      type: 'lineHeights',
+      description: 'Line height',
+    },
+    'letter-spacing': {
+      value: '{body-font.letter-spacing}',
+      type: 'letterSpacing',
+      description: 'Letter spacing',
+    },
+    height: {
+      value: '{spacing.5}',
+      type: 'sizes',
+      description: 'Height',
+    },
+    'select-size': {
+      value: '{spacing.205}',
+      type: 'sizes',
+      description: 'Select size',
+    },
+    'max-width': {
+      value: '{spacing.mobile-lg}',
+      type: 'sizes',
+      description: 'Max width',
+    },
+    'margin-top': {
+      value: '{spacing.1}',
+      type: 'spacing',
+      description: 'Margin top',
+    },
+    'padding-x': {
+      value: '{spacing.1}',
+      type: 'spacing',
+      description: 'Padding x',
+    },
+    'padding-y': {
+      value: '{spacing.05}',
+      type: 'spacing',
+      description: 'Padding y',
+    },
+    'large-height': {
+      value: '{spacing.6}',
+      type: 'spacing',
+      description: 'Large height',
+    },
+    'border-width': {
+      value: '{border-width.sm}',
+      type: 'borderWidths',
+      description: 'Border width',
+    },
+    'border-color': {
+      value: '{ink}',
+      type: 'colors',
+      description: 'Border color',
+    },
+    'border-color-hover': {
+      value: '{ink}',
+      type: 'colors',
+      description: 'Border color hover',
+    },
+    color: {
+      value: '{ink}',
+      type: 'colors',
+      description: 'Color',
+    },
+    'placeholder-color': {
+      value: '{base}',
+      type: 'colors',
+      description: 'Placeholder color',
+    },
+    'background-color': {
+      value: '{white}',
+      type: 'colors',
+      description: 'Background color',
+    },
+    'border-radius': {
+      value: '{border-radius.0}',
+      type: 'borderRadius',
+      description: 'Border radius',
+    },
+    'search-min-width': {
+      value: '27ch',
+      type: 'sizes',
+      description: 'Search min width',
+    },
+    'disabled-border-color': {
+      value: '{disabled.light}',
+      type: 'colors',
+      description: 'Disabled border color',
+    },
+    'disabled-border-color-hover': {
+      value: '{input.disabled-border-color}',
+      type: 'colors',
+      description: 'Disabled border color hover',
+    },
+    'disabled-color': {
+      value: '{disabled}',
+      type: 'colors',
+      description: 'Disabled color',
+    },
+    'disabled-background-color': {
+      value: '{disabled.lighter}',
+      type: 'colors',
+      description: 'Disabled background color',
+    },
+    'label-font-size': {
+      value: '{body-font.size}',
+      type: 'fontSizes',
+      description: 'Label font size',
+    },
+    'label-font-family': {
+      value: '{body-font.family}',
+      type: 'fontFamilies',
+      description: 'Label font family',
+    },
+    'label-font-weight': {
+      value: '{body-font.weight}',
+      type: 'fontWeights',
+      description: 'Label font weight',
+    },
+    'label-color': {
+      value: '{ink}',
+      type: 'colors',
+      description: 'Label color',
+    },
+    'label-line-height': {
+      value: '{body-font.line-height}',
+      type: 'lineHeights',
+      description: 'Label line height',
+    },
+    'label-letter-spacing': {
+      value: '{body-font.letter-spacing}',
+      type: 'letterSpacing',
+      description: 'Label letter spacing',
+    },
+    'label-margin-bottom': {
+      value: '{spacing.05}',
       type: 'spacing',
       description: 'Label margin bottom',
     },
@@ -225,12 +397,12 @@ const tokens: ThemeTokens = {
       description: 'Letter spacing',
     },  
     height: {
-      value: '{sizing.6}',
+      value: '{spacing.6}',
       type: 'sizes',
       description: 'Height',
     },
     'select-size': {
-      value: '{sizing.3}',
+      value: '{spacing.3}',
       type: 'sizes',
       description: 'Select size',
     },
@@ -240,7 +412,7 @@ const tokens: ThemeTokens = {
       description: 'Select caret color',
     },
     'max-width': {
-      value: '{sizing.mobile-lg}',
+      value: '{spacing.mobile-lg}',
       type: 'sizes',
       description: 'Max width',
     },
@@ -260,7 +432,7 @@ const tokens: ThemeTokens = {
       description: 'Padding y',
     },
     'large-height': {
-      value: '{sizing.7}',
+      value: '{spacing.7}',
       type: 'sizing',
       description: 'Large height',
     },
@@ -358,6 +530,173 @@ const tokens: ThemeTokens = {
       value: '{spacing.0}',
       type: 'spacing',
       description: 'Label margin top',
+    },
+  },
+  weiss: {
+    'font-family': {
+      value: '{font.sans}',
+      type: 'fontFamilies',
+      description: 'Font family',
+    },
+    'font-size': {
+      value: '{body-font.size}',
+      type: 'fontSizes',
+      description: 'Font size',
+    },
+    'font-weight': {
+      value: '{font-weight.normal}',
+      type: 'fontWeights',
+      description: 'Font weight',
+    },
+    'line-height': {
+      value: '{line-height.4}',
+      type: 'lineHeights',
+      description: 'Line height',
+    },
+    'letter-spacing': {
+      value: '{body-font.letter-spacing}',
+      type: 'letterSpacing',
+      description: 'Letter spacing',
+    },
+    height: {
+      value: '{spacing.5}',
+      type: 'sizes',
+      description: 'Height',
+    },
+    'select-size': {
+      value: '{spacing.205}',
+      type: 'sizes',
+      description: 'Select size',
+    },
+    'max-width': {
+      value: '{spacing.mobile-lg}',
+      type: 'sizes',
+      description: 'Max width',
+    },
+    'margin-top': {
+      value: '{spacing.1}',
+      type: 'spacing',
+      description: 'Margin top',
+    },
+    'padding-x': {
+      value: '{spacing.1}',
+      type: 'spacing',
+      description: 'Padding x',
+    },
+    'padding-y': {
+      value: '{spacing.05}',
+      type: 'spacing',
+      description: 'Padding y',
+    },
+    'large-height': {
+      value: '{spacing.6}',
+      type: 'spacing',
+      description: 'Large height',
+    },
+    'border-width': {
+      value: '{border-width.1px}',
+      type: 'borderWidths',
+      description: 'Border width',
+    },
+    'border-color': {
+      value: '{black}',
+      type: 'colors',
+      description: 'Border color',
+    },
+    'border-color-hover': {
+      value: '{ink}',
+      type: 'colors',
+      description: 'Border color hover',
+    },
+    color: {
+      value: '{ink}',
+      type: 'colors',
+      description: 'Color',
+    },
+    'placeholder-color': {
+      value: '{base}',
+      type: 'colors',
+      description: 'Placeholder color',
+    },
+    'background-color': {
+      value: '{white}',
+      type: 'colors',
+      description: 'Background color',
+    },
+    'border-radius': {
+      value: '{border-radius.0}',
+      type: 'borderRadius',
+      description: 'Border radius',
+    },
+    'search-min-width': {
+      value: '27ch',
+      type: 'sizes',
+      description: 'Search min width',
+    },
+    'disabled-border-color': {
+      value: '{disabled.light}',
+      type: 'colors',
+      description: 'Disabled border color',
+    },
+    'disabled-border-color-hover': {
+      value: '{input.disabled-border-color}',
+      type: 'colors',
+      description: 'Disabled border color hover',
+    },
+    'disabled-color': {
+      value: '{disabled}',
+      type: 'colors',
+      description: 'Disabled color',
+    },
+    'disabled-background-color': {
+      value: '{disabled.lighter}',
+      type: 'colors',
+      description: 'Disabled background color',
+    },
+    'label-font-size': {
+      value: '{body-font.size}',
+      type: 'fontSizes',
+      description: 'Label font size',
+    },
+    'label-font-family': {
+      value: '{body-font.family}',
+      type: 'fontFamilies',
+      description: 'Label font family',
+    },
+    'label-font-weight': {
+      value: '{body-font.weight}',
+      type: 'fontWeights',
+      description: 'Label font weight',
+    },
+    'label-color': {
+      value: '{ink}',
+      type: 'colors',
+      description: 'Label color',
+    },
+    'label-line-height': {
+      value: '{body-font.line-height}',
+      type: 'lineHeights',
+      description: 'Label line height',
+    },
+    'label-letter-spacing': {
+      value: '{body-font.letter-spacing}',
+      type: 'letterSpacing',
+      description: 'Label letter spacing',
+    },
+    'label-margin-bottom': {
+      value: '{spacing.05}',
+      type: 'spacing',
+      description: 'Label margin bottom',
+    },
+    'label-margin-top': {
+      value: '{spacing.2}',
+      type: 'spacing',
+      description: 'Label margin top',
+    },
+    'select-caret-color': {
+      value: '{input.color}',
+      type: 'colors',
+      description: 'Select caret color',
     },
   },
 };

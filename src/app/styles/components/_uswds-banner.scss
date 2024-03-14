@@ -1,6 +1,6 @@
 :root {
     --usa-banner-font-weight: var(--usa-font-weight-normal);
-    --usa-banner-max-width: var(--usa-sizing-desktop);
+    --usa-banner-max-width: var(--usa-spacing-desktop);
     --usa-banner-line-height: var(--usa-line-height-2);
     --usa-banner-background: var(--usa-base-lightest);
     --usa-banner-text-color: var(--usa-ink);
@@ -107,8 +107,8 @@
 }
 
 .usa-banner__lock-image {
-    height: var(--usa-sizing-105);
-    width: var(--usa-sizing-105);
+    height: var(--usa-spacing-105);
+    width: var(--usa-spacing-105);
 }
 
 .usa-banner__lock-image path {
@@ -183,10 +183,10 @@
     background-image: url($assets-path + 'usa-icons/expand_more.svg');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: var(--usa-sizing-2);
+    background-size: var(--usa-spacing-2);
     display: inline-block;
-    height: var(--usa-sizing-2);
-    width: var(--usa-sizing-2);
+    height: var(--usa-spacing-2);
+    width: var(--usa-spacing-2);
     content: "";
     vertical-align: middle;
     margin-left: var(--usa-spacing-auto);
@@ -202,8 +202,8 @@
         mask-position: center center;
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
-        -webkit-mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
-        mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
+        -webkit-mask-size: var(--usa-spacing-2) var(--usa-spacing-2);
+        mask-size: var(--usa-spacing-2) var(--usa-spacing-2);
         right: unset;
     }
 
@@ -245,7 +245,7 @@
 .usa-banner__header-flag {
     float: left;
     margin-right: var(--usa-spacing-1);
-    width: var(--usa-sizing-2)
+    width: var(--usa-spacing-2)
 }
 
 @media all and (min-width: 40em) {
@@ -265,7 +265,7 @@
         display: block;
         font-size: var(--usa-banner-font-size);
         font-weight: var(--usa-banner-font-weight);
-        min-height: var(--usa-sizing-0);
+        min-height: var(--usa-spacing-0);
         padding-right: var(--usa-spacing-0);
     }
 }
@@ -402,10 +402,10 @@
         background-image: url($assets-path + 'usa-icons/expand_more.svg');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: var(--usa-sizing-2);
+        background-size: var(--usa-spacing-2);
         display: inline-block;
-        height: var(--usa-sizing-2);
-        width: var(--usa-sizing-2);
+        height: var(--usa-spacing-2);
+        width: var(--usa-spacing-2);
         content: "";
         vertical-align: middle;
         margin-left: var(--usa-spacing-2px);
@@ -423,8 +423,8 @@
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
-            -webkit-mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
-            mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
+            -webkit-mask-size: var(--usa-spacing-2) var(--usa-spacing-2);
+            mask-size: var(--usa-spacing-2) var(--usa-spacing-2);
         }
     }
 
@@ -473,10 +473,10 @@
         background-image: url($assets-path + 'usa-icons/close.svg');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: var(--usa-sizing-3);
+        background-size: var(--usa-spacing-3);
         display: inline-block;
-        height: var(--usa-sizing-6);
-        width: var(--usa-sizing-6);
+        height: var(--usa-spacing-6);
+        width: var(--usa-spacing-6);
         content: "";
         vertical-align: middle;
         margin-left: var(--usa-0);
@@ -492,8 +492,8 @@
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
-            -webkit-mask-size: var(--usa-sizing-3) var(--usa-sizing-3);
-            mask-size: var(--usa-sizing-3) var(--usa-sizing-3);
+            -webkit-mask-size: var(--usa-spacing-3) var(--usa-spacing-3);
+            mask-size: var(--usa-spacing-3) var(--usa-spacing-3);
         }
     }
 
@@ -533,10 +533,10 @@
         background-image: url($assets-path + 'usa-icons/expand_less.svg');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: var(--usa-sizing-2);
+        background-size: var(--usa-spacing-2);
         display: inline-block;
-        height: var(--usa-sizing-2);
-        width: var(--usa-sizing-2);
+        height: var(--usa-spacing-2);
+        width: var(--usa-spacing-2);
         content: "";
         vertical-align: middle;
         margin-left: var(--usa-spacing-2px);
@@ -552,8 +552,8 @@
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
-            -webkit-mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
-            mask-size: var(--usa-sizing-2) var(--usa-sizing-2);
+            -webkit-mask-size: var(--usa-spacing-2) var(--usa-spacing-2);
+            mask-size: var(--usa-spacing-2) var(--usa-spacing-2);
         }
 
         .usa-banner__button[aria-expanded=true]:after:hover {

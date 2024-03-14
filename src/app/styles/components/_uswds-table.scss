@@ -6,6 +6,7 @@
     --usa-table-cell-padding-y: var(--usa-spacing-1);
     --usa-table-unsorted-icon-hover-color: var(--usa-base-dark);
     --usa-table-unsorted-icon-color: var(--usa-base-base);
+    --usa-table-background-color: var(--usa-body-background);
     --usa-table-sorted-stripe-background-color: var(--usa-accent-cool-lighter);
     --usa-table-sorted-background-color: var(--usa-accent-cool-lighter);
     --usa-table-sorted-header-background-color: var(--usa-accent-cool-light);
@@ -32,7 +33,7 @@
     --usa-table-margin-y: var(--usa-spacing-205);
 
     --usa-table-caption-margin-bottom: var(--usa-spacing-105);
-    --usa-table-caption-font-size: var(--usa-font-size-xs);
+    --usa-table-caption-font-size: var(--usa-font-size-sm);
     --usa-table-caption-font-family: var(--usa-font-body);
     --usa-table-caption-font-weight: var(--usa-font-weight-bold);
     --usa-table-caption-text-align: left;
@@ -76,20 +77,24 @@
 .usa-table td {
     border: var(--usa-table-border-width) solid var(--usa-table-border-color);
     font-weight: var(--usa-table-font-weight);
-    padding: var(--usa-table-cell-padding-y) var(--usa-table-cell-padding-x)
+    padding: var(--usa-table-cell-padding-y) var(--usa-table-cell-padding-x);
+    background-color: var(--usa-table-background-color);
+
 }
 
 .usa-table caption {
-    font-family: var(--usa-font-body);
-    font-size: var(--usa-font-size-xs);
-    font-weight: var(--usa-font-weight-bold);
-    margin-bottom: var(--usa-spacing-105);
-    text-align: left
+    font-family: var(--usa-table-caption-font-family);
+    font-size: var(--usa-table-caption-font-size);
+    font-weight: var(--usa-table-caption-font-weight);
+    line-height: var(--usa-table-caption-line-height);
+    letter-spacing: var(--usa-letter-spacing-1);
+    margin-bottom: var(--usa-table-caption-margin-bottom);
+    text-align: var(--usa-table-caption-text-align);
 }
 
 .usa-table th[data-sortable] {
     padding-right: var(--usa-spacing-5);
-    position: relative
+    position: relative;
 }
 
 .usa-table th[data-sortable]:after {

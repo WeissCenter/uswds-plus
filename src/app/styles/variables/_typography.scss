@@ -29,12 +29,7 @@
   --usa-measure-small: var(--usa-font-settings-measure-2);
   --usa-measure-smaller: var(--usa-font-settings-measure-1);
 
-  // Fluid typography calculations
-  // clamp(a, b, c)
-  // a = minimum font size
-  // b = dynamic size calculation
-  // c = maximum font size
-  --usa-font-settings-size-base: 1rem;
+  --usa-line-height-auto: auto;
 
 }
 

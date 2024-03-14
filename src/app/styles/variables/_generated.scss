@@ -65,7 +65,7 @@
   --usa-pagination-button-border-width: var(--usa-spacing-1px);
   --usa-navigation-submenu-color: var(--usa-color-global-white);
   --usa-navigation-active-text-color: var(--usa-color-global-white);
-  --usa-modal-background-color: var(--usa-color-global-white);
+
 
 
   --usa-input-tile-border-width: var(--usa-spacing-2px);
@@ -118,7 +118,7 @@
   --usa-process-list-counter-gap-width: calc(var(--usa-spacing-05));
   --usa-process-list-counter-border-width: calc(var(--usa-spacing-05));
   --usa-process-list-counter-border-color: var(--usa-base-ink);
-  --usa-paragraph-margin-top: calc(var(--usa-spacing-2));
+  --usa-paragraph-margin-top:--usa-body-font-paragraph-spacing;
   --usa-pagination-icon-size: calc(var(--usa-spacing-205));
   --usa-pagination-button-current-border-color: var(--usa-base-ink);
   --usa-pagination-button-border-color: var(--usa-base-light);
@@ -140,19 +140,7 @@
   --usa-navigation-active-background-color: var(--usa-primary-base);
   --usa-navigation-hover-background-color: var(--usa-base-lightest);
   --usa-navigation-background-color: var(--usa-body-background);
-  --usa-modal-footer-margin-top: calc(var(--usa-spacing-3));
-  --usa-modal-close-icon-hover-color: var(--usa-base-darkest);
-  --usa-modal-close-icon-color: var(--usa-base-base);
-  --usa-modal-close-icon-size: calc(var(--usa-spacing-3));
-  --usa-modal-lg-max-width: calc(var(--usa-spacing-tablet));
-  --usa-modal-lg-content-max-width: calc(var(--usa-spacing-tablet-lg));
-  --usa-modal-default-max-width: calc(var(--usa-spacing-mobile-lg));
-  --usa-modal-large-padding-x: calc(var(--usa-spacing-4));
-  --usa-modal-large-padding-y: calc(var(--usa-spacing-3));
-  --usa-modal-padding-x: calc(var(--usa-spacing-205));
-  --usa-modal-padding-y: calc(var(--usa-spacing-2));
-  --usa-modal-border-width: calc(var(--usa-spacing-05));
-  --usa-modal-border-color: var(--usa-base-lighter);
+
 
 
   --usa-in-page-nav-top: calc(var(--usa-spacing-4));
@@ -223,7 +211,6 @@
   --usa-navigation-link-hover-color: var(--usa-link-hover-color);
   --usa-navigation-link-color: var(--usa-link-color);
   --usa-navigation-border-radius: var(--usa-border-radius-0);
-  --usa-modal-text-color: var(--usa-text-color);
 
   --usa-in-page-nav-link-active-color: var(--usa-link-active-color);
   --usa-in-page-nav-link-color: var(--usa-link-color);
@@ -253,7 +240,6 @@
   --usa-pagination-font-family: var(--usa-font-ui);
   --usa-pagination-button-border-radius: calc(var(--usa-border-radius-md));
   --usa-navigation-font-family: var(--usa-font-ui);
-  --usa-modal-border-radius: var(--usa-border-radius-lg);
   --usa-input-tile-border-radius: calc(var(--usa-border-radius-md));
   --usa-in-page-nav-font-family: var(--usa-font-ui);
   --usa-in-page-nav-border-radius: var(--usa-border-radius-lg);

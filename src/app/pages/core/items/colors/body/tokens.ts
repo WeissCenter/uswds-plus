@@ -27,12 +27,24 @@ const tokens: ThemeTokens = {
   },
   adapt: {
     'background': {
-        value: '{white}',
+        value: '{color-gray.2}',
         type: 'color',
         description: 'Body background color',
     },
     ink: {
-        value: '{black}',
+        value: '{base.darkest}',
+        type: 'color',
+        description: 'Body text color',
+    }
+  },
+  weiss: {
+    'background': {
+        value: '{color-gray.2}',
+        type: 'color',
+        description: 'Body background color',
+    },
+    ink: {
+        value: '{base.darkest}',
         type: 'color',
         description: 'Body text color',
     }

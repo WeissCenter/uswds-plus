@@ -5,7 +5,7 @@ exports.key = 'alert';
 var tokens = {
     base: {
         'bar-width': {
-            value: '{sizing.05}',
+            value: '{spacing.05}',
             type: 'sizing',
             description: 'Alert bar width',
         },
@@ -15,7 +15,7 @@ var tokens = {
             description: 'Alert bar color',
         },
         'background-color': {
-            value: '{base.lightest}',
+            value: '{base.lighter}',
             type: 'color',
             description: 'Alert background color',
         },
@@ -40,12 +40,12 @@ var tokens = {
             description: 'Alert line height',
         },
         'icon-size': {
-            value: '{sizing.3}',
+            value: '{spacing.3}',
             type: 'sizing',
             description: 'Alert icon size',
         },
         'slim-icon-size': {
-            value: '{sizing.3}',
+            value: '{spacing.3}',
             type: 'sizing',
             description: 'Alert icon size',
         },
@@ -85,7 +85,7 @@ var tokens = {
             description: 'Alert link color',
         },
         'max-width': {
-            value: '{sizing.tablet}',
+            value: '{spacing.tablet}',
             type: 'sizing',
             description: 'Alert max width',
         },
@@ -93,6 +93,106 @@ var tokens = {
             value: '{border-radius.sm}',
             type: 'borderRadius',
             description: 'Alert border radius',
+        },
+        'bar-color-info': {
+            value: '{info}',
+            type: 'color',
+            description: 'Alert bar color',
+        },
+        'background-color-info': {
+            value: '{info.lighter}',
+            type: 'color',
+            description: 'Alert background color',
+        },
+        'text-color-info': {
+            value: '{ink}',
+            type: 'color',
+            description: 'Alert text color',
+        },
+        'icon-color-info': {
+            value: '{info}',
+            type: 'color',
+            description: 'Alert icon color',
+        },
+        'link-color-info': {
+            value: '{info}',
+            type: 'color',
+            description: 'Alert link color',
+        },
+        'bar-color-warning': {
+            value: '{warning}',
+            type: 'color',
+            description: 'Alert bar color',
+        },
+        'background-color-warning': {
+            value: '{warning.lighter}',
+            type: 'color',
+            description: 'Alert background color',
+        },
+        'text-color-warning': {
+            value: '{ink}',
+            type: 'color',
+            description: 'Alert text color',
+        },
+        'icon-color-warning': {
+            value: '{warning}',
+            type: 'color',
+            description: 'Alert icon color',
+        },
+        'link-color-warning': {
+            value: '{link.color}',
+            type: 'color',
+            description: 'Alert link color',
+        },
+        'bar-color-success': {
+            value: '{success}',
+            type: 'color',
+            description: 'Alert bar color',
+        },
+        'background-color-success': {
+            value: '{success.lighter}',
+            type: 'color',
+            description: 'Alert background color',
+        },
+        'text-color-success': {
+            value: '{ink}',
+            type: 'color',
+            description: 'Alert text color',
+        },
+        'icon-color-success': {
+            value: '{success}',
+            type: 'color',
+            description: 'Alert icon color',
+        },
+        'link-color-success': {
+            value: '{link.color}',
+            type: 'color',
+            description: 'Alert link color',
+        },
+        'bar-color-error': {
+            value: '{error}',
+            type: 'color',
+            description: 'Alert bar color',
+        },
+        'background-color-error': {
+            value: '{error.lighter}',
+            type: 'color',
+            description: 'Alert background color',
+        },
+        'text-color-error': {
+            value: '{ink}',
+            type: 'color',
+            description: 'Alert text color',
+        },
+        'icon-color-error': {
+            value: '{error}',
+            type: 'color',
+            description: 'Alert icon color',
+        },
+        'link-color-error': {
+            value: '{link.color}',
+            type: 'color',
+            description: 'Alert link color',
         },
     },
 };

@@ -48,6 +48,12 @@ import { SecondaryComponent } from './pages/core/items/colors/secondary/secondar
 import { AccentCoolComponent } from './pages/core/items/colors/accent-cool/accent-cool.component';
 import { AccentWarmComponent } from './pages/core/items/colors/accent-warm/accent-warm.component';
 import { BasicComponent } from './pages/core/items/colors/basic/basic.component';
+import { SpacingComponent } from './pages/core/items/spacing/spacing.component';
+import { FocusComponent } from './pages/core/items/focus/focus.component';
+import { LinksComponent } from './pages/core/items/links/links.component';
+import { KitchenSinkComponent } from './pages/kitchen-sink/kitchen-sink.component';
+import { AccessibilityWidgetComponent } from './accessibility-widget/accessibility-widget.component';
+import { ModalComponent } from './pages/components/items/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -95,12 +101,19 @@ import { BasicComponent } from './pages/core/items/colors/basic/basic.component'
     SecondaryComponent,
     AccentCoolComponent,
     AccentWarmComponent,
-    BasicComponent
+    BasicComponent,
+    SpacingComponent,
+    FocusComponent,
+    LinksComponent,
+    KitchenSinkComponent,
+    ModalComponent,
+    
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AccessibilityWidgetComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

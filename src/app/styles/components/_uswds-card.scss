@@ -10,22 +10,22 @@
     --usa-card-flag-image-width: var(--usa-spacing-card-lg);
     --usa-card-flag-min-width: var(--usa-spacing-tablet);
     --usa-card-gap: var(--usa-spacing-2);
-    --usa-card-border-color: var(--usa-border-color-base);
+    --usa-card-border-color: var(--usa-base-lighter);
     --usa-card-text-color: var(--usa-base-ink);
-    --usa-card-background-color: var(--usa-base-lightest);
-    --usa-card-header-line-height: var(--usa-line-height-2);
+    --usa-card-background-color: var(--usa-white);
+    --usa-card-header-line-height: var(--usa-line-height-3);
     --usa-card-header-font-size: var(--usa-font-size-lg);
-    --usa-card-line-height: var(--usa-line-height-body);
+    --usa-card-line-height: var(--usa-body-font-line-height);
     --usa-card-border-radius: var(--usa-border-radius-lg);
     --usa-card-header-font-family: var(--usa-font-heading);
     --usa-card-font-size: var(--usa-body-font-size);
-    --usa-card-font-family: var(--usa-font-body);
+    --usa-card-font-family: var(--usa-body-font-family);
 }
 
 .usa-card-group,
 .usa-prose .usa-card-group {
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: var(--usa-spacing-2);
+    margin-top: var(--usa-spacing-2);
     list-style-type: none;
     padding-left: 0;
 }
@@ -37,6 +37,7 @@
     align-items: stretch;
     margin-left: var(--usa-card-margin-x);
     margin-right: var(--usa-card-margin-x);
+    container-type: inline-size;
 }
 
 @media all and (min-width: 40em) {
@@ -45,9 +46,18 @@
     }
 }
 
+
+@container (max-width: 40em) {
+    .usa-card-group {
+        flex-direction: column;
+    }
+}
+
+
 .usa-card {
     margin-bottom: var(--usa-card-margin-bottom);
-    max-width: var(--usa-spacing-none);
+    max-width: none;
+    min-width: 25ch;
 }
 
 .usa-card:last-child {
@@ -66,7 +76,7 @@
 
 .usa-prose .usa-card {
     margin-bottom: var(--usa-card-margin-bottom);
-    max-width: var(--usa-spacing-0);
+    max-width: var(--usa-spacing-tablet);
 }
 
 .usa-prose .usa-card:last-child {
@@ -84,14 +94,14 @@
 }
 
 .usa-card__container {
-    background-color: var(--usa-card-background);
+    background-color: var(--usa-card-background-color);
     color: var(--usa-card-text-color);
     font-size: var(--usa-card-font-size);
     font-family: var(--usa-card-font-family);
     line-height: var(--usa-card-line-height);
     border: var(--usa-card-border-width) solid var(--usa-card-border-color);
     display: flex;
-    height: var(--usa-sizing-full);
+    height: var(--usa-spacing-full);
     flex-direction: column;
     margin-left: var(--usa-card-margin-x);
     margin-right: var(--usa-card-margin-x);

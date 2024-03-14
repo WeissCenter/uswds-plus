@@ -10,20 +10,20 @@
   </thead>
   <tbody>
     
-    <tr *ngFor="let item of data">
-      <th scope="row" class="font-3xs">
+    <tr *ngFor="let item of data" class="font-3xs">
+      <th scope="row">
         <code>
           {{item.name}}
         </code>
       </th>
-      <td class="font-3xs">
+      <td >
         <code class="display-flex flex-align-center gap-1">
-          <span *ngIf="colors" class="height-2 width-2 radius-pill display-flex" [ngStyle]="{backgroundColor: item.value}"></span>
+          <span *ngIf="!item.type" class="height-2 width-2 radius-pill display-flex" [ngStyle]="{backgroundColor: item.value}"></span>
           {{item.value}}
         </code>
       </td>
       <td *ngIf="type === 'json'">
-        {{item.description}}
+        <code>{{item.description}}</code>
       </td>
     </tr>
     

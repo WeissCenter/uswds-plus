@@ -6,8 +6,7 @@
   @import "../src/app/styles/variables/typography";
   @import "../src/app/styles/variables/colors";
   @import "../src/app/styles/variables/spacing";
-  @import "../src/app/styles/variables/sizing";
-  @import "../src/app/styles/variables/a11y";
+  // @import "../src/app/styles/variables/a11y";
   @import "../src/app/styles/core/uswds-focus";
   @import "../src/app/styles/core/uswds-border-radius";
   @import "../src/app/styles/core/uswds-border-width";
@@ -30,6 +29,7 @@
   @import "../src/app/styles/components/uswds-radio-button";
   @import "../src/app/styles/components/uswds-icon-list";
   @import "../src/app/styles/components/uswds-tag";
+  @import "../src/app/styles/components/uswds-modal";
   @import "../src/app/styles/components/uswds-table";
   @import "../src/app/styles/components/uswds-side-navigation";
   @import "../src/app/styles/animations";
@@ -44,11 +44,11 @@
   @import "../src/app/styles/utilities/color";
   @import "../src/app/styles/utilities/typography";
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+  // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
   :root {
-    --usa-header-max-width: var(--usa-sizing-widescreen);
-    --usa-banner-max-width: var(--usa-sizing-widescreen);
+    --usa-header-max-width: var(--usa-spacing-widescreen);
+    --usa-banner-max-width: var(--usa-spacing-widescreen);
   }
 
   .site-preview-heading, .usa-preview-heading {
@@ -61,4 +61,8 @@
     margin-top: 2rem;
     text-transform: uppercase;
     color: var(--usa-base);
+}
+
+.usa-footer__nav, .usa-footer__secondary-section, .usa-identifier {
+  --usa-spacing-desktop: var(--usa-spacing-widescreen);
 }

@@ -32,12 +32,11 @@ export class TokenToCssService {
   cssVars(
     variables: JsonObject | string,
     globalPrefix: string,
-    componentPrefix: string,
-    a11y?: string
+    componentPrefix: string
   ) {
     const variablesObject: JsonObject =
       typeof variables === 'string' ? JSON.parse(variables) : variables;
-      return convertTokensToCssVars(variablesObject, globalPrefix, componentPrefix, a11y);
+      return convertTokensToCssVars(variablesObject, globalPrefix, componentPrefix);
 
   }
 
@@ -53,8 +52,7 @@ export class TokenToCssService {
     path: string,
     object: JsonObject,
     globalPrefix: string,
-    componentPrefix: string,
-    a11y?: string
+    componentPrefix: string
   ): string {
     let styles = '';
     Object.entries(object).forEach(([key, item]) => {
@@ -66,8 +64,9 @@ export class TokenToCssService {
           item['value'],
           globalPrefix
         );
-        if (a11y) {
-          style = `calc((${style}) * var(${a11y}))`;
+        if (item.a11y) {
+          // Apply a11y modifier
+          style = `calc((${style}) * var(${item.a11y}))`;
         }
         styles += `--${fullPath}: ` + style + ';\n';
       } else if (typeof item === 'object') {
@@ -75,8 +74,7 @@ export class TokenToCssService {
           fullPath,
           item,
           globalPrefix,
-          componentPrefix,
-          a11y
+          componentPrefix
         );
       }
     });
@@ -172,7 +170,7 @@ export class TokenToCssService {
       tokenObject[key] = { value };
     });
 
-    return this.cssVars(tokenObject, globalPrefix, componentPrefix, a11y);
+    return this.cssVars(tokenObject, globalPrefix, componentPrefix);
   }
 
 

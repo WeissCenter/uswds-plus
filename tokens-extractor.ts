@@ -42,6 +42,10 @@ import border, { key as borderKey } from './src/app/pages/core/items/border/toke
 import radioButton, { key as radioButtonKey } from './src/app/pages/components/items/radio-button/tokens';
 import secondaryColor, { key as secondaryColorKey } from './src/app/pages/core/items/colors/secondary/tokens';
 import basicColors, { key as basicColorsKey } from './src/app/pages/core/items/colors/basic/tokens';
+import spacing, { key as spacingKey } from './src/app/pages/core/items/spacing/tokens';
+import focus, { key as focusKey } from './src/app/pages/core/items/focus/tokens';
+import breadcrumb, { key as breadcrumbKey } from './src/app/pages/components/items/breadcrumb/tokens';
+import modal, { key as modalKey } from './src/app/pages/components/items/modal/tokens';
 
 function aggregateTokens(
   ...tokenSets: { tokens: ThemeTokens; key: string }[]
@@ -100,7 +104,11 @@ const aggregatedTokens = aggregateTokens(
   { tokens: border, key: borderKey },
   { tokens: radioButton, key: radioButtonKey },
   { tokens: secondaryColor, key: secondaryColorKey },
-  { tokens: basicColors, key: basicColorsKey }
+  { tokens: basicColors, key: basicColorsKey },
+  { tokens: spacing, key: spacingKey },
+  { tokens: focus, key: focusKey },
+  { tokens: breadcrumb, key: breadcrumbKey },
+  { tokens: modal, key: modalKey }
   // Add more as arguments...
 );
 

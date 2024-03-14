@@ -51,7 +51,7 @@
       "description": "Hover accordion color"
     },
     "button-icon-size": {
-      "value": "{sizing.3}",
+      "value": "{spacing.3}",
       "type": "sizing",
       "description": "Accordion button icon size"
     },
@@ -205,12 +205,12 @@
       "description": "Button line height"
     },
     "lg-font-size": {
-      "value": "{font.size-lg}",
+      "value": "{font-size.lg}",
       "type": "fontSizes",
       "description": "Button font size"
     },
     "font-weight": {
-      "value": "{font.weight-medium}",
+      "value": "{font-weight.medium}",
       "type": "fontWeights",
       "description": "Button font weight"
     },
@@ -265,12 +265,12 @@
       "description": "Button margin right"
     },
     "icon-size": {
-      "value": "{sizing.205}",
+      "value": "{spacing.205}",
       "type": "sizing",
       "description": "Button icon size"
     },
     "lg-icon-size": {
-      "value": "{sizing.3}",
+      "value": "{spacing.3}",
       "type": "sizing",
       "description": "Button icon size"
     },
@@ -324,79 +324,65 @@
     "3xs": {
       "value": "14px",
       "type": "fontSizes",
-      "description": "Smallest font size"
+      "description": "Smallest font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     },
     "2xs": {
       "value": "14px",
       "type": "fontSizes",
-      "description": "Second smallest font size"
+      "description": "Second smallest font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     },
     "xs": {
       "value": "15px",
       "type": "fontSizes",
-      "description": "Extra small font size"
+      "description": "Extra small font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     },
     "sm": {
       "value": "16px",
       "type": "fontSizes",
-      "description": "Small font size"
+      "description": "Small font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     },
     "md": {
       "value": "18px",
       "type": "fontSizes",
-      "description": "Medium font size"
+      "description": "Medium font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     },
     "lg": {
       "value": "24px",
       "type": "fontSizes",
-      "description": "Large font size"
+      "description": "Large font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     },
     "xl": {
       "value": "36px",
       "type": "fontSizes",
-      "description": "Extra large font size"
+      "description": "Extra large font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     },
     "2xl": {
       "value": "48px",
       "type": "fontSizes",
-      "description": "Second largest font size"
+      "description": "Second largest font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     },
     "3xl": {
       "value": "56px",
       "type": "fontSizes",
-      "description": "Largest font size"
-    }
-  },
-  "line-height": {
-    "1": {
-      "value": "1",
-      "type": "lineHeight",
-      "description": "Smallest line height"
-    },
-    "2": {
-      "value": "1.25",
-      "type": "lineHeight",
-      "description": "Second smallest line height"
-    },
-    "3": {
-      "value": "1.38",
-      "type": "lineHeight",
-      "description": "Regular line height"
-    },
-    "4": {
-      "value": "1.5",
-      "type": "lineHeight",
-      "description": "Large line height"
-    },
-    "5": {
-      "value": "1.65",
-      "type": "lineHeight",
-      "description": "Larger line height"
-    },
-    "6": {
-      "value": "1.75",
-      "type": "lineHeight",
-      "description": "Largest line height"
+      "description": "Largest font size",
+      "a11y": "--a11y-font-size-modifier",
+      "responsiveFont": true
     }
   },
   "font": {
@@ -503,6 +489,16 @@
       "value": "{letter-spacing.1}",
       "type": "letterSpacing",
       "description": "Body letter spacing"
+    },
+    "paragraph-spacing": {
+      "value": "{spacing.2}",
+      "type": "spacing",
+      "description": "Spacing between <p> elements with .usa-prose class"
+    },
+    "list-spacing": {
+      "value": "{spacing.1}",
+      "type": "spacing",
+      "description": "Spacing between <ul> and <ol> child elements with .usa-prose class"
     }
   },
   "h1-font": {
@@ -530,6 +526,11 @@
       "value": "{letter-spacing.1}",
       "type": "letterSpacing",
       "description": "H1 letter spacing"
+    },
+    "paragraph-spacing": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Spacing between <h1> and other elements with .usa-prose class"
     }
   },
   "h2-font": {
@@ -557,6 +558,11 @@
       "value": "{letter-spacing.1}",
       "type": "letterSpacing",
       "description": "H2 letter spacing"
+    },
+    "paragraph-spacing": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Spacing between <h2> and other elements with .usa-prose class"
     }
   },
   "h3-font": {
@@ -584,6 +590,11 @@
       "value": "{letter-spacing.1}",
       "type": "letterSpacing",
       "description": "H3 letter spacing"
+    },
+    "paragraph-spacing": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Spacing between <h3> and other elements with .usa-prose class"
     }
   },
   "h4-font": {
@@ -611,6 +622,11 @@
       "value": "{letter-spacing.1}",
       "type": "letterSpacing",
       "description": "H4 letter spacing"
+    },
+    "paragraph-spacing": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Spacing between <h4> and other elements with .usa-prose class"
     }
   },
   "h5-font": {
@@ -638,6 +654,11 @@
       "value": "{letter-spacing.1}",
       "type": "letterSpacing",
       "description": "H5 letter spacing"
+    },
+    "paragraph-spacing": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Spacing between <h5> and other elements with .usa-prose class"
     }
   },
   "h6-font": {
@@ -665,6 +686,16 @@
       "value": "{letter-spacing.2}",
       "type": "letterSpacing",
       "description": "H6 letter spacing"
+    },
+    "text-transform": {
+      "value": "uppercase",
+      "type": "textTransform",
+      "description": "H6 text transform"
+    },
+    "paragraph-spacing": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Spacing between <h6> and other elements with .usa-prose class"
     }
   },
   "letter-spacing": {
@@ -676,32 +707,38 @@
     "1": {
       "value": "0.025em",
       "type": "letterSpacing",
-      "description": "Slightly larger letter spacing"
+      "description": "Slightly larger letter spacing",
+      "a11y": "--a11y-letter-spacing-modifier"
     },
     "2": {
       "value": "0.1em",
       "type": "letterSpacing",
-      "description": "Large letter spacing"
+      "description": "Large letter spacing",
+      "a11y": "--a11y-letter-spacing-modifier"
     },
     "3": {
       "value": "0.15em",
       "type": "letterSpacing",
-      "description": "Largest letter spacing"
+      "description": "Largest letter spacing",
+      "a11y": "--a11y-letter-spacing-modifier"
     },
     "neg-3": {
       "value": "-0.03em",
       "type": "letterSpacing",
-      "description": "Smallest letter spacing"
+      "description": "Smallest letter spacing",
+      "a11y": "--a11y-letter-spacing-modifier"
     },
     "neg-2": {
       "value": "-0.02em",
       "type": "letterSpacing",
-      "description": "Small letter spacing"
+      "description": "Small letter spacing",
+      "a11y": "--a11y-letter-spacing-modifier"
     },
     "neg-1": {
       "value": "-0.01em",
       "type": "letterSpacing",
-      "description": "Slightly smaller letter spacing"
+      "description": "Slightly smaller letter spacing",
+      "a11y": "--a11y-letter-spacing-modifier"
     },
     "auto": {
       "value": "initial",
@@ -739,6 +776,11 @@
       "value": "{measure.small}",
       "type": "maxWidth",
       "description": "Lead max width"
+    },
+    "paragraph-spacing": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Spacing between .usa-intro and other elements within .usa-prose class"
     }
   },
   "body": {
@@ -932,7 +974,7 @@
   },
   "sidenav": {
     "item-font-size": {
-      "value": "{font-size.md}",
+      "value": "{font-size.sm}",
       "type": "fontSizes",
       "description": "Side navigation item font size"
     },
@@ -962,7 +1004,7 @@
       "description": "Side navigation item text align"
     },
     "sublist-font-size": {
-      "value": "{font-size.2xs}",
+      "value": "{sidenav.item-font-size}",
       "type": "fontSizes",
       "description": "Side navigation sublist font size"
     },
@@ -1016,13 +1058,28 @@
       "type": "colors",
       "description": "Side navigation sublist background current"
     },
+    "border-color": {
+      "value": "{body.background}",
+      "type": "colors",
+      "description": "Side navigation item border color"
+    },
+    "border-width": {
+      "value": "{border-width.0}",
+      "type": "borderWidths",
+      "description": "Side navigation item border width"
+    },
+    "border-radius": {
+      "value": "{border-radius.0}",
+      "type": "borderRadius",
+      "description": "Side navigation item border radius"
+    },
     "item-border-color": {
-      "value": "{border-color.base}",
+      "value": "{body.background}",
       "type": "colors",
       "description": "Side navigation item border color"
     },
     "item-border-width": {
-      "value": "{border-width.0}",
+      "value": "{border-width.1px}",
       "type": "borderWidths",
       "description": "Side navigation item border width"
     },
@@ -1062,7 +1119,7 @@
       "description": "Side navigation item color"
     },
     "item-color-hover": {
-      "value": "{primary.lighter}",
+      "value": "{primary.lightest}",
       "type": "colors",
       "description": "Side navigation item color hover"
     },
@@ -1112,7 +1169,7 @@
       "description": "Side navigation item current indicator border radius"
     },
     "item-current-indicator-width": {
-      "value": "{sizing.05}",
+      "value": "{spacing.05}",
       "type": "sizing",
       "description": "Side navigation item current indicator width"
     },
@@ -1127,7 +1184,7 @@
       "description": "Side navigation child padding left"
     },
     "child-padding-right": {
-      "value": "{spacing.2px}",
+      "value": "{spacing.105}",
       "type": "spacing",
       "description": "Side navigation child padding left"
     },
@@ -1164,12 +1221,12 @@
       "description": "Letter spacing"
     },
     "height": {
-      "value": "{sizing.6}",
+      "value": "{spacing.6}",
       "type": "sizes",
       "description": "Height"
     },
     "select-size": {
-      "value": "{sizing.3}",
+      "value": "{spacing.3}",
       "type": "sizes",
       "description": "Select size"
     },
@@ -1179,7 +1236,7 @@
       "description": "Select caret color"
     },
     "max-width": {
-      "value": "{sizing.mobile-lg}",
+      "value": "{spacing.mobile-lg}",
       "type": "sizes",
       "description": "Max width"
     },
@@ -1199,7 +1256,7 @@
       "description": "Padding y"
     },
     "large-height": {
-      "value": "{sizing.7}",
+      "value": "{spacing.7}",
       "type": "sizing",
       "description": "Large height"
     },
@@ -1338,27 +1395,27 @@
   },
   "border": {
     "radius-0": {
-      "value": "{sizing.0}",
+      "value": "{spacing.0}",
       "type": "borderRadius",
       "description": "No border radius"
     },
     "radius-sm": {
-      "value": "{sizing.05}",
+      "value": "{spacing.05}",
       "type": "borderRadius",
       "description": "Small border radius"
     },
     "radius-md": {
-      "value": "{sizing.1}",
+      "value": "{spacing.1}",
       "type": "borderRadius",
       "description": "Medium border radius"
     },
     "radius-lg": {
-      "value": "{sizing.2}",
+      "value": "{spacing.2}",
       "type": "borderRadius",
       "description": "Large border radius"
     },
     "radius-pill": {
-      "value": "{sizing.tablet}",
+      "value": "{spacing.tablet}",
       "type": "borderRadius",
       "description": "Pill border radius"
     },
@@ -1388,31 +1445,36 @@
       "description": "Border darker color"
     },
     "width-0": {
-      "value": "{sizing.0}",
+      "value": "{spacing.0}",
       "type": "borderWidth",
       "description": "No border width"
     },
     "width-sm": {
-      "value": "{sizing.1px}",
+      "value": "{spacing.1px}",
       "type": "borderWidth",
       "description": "Small border width"
     },
     "width-md": {
-      "value": "{sizing.2px}",
+      "value": "{spacing.2px}",
       "type": "borderWidth",
       "description": "Medium border width"
     },
     "width-lg": {
-      "value": "{sizing.05}",
+      "value": "{spacing.05}",
       "type": "borderWidth",
       "description": "Large border width"
     }
   },
   "radio": {
     "size": {
-      "value": "{sizing.205}",
+      "value": "{spacing.205}",
       "type": "size",
       "description": "Radio button size"
+    },
+    "gap": {
+      "value": "{spacing.1}",
+      "type": "size",
+      "description": "Radio button gap"
     },
     "background-color": {
       "value": "{body.background-color}",
@@ -1423,6 +1485,31 @@
       "value": "{ink}",
       "type": "color",
       "description": "Radio button label color"
+    },
+    "label-font-family": {
+      "value": "{input.font-family}",
+      "type": "fontFamilies",
+      "description": "Radio button label font family"
+    },
+    "label-font-size": {
+      "value": "{input.font-size}",
+      "type": "fontSizes",
+      "description": "Radio button label font size"
+    },
+    "label-font-weight": {
+      "value": "{input.font-weight}",
+      "type": "fontWeights",
+      "description": "Radio button label font weight"
+    },
+    "label-line-height": {
+      "value": "{input.line-height}",
+      "type": "lineHeights",
+      "description": "Radio button label line height"
+    },
+    "label-letter-spacing": {
+      "value": "{input.letter-spacing}",
+      "type": "letterSpacing",
+      "description": "Radio button label letter spacing"
     },
     "border-color": {
       "value": "{base.dark}",
@@ -1475,6 +1562,11 @@
       "description": "Radio button disabled color"
     },
     "tile-padding-y": {
+      "value": "{spacing.2}",
+      "type": "size",
+      "description": "Radio button tile padding y"
+    },
+    "tile-padding-x": {
       "value": "{spacing.2}",
       "type": "size",
       "description": "Radio button tile padding y"

@@ -30,6 +30,16 @@ var tokens = {
             type: 'letterSpacing',
             description: 'H6 letter spacing',
         },
+        'text-transform': {
+            value: 'uppercase',
+            type: 'textTransform',
+            description: 'H6 text transform',
+        },
+        'paragraph-spacing': {
+            value: '{spacing.3}',
+            type: 'spacing',
+            description: 'Spacing between <h6> and other elements with .usa-prose class',
+        },
     },
     haystack: {
         'size': {
@@ -57,6 +67,16 @@ var tokens = {
             type: 'letterSpacing',
             description: 'H6 letter spacing',
         },
+        'text-transform': {
+            value: 'uppercase',
+            type: 'textTransform',
+            description: 'H6 text transform',
+        },
+        'paragraph-spacing': {
+            value: '{spacing.3}',
+            type: 'spacing',
+            description: 'Spacing between <h6> and other elements with .usa-prose class',
+        },
     },
     adapt: {
         'size': {
@@ -75,7 +95,7 @@ var tokens = {
             description: 'H6 font weight',
         },
         'line-height': {
-            value: '{line-height.2}',
+            value: '{line-height.3}',
             type: 'lineHeights',
             description: 'H6 line height',
         },
@@ -83,6 +103,16 @@ var tokens = {
             value: '{letter-spacing.2}',
             type: 'letterSpacing',
             description: 'H6 letter spacing',
+        },
+        'text-transform': {
+            value: 'uppercase',
+            type: 'textTransform',
+            description: 'H6 text transform',
+        },
+        'paragraph-spacing': {
+            value: '{spacing.3}',
+            type: 'spacing',
+            description: 'Spacing between <h6> and other elements with .usa-prose class',
         },
     },
     coi: {
@@ -110,6 +140,53 @@ var tokens = {
             value: '{letter-spacing.2}',
             type: 'letterSpacing',
             description: 'H6 letter spacing',
+        },
+        'text-transform': {
+            value: 'uppercase',
+            type: 'textTransform',
+            description: 'H6 text transform',
+        },
+        'paragraph-spacing': {
+            value: '{spacing.3}',
+            type: 'spacing',
+            description: 'Spacing between <h6> and other elements with .usa-prose class',
+        },
+    },
+    weiss: {
+        'size': {
+            value: '{font-size.sm}',
+            type: 'fontSizes',
+            description: 'H6 font size',
+        },
+        'family': {
+            value: '{font.sans}',
+            type: 'fontFamilies',
+            description: 'H6 font family',
+        },
+        'weight': {
+            value: '{font-weight.bold}',
+            type: 'fontWeights',
+            description: 'H6 font weight',
+        },
+        'line-height': {
+            value: '{line-height.3}',
+            type: 'lineHeights',
+            description: 'H6 line height',
+        },
+        'letter-spacing': {
+            value: '{letter-spacing.2}',
+            type: 'letterSpacing',
+            description: 'H6 letter spacing',
+        },
+        'text-transform': {
+            value: 'uppercase',
+            type: 'textTransform',
+            description: 'H6 text transform',
+        },
+        'paragraph-spacing': {
+            value: '{spacing.05}',
+            type: 'spacing',
+            description: 'Spacing between <h6> and other elements with .usa-prose class',
         },
     },
 };

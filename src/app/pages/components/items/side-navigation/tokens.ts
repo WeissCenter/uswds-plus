@@ -21,11 +21,15 @@ import { ThemeTokens } from '../../../../interfaces/tokens';
 //     --usa-sidenav-sublist-background-hover: var(--usa-sidenav-item-background-hover);
 //     --usa-sidenav-sublist-background-current: var(--usa-sidenav-item-background-current);
 
-//     --usa-sidenav-item-border-color: var(--usa-base-lighter);
-//     --usa-sidenav-item-border-width: var(--usa-border-width-1px);
+// --usa-sidenav-border-width: var(--usa-border-width-2px);
+// --usa-sidenav-border-color: var(--usa-base-light);
+// --usa-sidenav-border-radius: var(--usa-border-radius-sm);
 
-//     --usa-sidenav-sublist-border-color: var(--usa-sidenav-item-border-color);
-//     --usa-sidenav-sublist-border-width: var(--usa-sidenav-item-border-width);
+// --usa-sidenav-item-border-color: var(--usa-border-color-base-lighter);
+// --usa-sidenav-item-border-width: var(--usa-border-width-1px);
+
+// --usa-sidenav-sublist-border-color: var(--usa-sidenav-item-border-color);
+// --usa-sidenav-sublist-border-width: var(--usa-sidenav-item-border-width);
 
 //     --usa-sidenav-item-padding-x: var(--usa-spacing-2);
 //     --usa-sidenav-item-padding-y: var(--usa-spacing-1);
@@ -59,7 +63,7 @@ export const key = 'sidenav';
 const tokens: ThemeTokens = {
   base: {
     'item-font-size': {
-      value: '{font-size.sm}',
+      value: '{font-size.md}',
       type: 'fontSizes',
       description: 'Side navigation item font size',
     },
@@ -79,7 +83,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item font weight current',
     },
     'item-line-height': {
-      value: '{line-height.3}',
+      value: '{line-height.4}',
       type: 'lineHeights',
       description: 'Side navigation item line height',
     },
@@ -89,7 +93,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item text align',
     },
     'sublist-font-size': {
-      value: '{sidenav.item-font-size}',
+      value: '{font-size.sm}',
       type: 'fontSizes',
       description: 'Side navigation sublist font size',
     },
@@ -114,12 +118,12 @@ const tokens: ThemeTokens = {
       description: 'Side navigation sublist font family',
     },
     'item-background': {
-      value: '{body.background}',
+      value: '{white}',
       type: 'colors',
       description: 'Side navigation item background',
     },
     'item-background-hover': {
-      value: '{base.lighter}',
+      value: '{white}',
       type: 'colors',
       description: 'Side navigation item background hover',
     },
@@ -143,8 +147,23 @@ const tokens: ThemeTokens = {
       type: 'colors',
       description: 'Side navigation sublist background current',
     },
+    'border-color': {
+      value: '{base.lighter}',
+      type: 'colors',
+      description: 'Side navigation item border color',
+    },
+    'border-width': {
+      value: '{border-width.sm}',
+      type: 'borderWidths',
+      description: 'Side navigation item border width',
+    },
+    'border-radius': {
+      value: '{border-radius.sm}',
+      type: 'borderRadius',
+      description: 'Side navigation item border radius',
+    },
     'item-border-color': {
-      value: '{border-color.base}',
+      value: '{base.lightest}',
       type: 'colors',
       description: 'Side navigation item border color',
     },
@@ -239,12 +258,12 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item current indicator border radius',
     },
     'item-current-indicator-width': {
-      value: '{sizing.05}',
+      value: '{spacing.05}',
       type: 'sizing',
       description: 'Side navigation item current indicator width',
     },
     'item-current-indicator-position': {
-      value: '0',
+      value: '2%',
       type: 'spacing',
       description:
         'Side navigation item current indicator position. 0 is left, 100% is right.',
@@ -282,12 +301,12 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item font weight',
     },
     'item-font-weight-current': {
-      value: '{font-weight.bold}',
+      value: '{font-weight.semibold}',
       type: 'fontWeights',
       description: 'Side navigation item font weight current',
     },
     'item-line-height': {
-      value: '{line-height.3}',
+      value: '{line-height.4}',
       type: 'lineHeights',
       description: 'Side navigation item line height',
     },
@@ -322,12 +341,12 @@ const tokens: ThemeTokens = {
       description: 'Side navigation sublist font family',
     },
     'item-background': {
-      value: '{body.background}',
+      value: '{white}',
       type: 'colors',
       description: 'Side navigation item background',
     },
     'item-background-hover': {
-      value: '{base.lighter}',
+      value: '{primary.lightest}',
       type: 'colors',
       description: 'Side navigation item background hover',
     },
@@ -351,8 +370,23 @@ const tokens: ThemeTokens = {
       type: 'colors',
       description: 'Side navigation sublist background current',
     },
+    'border-color': {
+      value: '{base.lighter}',
+      type: 'colors',
+      description: 'Side navigation item border color',
+    },
+    'border-width': {
+      value: '{border-width.md}',
+      type: 'borderWidths',
+      description: 'Side navigation item border width',
+    },
+    'border-radius': {
+      value: '{border-radius.lg}',
+      type: 'borderRadius',
+      description: 'Side navigation item border radius',
+    },
     'item-border-color': {
-      value: '{border-color.base}',
+      value: '{base.lighter}',
       type: 'colors',
       description: 'Side navigation item border color',
     },
@@ -397,7 +431,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item color',
     },
     'item-color-hover': {
-      value: '{primary}',
+      value: '{primary.dark}',
       type: 'colors',
       description: 'Side navigation item color hover',
     },
@@ -447,12 +481,12 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item current indicator border radius',
     },
     'item-current-indicator-width': {
-      value: '{sizing.05}',
+      value: '{spacing.05}',
       type: 'sizing',
       description: 'Side navigation item current indicator width',
     },
     'item-current-indicator-position': {
-      value: '0',
+      value: '2%',
       type: 'spacing',
       description:
         'Side navigation item current indicator position. 0 is left, 100% is right.',
@@ -559,13 +593,28 @@ const tokens: ThemeTokens = {
       type: 'colors',
       description: 'Side navigation sublist background current',
     },
+    'border-color': {
+      value: '{body.background}',
+      type: 'colors',
+      description: 'Side navigation item border color',
+    },
+    'border-width': {
+      value: '{border-width.0}',
+      type: 'borderWidths',
+      description: 'Side navigation item border width',
+    },
+    'border-radius': {
+      value: '{border-radius.0}',
+      type: 'borderRadius',
+      description: 'Side navigation item border radius',
+    },
     'item-border-color': {
-      value: '{border-color.base}',
+      value: '{body.background}',
       type: 'colors',
       description: 'Side navigation item border color',
     },
     'item-border-width': {
-      value: '{border-width.0}',
+      value: '{border-width.1px}',
       type: 'borderWidths',
       description: 'Side navigation item border width',
     },
@@ -605,7 +654,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item color',
     },
     'item-color-hover': {
-      value: '{primary.lighter}',
+      value: '{primary.lightest}',
       type: 'colors',
       description: 'Side navigation item color hover',
     },
@@ -655,7 +704,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item current indicator border radius',
     },
     'item-current-indicator-width': {
-      value: '{sizing.05}',
+      value: '{spacing.05}',
       type: 'sizing',
       description: 'Side navigation item current indicator width',
     },
@@ -683,7 +732,7 @@ const tokens: ThemeTokens = {
   },
   coi: {
     'item-font-size': {
-      value: '{font-size.md}',
+      value: '{font-size.sm}',
       type: 'fontSizes',
       description: 'Side navigation item font size',
     },
@@ -713,7 +762,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item text align',
     },
     'sublist-font-size': {
-      value: '{font-size.2xs}',
+      value: '{sidenav.item-font-size}',
       type: 'fontSizes',
       description: 'Side navigation sublist font size',
     },
@@ -767,13 +816,28 @@ const tokens: ThemeTokens = {
       type: 'colors',
       description: 'Side navigation sublist background current',
     },
+    'border-color': {
+      value: '{body.background}',
+      type: 'colors',
+      description: 'Side navigation item border color',
+    },
+    'border-width': {
+      value: '{border-width.0}',
+      type: 'borderWidths',
+      description: 'Side navigation item border width',
+    },
+    'border-radius': {
+      value: '{border-radius.0}',
+      type: 'borderRadius',
+      description: 'Side navigation item border radius',
+    },
     'item-border-color': {
-      value: '{border-color.base}',
+      value: '{body.background}',
       type: 'colors',
       description: 'Side navigation item border color',
     },
     'item-border-width': {
-      value: '{border-width.0}',
+      value: '{border-width.1px}',
       type: 'borderWidths',
       description: 'Side navigation item border width',
     },
@@ -813,7 +877,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item color',
     },
     'item-color-hover': {
-      value: '{primary.lighter}',
+      value: '{primary.lightest}',
       type: 'colors',
       description: 'Side navigation item color hover',
     },
@@ -863,7 +927,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation item current indicator border radius',
     },
     'item-current-indicator-width': {
-      value: '{sizing.05}',
+      value: '{spacing.05}',
       type: 'sizing',
       description: 'Side navigation item current indicator width',
     },
@@ -879,7 +943,7 @@ const tokens: ThemeTokens = {
       description: 'Side navigation child padding left',
     },
     'child-padding-right': {
-      value: '{spacing.2px}',
+      value: '{spacing.105}',
       type: 'spacing',
       description: 'Side navigation child padding left',
     },

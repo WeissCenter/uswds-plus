@@ -45,7 +45,7 @@ var tokens = {
             description: 'Banner text color',
         },
         'max-width': {
-            value: '{sizing.desktop}',
+            value: '{spacing.desktop}',
             type: 'sizing',
             description: 'Banner max width',
         },

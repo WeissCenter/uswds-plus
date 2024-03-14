@@ -6,10 +6,10 @@
     --usa-input-font-weight: var(--usa-font-weight-normal);
     --usa-input-line-height: var(--usa-line-height-3);
     --usa-input-letter-spacing: var(--usa-body-font-letter-spacing);
-    --usa-input-height: var(--usa-sizing-5);
-    --usa-input-select-size: var(--usa-sizing-205);
+    --usa-input-height: var(--usa-spacing-5);
+    --usa-input-select-size: var(--usa-spacing-205);
     --usa-input-select-caret-color: var(--usa-input-color);
-    --usa-input-max-width: var(--usa-sizing-mobile-lg);
+    --usa-input-max-width: var(--usa-spacing-mobile-lg);
     --usa-input-margin-top: var(--usa-spacing-1);
     --usa-input-padding-x: var(--usa-spacing-1);
     --usa-input-padding-y: var(--usa-spacing-05);
@@ -31,6 +31,7 @@
     --usa-input-label-font-size: var(--usa-font-size-xs);
     --usa-input-label-font-family: var(--usa-font-ui);
     --usa-input-label-font-weight: var(--usa-font-weight-normal);
+    --usa-input-label-letter-spacing: var(--usa-body-font-letter-spacing);
     --usa-input-label-color: var(--usa-base-dark);
     --usa-input-label-line-height: var(--usa-line-height-3);
     --usa-input-label-margin-bottom: var(--usa-spacing-05);
@@ -38,9 +39,52 @@
 
 }
 
+
+
+.usa-legend {
+    font-family: var(--usa-input-label-font-size);
+    font-size: var(--usa-input-label-font-size);
+    line-height: var(--usa-input-label-line-height);
+    display: block;
+    font-weight: var(--usa-input-label-font-weight);
+    margin-top: var(--usa-spacing-2);
+    margin-bottom: var(--usa-spacing-1);
+    max-width: var(--usa-input-max-width);
+}
+
+.usa-legend--large {
+    font-size: var(--usa-font-size-xl);
+    font-weight: var(--usa-font-weight-bold);
+    margin-top: var(--usa-spacing-2);
+    margin-bottom: var(--usa-spacing-1)
+}
+
+.usa-input-list {
+    margin-bottom: 0;
+    margin-top: 0;
+    list-style-type: none;
+    padding-left: 0
+}
+
+.usa-input-list li {
+    line-height: var(--usa-input-line-height)
+}
+
+.usa-prose .usa-input-list {
+    margin-bottom: 0;
+    margin-top: 0;
+    list-style-type: none;
+    padding-left: 0
+}
+
+.usa-prose .usa-input-list li {
+    line-height: var(--usa-input-line-height)
+}
+
+//end
+
 .usa-textarea,
 .usa-range,
-.usa-radio__label,
 .usa-input-group,
 .usa-hint,
 .usa-combo-box__input,
@@ -49,11 +93,11 @@
 .usa-checkbox__label,
 .usa-fieldset,
 .usa-input {
-    font-family: var( --usa-input-font-family);
-    font-weight: var(--usa-input-font-weight);
-    font-size: var(--usa-input-font-size);
-    line-height: var(--usa-input-line-height);
-    letter-spacing: var(--usa-input-letter-spacing);
+    font-family: var( --usa-input-label-font-family);
+    font-weight: var( --usa-input-label-font-weight);
+    font-size: var(--usa-input-label-font-size);
+    line-height: var(--usa-input-label-line-height);
+    letter-spacing: var(--usa-input-label-letter-spacing);
     ::placeholder {
         color: var(--usa-input-placeholder-color);
     }
@@ -105,7 +149,7 @@ button:not([disabled]):focus {
     margin-top: var(--usa-input-label-margin-top);
     margin-bottom: var(--usa-input-label-margin-bottom);
     max-width: var(--usa-input-max-width);
-    letter-spacing: var(--usa-input-letter-spacing);
+    letter-spacing: var(--usa-input-label-letter-spacing);
     color: var(--usa-input-label-color);
 }
 
@@ -116,4 +160,67 @@ button:not([disabled]):focus {
 
 .usa-label--required {
     color: var(--usa-error-dark)
+}
+
+
+
+.usa-input:disabled,
+.usa-input[aria-disabled=true] {
+    background-color: var(--usa-disabled-lighter);
+    color: var(--usa-disabled-dark);
+    cursor: not-allowed;
+    opacity: 1;
+    -webkit-text-fill-color: var(--usa-disabled-dark)
+}
+
+.usa-input:disabled:hover,
+.usa-input:disabled:active,
+.usa-input:disabled:focus,
+.usa-input:disabled.usa-focus,
+.usa-input[aria-disabled=true]:hover,
+.usa-input[aria-disabled=true]:active,
+.usa-input[aria-disabled=true]:focus,
+.usa-input[aria-disabled=true].usa-focus {
+    background-color: var(--usa-disabled-lighter);
+    color: var(--usa-disabled-dark)
+}
+
+@media (forced-colors: active) {
+
+    .usa-input:disabled,
+    .usa-input[aria-disabled=true] {
+        border: 0;
+        color: GrayText
+    }
+
+    .usa-input:disabled:hover,
+    .usa-input:disabled:active,
+    .usa-input:disabled:focus,
+    .usa-input:disabled.usa-focus,
+    .usa-input[aria-disabled=true]:hover,
+    .usa-input[aria-disabled=true]:active,
+    .usa-input[aria-disabled=true]:focus,
+    .usa-input[aria-disabled=true].usa-focus {
+        color: GrayText
+    }
+}
+
+@media (forced-colors: active) {
+
+    .usa-input:disabled,
+    .usa-input[aria-disabled=true] {
+        border: 2px solid GrayText
+    }
+}
+
+.usa-input--error {
+    border: var(--usa-input-border-width) solid var(--usa-error-dark);
+    padding-top: calc(var(--usa-spacing-1) - var(--usa-input-border-width));
+    padding-bottom: calc(var(--usa-spacing-1) - var(--usa-input-border-width))
+}
+
+.usa-input--success {
+    border: var(--usa-input-border-width) solid var(--usa-success);
+    padding-top: calc(var(--usa-spacing-1) - var(--usa-input-border-width));
+    padding-bottom: calc(var(--usa-spacing-1) - var(--usa-input-border-width))
 }

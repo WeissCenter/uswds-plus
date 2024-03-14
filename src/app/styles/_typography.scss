@@ -1,78 +1,163 @@
-// Cleaned up typography styles
-
-// TODO: Mobile font size variants
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-}
 
 .usa-prose {
-
-
-    h1 {
-        line-height: var(--usa-h1-font-line-height);
-        font-size: var(--usa-h1-font-size);
-        font-family: var(--usa-h1-font-family);
-        font-weight: var(--usa-h1-font-weight);
-        letter-spacing: var(--usa-h1-font-letter-spacing);
-    }
-
-    h2 {
-        line-height: var(--usa-h2-font-line-height);
-        font-size: var(--usa-h2-font-size);
-        font-family: var(--usa-h2-font-family);
-        font-weight: var(--usa-h2-font-weight);
-        letter-spacing: var(--usa-h2-font-letter-spacing);
-    }
-
-    h3 {
-        line-height: var(--usa-h3-font-line-height);
-        font-size: var(--usa-h3-font-size);
-        font-family: var(--usa-h3-font-family);
-        font-weight: var(--usa-h3-font-weight);
-        letter-spacing: var(--usa-h3-font-letter-spacing);
-    }
-
-    h4 {
-        line-height: var(--usa-h4-font-line-height);
-        font-size: var(--usa-h4-font-size);
-        font-family: var(--usa-h4-font-family);
-        font-weight: var(--usa-h4-font-weight);
-        letter-spacing: var(--usa-h4-font-letter-spacing);
-    }
-
-    h5 {
-        line-height: var(--usa-h5-font-line-height);
-        font-size: var(--usa-h5-font-size);
-        font-family: var(--usa-h5-font-family);
-        font-weight: var(--usa-h5-font-weight);
-        letter-spacing: var(--usa-h5-font-letter-spacing);
-    }
-
-    h6 {
-        line-height: var(--usa-h6-font-line-height);
-        font-size: var(--usa-h6-font-size);
-        font-family: var(--usa-h6-font-family);
-        font-weight: var(--usa-h6-font-weight);
-        letter-spacing: var(--usa-h6-font-letter-spacing);
-    }
-
-    p {
-        line-height: var(--usa-body-font-line-height);
-        font-size: var(--usa-body-font-size);
-        font-family: var(--usa-body-font-family);
-        font-weight: var(--usa-body-font-weight);
-        letter-spacing: var(--usa-body-font-letter-spacing);
-    }
-
+    line-height: var(--usa-body-font-line-height);
+    font-size: var(--usa-body-font-size);
+    font-family: var(--usa-body-font-family);
+    font-weight: var(--usa-body-font-weight);
+    letter-spacing: var(--usa-body-font-letter-spacing);
 }
 
-b,
-strong {
-    font-weight: var(--usa-font-weight-semibold);
+.usa-prose>ul,
+.usa-prose>ol {
+    margin-bottom: var(--usa-body-font-list-spacing);
+    margin-top: var(--usa-body-font-list-spacing);
+    line-height: var(--usa-body-font-line-height);
+    padding-left: var(--usa-spacing-105);
+    font-size: var(--usa-body-font-size);
+    font-family: var(--usa-body-font-family);
+    font-weight: var(--usa-body-font-weight);
+    letter-spacing: var(--usa-body-font-letter-spacing);
+}
+
+.usa-prose>ul:last-child,
+.usa-prose>ol:last-child {
+    margin-bottom: var(--usa-spacing-0);
+}
+
+.usa-prose>ul ul,
+.usa-prose>ul ol,
+.usa-prose>ol ul,
+.usa-prose>ol ol {
+    margin-top: var(--usa-body-font-list-spacing);
+}
+
+.usa-prose>ul li,
+.usa-prose>ol li {
+    margin-bottom: var(--usa-body-font-list-spacing);
+    max-width: var(--usa-measure-base);
+}
+
+.usa-prose>ul li:last-child,
+.usa-prose>ol li:last-child {
+    margin-bottom: var(--usa-spacing-0);
+}
+
+
+.usa-prose>p {
+    line-height: var(--usa-body-font-line-height);
+    font-size: var(--usa-body-font-size);
+    font-family: var(--usa-body-font-family);
+    font-weight: var(--usa-body-font-weight);
+    letter-spacing: var(--usa-body-font-letter-spacing);
+    max-width: var(--usa-measure-base);
+}
+
+.usa-prose>h1,
+.usa-prose>h2,
+.usa-prose>h3,
+.usa-prose>h4,
+.usa-prose>h5,
+.usa-prose>h6 {
+    margin-bottom: var(--usa-spacing-0);
+    margin-top: var(--usa-spacing-0);
+    clear: both;
+}
+
+.usa-prose>*+* {
+    margin-top: var(--usa-body-font-paragraph-spacing);
+    margin-bottom: var(--usa-spacing-0);
+}
+
+.usa-prose>h1+* {
+    margin-top: var(--usa-h1-font-paragraph-spacing);
+}
+
+.usa-prose>h2+* {
+    margin-top: var(--usa-h2-font-paragraph-spacing);
+}
+
+.usa-prose>h3+* {
+    margin-top: var(--usa-h3-font-paragraph-spacing);
+}
+
+.usa-prose>h4+* {
+    margin-top: var(--usa-h4-font-paragraph-spacing);
+}   
+
+.usa-prose>h5+* {
+    margin-top: var(--usa-h5-font-paragraph-spacing);
+}
+
+.usa-prose>h6+* {
+    margin-top: var(--usa-h6-font-paragraph-spacing);
+}
+
+.usa-prose>.usa-intro+* {
+    margin-top: var(--usa-lead-font-paragraph-spacing);
+}
+
+.usa-prose>*+h1,
+.usa-prose>*+h2,
+.usa-prose>*+h3,
+.usa-prose>*+h4,
+.usa-prose>*+h5,
+.usa-prose>*+h6 {
+    margin-top: var(--usa-h1-font-paragraph-spacing);
+}
+
+.usa-prose>h1, h1.usa-prose {
+    font-size: var(--usa-h1-font-size);
+    font-family: var(--usa-h1-font-family);
+    line-height: var(--usa-h1-font-line-height);
+    font-weight: var(--usa-h1-font-weight)
+}
+
+.usa-prose>h2, h2.usa-prose {
+    font-size: var(--usa-h2-font-size);
+    font-family: var(--usa-h2-font-family);
+    line-height: var(--usa-h2-font-line-height);
+    font-weight: var(--usa-h2-font-weight);
+    letter-spacing: var(--usa-h2-font-letter-spacing);
+}
+
+.usa-prose>h3, h3.usa-prose {
+    font-size: var( --usa-h3-font-size);
+    font-family: var(--usa-h3-font-family);
+    line-height: var(--usa-h3-font-line-height);
+    font-weight: var(--usa-h3-font-weight);
+    letter-spacing: var(--usa-h3-font-letter-spacing);
+}
+
+.usa-prose>h4, h4.usa-prose {
+    font-size: var(--usa-h4-font-size);
+    font-family: var(--usa-h4-font-family);
+    line-height: var(--usa-h4-font-line-height);
+    font-weight: var(--usa-h4-font-weight);
+    letter-spacing: var(--usa-h4-font-letter-spacing);
+}
+
+.usa-prose>h5, h5.usa-prose {
+    font-size: var(--usa-h5-font-size);
+    font-family: var(--usa-h5-font-family);
+    line-height: var(--usa-h5-font-line-height);
+    font-weight: var(--usa-h5-font-weight);
+    letter-spacing: var(--usa-h5-font-letter-spacing);
+}
+
+.usa-prose>h6, h6.usa-prose {
+    font-size: var(--usa-h6-font-size);
+    font-family: var(--usa-h6-font-family);
+    line-height: var(--usa-h6-font-line-height);
+    font-weight: var(--usa-h6-font-weight);
+    letter-spacing: var(--usa-h6-font-letter-spacing);
+    text-transform: var(--usa-h6-font-text-transform);
+}
+
+
+.usa-intro, .usa-prose .usa-intro {
+    font-family: var(--usa-lead-font-family);
+    font-size: var(--usa-lead-font-size);
+    line-height: var(--usa-lead-font-line-height);
+    font-weight: var(--usa-lead-font-weight);
+    max-width: var(--usa-lead-font-max-width);
 }

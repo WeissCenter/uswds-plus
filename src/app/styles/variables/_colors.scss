@@ -629,32 +629,31 @@
     --usa-border-color-lighter: var(--usa-color-gray-20);
 
 
-    --usa-modal-overlay-background-color: var(--usa-color-black-transparent-70);
 
-    --usa-black: black;
-    --usa-white: white;
-    --usa-red: #e52207;
-    --usa-red-warm: false;
-    --usa-orange-warm: false;
-    --usa-orange: #e66f0e;
-    --usa-gold: #ffbe2e;
-    --usa-yellow: #fee685;
-    --usa-green-warm: false;
-    --usa-green: #538200;
-    --usa-green-cool: false;
-    --usa-mint: #04c585;
-    --usa-mint-cool: false;
-    --usa-cyan: #009ec1;
-    --usa-blue: #0076d6;
-    --usa-blue-warm: false;
-    --usa-indigo-cool: false;
-    --usa-indigo: #676cc8;
-    --usa-indigo-warm: false;
-    --usa-violet: #8168b3;
-    --usa-violet-warm: false;
-    --usa-magenta: #d72d79;
-    --usa-gray-cool: false;
-    --usa-gray: false;
+    --usa-black: var(--usa-color-black);
+    --usa-white: var(--usa-color-white);
+    --usa-red: var(--usa-color-red);
+    --usa-red-warm: var(--usa-color-red-warm);
+    --usa-orange-warm: var(--usa-color-orange-warm);
+    --usa-orange: var(--usa-color-orange);
+    --usa-gold: var(--usa-color-gold);
+    --usa-yellow: var(--usa-color-yellow);
+    --usa-green-warm: var(--usa-color-green-warm);
+    --usa-green: var(--usa-color-green);
+    --usa-green-cool: var(--usa-color-green-cool);
+    --usa-mint: var(--usa-color-mint);
+    --usa-mint-cool: var(--usa-color-mint-cool);
+    --usa-cyan: var(--usa-color-cyan);
+    --usa-blue: var(--usa-color-blue);
+    --usa-blue-warm: var(--usa-color-blue-warm);
+    --usa-indigo-cool: var(--usa-color-indigo-cool);
+    --usa-indigo: var(--usa-color-indigo);
+    --usa-indigo-warm: var(--usa-color-indigo-warm);
+    --usa-violet: var(--usa-color-violet);
+    --usa-violet-warm: var(--usa-color-violet-warm);
+    --usa-magenta: var(--usa-color-magenta);
+    --usa-gray-cool: var(--usa-color-gray-cool);
+    --usa-gray: var(--usa-color-gray);
 
 }
 

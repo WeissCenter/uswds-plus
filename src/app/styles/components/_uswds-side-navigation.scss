@@ -20,7 +20,13 @@
     --usa-sidenav-sublist-background-hover: var(--usa-sidenav-item-background-hover);
     --usa-sidenav-sublist-background-current: var(--usa-sidenav-item-background-current);
 
-    --usa-sidenav-item-border-color: var(--usa-border-color-base);
+
+
+    --usa-sidenav-border-width: var(--usa-border-width-2px);
+    --usa-sidenav-border-color: var(--usa-base-light);
+    --usa-sidenav-border-radius: var(--usa-border-radius-sm);
+
+    --usa-sidenav-item-border-color: var(--usa-border-color-base-lighter);
     --usa-sidenav-item-border-width: var(--usa-border-width-1px);
 
     --usa-sidenav-sublist-border-color: var(--usa-sidenav-item-border-color);
@@ -47,7 +53,7 @@
 
     --usa-sidenav-item-current-indicator-color: var(--usa-primary);
     --usa-sidenav-item-current-indicator-border-radius: var(--usa-border-radius-pill);
-    --usa-sidenav-item-current-indicator-width: var(--usa-sizing-05);
+    --usa-sidenav-item-current-indicator-width: var(--usa-spacing-05);
     --usa-sidenav-item-current-indicator-position: 0;
 
     --usa-sidenav-child-padding-left: var(--usa-spacing-4);
@@ -62,8 +68,9 @@
     margin-top: var(--usa-spacing-0);
     list-style-type: none;
     padding-left: 0;
-    border-bottom: var(--usa-sidenav-item-border-width) solid var(--usa-sidenav-item-border-color);
+    border-bottom: var(--usa-sidenav-border-width) solid var(--usa-sidenav-border-color);
     text-align: var(--usa-sidenav-item-text-align);
+    border-radius: var(--usa-sidenav-border-radius);
 }
 
 .usa-sidenav>li {
@@ -73,6 +80,8 @@
 
 .usa-sidenav__item {
     border-top: var(--usa-sidenav-item-border-width) solid var(--usa-sidenav-item-border-color);
+    border-left: var(--usa-sidenav-border-width) solid var(--usa-sidenav-border-color);
+    border-right: var(--usa-sidenav-border-width) solid var(--usa-sidenav-border-color);
     font-size: var(--usa-sidenav-item-font-size);
     font-family: var(--usa-sidenav-item-font-family);
     font-weight: var(--usa-sidenav-item-font-weight);
@@ -80,7 +89,13 @@
     background-color: var(--usa-sidenav-item-background);
     margin-bottom: var(--usa-sidenav-item-margin-bottom);
     margin-top: var(--usa-sidenav-item-margin-top);
-
+    &:first-child {
+        border-top:  var(--usa-sidenav-border-width) solid var(--usa-sidenav-border-color);
+        border-radius: var(--usa-sidenav-border-radius) var(--usa-sidenav-border-radius) 0 0;
+    }
+    &:last-child {
+        border-radius: 0 0 var(--usa-sidenav-border-radius) var(--usa-sidenav-border-radius);
+    }
 }
 
 .usa-sidenav a:not(.usa-button) {
@@ -170,6 +185,8 @@
 
 .usa-sidenav__sublist-item, .usa-sidenav__sublist>.usa-sidenav__item {
     border-top: var(--usa-sidenav-sublist-border-width) solid var(--usa-sidenav-sublist-border-color);
+    border-left: none;
+    border-right: none;
     font-size: var(--usa-sidenav-sublist-font-size);
     font-family: var(--usa-sidenav-sublist-font-family);
     font-weight: var(--usa-sidenav-sublist-font-weight);
@@ -180,6 +197,14 @@
     &:hover {
         background-color: var(--usa-sidenav-sublist-background-hover);
         color: var(--usa-sidenav-sublist-item-color-hover);
+    }
+
+    &:first-child {
+        border-top: var(--usa-sidenav-sublist-border-width) solid var(--usa-sidenav-sublist-border-color);
+        border-radius: 0;
+    }
+    &:last-child {
+        border-radius: 0;
     }
 
 }

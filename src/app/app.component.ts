@@ -4,6 +4,7 @@ import * as USWDS from '@uswds/uswds/js';
 import { Subscription } from 'rxjs';
 import { aggregatedTokens } from './aggregated-tokens';
 import { TokenToCssService } from './services/token-to-css.service';
+import { AccessibilityWidgetService } from './accessibility-widget/accessibility-widget.service';
 const { banner, inPageNavigation, navigation, accordion } = USWDS;
 @Component({
   selector: 'app-root',
@@ -16,24 +17,12 @@ export class AppComponent {
   availableThemes: string[] = [];
   themeSubscription!: Subscription;
   currentTheme!: string;
-
-  // Shortcut for now to identify tokens that need an a11y modifier
-  a11yModifierTokens = [{ 
-    id: 'font-size', 
-    value: 'a11y-font-size-modifier' 
-  }, {
-    id: 'line-height', 
-    value: 'a11y-line-height-modifier' 
-  },
-  {
-    id: 'letter-spacing', 
-    value: 'a11y-letter-spacing-modifier'
-  }
-  ];
+  a11yPanelOpen = false;
 
   constructor(
     private themeService: ThemeService,
-    private tokenToCssService: TokenToCssService
+    private tokenToCssService: TokenToCssService,
+    private accessibilityWidgetService: AccessibilityWidgetService
   ) {
     this.availableThemes = this.themeService.availableThemes;
     this.themeSubscription = this.themeService.getTheme().subscribe((theme) => {
@@ -56,17 +45,11 @@ export class AppComponent {
     // Iterate over each token in the selected theme
     Object.entries(themeTokens).forEach(([key, tokenObject]) => {
       // For each token, generate CSS variables string
-      // Assuming tokenObject is compatible with the service's expected input
-      let a11yModifier = undefined;
-      let modify = this.a11yModifierTokens.find((token) => token.id === key);
-      if (modify) {
-        a11yModifier = `--${modify.value}`;
-      }
+
       const partialCssString = this.tokenToCssService.cssVars(
         tokenObject, // Wrapping the tokenObject to match expected input structure
         'usa', // Adjust 'global' and 'component' prefixes as necessary
-        key,
-        a11yModifier
+        key
       );
       cssVariablesString += partialCssString;
     });
@@ -86,6 +69,11 @@ export class AppComponent {
     inPageNavigation.on(document.body);
     navigation.on(document.body);
     accordion.on(document.body);
+    this.accessibilityWidgetService.showAccessibilityWidget$.subscribe(
+      (show) => {
+        this.a11yPanelOpen = show;
+      }
+    );
   }
 
   setTheme(theme: string) {
@@ -97,4 +85,10 @@ export class AppComponent {
     // Set the new theme
     document.documentElement.setAttribute(`data-${type}`, value);
   }
+
+  openA11yPanel() {
+    this.accessibilityWidgetService.toggleWidgetVisibility();
+    document.documentElement.setAttribute('data-a11y-panel', 'open');
+  }
+
 }

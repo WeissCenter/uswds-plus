@@ -10,7 +10,7 @@ import { ThemeTokens } from '../interfaces/tokens';
   providedIn: 'root',
 })
 export class ThemeService {
-  private currentTheme = new BehaviorSubject<string>('base');
+  private currentTheme = new BehaviorSubject<string>('adapt');
   public availableThemes: string[] = Object.keys(aggregatedTokens);
   public allTokens = aggregatedTokens;
 

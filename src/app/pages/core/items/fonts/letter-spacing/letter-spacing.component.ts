@@ -1,8 +1,8 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TokenToCssService } from 'src/app/services/token-to-css.service';
 import { ToolboxService } from 'src/app/services/toolbox.service';
-import defaultTokenObj, {a11y as a11y} from './tokens';
+import defaultTokenObj from './tokens';
 import { ThemeService } from 'src/app/services/theme.service';
 import { Subscription } from 'rxjs';
 
@@ -24,8 +24,6 @@ export class LetterSpacingComponent {
 
   constructor(
     private tokenToCssService: TokenToCssService,
-    private el: ElementRef,
-    private renderer: Renderer2,
     private fb: FormBuilder,
     private toolboxService: ToolboxService,
     private themeService: ThemeService
@@ -47,6 +45,7 @@ export class LetterSpacingComponent {
         'usa',
         'letter-spacing'
       );
+      console.log(this.currentTokenArr);
       this.currentVars = this.tokenToCssService.parseCssVariables(cssVars);
       this.buildForm();
       this.applyStyles();
@@ -72,11 +71,17 @@ export class LetterSpacingComponent {
   }
 
   applyStyles() {
-    const css = this.tokenToCssService.generateCssFromFormValue(
-      this.tokenForm.value,
+    // copy default token object, then map over the values from the form (this restores the a11y and description properties to pass along to the service while also capturing new data) TODO: can we keep all that extra info available on the form object?
+    const newTokenObj = {... defaultTokenObj[this.currentTheme]};
+    Object.keys(this.tokenForm.value).map((key, index) => {
+      newTokenObj[key].value = this.tokenForm.value[key];
+    });
+
+
+    const css = this.tokenToCssService.cssVars(
+      newTokenObj,
       'usa',
-      'letter-spacing',
-      a11y
+      'letter-spacing'
     );
 
     this.tokenToCssService.injectCssStyleTag(css, 'letter-spacing');
@@ -87,7 +92,7 @@ export class LetterSpacingComponent {
   resetStyles() {
     const styleTag = document.getElementById('letter-spacing') as HTMLStyleElement;
     if (styleTag) {
-      styleTag.innerHTML = '';
+      styleTag.remove();
     }
   }
 

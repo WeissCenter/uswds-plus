@@ -1,7 +1,13 @@
 :root {
     --usa-header-logo-text-width: 33%;
-    --usa-header-max-width: var(--usa-sizing-desktop);
+    --usa-header-max-width: var(--usa-spacing-desktop);
     --usa-header-font-family: var(--usa-font-ui);
+    --usa-header-nav-background-color: var(--usa-white);
+    --usa-header-nav-padding-x: var(--usa-spacing-2);
+    --usa-header-nav-padding-y: var(--usa-spacing-0);
+    --usa-header-nav-border-color: var(--usa-border-color-base);
+    --usa-header-nav-border-width: var(--usa-border-width-sm);
+
 }
 
 .usa-header {
@@ -20,9 +26,29 @@
     border-bottom: none;
 }
 
+.site-nav {
+    font-family: var(--usa-header-font-family);
+    font-size: var(--usa-body-font-size);
+    line-height: var(--usa-line-height-body);
+    background-color: var(--usa-header-nav-background-color);
+    border-bottom: var(--usa-header-nav-border-width) solid var(--usa-header-nav-border-color);
+    border-top: var(--usa-header-nav-border-width) solid var(--usa-header-nav-border-color);
+    padding: var(--usa-header-nav-padding-y) var(--usa-header-nav-padding-x);
+}
+
 @media all and (min-width: 64em) {
     .usa-header .usa-search {
         float: right;
+    }
+
+    .site-nav {
+       float:none !important;
+        &.sticky {
+            position:sticky;
+            top:0;
+            z-index:300;
+        }
+    
     }
 }
 
@@ -40,7 +66,7 @@
 
 @media all and (min-width: 64em) {
     .usa-header+.usa-hero {
-        border-top: var(--usa-sizing-1px) solid var(--usa-white);
+        border-top: var(--usa-spacing-1px) solid var(--usa-white);
     }
 }
 
@@ -48,7 +74,7 @@
 
     .usa-header+.usa-section,
     .usa-header+main {
-        border-top: var(--usa-sizing-1px) solid var(--usa-base-lighter);
+        border-top: var(--usa-spacing-1px) solid var(--usa-base-lighter);
     }
 }
 
@@ -652,7 +678,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
     .usa-nav__primary .usa-current {
         position: relative;
         color: var(--usa-link-color);
-        font-weight: var(--usa-font-weight-bold);
+        font-weight: var(--usa-font-weight-semibold);
     }
 
     .usa-nav__primary .usa-current:after {
@@ -696,6 +722,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
 @media all and (min-width: 64em) {
     .usa-nav__primary {
         display: flex;
+        align-items: center;
     }
 }
 
@@ -709,7 +736,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
 
 @media all and (min-width: 64em) {
     .usa-nav__primary>.usa-nav__primary-item {
-        font-size: var(--usa-font-size-2xs);
+        font-size: var(--usa-font-size-sm);
         line-height: var(--usa-line-height-1);
     }
 }

@@ -45,48 +45,6 @@ var tokens = {
             description: 'Primary darkest color',
         },
     },
-    adapt: {
-        lightest: {
-            value: '{color.blue.5}',
-            type: 'color',
-            description: 'Primary lightest color',
-        },
-        lighter: {
-            value: '{color.indigo.10}',
-            type: 'color',
-            description: 'Primary lighter color',
-        },
-        light: {
-            value: '{color.indigo.30}',
-            type: 'color',
-            description: 'Primary light color',
-        },
-        base: {
-            value: '{color.indigo.vivid.60}',
-            type: 'color',
-            description: 'Primary color',
-        },
-        vivid: {
-            value: '{color.indigo-warm.vivid.60}',
-            type: 'color',
-            description: 'Vivid primary color',
-        },
-        dark: {
-            value: '{color.indigo-warm.vivid.70}',
-            type: 'color',
-            description: 'Primary dark color',
-        },
-        darker: {
-            value: '{color.indigo-warm.vivid.80}',
-            type: 'color',
-            description: 'Primary darker color',
-        },
-        darkest: {
-            value: '{body.ink}',
-            type: 'color',
-            description: 'Primary darkest color',
-        },
-    },
     haystack: {
         lightest: {
             value: '{white}',
@@ -167,6 +125,90 @@ var tokens = {
         },
         darkest: {
             value: '#1E1E1E',
+            type: 'color',
+            description: 'Primary darkest color',
+        },
+    },
+    adapt: {
+        lightest: {
+            value: '{color.blue.5}',
+            type: 'color',
+            description: 'Primary lightest color',
+        },
+        lighter: {
+            value: '{color.indigo-cool.10}',
+            type: 'color',
+            description: 'Primary lighter color',
+        },
+        light: {
+            value: '{color.indigo-cool.30}',
+            type: 'color',
+            description: 'Primary light color',
+        },
+        base: {
+            value: '{color.indigo-cool.vivid.70}',
+            type: 'color',
+            description: 'Primary color',
+        },
+        vivid: {
+            value: '{color.indigo-cool.vivid.70}',
+            type: 'color',
+            description: 'Vivid primary color',
+        },
+        dark: {
+            value: '{color.indigo-cool.vivid.80}',
+            type: 'color',
+            description: 'Primary dark color',
+        },
+        darker: {
+            value: '{color.indigo-warm.90}',
+            type: 'color',
+            description: 'Primary darker color',
+        },
+        darkest: {
+            value: '{body.ink}',
+            type: 'color',
+            description: 'Primary darkest color',
+        },
+    },
+    weiss: {
+        lightest: {
+            value: '{color.blue.5}',
+            type: 'color',
+            description: 'Primary lightest color',
+        },
+        lighter: {
+            value: '{color.indigo-cool.10}',
+            type: 'color',
+            description: 'Primary lighter color',
+        },
+        light: {
+            value: '{color.indigo-cool.30}',
+            type: 'color',
+            description: 'Primary light color',
+        },
+        base: {
+            value: '{color.indigo-cool.vivid.60}',
+            type: 'color',
+            description: 'Primary color',
+        },
+        vivid: {
+            value: '{color.indigo-cool.vivid.60}',
+            type: 'color',
+            description: 'Vivid primary color',
+        },
+        dark: {
+            value: '{color.indigo-cool.vivid.70}',
+            type: 'color',
+            description: 'Primary dark color',
+        },
+        darker: {
+            value: '{color.indigo-warm.vivid.80}',
+            type: 'color',
+            description: 'Primary darker color',
+        },
+        darkest: {
+            value: '{body.ink}',
             type: 'color',
             description: 'Primary darkest color',
         },

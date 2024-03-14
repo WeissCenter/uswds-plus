@@ -1,5 +1,5 @@
 :root {
-    --usa-checkbox-size: var(--usa-sizing-205);
+    --usa-checkbox-size: var(--usa-spacing-205);
     --usa-checkbox-background-color: var(--usa-input-background-color);
     --usa-checkbox-label-color: var(--usa-ink);
     --usa-checkbox-border-color:var(--usa-border-color-base);
@@ -208,6 +208,9 @@
 
 .usa-checkbox__label-description {
     display: block;
-    font-size: var(--usa-font-size-3xs);
+    font-size: var(--usa-font-size-sm);
+    line-height: var(--usa-line-height-4);
+    font-weight: var(--usa-font-weight-normal);
+    letter-spacing: var(--usa-input-label-letter-spacing);
     margin-top: var(--usa-spacing-05);
 }

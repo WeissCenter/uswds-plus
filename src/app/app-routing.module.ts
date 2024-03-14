@@ -41,6 +41,8 @@ import { BorderComponent } from './pages/core/items/border/border.component';
 import { SecondaryComponent } from './pages/core/items/colors/secondary/secondary.component';
 import { RadioButtonComponent } from './pages/components/items/radio-button/radio-button.component';
 import { BasicComponent } from './pages/core/items/colors/basic/basic.component';
+import { SpacingComponent } from './pages/core/items/spacing/spacing.component';
+import { KitchenSinkComponent } from './pages/kitchen-sink/kitchen-sink.component';
 
 import { NgModule } from '@angular/core';
 
@@ -277,7 +279,17 @@ export const appRoutes: Route[] = [
               },
             ],
           },
+          {
+            path: 'spacing',
+            component: SpacingComponent,
+            data: { breadcrumbLabel: 'Spacing' },
+          },
         ],
+      },
+      {
+        path: 'kitchen-sink',
+        component: KitchenSinkComponent,
+        data: { breadcrumbLabel: 'Kitchen Sink' },
       },
     ],
   },

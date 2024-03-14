@@ -169,6 +169,48 @@ const tokens: ThemeTokens = {
       type: 'fontFamilies',
       description: 'Prose font family',
     },
+  },
+  weiss: {
+    sans: {
+      value: `'Public Sans Web', Helvetica Neue, Helvetica, Roboto, Arial, sans-serif`,
+      type: 'fontFamilies',
+      description: 'System font family',
+    },
+    serif: {
+      value: `Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif`,
+      type: 'fontFamilies',
+      description: 'Serif font family',
+    },
+    mono: {
+      value: `'Roboto Mono Web', "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace`,
+      type: 'fontFamilies',
+      description: 'Monospace font family',
+    },
+    heading: {
+      value: '{font.sans}',
+      type: 'fontFamilies',
+      description: 'Heading font family',
+    },
+    ui: {
+      value: '{font.sans}',
+      type: 'fontFamilies',
+      description: 'UI font family',
+    },
+    code: {
+      value: '{font.mono}',
+      type: 'fontFamilies',
+      description: 'Code font family',
+    },
+    alt: {
+      value: '{font.serif}',
+      type: 'fontFamilies',
+      description: 'Alternate font family',
+    },
+    prose: {
+      value: '{font.sans}',
+      type: 'fontFamilies',
+      description: 'Prose font family',
+    },
   }
 };
 

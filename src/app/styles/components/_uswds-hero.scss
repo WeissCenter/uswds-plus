@@ -1,6 +1,6 @@
 
   .usa-hero {
-    font-size: var(--usa-font-size-sm);
+    font-size: var(--usa-body-font-size);
     font-family: var(--usa-font-body);
     line-height: var(--usa-line-height-5);
     background-image:url($assets-path + 'hero.jpg');
@@ -13,6 +13,7 @@
     position: relative;
     padding-bottom: var(--usa-spacing-4);
     padding-top: var(--usa-spacing-4);
+    // max-width: var(--usa-spacing-desktop);
 }
 
 .usa-hero__callout {
@@ -22,7 +23,7 @@
 
 @media all and (min-width: 40em) {
     .usa-hero__callout {
-        max-width: var(--usa-spacing-mobile);
+        max-width: 30ch;
     }
 }
 
@@ -34,7 +35,7 @@
     font-family: var(--usa-font-heading);
     font-weight: var(--usa-font-weight-bold);
     color: var(--usa-accent-cool);
-    line-height: var(--usa-line-height-2);
+    line-height: var(--usa-line-height-3);
 }
 
 *+.usa-hero__heading {
@@ -42,7 +43,7 @@
 }
 
 .usa-hero__heading+* {
-    margin-top: var(--usa-paragraph-margin-top);
+    margin-top: var(--usa-body-font-paragraph-spacing);
 }
 
 .usa-hero__heading--alt {

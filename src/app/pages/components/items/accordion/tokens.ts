@@ -15,12 +15,12 @@ const tokens: ThemeTokens = {
       description: 'Accordion content background color',
     },
     'border-color': {
-      value: '{border-color.base}',
+      value: '{border-color.light}',
       type: 'color',
       description: 'Accordion border color',
     },
     'border-width': {
-      value: '{sizing.2px}',
+      value: '{spacing.2px}',
       type: 'borderWidth',
       description: 'Accordion border width',
     },
@@ -55,7 +55,7 @@ const tokens: ThemeTokens = {
       description: 'Hover accordion color',
     },
     'button-icon-size': {
-      value: '{sizing.3}',
+      value: '{spacing.3}',
       type: 'sizing',
       description: 'Accordion button icon size',
     },
@@ -122,7 +122,7 @@ const tokens: ThemeTokens = {
       description: 'Accordion border color',
     },
     'border-width': {
-      value: '{sizing.05}',
+      value: '{spacing.05}',
       type: 'borderWidth',
       description: 'Accordion border width',
     },
@@ -157,7 +157,7 @@ const tokens: ThemeTokens = {
       description: 'Hover accordion color',
     },
     'button-icon-size': {
-      value: '{sizing.3}',
+      value: '{spacing.3}',
       type: 'sizing',
       description: 'Accordion button icon size',
     },
@@ -259,7 +259,7 @@ const tokens: ThemeTokens = {
       description: 'Hover accordion color',
     },
     'button-icon-size': {
-      value: '{sizing.3}',
+      value: '{spacing.3}',
       type: 'sizing',
       description: 'Accordion button icon size',
     },
@@ -305,6 +305,108 @@ const tokens: ThemeTokens = {
     },
     'border-radius': {
       value: '{border-radius.md}',
+      type: 'borderRadius',
+      description: 'Accordion border radius',
+    },
+  },
+  adapt: {
+    'background-color': {
+      value: '{body.background}',
+      type: 'color',
+      description: 'Accordion content background color',
+    },
+    'content-color': {
+      value: '{ink}',
+      type: 'color',
+      description: 'Accordion content background color',
+    },
+    'border-color': {
+      value: '{base.lighter}',
+      type: 'color',
+      description: 'Accordion border color',
+    },
+    'border-width': {
+      value: '{spacing.05}',
+      type: 'borderWidth',
+      description: 'Accordion border width',
+    },
+    'button-background': {
+      value: '{base.lighter}',
+      type: 'color',
+      description: 'Accordion button background color',
+    },
+    'button-color': {
+      value: '{link.color}',
+      type: 'color',
+      description: 'Accordion button color',
+    },
+    'button-active-background': {
+      value: '{base.lightest}',
+      type: 'color',
+      description: 'Active accordion button background color',
+    },
+    'button-active-color': {
+      value: '{link.active-color}',
+      type: 'color',
+      description: 'Active accordion button color',
+    },
+    'button-hover-background': {
+      value: '{base.lighter}',
+      type: 'color',
+      description: 'Hover accordion background color',
+    },
+    'button-hover-color': {
+      value: '{link.hover-color}',
+      type: 'color',
+      description: 'Hover accordion color',
+    },
+    'button-icon-size': {
+      value: '{spacing.3}',
+      type: 'sizing',
+      description: 'Accordion button icon size',
+    },
+    'button-padding-y': {
+      value: '{spacing.2}',
+      type: 'spacing',
+      description: 'Accordion button padding y',
+    },
+    'button-padding-x': {
+      value: '{spacing.205}',
+      type: 'spacing',
+      description: 'Accordion button padding x',
+    },
+    'button-font-family': {
+      value: '{font.body}',
+      type: 'fontFamilies',
+      description: 'Accordion font family',
+    },
+    'button-font-weight': {
+      value: '{font.weight-semibold}',
+      type: 'fontWeight',
+      description: 'Accordion font weight',
+    },
+    'button-font-size': {
+      value: '{font.size-body}',
+      type: 'fontSizes',
+      description: 'Accordion font size',
+    },
+    'button-line-height': {
+      value: '{line-height.body}',
+      type: 'lineHeight',
+      description: 'Accordion line height',
+    },
+    'padding-y': {
+      value: '{spacing.2}',
+      type: 'spacing',
+      description: 'Accordion padding y',
+    },
+    'padding-x': {
+      value: '{spacing.205}',
+      type: 'spacing',
+      description: 'Accordion padding x',
+    },
+    'border-radius': {
+      value: '{border-radius.0}',
       type: 'borderRadius',
       description: 'Accordion border radius',
     },

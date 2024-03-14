@@ -4,6 +4,8 @@ export interface ThemeTokens {
         value: string;
         type: string;
         description: string;
+        a11y?: string;
+        responsiveFont?: boolean;
       };
     };
   }

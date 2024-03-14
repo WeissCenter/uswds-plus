@@ -44,6 +44,11 @@ var tokens = {
             type: 'sizing',
             description: 'Table border width',
         },
+        'background-color': {
+            value: '{body.background}',
+            type: 'color',
+            description: 'Table background color',
+        },
         'cell-compact-padding-x': {
             value: '{spacing.1}',
             type: 'sizing',
@@ -75,7 +80,7 @@ var tokens = {
             description: 'Table unsorted icon color',
         },
         'sorted-stripe-background-color': {
-            value: '{accent-cool.lighter}',
+            value: '{accent-cool.light}',
             type: 'color',
             description: 'Table sorted stripe background color',
         },
@@ -190,7 +195,7 @@ var tokens = {
             description: 'Table caption margin bottom',
         },
         'caption-font-size': {
-            value: '{font-size.xs}',
+            value: '{font-size.sm}',
             type: 'fontSizes',
             description: 'Table caption font size',
         },
@@ -217,7 +222,7 @@ var tokens = {
     },
     adapt: {
         'border-width': {
-            value: '{spacing.2px}',
+            value: '{border-width.md}',
             type: 'sizing',
             description: 'Table border width',
         },
@@ -252,7 +257,7 @@ var tokens = {
             description: 'Table unsorted icon color',
         },
         'sorted-stripe-background-color': {
-            value: '{accent-cool.lighter}',
+            value: '{accent-cool.light}',
             type: 'color',
             description: 'Table sorted stripe background color',
         },
@@ -270,6 +275,11 @@ var tokens = {
             value: '{base.dark}',
             type: 'color',
             description: 'Table text hover color',
+        },
+        'background-color': {
+            value: '{body.background}',
+            type: 'color',
+            description: 'Table background color',
         },
         'stripe-background-color': {
             value: '{base.lighter}',
@@ -317,7 +327,7 @@ var tokens = {
             description: 'Table sorted text color',
         },
         'font-size': {
-            value: '{font-size.sm}',
+            value: '{font-size.md}',
             type: 'fontSizes',
             description: 'Table font size',
         },
@@ -327,7 +337,7 @@ var tokens = {
             description: 'Table font family',
         },
         'line-height': {
-            value: '{line-height.2}',
+            value: '{line-height.3}',
             type: 'lineHeights',
             description: 'Table line height',
         },
@@ -337,7 +347,7 @@ var tokens = {
             description: 'Table font weight',
         },
         'header-font-size': {
-            value: '{font-size.sm}',
+            value: '{font-size.md}',
             type: 'fontSizes',
             description: 'Table header font size',
         },
@@ -347,7 +357,7 @@ var tokens = {
             description: 'Table header font family',
         },
         'header-font-weight': {
-            value: '{font-weight.semibold}',
+            value: '{font-weight.medium}',
             type: 'fontWeights',
             description: 'Table header font weight',
         },
@@ -367,7 +377,7 @@ var tokens = {
             description: 'Table caption margin bottom',
         },
         'caption-font-size': {
-            value: '{font-size.xs}',
+            value: '{font-size.sm}',
             type: 'fontSizes',
             description: 'Table caption font size',
         },
@@ -377,7 +387,7 @@ var tokens = {
             description: 'Table caption font family',
         },
         'caption-font-weight': {
-            value: '{font-weight.bold}',
+            value: '{font-weight.semibold}',
             type: 'fontWeights',
             description: 'Table caption font weight',
         },
@@ -387,7 +397,7 @@ var tokens = {
             description: 'Table caption text align',
         },
         'caption-line-height': {
-            value: '{line-height.3}',
+            value: '{line-height.5}',
             type: 'lineHeights',
             description: 'Table caption line height',
         },

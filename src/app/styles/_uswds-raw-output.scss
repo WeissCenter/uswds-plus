@@ -84,7 +84,7 @@ dfn {
 }
 
 .usa-display+* {
-    margin-top: var(--usa-paragraph-margin-top)
+    margin-top: var(--usa-body-font-paragraph-spacing)
 }
 
 @media all and (min-width: 30em) {
@@ -103,7 +103,7 @@ dfn {
     }
 
     .usa-display+* {
-        margin-top: var(--usa-paragraph-margin-top)
+        margin-top: var(--usa-body-font-paragraph-spacing)
     }
 }
 
@@ -123,7 +123,7 @@ dfn {
     }
 
     .usa-display+* {
-        margin-top: var(--usa-paragraph-margin-top)
+        margin-top: var(--usa-body-font-paragraph-spacing)
     }
 }
 
@@ -173,9 +173,9 @@ dfn {
 
 
 .usa-list {
-    margin-bottom: var(--usa-spacing-1em);
-    margin-top: var(--usa-spacing-1em);
-    line-height: 1.6;
+    margin-bottom: var(--usa-spacing-1);
+    margin-top: var(--usa-spacing-1);
+    line-height: var(--usa-line-height-3);
     padding-left: var(--usa-spacing-105)
 }
 
@@ -222,131 +222,20 @@ dfn {
 }
 
 .usa-paragraph {
-    line-height: var(--usa-line-height-body);
+    line-height: var(--usa-body-font-line-height);
     max-width: var(--usa-measure-base);
     margin-bottom: var(--usa-spacing-0);
     margin-top: var(--usa-spacing-0)
 }
 
 *+.usa-paragraph {
-    margin-top: var(--usa-paragraph-margin-top)
+    margin-top: var(--usa-body-font-paragraph-spacing)
 }
 
 .usa-paragraph+* {
-    margin-top: var(--usa-paragraph-margin-top)
+    margin-top: var(--usa-body-font-paragraph-spacing)
 }
 
-.usa-prose {
-    font-size: var(--usa-font-size-sm);
-    font-family: var(--usa-font-body);
-    line-height: var(--usa-line-height-5)
-}
-
-.usa-prose>ul,
-.usa-prose>ol {
-    margin-bottom: var(--usa-spacing-1em);
-    margin-top: var(--usa-spacing-1em);
-    line-height: 1.6;
-    padding-left: var(--usa-spacing-105)
-}
-
-.usa-prose>ul:last-child,
-.usa-prose>ol:last-child {
-    margin-bottom: var(--usa-spacing-0)
-}
-
-.usa-prose>ul ul,
-.usa-prose>ul ol,
-.usa-prose>ol ul,
-.usa-prose>ol ol {
-    margin-top: var(--usa-spacing-05)
-}
-
-.usa-prose>ul li,
-.usa-prose>ol li {
-    margin-bottom: var(--usa-spacing-05);
-    max-width: var(--usa-measure-base)
-}
-
-.usa-prose>ul li:last-child,
-.usa-prose>ol li:last-child {
-    margin-bottom: var(--usa-spacing-0)
-}
-
-
-.usa-prose>p {
-    line-height: var(--usa-line-height-body);
-    max-width: var(--usa-measure-base)
-}
-
-.usa-prose>h1,
-.usa-prose>h2,
-.usa-prose>h3,
-.usa-prose>h4,
-.usa-prose>h5,
-.usa-prose>h6 {
-    margin-bottom: var(--usa-spacing-0);
-    margin-top: var(--usa-spacing-0);
-    clear: both
-}
-
-.usa-prose>*+* {
-    margin-top: var(--usa-paragraph-margin-top);
-    margin-bottom: var(--usa-spacing-0)
-}
-
-.usa-prose>*+h1,
-.usa-prose>*+h2,
-.usa-prose>*+h3,
-.usa-prose>*+h4,
-.usa-prose>*+h5,
-.usa-prose>*+h6 {
-    margin-top: var(--usa-heading-margin-top)
-}
-
-.usa-prose>h1 {
-    font-size: var(--usa-font-size-2xl);
-    font-family: var(--usa-font-heading);
-    line-height: var(--usa-line-height-2);
-    font-weight: var(--usa-font-weight-bold)
-}
-
-.usa-prose>h2 {
-    font-size: var(--usa-font-size-xl);
-    font-family: var(--usa-font-heading);
-    line-height: var(--usa-line-height-2);
-    font-weight: var(--usa-font-weight-bold)
-}
-
-.usa-prose>h3 {
-    font-size: var(--usa-font-size-lg);
-    font-family: var(--usa-font-heading);
-    line-height: var(--usa-line-height-2);
-    font-weight: var(--usa-font-weight-bold)
-}
-
-.usa-prose>h4 {
-    font-size: var(--usa-font-size-sm);
-    font-family: var(--usa-font-heading);
-    line-height: var(--usa-line-height-2);
-    font-weight: var(--usa-font-weight-bold)
-}
-
-.usa-prose>h5 {
-    font-size: var(--usa-font-size-xs);
-    font-family: var(--usa-font-heading);
-    line-height: var(--usa-line-height-2);
-    font-weight: var(--usa-font-weight-bold)
-}
-
-.usa-prose>h6 {
-    font-size: var(--usa-font-size-3xs);
-    font-family: var(--usa-font-body);
-    line-height: var(--usa-line-height-2);
-    font-weight: var(--usa-font-weight-normal);
-    letter-spacing: .025em;
-    text-transform: uppercase
-}
 
 
 
@@ -390,9 +279,9 @@ dfn {
     font-family: var(--usa-collection-font-family);
     font-size: var(--usa-font-size-sm);
     line-height: var(--usa-line-height-3);
-    margin-bottom: var(--usa-spacing-1em);
-    margin-top: var(--usa-spacing-1em);
-    line-height: 1.6;
+    margin-bottom: var(--usa-spacing-1);
+    margin-top: var(--usa-spacing-1);
+    line-height: var(--usa-line-height-3);
     padding-left: var(--usa-spacing-105);
     padding-left: var(--usa-spacing-0)
 }
@@ -435,9 +324,9 @@ dfn {
     font-family: var(--usa-collection-font-family);
     font-size: var(--usa-font-size-sm);
     line-height: var(--usa-line-height-3);
-    margin-bottom: var(--usa-spacing-1em);
-    margin-top: var(--usa-spacing-1em);
-    line-height: 1.6;
+    margin-bottom: var(--usa-spacing-1);
+    margin-top: var(--usa-spacing-1);
+    line-height: var(--usa-line-height-3);
     padding-left: var(--usa-spacing-105);
     padding-left: var(--usa-spacing-0)
 }
@@ -1434,7 +1323,7 @@ dfn {
 }
 
 .usa-graphic-list__heading+* {
-    margin-top: var(--usa-paragraph-margin-top)
+    margin-top: var(--usa-body-font-paragraph-spacing)
 }
 
 
@@ -3741,170 +3630,6 @@ dfn {
     user-select: none
 }
 
-.usa-js-no-click .usa-modal,
-.usa-js-no-click .usa-modal * {
-    pointer-events: auto;
-    -webkit-user-select: text;
-    user-select: text
-}
-
-[data-open-modal] * {
-    pointer-events: none
-}
-
-.usa-modal-wrapper {
-    text-align: center;
-    transition: opacity var(--usa-easing)
-}
-
-.usa-modal-wrapper.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    position: fixed
-}
-
-.usa-modal-wrapper.is-visible {
-    visibility: visible;
-    opacity: 1;
-    position: fixed;
-    z-index: 99999
-}
-
-.usa-modal-overlay {
-    background: var(--usa-modal-overlay-background-color);
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    overflow: scroll;
-    overflow-x: hidden;
-    padding: var(--usa-spacing-3);
-    position: fixed;
-    scroll-behavior: smooth;
-    top: 0;
-    width: 100%
-}
-
-.usa-modal-overlay:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle
-}
-
-.usa-modal-overlay[data-force-action=true] {
-    pointer-events: none
-}
-
-.usa-modal-overlay[data-force-action=true] * {
-    pointer-events: auto
-}
-
-.usa-js-loading .usa-modal-wrapper {
-    position: absolute;
-    left: -999em;
-    right: auto
-}
-
-.usa-js-loading .usa-modal-wrapper:target {
-    position: static
-}
-
-.usa-modal {
-    font-size: var(--usa-font-size-sm);
-    font-family: var(--usa-font-body);
-    line-height: var(--usa-line-height-5);
-    border-radius: var(--usa-modal-border-radius);
-    background: var(--usa-modal-background-color);
-    color: var(--usa-modal-text-color);
-    display: inline-block;
-    margin: var(--usa-spacing-205) auto;
-    max-width: var(--usa-modal-default-max-width);
-    position: relative;
-    text-align: left;
-    vertical-align: middle;
-    width: 100%;
-    border: var(--usa-modal-border-width) solid var(--usa-modal-border-color)
-}
-
-.usa-modal:focus {
-    outline: none
-}
-
-.usa-modal__content {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%
-}
-
-.usa-modal__main {
-    padding: var(--usa-modal-padding-y) var(--usa-modal-padding-x)
-}
-
-.usa-modal-wrapper [data-close-modal]>.usa-icon,
-.usa-modal-wrapper [data-close-modal]>.usa-icon use {
-    pointer-events: none !important
-}
-
-.usa-modal__close {
-    align-items: center;
-    align-self: flex-end;
-    background-color: transparent;
-    color: var(--usa-modal-close-icon-color);
-    display: flex;
-    flex-shrink: 0;
-    font-size: var(--usa-font-size-2xs);
-    margin: 0 0 0 auto;
-    padding: var(--usa-spacing-05) var(--usa-spacing-05);
-    width: auto
-}
-
-.usa-modal__close:hover,
-.usa-modal__close:active {
-    background-color: transparent;
-    color: var(--usa-modal-close-icon-hover-color)
-}
-
-.usa-modal__close:focus {
-    outline-offset: 0
-}
-
-.usa-modal__close .usa-icon {
-    height: var(--usa-modal-close-icon-size);
-    width: var(--usa-modal-close-icon-size)
-}
-
-.usa-modal__heading {
-    font-size: var(--usa-font-size-lg);
-    font-family: var(--usa-font-heading);
-    line-height: var(--usa-line-height-3);
-    margin-top: 0
-}
-
-.usa-modal__footer {
-    margin-top: var(--usa-modal-footer-margin-top)
-}
-
-.usa-modal--lg {
-    max-width: var(--usa-modal-lg-max-width);
-    width: 100%
-}
-
-.usa-modal--lg .usa-modal__main {
-    padding: calc(var(--usa-modal-large-padding-y) - var(--usa-modal-close-icon-size)) var(--usa-modal-large-padding-x) var(--usa-modal-large-padding-y);
-    width: 100%;
-    max-width: var(--usa-modal-lg-content-max-width)
-}
-
-@media all and (min-width: 40em) {
-    .usa-modal--lg .usa-modal__heading {
-        font-size: var(--usa-font-size-xl);
-        font-family: var(--usa-font-heading)
-    }
-}
-
-.usa-js-modal--active {
-    overflow: hidden
-}
 
 @keyframes slidein-left {
     0% {
@@ -5078,66 +4803,6 @@ input[type=search] {
     font-weight: var(--usa-font-weight-bold)
 }
 
-.usa-input:disabled,
-.usa-input[aria-disabled=true] {
-    background-color: var(--usa-disabled-lighter);
-    color: var(--usa-disabled-dark);
-    cursor: not-allowed;
-    opacity: 1;
-    -webkit-text-fill-color: var(--usa-disabled-dark)
-}
-
-.usa-input:disabled:hover,
-.usa-input:disabled:active,
-.usa-input:disabled:focus,
-.usa-input:disabled.usa-focus,
-.usa-input[aria-disabled=true]:hover,
-.usa-input[aria-disabled=true]:active,
-.usa-input[aria-disabled=true]:focus,
-.usa-input[aria-disabled=true].usa-focus {
-    background-color: var(--usa-disabled-lighter);
-    color: var(--usa-disabled-dark)
-}
-
-@media (forced-colors: active) {
-
-    .usa-input:disabled,
-    .usa-input[aria-disabled=true] {
-        border: 0;
-        color: GrayText
-    }
-
-    .usa-input:disabled:hover,
-    .usa-input:disabled:active,
-    .usa-input:disabled:focus,
-    .usa-input:disabled.usa-focus,
-    .usa-input[aria-disabled=true]:hover,
-    .usa-input[aria-disabled=true]:active,
-    .usa-input[aria-disabled=true]:focus,
-    .usa-input[aria-disabled=true].usa-focus {
-        color: GrayText
-    }
-}
-
-@media (forced-colors: active) {
-
-    .usa-input:disabled,
-    .usa-input[aria-disabled=true] {
-        border: 2px solid GrayText
-    }
-}
-
-.usa-input--error {
-    border: var(--usa-input-border-width) solid var(--usa-error-dark);
-    padding-top: calc(var(--usa-spacing-1) - var(--usa-input-border-width));
-    padding-bottom: calc(var(--usa-spacing-1) - var(--usa-input-border-width))
-}
-
-.usa-input--success {
-    border: var(--usa-input-border-width) solid var(--usa-success);
-    padding-top: calc(var(--usa-spacing-1) - var(--usa-input-border-width));
-    padding-bottom: calc(var(--usa-spacing-1) - var(--usa-input-border-width))
-}
 
 .usa-fieldset {
     border: none;
@@ -5145,43 +4810,6 @@ input[type=search] {
     padding: 0
 }
 
-.usa-legend {
-    font-family: var(--usa-form-font-family);
-    font-size: var(--usa-font-size-body);
-    line-height: var(--usa-input-line-height);
-    display: block;
-    font-weight: var(--usa-font-weight-normal);
-    margin-top: var(--usa-spacing-3);
-    max-width: var(--usa-input-max-width)
-}
-
-.usa-legend--large {
-    font-size: var(--usa-font-size-xl);
-    font-weight: var(--usa-font-weight-bold);
-    margin-top: var(--usa-spacing-2)
-}
-
-.usa-input-list {
-    margin-bottom: 0;
-    margin-top: 0;
-    list-style-type: none;
-    padding-left: 0
-}
-
-.usa-input-list li {
-    line-height: var(--usa-input-line-height)
-}
-
-.usa-prose .usa-input-list {
-    margin-bottom: 0;
-    margin-top: 0;
-    list-style-type: none;
-    padding-left: 0
-}
-
-.usa-prose .usa-input-list li {
-    line-height: var(--usa-input-line-height)
-}
 
 
 
@@ -10653,27 +10281,27 @@ input[type=search] {
     }
 
     .mobile-lg\:line-height-body-1 {
-        line-height: var(--usa-line-height-body-1)
+        line-height: var(--usa-body-font-line-height-1)
     }
 
     .mobile-lg\:line-height-body-2 {
-        line-height: var(--usa-line-height-body-2)
+        line-height: var(--usa-body-font-line-height-2)
     }
 
     .mobile-lg\:line-height-body-3 {
-        line-height: var(--usa-line-height-body-3)
+        line-height: var(--usa-body-font-line-height-3)
     }
 
     .mobile-lg\:line-height-body-4 {
-        line-height: var(--usa-line-height-body-4)
+        line-height: var(--usa-body-font-line-height-4)
     }
 
     .mobile-lg\:line-height-body-5 {
-        line-height: var(--usa-line-height-body-5)
+        line-height: var(--usa-body-font-line-height-5)
     }
 
     .mobile-lg\:line-height-body-6 {
-        line-height: var(--usa-line-height-body-6)
+        line-height: var(--usa-body-font-line-height-6)
     }
 
     .mobile-lg\:line-height-code-1 {
@@ -12477,27 +12105,27 @@ input[type=search] {
     }
 
     .tablet\:line-height-body-1 {
-        line-height: var(--usa-line-height-body-1)
+        line-height: var(--usa-body-font-line-height-1)
     }
 
     .tablet\:line-height-body-2 {
-        line-height: var(--usa-line-height-body-2)
+        line-height: var(--usa-body-font-line-height-2)
     }
 
     .tablet\:line-height-body-3 {
-        line-height: var(--usa-line-height-body-3)
+        line-height: var(--usa-body-font-line-height-3)
     }
 
     .tablet\:line-height-body-4 {
-        line-height: var(--usa-line-height-body-4)
+        line-height: var(--usa-body-font-line-height-4)
     }
 
     .tablet\:line-height-body-5 {
-        line-height: var(--usa-line-height-body-5)
+        line-height: var(--usa-body-font-line-height-5)
     }
 
     .tablet\:line-height-body-6 {
-        line-height: var(--usa-line-height-body-6)
+        line-height: var(--usa-body-font-line-height-6)
     }
 
     .tablet\:line-height-code-1 {
@@ -14268,27 +13896,27 @@ input[type=search] {
     }
 
     .desktop\:line-height-body-1 {
-        line-height: var(--usa-line-height-body-1)
+        line-height: var(--usa-body-font-line-height-1)
     }
 
     .desktop\:line-height-body-2 {
-        line-height: var(--usa-line-height-body-2)
+        line-height: var(--usa-body-font-line-height-2)
     }
 
     .desktop\:line-height-body-3 {
-        line-height: var(--usa-line-height-body-3)
+        line-height: var(--usa-body-font-line-height-3)
     }
 
     .desktop\:line-height-body-4 {
-        line-height: var(--usa-line-height-body-4)
+        line-height: var(--usa-body-font-line-height-4)
     }
 
     .desktop\:line-height-body-5 {
-        line-height: var(--usa-line-height-body-5)
+        line-height: var(--usa-body-font-line-height-5)
     }
 
     .desktop\:line-height-body-6 {
-        line-height: var(--usa-line-height-body-6)
+        line-height: var(--usa-body-font-line-height-6)
     }
 
     .desktop\:line-height-code-1 {
@@ -14662,11 +14290,11 @@ input[type=search] {
     --usa-font-size-display: var(--usa-font-size-3xl);
     --usa-font-size-lead: var(--usa-font-size-lg);
     --usa-font-size-small: var(--usa-font-size-2xs);
-    --usa-line-height-body: var(--usa-line-height-5);
+    --usa-body-font-line-height: var(--usa-line-height-5);
     --usa-line-height-heading: var(--usa-line-height-2);
     --usa-line-height-lead: var(--usa-line-height-6);
     --usa-heading-margin-top: var(--usa-spacing-205);
-    --usa-paragraph-margin-top: var(--usa-spacing-2);
+    --usa-body-font-paragraph-spacing: var(--usa-spacing-2);
     --usa-type-scale-micro: 10px;
     --usa-type-scale-1: 12px;
     --usa-type-scale-2: 13px;
@@ -14912,7 +14540,7 @@ input[type=search] {
     --usa-button-font-weight: var(--usa-font-weight-bold);
     --usa-button-font-size: var(--usa-font-size-body);
     --usa-button-lg-font-size: var(--usa-font-size-lg);
-    --usa-button-line-height: var(--usa-line-height-body);
+    --usa-button-line-height: var(--usa-body-font-line-height);
     --usa-button-border-radius: var(--usa-border-radius-md);
     --usa-button-lg-border-radius: var(--usa-border-radius-md);
     --usa-button-stroke-width: var(--usa-spacing-2px);
@@ -14935,7 +14563,7 @@ input[type=search] {
     --usa-card-font-family: var(--usa-font-body);
     --usa-card-font-size: var(--usa-font-size-body);
     --usa-card-font-weight: var(--usa-font-weight-normal);
-    --usa-card-line-height: var(--usa-line-height-body);
+    --usa-card-line-height: var(--usa-body-font-line-height);
     --usa-card-header-font-family: var(--usa-font-heading);
     --usa-card-header-font-size: var(--usa-font-size-lg);
     --usa-card-header-font-weight: var(--usa-font-weight-bold);

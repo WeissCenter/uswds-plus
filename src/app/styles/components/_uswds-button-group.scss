@@ -49,7 +49,7 @@
 
 .usa-button-group--segmented .usa-button {
     position: relative;
-    width: calc(100% + var(--usa-sizing-2px));
+    width: calc(100% + var(--usa-spacing-2px));
 }
 
 @media all and (min-width: 30em) {
@@ -82,40 +82,40 @@
 .usa-button-group--segmented .usa-button-group__item:first-child>.usa-button {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    margin-right: var(--usa-sizing-neg-1px);
+    margin-right: var(--usa-spacing-neg-1px);
 }
 
 .usa-button-group--segmented .usa-button-group__item:last-child>.usa-button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-right: 0;
-    margin-left: var(--usa-sizing-neg-2px);
-    width: calc(100% + var(--usa-sizing-2px))
+    margin-left: var(--usa-spacing-neg-2px);
+    width: calc(100% + var(--usa-spacing-2px))
 }
 
 @media all and (min-width: 30em) {
     .usa-button-group--segmented .usa-button-group__item:last-child>.usa-button {
-        margin-left: var(--usa-sizing-neg-1px);
+        margin-left: var(--usa-spacing-neg-1px);
         width: auto;
     }
 }
 
 .usa-button-group--segmented .usa-button-group__item:where(:not(:first-child):not(:last-child))>.usa-button {
     border-radius: 0;
-    margin-right: var(--usa-sizing-neg-1px);
-    margin-left: var(--usa-sizing-neg-1px);
+    margin-right: var(--usa-spacing-neg-1px);
+    margin-left: var(--usa-spacing-neg-1px);
 }
 
 .usa-button-group--segmented .usa-button-group__item:where(:not(:last-child)) .usa-button:before {
-    border-right: var(--usa-sizing-1px) solid var(--usa-primary-dark);
+    border-right: var(--usa-spacing-1px) solid var(--usa-primary-dark);
     bottom: 0;
     content: "";
     display: block;
     height: 100%;
     position: absolute;
-    right: var(--usa-sizing-1px);
+    right: var(--usa-spacing-1px);
     top: 0;
-    width: var(--usa-sizing-1px);
+    width: var(--usa-spacing-1px);
     z-index: 3
 }
 
