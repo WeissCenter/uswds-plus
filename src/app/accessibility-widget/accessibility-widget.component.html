@@ -13,22 +13,27 @@
         Close
     </button>
     <button type="button" style="flex-direction: column;"
-        class="usa-button padding-y-105 padding-x-205 usa-button--unstyled width-full" (click)="contrastUpdate()"
-        [ngClass]="{'bg-a11y-active': contrast !== false}">
-        <span [ngSwitch]="contrast" class="display-inline-block minh-3">
-            <svg *ngSwitchCase="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                class="icon icon-tabler icon-tabler-text-size" width="24" height="24"
-                style="--usa-button-icon-size:var(--usa-spacing-3)" fill="currentColor">
-                <path
-                    d="M8 256c0 137 111 248 248 248s248-111 248-248S393 8 256 8 8 119 8 256zm248 184V72c101.7 0 184 82.3 184 184 0 101.7-82.3 184-184 184z" />
+        class="usa-button padding-y-105 padding-x-105 usa-button--unstyled width-full" (click)="colorThemeUpdate()"
+        [ngClass]="{'bg-a11y-active': color_theme !== 'default'}">
+        <span [ngSwitch]="color_theme" class="display-inline-block minh-4">
+            <svg xmlns="http://www.w3.org/2000/svg" *ngSwitchCase="'default'" style="--usa-button-icon-size:var(--usa-spacing-4);fill:none"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-color-swatch">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M19 3h-4a2 2 0 0 0 -2 2v12a4 4 0 0 0 8 0v-12a2 2 0 0 0 -2 -2" />
+                <path d="M13 7.35l-2 -2a2 2 0 0 0 -2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l9 9" />
+                <path d="M7.3 13h-2.3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h12" />
+                <path d="M17 17l0 .01" />
             </svg>
-            <span *ngSwitchCase="true" class="font-md text-bold">High</span>
+            <span *ngSwitchCase="'high-contrast'" class="font-md text-center maxh-4 width-full display-inline-block text-bold">High<br>Contrast</span>
+            <span *ngSwitchCase="'dark'" class="font-md text-center maxh-4 width-full display-inline-block text-bold">Dark<br>Mode</span>
         </span>
-        Contrast</button>
+        Theme</button>
     <button type="button" style="flex-direction: column;"
-        class="usa-button padding-y-105 padding-x-205 usa-button--unstyled width-full" (click)="fontSizeUpdate()"
+        class="usa-button padding-y-105 padding-x-105 usa-button--unstyled width-full" (click)="fontSizeUpdate()"
         [ngClass]="{'bg-a11y-active': font_size !== 'default'}">
-        <span [ngSwitch]="font_size" class="display-inline-block minh-3">
+        <span [ngSwitch]="font_size" class="display-inline-block">
             <svg aria-hidden="true" *ngSwitchCase="'default'" xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-text-size" width="24" height="24"
                 style="--usa-button-icon-size:var(--usa-spacing-4)" viewBox="0 0 24 24" stroke-width="2.25"
@@ -41,18 +46,19 @@
                 <path d="M18 12v7" />
                 <path d="M17 19h2" />
             </svg>
-            <span *ngSwitchCase="'large'" class="font-md text-bold">125%</span>
-            <span *ngSwitchCase="'larger'" class="font-md text-bold">150%</span>
-            <span *ngSwitchCase="'largest'" class="font-md text-bold">200%</span>
+            <span *ngSwitchCase="'large'" class="font-md text-bold text-center minh-4 width-full display-inline-block">125%</span>
+            <span *ngSwitchCase="'larger'" class="font-md text-bold text-center minh-4 width-full display-inline-block">150%</span>
+            <span *ngSwitchCase="'largest'" class="font-md text-bold text-center minh-4 width-full display-inline-block">200%</span>
         </span>
         Text Size</button>
     <button type="button" style="flex-direction: column;"
         class="usa-button padding-y-105 padding-x-205 usa-button--unstyled width-full" (click)="familyUpdate()"
         [ngClass]="{'bg-a11y-active': family !== 'default'}">
         <span [ngSwitch]="family" class="display-inline-block minh-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" *ngSwitchCase="'default'"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-typography" style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                *ngSwitchCase="'default'" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-typography"
+                style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M4 20l3 0" />
                 <path d="M14 20l7 0" />
@@ -60,8 +66,65 @@
                 <path d="M10.2 6.3l5.8 13.7" />
                 <path d="M5 20l6 -16l2 0l7 16" />
             </svg>
-            <svg *ngSwitchCase="'easy'" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round" style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M12 18c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /><path d="M16 19h6" /><path d="M19 16v6" /></svg>
+            <svg *ngSwitchCase="'easy'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-eye-plus">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M12 18c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                <path d="M16 19h6" />
+                <path d="M19 16v6" />
+            </svg>
         </span>
         Font</button>
+    <button type="button" style="flex-direction: column;"
+        class="usa-button padding-y-105 padding-x-205 usa-button--unstyled width-full" (click)="layoutUpdate()"
+        [ngClass]="{'bg-a11y-active': layout !== 'default'}">
+        <span [ngSwitch]="layout" class="display-inline-block minh-3">
+            <!-- <svg  xmlns="http://www.w3.org/2000/svg" style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-layout-distribute-vertical"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l0 16" /><path d="M20 4l0 16" /><path d="M9 6m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /></svg> -->
+            <svg  *ngSwitchCase="'default'" xmlns="http://www.w3.org/2000/svg" style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-layout-board-split">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                <path d="M4 12h8" />
+                <path d="M12 15h8" />
+                <path d="M12 9h8" />
+                <path d="M12 4v16" />
+            </svg>
+            <svg *ngSwitchCase="'single'"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor" style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)" stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-layout-rows"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M4 12l16 0" /></svg>
+        </span>
+        Layout</button>
+    <button type="button" style="flex-direction: column;"
+        class="usa-button padding-y-105 padding-x-205 usa-button--unstyled width-full" (click)="familyUpdate()"
+        [ngClass]="{'bg-a11y-active': family !== 'default'}">
+        <span [ngSwitch]="family" class="display-inline-block minh-3">
+            <!-- <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round" style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)" stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-photo-sensor"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 5h2a2 2 0 0 1 2 2v2" /><path d="M21 15v2a2 2 0 0 1 -2 2h-2" /><path d="M7 19h-2a2 2 0 0 1 -2 -2v-2" /><path d="M3 9v-2a2 2 0 0 1 2 -2h2" /><path d="M7 9m0 1a1 1 0 0 1 1 -1h8a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1z" /></svg> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-stereo-glasses">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 3h-2l-3 9" />
+                <path d="M16 3h2l3 9" />
+                <path
+                    d="M3 12v7a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707 -.293l2 -2a1 1 0 0 1 1.414 0l2 2a1 1 0 0 0 .707 .293h4.586a1 1 0 0 0 1 -1v-7h-18z" />
+                <path d="M7 16h1" />
+                <path d="M16 16h1" />
+            </svg>
+            <svg *ngSwitchCase="'easy'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="fill:none; --usa-button-icon-size:var(--usa-spacing-4)"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-eye-plus">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M12 18c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                <path d="M16 19h6" />
+                <path d="M19 16v6" />
+            </svg>
+        </span>
+        Focus</button>
     <div aria-live="polite" id="statusMessage" *ngIf="statusMessage" class="visually-hidden">{{statusMessage}}</div>
 </article>

@@ -34,6 +34,7 @@
     border-bottom: var(--usa-header-nav-border-width) solid var(--usa-header-nav-border-color);
     border-top: var(--usa-header-nav-border-width) solid var(--usa-header-nav-border-color);
     padding: var(--usa-header-nav-padding-y) var(--usa-header-nav-padding-x);
+   --usa-focus-offset: calc(var(--usa-focus-width) * -1);
 }
 
 @media all and (min-width: 64em) {
@@ -780,6 +781,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
     padding: var(--usa-navigation-link-padding-y) var(--usa-navigation-link-padding-x);
     text-decoration: none;
     border-radius: var(--usa-navigation-border-radius);
+    --usa-button-outline-offset: calc(var(--usa-focus-width) * -1);
 }
 
 .usa-nav__primary button:visited {
