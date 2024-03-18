@@ -3035,7 +3035,7 @@ dfn {
 
 .grid-col-1 {
     flex: 0 1 auto;
-    width: var(--usa-spacing-override, 8.3333333333%)
+    width: var(--usa-spacing-override, 8.3333333333%);
 }
 
 .grid-col-2 {
@@ -3201,9 +3201,14 @@ dfn {
         width: var(--usa-spacing-override, 25%)
     }
 
+    // TODO: Finish this logic out for better card layouts
+
     .tablet\:grid-col-4 {
         flex: 0 1 auto;
-        width: var(--usa-spacing-override, 33.3333333333%)
+        width: var(--usa-spacing-override, 33.3333333333%);
+        &.usa-card {
+            width:calc(33.3333333333% - var(--usa-card-group-gap));
+        }
     }
 
     .tablet\:grid-col-5 {
@@ -3213,7 +3218,10 @@ dfn {
 
     .tablet\:grid-col-6 {
         flex: 0 1 auto;
-        width: var(--usa-spacing-override, 50%)
+        width: var(--usa-spacing-override, 50%);
+        &.usa-card {
+            width:calc(50% - var(--usa-card-group-gap));
+        }
     }
 
     .tablet\:grid-col-7 {

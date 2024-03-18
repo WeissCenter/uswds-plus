@@ -29,7 +29,7 @@ export class AccessibilitySettings {
     this.spacing = spacing;
     this.color = color;
     this.layout = layout;
-    this.family = family
+    this.family = family;
   }
 }
 
@@ -54,7 +54,6 @@ export class AccessibilityWidgetComponent {
 
   current_view = 'text';
   ref: HTMLElement;
-  contrast = false;
   statusMessage = '';
 
   // Allow for passed in accessibility settings in case we want to pull in things from user objects or whatnot in future projects
@@ -76,9 +75,7 @@ export class AccessibilityWidgetComponent {
     if (saved.fontSize) this.accessibility_settings = saved;
     console.log('Saved settings:', saved);
     console.log('Accessibility settings:', this.accessibility_settings);
-    this.applySettings(true);
-    this.contrast =
-      this.accessibility_settings.color === 'high-contrast' ? true : false;
+    this.applySettings();
 
     this.accessibilityWidgetService.showAccessibilityWidget$.subscribe(
       (show) => {
@@ -94,18 +91,20 @@ export class AccessibilityWidgetComponent {
 
   availableFontSizes = ['default', 'large', 'larger', 'largest'];
 
-  fontSizeUpdate(skip_check: boolean = false) {
+  fontSizeUpdate() {
     // Cycle through available font sizes when clicking button
     // If we're at the end of the array, start over
-    if (!skip_check) {
-      const currentIndex = this.availableFontSizes.indexOf(this.font_size);
-      if (currentIndex === this.availableFontSizes.length - 1) {
-        this.font_size = this.availableFontSizes[0];
-      } else {
-        this.font_size = this.availableFontSizes[currentIndex + 1];
-      }
-      this.statusMessage = `Font size set to ${this.font_size}`;
+    const currentIndex = this.availableFontSizes.indexOf(this.font_size);
+    if (currentIndex === this.availableFontSizes.length - 1) {
+      this.font_size = this.availableFontSizes[0];
+    } else {
+      this.font_size = this.availableFontSizes[currentIndex + 1];
     }
+    this.statusMessage = `Font size set to ${this.font_size}`;
+    this.applyFontSize();
+  }
+
+  applyFontSize() {
     this.accessibility_settings.fontSize = this.font_size;
     console.log('Font size set:', this.accessibility_settings.fontSize);
     document.documentElement.setAttribute(
@@ -115,17 +114,22 @@ export class AccessibilityWidgetComponent {
     this.saveSettingsLocally();
   }
 
-  spacingUpdate() {
-    this.accessibility_settings.spacing = this.spacing;
-    console.log('Spacing set:', this.accessibility_settings.spacing);
-    document.documentElement.setAttribute(
-      'data-a11y-line-height',
-      this.accessibility_settings.spacing
-    );
-    this.saveSettingsLocally();
-  }
+  availableColorThemes = ['default', 'high-contrast', 'dark'];
 
   colorThemeUpdate() {
+    // Cycle through available themes when clicking button
+    // If we're at the end of the array, start over
+    const currentIndex = this.availableColorThemes.indexOf(this.color_theme);
+    if (currentIndex === this.availableColorThemes.length - 1) {
+      this.color_theme = this.availableColorThemes[0];
+    } else {
+      this.color_theme = this.availableColorThemes[currentIndex + 1];
+    }
+    this.statusMessage = `Color theme set to ${this.color_theme}`;
+    this.applyColorTheme();
+  }
+
+  applyColorTheme() {
     this.accessibility_settings.color = this.color_theme;
     console.log('Color set:', this.accessibility_settings.color);
     document.documentElement.setAttribute(
@@ -134,6 +138,58 @@ export class AccessibilityWidgetComponent {
     );
     this.saveSettingsLocally();
   }
+
+  availableFontFamiles = ['default', 'easy'];
+
+  familyUpdate() {
+    // Cycle through available fanilies when clicking button
+    // If we're at the end of the array, start over
+    const currentIndex = this.availableFontFamiles.indexOf(this.family);
+    if (currentIndex === this.availableFontFamiles.length - 1) {
+      this.family = this.availableFontFamiles[0];
+    } else {
+      this.family = this.availableFontFamiles[currentIndex + 1];
+    }
+    this.statusMessage = `Font family set to ${this.family}`;
+    this.applyFontFamily();
+  }
+
+  applyFontFamily() {
+
+    this.accessibility_settings.family = this.family;
+    document.documentElement.setAttribute(
+      'data-a11y-font-family',
+      this.accessibility_settings.family.toString()
+    );
+    this.saveSettingsLocally();
+  }
+
+  availableLayouts = ['default', 'single'];
+
+  layoutUpdate() {
+    // Cycle through available layout options when clicking button
+    // If we're at the end of the array, start over
+    const currentIndex = this.availableLayouts.indexOf(this.layout);
+    if (currentIndex === this.availableLayouts.length - 1) {
+      this.layout = this.availableLayouts[0];
+    } else {
+      this.layout = this.availableLayouts[currentIndex + 1];
+    }
+    this.statusMessage = `Site column layout set to ${this.layout}`;
+    this.applyLayout();
+  }
+
+
+  applyLayout() {
+    this.accessibility_settings.layout = this.layout;
+    console.log('Layout set:', this.accessibility_settings.layout);
+    document.documentElement.setAttribute(
+      'data-a11y-layout',
+      this.accessibility_settings.layout
+    );
+    this.saveSettingsLocally();
+  }
+
   private firstFocusableElement: HTMLElement | null = null;
   private lastFocusableElement: HTMLElement | null = null;
   private focusableElementsString =
@@ -171,51 +227,8 @@ export class AccessibilityWidgetComponent {
     }
   }
 
-  contrastUpdate() {
-    if (this.accessibility_settings.color === 'default') {
-      this.accessibility_settings.color = 'high-contrast';
-      this.contrast = true;
-    } else {
-      this.accessibility_settings.color = 'default';
-      this.contrast = false;
-    }
-    this.statusMessage = `Contrast set to ${this.accessibility_settings.color}`;
-    console.log('Contrast set:', this.accessibility_settings.color);
-    document.documentElement.setAttribute(
-      'data-a11y-color-theme',
-      this.accessibility_settings.color.toString()
-    );
-    this.saveSettingsLocally();
-  }
 
-  familyUpdate(skip_update: boolean = false) {
-    if (!skip_update) {
-      if (this.accessibility_settings.family === 'default') {
-        this.accessibility_settings.family = 'easy';
-      } else {
-        this.accessibility_settings.family = 'default';
-      }
-      this.family = this.accessibility_settings.family;
-      this.statusMessage = `Font family set to ${this.accessibility_settings.family}`;
-      console.log('Font family set:', this.accessibility_settings.family);
-    }
-  
-    document.documentElement.setAttribute(
-      'data-a11y-font-family',
-      this.accessibility_settings.family.toString()
-    );
-    this.saveSettingsLocally();
-  }
 
-  layoutUpdate() {
-    this.accessibility_settings.layout = this.layout;
-    console.log('Layout set:', this.accessibility_settings.layout);
-    document.documentElement.setAttribute(
-      'data-a11y-layout',
-      this.accessibility_settings.layout
-    );
-    this.saveSettingsLocally();
-  }
 
   close() {
     this.accessibilityWidgetService.toggleWidgetVisibility();
@@ -230,15 +243,16 @@ export class AccessibilityWidgetComponent {
     this.current_view = view;
   }
 
-  applySettings(skip_check: boolean = false) {
+  applySettings() {
     this.font_size = this.accessibility_settings.fontSize;
     this.spacing = this.accessibility_settings.spacing;
     this.color_theme = this.accessibility_settings.color;
     this.layout = this.accessibility_settings.layout;
     this.family = this.accessibility_settings.family;
-    this.colorThemeUpdate();
-    this.fontSizeUpdate(skip_check);
-    this.familyUpdate(true);
+    this.applyColorTheme();
+    this.applyFontSize();
+    this.applyFontFamily();
+    this.applyLayout();
   }
 
   saveSettingsLocally() {

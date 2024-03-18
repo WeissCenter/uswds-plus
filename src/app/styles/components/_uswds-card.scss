@@ -5,8 +5,9 @@
     --usa-card-padding-body-x: var(--usa-spacing-3);
     --usa-card-padding-y: var(--usa-spacing-2);
     --usa-card-padding-perimeter: var(--usa-spacing-3);
-    --usa-card-margin-bottom:var(--usa-spacing-4);
-    --usa-card-margin-x: var(--usa-spacing-1);
+    --usa-card-margin-bottom:var(--usa-spacing-1);
+    --usa-card-margin-x: var(--usa-spacing-2);
+    --usa-card-group-gap: var(--usa-spacing-2);
     --usa-card-flag-image-width: var(--usa-spacing-card-lg);
     --usa-card-flag-min-width: var(--usa-spacing-tablet);
     --usa-card-gap: var(--usa-spacing-2);
@@ -35,8 +36,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: stretch;
-    margin-left: var(--usa-card-margin-x);
-    margin-right: var(--usa-card-margin-x);
+    // margin-left: var(--usa-card-margin-x);
+    // margin-right: var(--usa-card-margin-x);
+    gap: var(--usa-card-group-gap);
     container-type: inline-size;
 }
 
@@ -103,8 +105,8 @@
     display: flex;
     height: var(--usa-spacing-full);
     flex-direction: column;
-    margin-left: var(--usa-card-margin-x);
-    margin-right: var(--usa-card-margin-x);
+    // margin-left: var(--usa-card-margin-x);
+    // margin-right: var(--usa-card-margin-x);
     position: relative;
     border-radius: var(--usa-card-border-radius);
 }
