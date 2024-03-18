@@ -47,252 +47,259 @@ import { KitchenSinkComponent } from './pages/kitchen-sink/kitchen-sink.componen
 import { NgModule } from '@angular/core';
 
 export const appRoutes: Route[] = [
+  // {
+  //   path: '',
+  //   data: { breadcrumbLabel: 'Home' },
+  //   children: [
+  //     {
+  //       path: 'components',
+  //       component: ComponentsComponent,
+  //       data: { breadcrumbLabel: 'Compenents' },
+  //       children: [
+  //         {
+  //           path: '',
+  //           redirectTo: 'overview',
+  //           pathMatch: 'full',
+  //         },
+  //         {
+  //           path: 'overview',
+  //           component: ComponentOverviewComponent,
+  //           data: { breadcrumbLabel: 'Overview' },
+  //         },
+  //         {
+  //           path: 'accordion',
+  //           component: AccordionComponent,
+  //           data: { breadcrumbLabel: 'Accordion' },
+  //         },
+  //         {
+  //           path: 'alert',
+  //           component: AlertComponent,
+  //           data: { breadcrumbLabel: 'Alert' },
+  //         },
+  //         {
+  //           path: 'banner',
+  //           component: BannerComponent,
+  //           data: { breadcrumbLabel: 'Banner' },
+  //         },
+  //         {
+  //           path: 'breadcrumb',
+  //           component: BreadcrumbComponent,
+  //           data: { breadcrumbLabel: 'Breadcrumb' },
+  //         },
+  //         {
+  //           path: 'button',
+  //           component: ButtonComponent,
+  //           data: { breadcrumbLabel: 'Button' },
+  //         },
+  //         {
+  //           path: 'form-input',
+  //           component: FormInputComponent,
+  //           data: { breadcrumbLabel: 'Form input' },
+  //         },
+  //         {
+  //           path: 'table',
+  //           component: TableComponent,
+  //           data: { breadcrumbLabel: 'Table' },
+  //         },
+  //         {
+  //           path: 'side-navigation',
+  //           component: SideNavigationComponent,
+  //           data: { breadcrumbLabel: 'Side Navigation' },
+  //         },
+  //         {
+  //           path: 'radio-button',
+  //           component: RadioButtonComponent,
+  //           data: { breadcrumbLabel: 'Radio Button' },
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       path: 'core',
+  //       component: CoreComponent,
+  //       data: { breadcrumbLabel: 'Core' },
+  //       children: [
+  //         {
+  //           path: '',
+  //           redirectTo: 'overview',
+  //           pathMatch: 'full',
+  //         },
+  //         {
+  //           path: 'overview',
+  //           component: CoreOverviewComponent,
+  //           data: { breadcrumbLabel: 'Overview' },
+  //         },
+  //         {
+  //           path: 'border',
+  //           component: BorderComponent,
+  //           data: { breadcrumbLabel: 'Border' },
+  //         },
+  //         {
+  //           path: 'colors',
+  //           component: ColorsComponent,
+  //           data: { breadcrumbLabel: 'Colors' },
+  //           children: [
+  //             { path: '', redirectTo: 'primary', pathMatch: 'full' },
+  //             {
+  //               path: 'primary',
+  //               component: PrimaryComponent,
+  //               data: { breadcrumbLabel: 'Primary' },
+  //             },
+  //             {
+  //               path: 'basic',
+  //               component: BasicComponent,
+  //               data: { breadcrumbLabel: 'Basic palette' },
+  //             },
+  //             {
+  //               path: 'accent-cool',
+  //               component: AccentCoolComponent,
+  //               data: { breadcrumbLabel: 'Accent Cool' },
+  //             },
+  //             {
+  //               path: 'accent-warm',
+  //               component: AccentWarmComponent,
+  //               data: { breadcrumbLabel: 'Accent Warm' },
+  //             },
+  //             {
+  //               path: 'secondary',
+  //               component: SecondaryComponent,
+  //               data: { breadcrumbLabel: 'Secondary' },
+  //             },
+  //             {
+  //               path: 'body',
+  //               component: BodyColorComponent,
+  //               data: { breadcrumbLabel: 'Body' },
+  //             },
+  //             {
+  //               path: 'base',
+  //               component: BaseComponent,
+  //               data: { breadcrumbLabel: 'Base' },
+  //             },
+  //             {
+  //               path: 'info',
+  //               component: InfoComponent,
+  //               data: { breadcrumbLabel: 'Info' },
+  //             },
+  //             {
+  //               path: 'success',
+  //               component: SuccessComponent,
+  //               data: { breadcrumbLabel: 'Success' },
+  //             },
+  //             {
+  //               path: 'error',
+  //               component: ErrorComponent,
+  //               data: { breadcrumbLabel: 'Error' },
+  //             },
+  //             {
+  //               path: 'warning',
+  //               component: WarningComponent,
+  //               data: { breadcrumbLabel: 'Warning' },
+  //             },
+  //             {
+  //               path: 'disabled',
+  //               component: DisabledComponent,
+  //               data: { breadcrumbLabel: 'Disabled' },
+  //             },
+  //             {
+  //               path: 'emergency',
+  //               component: EmergencyComponent,
+  //               data: { breadcrumbLabel: 'Emergency' },
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           path: 'fonts',
+  //           component: FontsComponent,
+  //           data: { breadcrumbLabel: 'Fonts' },
+  //           children: [
+  //             { path: '', redirectTo: 'sizes', pathMatch: 'full' },
+  //             {
+  //               path: 'sizes',
+  //               component: SizesComponent,
+  //               data: { breadcrumbLabel: 'Sizes' },
+  //             },
+  //             {
+  //               path: 'line-height',
+  //               component: LineHeightComponent,
+  //               data: { breadcrumbLabel: 'Line height' },
+  //             },
+  //             {
+  //               path: 'letter-spacing',
+  //               component: LetterSpacingComponent,
+  //               data: { breadcrumbLabel: 'Letter spacing' },
+  //             },
+  //             {
+  //               path: 'weights',
+  //               component: WeightsComponent,
+  //               data: { breadcrumbLabel: 'Weights' },
+  //             },
+  //             {
+  //               path: 'families',
+  //               component: FamiliesComponent,
+  //               data: { breadcrumbLabel: 'Families' },
+  //             },
+  //             {
+  //               path: 'body',
+  //               component: FontBodyComponent,
+  //               data: { breadcrumbLabel: 'Body' },
+  //             },
+  //             {
+  //               path: 'lead',
+  //               component: FontLeadComponent,
+  //               data: { breadcrumbLabel: 'Lead' },
+  //             },
+  //             {
+  //               path: 'h1',
+  //               component: FontH1Component,
+  //               data: { breadcrumbLabel: 'H1' },
+  //             },
+  //             {
+  //               path: 'h2',
+  //               component: FontH2Component,
+  //               data: { breadcrumbLabel: 'H2' },
+  //             },
+  //             {
+  //               path: 'h3',
+  //               component: FontH3Component,
+  //               data: { breadcrumbLabel: 'H3' },
+  //             },
+  //             {
+  //               path: 'h4',
+  //               component: FontH4Component,
+  //               data: { breadcrumbLabel: 'H4' },
+  //             },
+  //             {
+  //               path: 'h5',
+  //               component: FontH5Component,
+  //               data: { breadcrumbLabel: 'H5' },
+  //             },
+  //             {
+  //               path: 'h6',
+  //               component: FontH6Component,
+  //               data: { breadcrumbLabel: 'H6' },
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           path: 'spacing',
+  //           component: SpacingComponent,
+  //           data: { breadcrumbLabel: 'Spacing' },
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       path: 'kitchen-sink',
+  //       component: KitchenSinkComponent,
+  //       data: { breadcrumbLabel: 'Kitchen Sink' },
+  //     },
+  //   ],
+  // },
   {
-    path: '',
-    data: { breadcrumbLabel: 'Home' },
-    children: [
-      {
-        path: 'components',
-        component: ComponentsComponent,
-        data: { breadcrumbLabel: 'Compenents' },
-        children: [
-          {
-            path: '',
-            redirectTo: 'overview',
-            pathMatch: 'full',
-          },
-          {
-            path: 'overview',
-            component: ComponentOverviewComponent,
-            data: { breadcrumbLabel: 'Overview' },
-          },
-          {
-            path: 'accordion',
-            component: AccordionComponent,
-            data: { breadcrumbLabel: 'Accordion' },
-          },
-          {
-            path: 'alert',
-            component: AlertComponent,
-            data: { breadcrumbLabel: 'Alert' },
-          },
-          {
-            path: 'banner',
-            component: BannerComponent,
-            data: { breadcrumbLabel: 'Banner' },
-          },
-          {
-            path: 'breadcrumb',
-            component: BreadcrumbComponent,
-            data: { breadcrumbLabel: 'Breadcrumb' },
-          },
-          {
-            path: 'button',
-            component: ButtonComponent,
-            data: { breadcrumbLabel: 'Button' },
-          },
-          {
-            path: 'form-input',
-            component: FormInputComponent,
-            data: { breadcrumbLabel: 'Form input' },
-          },
-          {
-            path: 'table',
-            component: TableComponent,
-            data: { breadcrumbLabel: 'Table' },
-          },
-          {
-            path: 'side-navigation',
-            component: SideNavigationComponent,
-            data: { breadcrumbLabel: 'Side Navigation' },
-          },
-          {
-            path: 'radio-button',
-            component: RadioButtonComponent,
-            data: { breadcrumbLabel: 'Radio Button' },
-          },
-        ],
-      },
-      {
-        path: 'core',
-        component: CoreComponent,
-        data: { breadcrumbLabel: 'Core' },
-        children: [
-          {
-            path: '',
-            redirectTo: 'overview',
-            pathMatch: 'full',
-          },
-          {
-            path: 'overview',
-            component: CoreOverviewComponent,
-            data: { breadcrumbLabel: 'Overview' },
-          },
-          {
-            path: 'border',
-            component: BorderComponent,
-            data: { breadcrumbLabel: 'Border' },
-          },
-          {
-            path: 'colors',
-            component: ColorsComponent,
-            data: { breadcrumbLabel: 'Colors' },
-            children: [
-              { path: '', redirectTo: 'primary', pathMatch: 'full' },
-              {
-                path: 'primary',
-                component: PrimaryComponent,
-                data: { breadcrumbLabel: 'Primary' },
-              },
-              {
-                path: 'basic',
-                component: BasicComponent,
-                data: { breadcrumbLabel: 'Basic palette' },
-              },
-              {
-                path: 'accent-cool',
-                component: AccentCoolComponent,
-                data: { breadcrumbLabel: 'Accent Cool' },
-              },
-              {
-                path: 'accent-warm',
-                component: AccentWarmComponent,
-                data: { breadcrumbLabel: 'Accent Warm' },
-              },
-              {
-                path: 'secondary',
-                component: SecondaryComponent,
-                data: { breadcrumbLabel: 'Secondary' },
-              },
-              {
-                path: 'body',
-                component: BodyColorComponent,
-                data: { breadcrumbLabel: 'Body' },
-              },
-              {
-                path: 'base',
-                component: BaseComponent,
-                data: { breadcrumbLabel: 'Base' },
-              },
-              {
-                path: 'info',
-                component: InfoComponent,
-                data: { breadcrumbLabel: 'Info' },
-              },
-              {
-                path: 'success',
-                component: SuccessComponent,
-                data: { breadcrumbLabel: 'Success' },
-              },
-              {
-                path: 'error',
-                component: ErrorComponent,
-                data: { breadcrumbLabel: 'Error' },
-              },
-              {
-                path: 'warning',
-                component: WarningComponent,
-                data: { breadcrumbLabel: 'Warning' },
-              },
-              {
-                path: 'disabled',
-                component: DisabledComponent,
-                data: { breadcrumbLabel: 'Disabled' },
-              },
-              {
-                path: 'emergency',
-                component: EmergencyComponent,
-                data: { breadcrumbLabel: 'Emergency' },
-              },
-            ],
-          },
-          {
-            path: 'fonts',
-            component: FontsComponent,
-            data: { breadcrumbLabel: 'Fonts' },
-            children: [
-              { path: '', redirectTo: 'sizes', pathMatch: 'full' },
-              {
-                path: 'sizes',
-                component: SizesComponent,
-                data: { breadcrumbLabel: 'Sizes' },
-              },
-              {
-                path: 'line-height',
-                component: LineHeightComponent,
-                data: { breadcrumbLabel: 'Line height' },
-              },
-              {
-                path: 'letter-spacing',
-                component: LetterSpacingComponent,
-                data: { breadcrumbLabel: 'Letter spacing' },
-              },
-              {
-                path: 'weights',
-                component: WeightsComponent,
-                data: { breadcrumbLabel: 'Weights' },
-              },
-              {
-                path: 'families',
-                component: FamiliesComponent,
-                data: { breadcrumbLabel: 'Families' },
-              },
-              {
-                path: 'body',
-                component: FontBodyComponent,
-                data: { breadcrumbLabel: 'Body' },
-              },
-              {
-                path: 'lead',
-                component: FontLeadComponent,
-                data: { breadcrumbLabel: 'Lead' },
-              },
-              {
-                path: 'h1',
-                component: FontH1Component,
-                data: { breadcrumbLabel: 'H1' },
-              },
-              {
-                path: 'h2',
-                component: FontH2Component,
-                data: { breadcrumbLabel: 'H2' },
-              },
-              {
-                path: 'h3',
-                component: FontH3Component,
-                data: { breadcrumbLabel: 'H3' },
-              },
-              {
-                path: 'h4',
-                component: FontH4Component,
-                data: { breadcrumbLabel: 'H4' },
-              },
-              {
-                path: 'h5',
-                component: FontH5Component,
-                data: { breadcrumbLabel: 'H5' },
-              },
-              {
-                path: 'h6',
-                component: FontH6Component,
-                data: { breadcrumbLabel: 'H6' },
-              },
-            ],
-          },
-          {
-            path: 'spacing',
-            component: SpacingComponent,
-            data: { breadcrumbLabel: 'Spacing' },
-          },
-        ],
-      },
-      {
-        path: 'kitchen-sink',
-        component: KitchenSinkComponent,
-        data: { breadcrumbLabel: 'Kitchen Sink' },
-      },
-    ],
+    path: 'csun',
+    component: KitchenSinkComponent,
+    data: { breadcrumbLabel: 'CSUN Demo' },
+    
   },
+  { path: '**',   redirectTo: '/csun', pathMatch: 'full' },
 ];
 
 @NgModule({
