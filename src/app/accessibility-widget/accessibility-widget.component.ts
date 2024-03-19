@@ -114,7 +114,7 @@ export class AccessibilityWidgetComponent {
     this.saveSettingsLocally();
   }
 
-  availableColorThemes = ['default', 'high-contrast', 'dark'];
+  availableColorThemes = ['default', 'high-contrast'];
 
   colorThemeUpdate() {
     // Cycle through available themes when clicking button
