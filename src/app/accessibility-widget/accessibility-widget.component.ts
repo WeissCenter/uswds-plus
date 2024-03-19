@@ -21,9 +21,9 @@ export class AccessibilitySettings {
   constructor(
     fontSize = 'default',
     spacing = 'default',
-    color = 'light',
+    color = 'default',
     layout = 'default',
-    family = 'default'
+    family = 'default',
   ) {
     this.fontSize = fontSize;
     this.spacing = spacing;
@@ -236,6 +236,7 @@ export class AccessibilityWidgetComponent {
 
   reset() {
     this.accessibility_settings = new AccessibilitySettings();
+    this.statusMessage = `Accessibility updates have been reset.`;
     this.applySettings();
   }
 
