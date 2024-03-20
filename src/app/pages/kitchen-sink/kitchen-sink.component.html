@@ -39,7 +39,7 @@
             </nav>
     
             <div class="grid-row grid-gap position-relative flex-align-start">
-                <div class="desktop:grid-col-3 position-sticky margin-top-2 usa-layout-docs__sidenav" style="top:var(--usa-spacing-8)">
+                <div class="desktop:grid-col-3 position-sticky margin-top-2 usa-layout-docs__sidenav accessibility-layout" style="top:var(--usa-spacing-8)">
                     <nav aria-label="Secondary navigation">
                         <ul class="usa-sidenav">
                             <li class="usa-sidenav__item">
@@ -75,6 +75,10 @@
     
                 </div>
                 <main class="desktop:grid-col-9 usa-layout-docs__main usa-prose usa-layout-docs margin-top-2" id="main-content">
+                    <div class="display-flex gap-1">
+                        <button type="button" class="usa-button" (click)="toggleLowVisionPreset()">Low Vision Preset</button>
+                        <button type="button" class="usa-button" (click)="toggleDyslexiaPreset()">Dyslexia Preset</button>
+                    </div>
                     <h1>This is your page title</h1>
                     <p class="usa-intro">The page heading communicates the main focus of the page. Make your page heading descriptive and keep it succinct.</p>
                     <p class="usa-content">
@@ -761,7 +765,7 @@
         </div>
     </div>
     
-    <section class="usa-graphic-list usa-section usa-prose usa-section--dark">
+    <!-- <section class="usa-graphic-list usa-section usa-prose usa-section--dark">
         <div class="grid-container">
             <div class="usa-graphic-list__row accessibility-layout grid-row grid-gap">
                 <div class="usa-media-block tablet:grid-col">
@@ -796,4 +800,4 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->

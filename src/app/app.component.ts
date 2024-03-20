@@ -18,6 +18,7 @@ export class AppComponent {
   themeSubscription!: Subscription;
   currentTheme!: string;
   a11yPanelOpen = false;
+  mobileMenuOpen = false;
 
   constructor(
     private themeService: ThemeService,
@@ -74,16 +75,6 @@ export class AppComponent {
         this.a11yPanelOpen = show;
       }
     );
-  }
-
-  setTheme(theme: string) {
-    // Set the new theme
-    this.themeService.setTheme(theme);
-  }
-
-  setA11y(type: string, value: string) {
-    // Set the new theme
-    document.documentElement.setAttribute(`data-${type}`, value);
   }
 
   openA11yPanel() {
