@@ -347,6 +347,10 @@ html[data-a11y-preset="low-vision"] {
     --usa-body-background: var(--usa-white);
     --usa-body-ink: var(--usa-black);
     --usa-focus-color: var(--usa-color-mint-vivid-30);
+    --usa-font-sans: "Atkinson Hyperlegible", sans-serif;
+    --usa-font-serif:  "Atkinson Hyperlegible", sans-serif;
+    --usa-font-mono:  "Atkinson Hyperlegible", sans-serif;
+   
 
     .accessibility-layout,
     .accessibility-layout.display-flex.flex-row {
@@ -379,9 +383,9 @@ html[data-a11y-preset="low-vision"] {
 html[data-a11y-preset="dyslexia"] {
     --a11y-line-height-modifier: 1.175;
     --a11y-letter-spacing-modifier: 2;
-    --usa-font-sans: 'Lexend' !important;
-    --usa-font-serif: 'Lexend', sans-serif !important;
-    --usa-font-mono: 'Lexend', sans-serif !important;
+    --usa-font-sans: var( --a11y-font-family) !important;
+    --usa-font-serif:  var( --a11y-font-family)!important;
+    --usa-font-mono:  var( --a11y-font-family)!important;
 
 }
 
