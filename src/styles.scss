@@ -1,4 +1,5 @@
   $assetFilePath: "/assets/";
+  $cssVarPrefix: usa;
   
   @import "../src/app/styles/uswds-raw-output";
   @import "../src/app/styles/utilities/normalize";
@@ -49,6 +50,10 @@
   :root {
     --usa-header-max-width: var(--usa-spacing-widescreen);
     --usa-banner-max-width: var(--usa-spacing-widescreen);
+  }
+
+  :root {
+    --#{$cssVarPrefix}-test-color: #000000; 
   }
 
   .site-preview-heading, .usa-preview-heading {
