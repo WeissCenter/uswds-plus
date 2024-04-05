@@ -18,7 +18,50 @@ Welcome to USWDS+flex, a comprehensive design system that provides a set of reus
 [Provide a brief introduction to your design system, its purpose, and the benefits it offers.]
 
 ## Getting Started
-[Explain how to set up and start using your design system. Include any necessary dependencies, installation instructions, and basic usage examples.]
+### USWDS+ CSS Compilation Script
+
+This script is a command-line tool for compiling SCSS (Sass) files into CSS, specifically designed for USWDS+. It provides a convenient way to compile a tailored version of USWDS+ with user-defined component options - allowing you to minimize and bundle up only the code you need.
+
+#### Features
+
+- Compiles USWDS+ files into a single minified CSS sheet
+- Allows modification of the `$assetFilePath` variable in the USWDS+ code without changing the original files or needing to create a new SCSS variable file
+- Applies PostCSS plugins for additional CSS transformations
+  - Autoprefixer for vendor prefixing
+  - cssnano for CSS minification
+  - postcss-preset-env for transforming modern CSS into browser-compatible CSS
+- Customizable output file name and path
+- Interactive command-line prompts for user input
+
+#### Prerequisites
+
+Before running this script, make sure you have the following dependencies installed:
+
+- Node.js (v12 or above)
+- npm (Node Package Manager)
+
+#### Installation
+
+1. Clone this repository or download the script file.
+
+2. Open a terminal and navigate to the project directory.
+
+3. Run the following command to install the required dependencies:
+    
+    ```javascript
+    npm install
+    ```
+
+
+#### Usage
+
+1. Open a terminal and navigate to the project directory.
+
+2. Run the following command to start the USWDS+ CSS Compilation script:
+    ```javascript
+    node compile-css.js
+    ```
+
 
 ## Components
 [List and describe the available components in your design system. You can use a completion checklist to track the progress of each component.]
@@ -65,5 +108,5 @@ Welcome to USWDS+flex, a comprehensive design system that provides a set of reus
 
 ## License
 Licensed under GNU General Public License v3.0. See [LICENSE](LICENSE) for more information.
-```
+
 

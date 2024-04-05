@@ -97,7 +97,7 @@
 .usa-checkbox__input:checked+[class*=__label]:before,
 .usa-checkbox__input:checked:disabled+[class*=__label]:before,
 .usa-checkbox__input:checked[aria-disabled=true]+[class*=__label]:before {
-    background-image: url($assets-path + 'correct8.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'correct8.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
 }
 
@@ -106,7 +106,7 @@
     .usa-checkbox__input:checked+[class*=__label]:before,
     .usa-checkbox__input:checked:disabled+[class*=__label]:before,
     .usa-checkbox__input:checked[aria-disabled=true]+[class*=__label]:before {
-        background-image: url($assets-path + 'correct8-alt.svg'), linear-gradient(transparent, transparent);
+        background-image: url($assetFilePath + 'correct8-alt.svg'), linear-gradient(transparent, transparent);
         background-repeat: no-repeat;
     }
 }

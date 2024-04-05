@@ -138,13 +138,13 @@
 }
 
 .usa-alert--success .usa-alert__body:before {
-    background-image: url($assets-path + 'usa-icons/check_circle.svg');
+    background-image: url($assetFilePath + 'usa-icons/check_circle.svg');
 
 }
 
 @supports ((-webkit-mask: url()) or (mask: url())) {
     .usa-alert--success .usa-alert__body:before {
-        mask-image: url($assets-path + 'usa-icons/check_circle.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/check_circle.svg'), linear-gradient(transparent, transparent);
     }
 }
 
@@ -169,12 +169,12 @@
 }
 
 .usa-alert--warning .usa-alert__body:before {
-    background-image: url($assets-path + 'usa-icons/warning.svg');
+    background-image: url($assetFilePath + 'usa-icons/warning.svg');
 }
 
 @supports ((-webkit-mask: url()) or (mask: url())) {
     .usa-alert--warning .usa-alert__body:before {
-        mask-image: url($assets-path + 'usa-icons/warning.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/warning.svg'), linear-gradient(transparent, transparent);
     }
 }
 
@@ -199,12 +199,12 @@
 }
 
 .usa-alert--error .usa-alert__body:before {
-    background-image: url($assets-path + 'usa-icons/error.svg');
+    background-image: url($assetFilePath + 'usa-icons/error.svg');
 }
 
 @supports ((-webkit-mask: url()) or (mask: url())) {
     .usa-alert--error .usa-alert__body:before {
-        mask-image: url($assets-path + 'usa-icons/error.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/error.svg'), linear-gradient(transparent, transparent);
     }
 }
 
@@ -229,12 +229,12 @@
 }
 
 .usa-alert--info .usa-alert__body:before {
-    background-image: url($assets-path + 'usa-icons/info.svg');
+    background-image: url($assetFilePath + 'usa-icons/info.svg');
 }
 
 @supports ((-webkit-mask: url()) or (mask: url())) {
     .usa-alert--info .usa-alert__body:before {
-        mask-image: url($assets-path + 'usa-icons/info.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/info.svg'), linear-gradient(transparent, transparent);
     }
 }
 
@@ -259,12 +259,12 @@
 }
 
 .usa-alert--emergency .usa-alert__body:before {
-    background-image: url($assets-path + 'usa-icons/error--white.svg');
+    background-image: url($assetFilePath + 'usa-icons/error--white.svg');
 }
 
 @supports ((-webkit-mask: url()) or (mask: url())) {
     .usa-alert--emergency .usa-alert__body:before {
-        mask-image: url($assets-path + 'usa-icons/error.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/error.svg'), linear-gradient(transparent, transparent);
     }
 }
 

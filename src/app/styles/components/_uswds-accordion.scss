@@ -123,7 +123,7 @@
 
     &:after {
         content:"";
-        background-image: url($assets-path + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
+        background-image: url($assetFilePath + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
         background-repeat: no-repeat;
         background-position: right var(--usa-accordion-button-padding-x) center;
         background-size: var(--usa-accordion-button-icon-size);
@@ -144,7 +144,7 @@
         background: none;
         background-image: none;
         background-color: var(--usa-accordion-button-color);
-        mask-image: url($assets-path + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
         -webkit-mask-position: center center;
         mask-position: center center;
         -webkit-mask-repeat: no-repeat;
@@ -153,7 +153,7 @@
         mask-size: var(--usa-accordion-button-icon-size) var(--usa-accordion-button-icon-size);
     }
     .usa-accordion__button[aria-expanded=false]:after {
-        mask-image: url($assets-path + 'usa-icons/add.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/add.svg'), linear-gradient(transparent, transparent);
     }
 }
 
@@ -227,7 +227,7 @@
     }
 
     .usa-accordion__button:before {
-        background-image: url($assets-path + 'usa-icons/remove.svg');
+        background-image: url($assetFilePath + 'usa-icons/remove.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-spacing-105);
@@ -245,7 +245,7 @@
         .usa-accordion__button:before {
             background: none;
             background-color: var(--usa-ButtonText);
-            mask-image: url($assets-path + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
+            mask-image: url($assetFilePath + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
             -webkit-mask-position: center center;
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;
@@ -262,7 +262,7 @@
 
 @media (forced-colors: active) {
     .usa-accordion__button[aria-expanded=false]:before {
-        background-image: url($assets-path + 'usa-icons/add.svg');
+        background-image: url($assetFilePath + 'usa-icons/add.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-spacing-105);

@@ -38,7 +38,7 @@
 
 @media (forced-colors: active) {
     .usa-combo-box--pristine .usa-combo-box__clear-input {
-        background-image: url($assets-path + 'usa-icons/close.svg');
+        background-image: url($assetFilePath + 'usa-icons/close.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-spacing-2);
@@ -53,7 +53,7 @@
         .usa-combo-box--pristine .usa-combo-box__clear-input {
             background: none;
             background-color: currentColor;
-            mask-image: url($assets-path + 'usa-icons/close.svg'), linear-gradient(transparent, transparent);
+            mask-image: url($assetFilePath + 'usa-icons/close.svg'), linear-gradient(transparent, transparent);
             -webkit-mask-position: center center;
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;
@@ -169,14 +169,14 @@ button.usa-combo-box__clear-input[aria-disabled=true] {
 }
 
 .usa-combo-box__clear-input {
-    background-image: url($assets-path + 'usa-icons/close.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'usa-icons/close.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     display: none;
     right: calc(var(--usa-spacing-4) + var(--usa-spacing-2));
 }
 
 .usa-combo-box__toggle-list {
-    background-image: url($assets-path + 'usa-icons/expand_more.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'usa-icons/expand_more.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     background-size: auto var(--usa-spacing-4);
     right: calc(var(--usa-spacing-1) + var(--usa-input-border-width));
@@ -184,7 +184,7 @@ button.usa-combo-box__clear-input[aria-disabled=true] {
 
 @media (forced-colors: active) {
     .usa-combo-box__toggle-list {
-        background-image: url($assets-path + 'usa-icons/expand_more.svg');
+        background-image: url($assetFilePath + 'usa-icons/expand_more.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-spacing-1rem);
@@ -199,7 +199,7 @@ button.usa-combo-box__clear-input[aria-disabled=true] {
         .usa-combo-box__toggle-list {
             background: none;
             background-color: currentColor;
-            mask-image: url($assets-path + 'usa-icons/expand_more.svg'), linear-gradient(transparent, transparent);
+            mask-image: url($assetFilePath + 'usa-icons/expand_more.svg'), linear-gradient(transparent, transparent);
             -webkit-mask-position: center center;
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;

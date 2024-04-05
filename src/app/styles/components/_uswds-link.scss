@@ -59,7 +59,7 @@
 }
 
 .usa-link--external:after {
-    background-image: url($assets-path + 'launch.svg');
+    background-image: url($assetFilePath + 'launch.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: var(--usa-spacing-2);
@@ -78,7 +78,7 @@
     .usa-link--external:after {
         background: none;
         background-color: currentColor;
-        mask-image: url($assets-path + 'launch.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'launch.svg'), linear-gradient(transparent, transparent);
         -webkit-mask-position: center center;
         mask-position: center center;
         -webkit-mask-repeat: no-repeat;
@@ -107,7 +107,7 @@
 }
 
 .usa-link--external.usa-link--alt:after {
-    background-image: url($assets-path + 'launch--white.svg');
+    background-image: url($assetFilePath + 'launch--white.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: var(--usa-spacing-2);
@@ -126,7 +126,7 @@
     .usa-link--external.usa-link--alt:after {
         background: none;
         background-color: currentColor;
-        mask-image: url($assets-path + 'launch.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'launch.svg'), linear-gradient(transparent, transparent);
         -webkit-mask-position: center center;
         mask-position: center center;
         -webkit-mask-repeat: no-repeat;

@@ -3,7 +3,7 @@
     font-size: var(--usa-body-font-size);
     font-family: var(--usa-font-body);
     line-height: var(--usa-line-height-5);
-    background-image:url($assets-path + 'hero.jpg');
+    background-image:url($assetFilePath + 'hero.jpg');
     background-position: center;
     background-size: cover;
     color: var(--usa-white);

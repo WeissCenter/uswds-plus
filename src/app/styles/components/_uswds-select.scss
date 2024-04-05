@@ -3,7 +3,7 @@
 }
 
 .usa-select {
-    background-image: url($assets-path + 'usa-icons/unfold_more.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'usa-icons/unfold_more.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     -webkit-appearance: none;
     appearance: none;

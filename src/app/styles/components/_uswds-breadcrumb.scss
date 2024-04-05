@@ -175,7 +175,7 @@
 
 @media all and (max-width: 29.99em) {
     .usa-breadcrumb__list-item:nth-last-child(2) .usa-breadcrumb__link:before {
-        background-image: url($assets-path + 'usa-icons/arrow_back.svg');
+        background-image: url($assetFilePath + 'usa-icons/arrow_back.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-breadcrumb-icon-height);
@@ -191,7 +191,7 @@
         .usa-breadcrumb__list-item:nth-last-child(2) .usa-breadcrumb__link:before {
             background: none;
             background-color: var(--usa-breadcrumb-separator-color);
-            mask-image: url($assets-path + 'usa-icons/arrow_back.svg'), linear-gradient(transparent, transparent);
+            mask-image: url($assetFilePath + 'usa-icons/arrow_back.svg'), linear-gradient(transparent, transparent);
             -webkit-mask-position: center center;
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;
@@ -237,7 +237,7 @@
     }
 
     .usa-breadcrumb__list-item:not(:last-child):after {
-        background-image: url($assets-path + 'usa-icons/navigate_next.svg');
+        background-image: url($assetFilePath + 'usa-icons/navigate_next.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-breadcrumb-icon-height);
@@ -253,7 +253,7 @@
         .usa-breadcrumb__list-item:not(:last-child):after {
             background: none;
             background-color: var(--usa-breadcrumb-separator-color);
-            mask-image: url($assets-path + 'usa-icons/navigate_next.svg'), linear-gradient(transparent, transparent);
+            mask-image: url($assetFilePath + 'usa-icons/navigate_next.svg'), linear-gradient(transparent, transparent);
             -webkit-mask-position: center center;
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;

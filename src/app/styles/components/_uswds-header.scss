@@ -897,7 +897,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
 }
 
 .usa-nav__primary button[aria-expanded=false] span:after {
-    background-image: url($assets-path + 'usa-icons/add.svg');
+    background-image: url($assetFilePath + 'usa-icons/add.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: var(--usa-spacing-105);
@@ -913,7 +913,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
     .usa-nav__primary button[aria-expanded=false] span:after {
         background: none;
         background-color: var(--usa-ButtonText);
-        mask-image: url($assets-path + 'usa-icons/add.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/add.svg'), linear-gradient(transparent, transparent);
         -webkit-mask-position: center center;
         mask-position: center center;
         -webkit-mask-repeat: no-repeat;
@@ -934,7 +934,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
 
 @media all and (min-width: 64em) {
     .usa-nav__primary button[aria-expanded=false] span:after {
-        background-image: url($assets-path + 'usa-icons/expand_more.svg');
+        background-image: url($assetFilePath + 'usa-icons/expand_more.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-spacing-1rem);
@@ -950,7 +950,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
         .usa-nav__primary button[aria-expanded=false] span:after {
             background: none;
             background-color: var(--usa-ButtonText);
-            mask-image: url($assets-path + 'usa-icons/expand_more.svg'), linear-gradient(transparent, transparent);
+            mask-image: url($assetFilePath + 'usa-icons/expand_more.svg'), linear-gradient(transparent, transparent);
             -webkit-mask-position: center center;
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;
@@ -978,7 +978,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
 }
 
 .usa-nav__primary button[aria-expanded=true] span:after {
-    background-image: url($assets-path + 'usa-icons/remove.svg');
+    background-image: url($assetFilePath + 'usa-icons/remove.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: var(--usa-spacing-105);
@@ -994,7 +994,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
     .usa-nav__primary button[aria-expanded=true] span:after {
         background: none;
         background-color: var(--usa-ButtonText);
-        mask-image: url($assets-path + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
+        mask-image: url($assetFilePath + 'usa-icons/remove.svg'), linear-gradient(transparent, transparent);
         -webkit-mask-position: center center;
         mask-position: center center;
         -webkit-mask-repeat: no-repeat;
@@ -1025,7 +1025,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
 
 @media all and (min-width: 64em) and (min-width: 64em) {
     .usa-nav__primary button[aria-expanded=true] span:after {
-        background-image: url($assets-path + 'usa-icons/expand_less.svg');
+        background-image: url($assetFilePath + 'usa-icons/expand_less.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-spacing-1rem);
@@ -1041,7 +1041,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
         .usa-nav__primary button[aria-expanded=true] span:after {
             background: none;
             background-color: var(--usa-ButtonText);
-            mask-image: url($assets-path + 'usa-icons/expand_less.svg'), linear-gradient(transparent, transparent);
+            mask-image: url($assetFilePath + 'usa-icons/expand_less.svg'), linear-gradient(transparent, transparent);
             -webkit-mask-position: center center;
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;
@@ -1341,7 +1341,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
 
 @media (forced-colors: active) {
     .usa-nav__close:before {
-        background-image: url($assets-path + 'usa-icons/close.svg');
+        background-image: url($assetFilePath + 'usa-icons/close.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: var(--usa-spacing-105);
@@ -1357,7 +1357,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
         .usa-nav__close:before {
             background: none;
             background-color: var(--usa-ButtonText);
-            mask-image: url($assets-path + 'usa-icons/close.svg'), linear-gradient(transparent, transparent);
+            mask-image: url($assetFilePath + 'usa-icons/close.svg'), linear-gradient(transparent, transparent);
             -webkit-mask-position: center center;
             mask-position: center center;
             -webkit-mask-repeat: no-repeat;

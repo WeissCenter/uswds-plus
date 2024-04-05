@@ -162,7 +162,7 @@
 }
 
 .usa-file-input__preview-image.is-loading {
-    background-image: url($assets-path + 'loader.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'loader.svg'), linear-gradient(transparent, transparent);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 2rem
@@ -179,27 +179,27 @@
 }
 
 .usa-file-input__preview-image--pdf {
-    background-image: url($assets-path + 'file-pdf.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'file-pdf.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat
 }
 
 .usa-file-input__preview-image--generic {
-    background-image: url($assets-path + 'file.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'file.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat
 }
 
 .usa-file-input__preview-image--word {
-    background-image: url($assets-path + 'file-word.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'file-word.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat
 }
 
 .usa-file-input__preview-image--excel {
-    background-image: url($assets-path + 'file-excel.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'file-excel.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat
 }
 
 .usa-file-input__preview-image--video {
-    background-image: url($assets-path + 'file-video.svg'), linear-gradient(transparent, transparent);
+    background-image: url($assetFilePath + 'file-video.svg'), linear-gradient(transparent, transparent);
     background-repeat: no-repeat
 }
 

@@ -38,7 +38,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/open-dyslexic/OpenDyslexic-regular.otf') format("otf");
+  src: url($assetFilePath + 'fonts/open-dyslexic/OpenDyslexic-regular.otf') format("otf");
 }
 
 // Font families TODO: get these added to be driven by typography tokens
@@ -48,7 +48,7 @@
   font-style: normal;
   font-weight: 100;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-Thin.woff') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-Thin.woff') format("woff2");
 }
 
 @font-face {
@@ -56,7 +56,7 @@
   font-style: normal;
   font-weight: 200;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-ExtraLight.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-ExtraLight.woff2') format("woff2");
 }
 
 @font-face {
@@ -64,7 +64,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-Light.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-Light.woff2') format("woff2");
 }
 
 @font-face {
@@ -72,7 +72,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-Regular.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-Regular.woff2') format("woff2");
 }
 
 @font-face {
@@ -80,7 +80,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-Medium.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-Medium.woff2') format("woff2");
 }
 
 @font-face {
@@ -88,7 +88,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-SemiBold.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-SemiBold.woff2') format("woff2");
 }
 
 @font-face {
@@ -96,7 +96,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-Bold.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-Bold.woff2') format("woff2");
 }
 
 @font-face {
@@ -104,7 +104,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-ExtraBold.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-ExtraBold.woff2') format("woff2");
 }
 
 @font-face {
@@ -112,7 +112,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-Black.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-Black.woff2') format("woff2");
 }
 
 @font-face {
@@ -120,7 +120,7 @@
   font-style: italic;
   font-weight: 100;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-ThinItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-ThinItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -128,7 +128,7 @@
   font-style: italic;
   font-weight: 200;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-ExtraLightItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-ExtraLightItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -136,7 +136,7 @@
   font-style: italic;
   font-weight: 300;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-LightItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-LightItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -144,7 +144,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-Italic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-Italic.woff2') format("woff2");
 }
 
 @font-face {
@@ -152,7 +152,7 @@
   font-style: italic;
   font-weight: 500;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-MediumItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-MediumItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -160,7 +160,7 @@
   font-style: italic;
   font-weight: 600;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-SemiBoldItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-SemiBoldItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -168,7 +168,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-BoldItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-BoldItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -176,7 +176,7 @@
   font-style: italic;
   font-weight: 800;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-ExtraBoldItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-ExtraBoldItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -184,7 +184,7 @@
   font-style: italic;
   font-weight: 900;
   font-display: fallback;
-  src: url($assets-path + 'fonts/public-sans/PublicSans-BlackItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/public-sans/PublicSans-BlackItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -192,7 +192,7 @@
   font-style: normal;
   font-weight: 100;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-100.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-100.woff2') format("woff2");
 }
 
 @font-face {
@@ -200,7 +200,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-300.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-300.woff2') format("woff2");
 }
 
 @font-face {
@@ -208,7 +208,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-regular.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-regular.woff2') format("woff2");
 }
 
 @font-face {
@@ -216,7 +216,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-500.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-500.woff2') format("woff2");
 }
 
 @font-face {
@@ -224,7 +224,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-700.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-700.woff2') format("woff2");
 }
 
 @font-face {
@@ -232,7 +232,7 @@
   font-style: italic;
   font-weight: 100;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-100italic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-100italic.woff2') format("woff2");
 }
 
 @font-face {
@@ -240,7 +240,7 @@
   font-style: italic;
   font-weight: 300;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-300italic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-300italic.woff2') format("woff2");
 }
 
 @font-face {
@@ -248,7 +248,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-italic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-italic.woff2') format("woff2");
 }
 
 @font-face {
@@ -256,7 +256,7 @@
   font-style: italic;
   font-weight: 500;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-500italic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-500italic.woff2') format("woff2");
 }
 
 @font-face {
@@ -264,7 +264,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: fallback;
-  src: url($assets-path + 'fonts/roboto-mono/roboto-mono-v5-latin-700italic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/roboto-mono/roboto-mono-v5-latin-700italic.woff2') format("woff2");
 }
 
 @font-face {
@@ -272,7 +272,7 @@
   font-style: normal;
   font-weight: 200;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-extralight-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-extralight-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -280,7 +280,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-light-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-light-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -288,7 +288,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -296,7 +296,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-semibold-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-semibold-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -304,7 +304,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -312,7 +312,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-black-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-black-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -320,7 +320,7 @@
   font-style: italic;
   font-weight: 200;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-extralightitalic-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-extralightitalic-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -328,7 +328,7 @@
   font-style: italic;
   font-weight: 300;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-lightitalic-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-lightitalic-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -336,7 +336,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-italic-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-italic-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -344,7 +344,7 @@
   font-style: italic;
   font-weight: 600;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -352,7 +352,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -360,7 +360,7 @@
   font-style: italic;
   font-weight: 900;
   font-display: fallback;
-  src: url($assets-path + 'fonts/source-sans-pro/sourcesanspro-blackitalic-webfont.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/source-sans-pro/sourcesanspro-blackitalic-webfont.woff2') format("woff2");
 }
 
 @font-face {
@@ -368,7 +368,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: fallback;
-  src: url($assets-path + 'fonts/merriweather/Latin-Merriweather-Light.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/merriweather/Latin-Merriweather-Light.woff2') format("woff2");
 }
 
 @font-face {
@@ -376,7 +376,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/merriweather/Latin-Merriweather-Regular.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/merriweather/Latin-Merriweather-Regular.woff2') format("woff2");
 }
 
 @font-face {
@@ -384,7 +384,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: fallback;
-  src: url($assets-path + 'fonts/merriweather/Latin-Merriweather-Bold.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/merriweather/Latin-Merriweather-Bold.woff2') format("woff2");
 }
 
 @font-face {
@@ -392,7 +392,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: fallback;
-  src: url($assets-path + 'fonts/merriweather/Latin-Merriweather-Black.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/merriweather/Latin-Merriweather-Black.woff2') format("woff2");
 }
 
 @font-face {
@@ -400,7 +400,7 @@
   font-style: italic;
   font-weight: 300;
   font-display: fallback;
-  src: url($assets-path + 'fonts/merriweather/Latin-Merriweather-LightItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/merriweather/Latin-Merriweather-LightItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -408,7 +408,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: fallback;
-  src: url($assets-path + 'fonts/merriweather/Latin-Merriweather-Italic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/merriweather/Latin-Merriweather-Italic.woff2') format("woff2");
 }
 
 @font-face {
@@ -416,7 +416,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: fallback;
-  src: url($assets-path + 'fonts/merriweather/Latin-Merriweather-BoldItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/merriweather/Latin-Merriweather-BoldItalic.woff2') format("woff2");
 }
 
 @font-face {
@@ -424,5 +424,5 @@
   font-style: italic;
   font-weight: 900;
   font-display: fallback;
-  src: url($assets-path + 'fonts/merriweather/Latin-Merriweather-BlackItalic.woff2') format("woff2");
+  src: url($assetFilePath + 'fonts/merriweather/Latin-Merriweather-BlackItalic.woff2') format("woff2");
 }
