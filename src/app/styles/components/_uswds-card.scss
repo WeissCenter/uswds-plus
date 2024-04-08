@@ -143,8 +143,8 @@
 }
 
 .usa-card__img {
-    border-top-right-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
-    border-top-left-radius: calc(var(card-border-radius) - var(--usa-card-border-width));
+    border-top-right-radius: calc(var(--usa-card-border-radius) - var(--usa-card-border-width));
+    border-top-left-radius: calc(var(--usa-card-border-radius) - var(--usa-card-border-width));
     background-color: var(--usa-base-lightest);
     position: relative;
     overflow: hidden;

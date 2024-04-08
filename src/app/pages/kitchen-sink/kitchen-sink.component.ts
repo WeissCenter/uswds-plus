@@ -13,6 +13,7 @@ export class KitchenSinkComponent {
     accordion.on(document.body);
     password.on(document.body);
     table.on(document.body);
+    this.setTheme(this.currentTheme);
   }
 
   lowVisionActive = false;
@@ -48,4 +49,14 @@ export class KitchenSinkComponent {
       );
     }
   }
+
+  currentTheme = 'monokai';
+
+  setTheme(theme: string) {
+    this.currentTheme = theme;
+    document.documentElement.setAttribute('data-a11y-color-theme', theme);
+  }
+
+
 }
+

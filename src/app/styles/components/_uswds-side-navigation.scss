@@ -71,6 +71,7 @@
     border-bottom: var(--usa-sidenav-border-width) solid var(--usa-sidenav-border-color);
     text-align: var(--usa-sidenav-item-text-align);
     border-radius: var(--usa-sidenav-border-radius);
+    overflow:hidden;
 }
 
 .usa-sidenav>li {
@@ -89,12 +90,13 @@
     background-color: var(--usa-sidenav-item-background);
     margin-bottom: var(--usa-sidenav-item-margin-bottom);
     margin-top: var(--usa-sidenav-item-margin-top);
+    overflow:hidden;
     &:first-child {
         border-top:  var(--usa-sidenav-border-width) solid var(--usa-sidenav-border-color);
-        border-radius: var(--usa-sidenav-border-radius) var(--usa-sidenav-border-radius) 0 0;
+        border-radius:calc( var(--usa-sidenav-border-radius) + var(--usa-sidenav-border-width)) calc( var(--usa-sidenav-border-radius) + var(--usa-sidenav-border-width)) 0 0;
     }
     &:last-child {
-        border-radius: 0 0 var(--usa-sidenav-border-radius) var(--usa-sidenav-border-radius);
+        border-radius: 0 0 calc( var(--usa-sidenav-border-radius) + var(--usa-sidenav-border-width)) calc( var(--usa-sidenav-border-radius) + var(--usa-sidenav-border-width));
     }
 }
 
