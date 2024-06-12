@@ -1,4 +1,4 @@
-import { ThemeTokens } from '../../../../../interfaces/tokens';
+import { ThemeTokens } from '../../../../../interfaces/token-interface';
 export const key = 'h3-font';
 export const a11y = null;
 const tokens: ThemeTokens = {
@@ -36,7 +36,7 @@ const tokens: ThemeTokens = {
   },
   haystack: {
     'size': {
-      value: '{font-size.xl}',
+      value: '{font-size.lg}',
       type: 'fontSizes',
       description: 'H3 font size',
     },
@@ -46,7 +46,7 @@ const tokens: ThemeTokens = {
       description: 'H3 font family',
     },
     'weight': {
-      value: '{font-weight.bold}',
+      value: '{font-weight.normal}',
       type: 'fontWeights',
       description: 'H3 font weight',
     },
@@ -61,7 +61,7 @@ const tokens: ThemeTokens = {
       description: 'H3 letter spacing',
     },
     'paragraph-spacing': {
-      value: '{spacing.3}',
+      value: '{spacing.1}',
       type: 'spacing',
       description: 'Spacing between <h3> and other elements with .usa-prose class',
     },
@@ -93,7 +93,7 @@ const tokens: ThemeTokens = {
       description: 'H3 letter spacing',
     },
     'paragraph-spacing': {
-      value: '{spacing.3}',
+      value: '{spacing.1}',
       type: 'spacing',
       description: 'Spacing between <h3> and other elements with .usa-prose class',
     },

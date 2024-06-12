@@ -38,7 +38,7 @@ var tokens = {
     },
     haystack: {
         'size': {
-            value: '{font-size.xl}',
+            value: '{font-size.lg}',
             type: 'fontSizes',
             description: 'H3 font size',
         },
@@ -48,7 +48,7 @@ var tokens = {
             description: 'H3 font family',
         },
         'weight': {
-            value: '{font-weight.bold}',
+            value: '{font-weight.normal}',
             type: 'fontWeights',
             description: 'H3 font weight',
         },
@@ -63,7 +63,7 @@ var tokens = {
             description: 'H3 letter spacing',
         },
         'paragraph-spacing': {
-            value: '{spacing.3}',
+            value: '{spacing.1}',
             type: 'spacing',
             description: 'Spacing between <h3> and other elements with .usa-prose class',
         },
@@ -95,7 +95,7 @@ var tokens = {
             description: 'H3 letter spacing',
         },
         'paragraph-spacing': {
-            value: '{spacing.3}',
+            value: '{spacing.1}',
             type: 'spacing',
             description: 'Spacing between <h3> and other elements with .usa-prose class',
         },

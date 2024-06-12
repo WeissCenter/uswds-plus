@@ -4,7 +4,7 @@ import { map, switchMap } from 'rxjs/operators';
 import { aggregatedTokens } from '../aggregated-tokens';
 import { TokenToCssService } from './token-to-css.service';
 import { ToolboxService } from './toolbox.service';
-import { ThemeTokens } from '../interfaces/tokens';
+import { ThemeTokens } from '../interfaces/token-interface';
 
 @Injectable({
   providedIn: 'root',

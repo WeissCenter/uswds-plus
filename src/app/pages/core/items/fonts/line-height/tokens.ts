@@ -1,4 +1,4 @@
-import { ThemeTokens } from '../../../../../interfaces/tokens';
+import { ThemeTokens } from '../../../../../interfaces/token-interface';
 export const key = 'line-height';
 
 const tokens: ThemeTokens = {

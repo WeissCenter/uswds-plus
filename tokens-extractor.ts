@@ -1,5 +1,5 @@
 // Import the ThemeTokens interface for type checking
-import { ThemeTokens } from './src/app/interfaces/tokens';
+import { ThemeTokens } from './src/app/interfaces/token-interface';
 import { convertTokensToCssVars } from './src/app/utils/token-to-css-var.util';
 
 // Import token files and their keys
@@ -46,6 +46,9 @@ import spacing, { key as spacingKey } from './src/app/pages/core/items/spacing/t
 import focus, { key as focusKey } from './src/app/pages/core/items/focus/tokens';
 import breadcrumb, { key as breadcrumbKey } from './src/app/pages/components/items/breadcrumb/tokens';
 import modal, { key as modalKey } from './src/app/pages/components/items/modal/tokens';
+import stepIndicator, { key as stepIndicatorKey } from './src/app/pages/components/items/step-indicator/tokens';
+import link, { key as linkKey } from './src/app/pages/core/items/links/tokens';
+import checkbox, { key as checkboxKey } from './src/app/pages/components/items/checkbox/tokens';
 
 function aggregateTokens(
   ...tokenSets: { tokens: ThemeTokens; key: string }[]
@@ -108,7 +111,10 @@ const aggregatedTokens = aggregateTokens(
   { tokens: spacing, key: spacingKey },
   { tokens: focus, key: focusKey },
   { tokens: breadcrumb, key: breadcrumbKey },
-  { tokens: modal, key: modalKey }
+  { tokens: modal, key: modalKey },
+  { tokens: stepIndicator, key: stepIndicatorKey },
+  { tokens: link, key: linkKey },
+  { tokens: checkbox, key: checkboxKey },
   // Add more as arguments...
 );
 
@@ -120,7 +126,7 @@ function writeTokensToFile(
 ): void {
   // Adjust the import path as necessary
   const content =
-    `import { ThemeTokens } from './interfaces/tokens';\n\n` +
+    `import { ThemeTokens } from './interfaces/token-interface';\n\n` +
     `export const aggregatedTokens: { [theme: string]: ThemeTokens } = ${JSON.stringify(
       tokens,
       null,

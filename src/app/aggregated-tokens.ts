@@ -1,4 +1,4 @@
-import { ThemeTokens } from './interfaces/tokens';
+import { ThemeTokens } from './interfaces/token-interface';
 
 export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
   "base": {
@@ -470,6 +470,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "button": {
+      "text-transform": {
+        "value": "none",
+        "type": "textTransform",
+        "description": "Button text transform"
+      },
       "color": {
         "value": "{white}",
         "type": "color",
@@ -1165,11 +1170,6 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "sizing",
         "description": "Table border width"
       },
-      "background-color": {
-        "value": "{body.background}",
-        "type": "color",
-        "description": "Table background color"
-      },
       "cell-compact-padding-x": {
         "value": "{spacing.1}",
         "type": "sizing",
@@ -1339,6 +1339,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "value": "{line-height.3}",
         "type": "lineHeights",
         "description": "Table caption line height"
+      },
+      "background-color": {
+        "value": "{body.background}",
+        "type": "color",
+        "description": "Table background color"
       }
     },
     "sidenav": {
@@ -1564,6 +1569,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "input": {
+      "icon-size": {
+        "value": "{spacing.3}",
+        "type": "sizing",
+        "description": "Icon size for input prefix and suffix items"
+      },
       "font-family": {
         "value": "{font.ui}",
         "type": "fontFamilies",
@@ -1594,10 +1604,20 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "sizes",
         "description": "Height"
       },
-      "select-size": {
+      "select-icon": {
+        "value": "url(/assets/usa-icons/unfold_more.svg)",
+        "type": "urls",
+        "description": "Select icon"
+      },
+      "select-icon-size": {
         "value": "{spacing.205}",
         "type": "sizes",
         "description": "Select size"
+      },
+      "select-icon-color": {
+        "value": "{base.light}",
+        "type": "colors",
+        "description": "Select icon color"
       },
       "max-width": {
         "value": "{spacing.mobile-lg}",
@@ -1723,11 +1743,6 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "value": "{spacing.2}",
         "type": "spacing",
         "description": "Label margin top"
-      },
-      "select-caret-color": {
-        "value": "{input.color}",
-        "type": "colors",
-        "description": "Select caret color"
       }
     },
     "base": {
@@ -2755,6 +2770,347 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "colors",
         "description": "Modal overlay background color"
       }
+    },
+    "step-indicator": {
+      "background-color": {
+        "value": "{body.background}",
+        "type": "color",
+        "description": "Step indicator background color"
+      },
+      "counter-gap": {
+        "value": "{spacing.1}",
+        "type": "spacing",
+        "description": "Step indicator counter gap"
+      },
+      "counter-border-width": {
+        "value": "{spacing.05}",
+        "type": "spacing",
+        "description": "Step indicator counter border width"
+      },
+      "font-family": {
+        "value": "{font.ui}",
+        "type": "font",
+        "description": "Step indicator font family"
+      },
+      "heading-color": {
+        "value": "{text.color}",
+        "type": "color",
+        "description": "Step indicator heading color"
+      },
+      "heading-font-family": {
+        "value": "{font.ui}",
+        "type": "font",
+        "description": "Step indicator heading font family"
+      },
+      "heading-font-size": {
+        "value": "{font.size.lg}",
+        "type": "font",
+        "description": "Step indicator heading font size"
+      },
+      "heading-font-size-small": {
+        "value": "{font.size.md}",
+        "type": "font",
+        "description": "Step indicator heading font size small"
+      },
+      "label-font-size": {
+        "value": "{font.size.sm}",
+        "type": "font",
+        "description": "Step indicator label font size"
+      },
+      "label-line-height": {
+        "value": "{line-height.2}",
+        "type": "line-height",
+        "description": "Step indicator label line height"
+      },
+      "label-font-weight": {
+        "value": "{font.weight.normal}",
+        "type": "font",
+        "description": "Step indicator label font weight"
+      },
+      "label-font-weight-current": {
+        "value": "{font.weight.bold}",
+        "type": "font",
+        "description": "Step indicator label font weight current"
+      },
+      "min-width": {
+        "value": "{spacing.tablet}",
+        "type": "spacing",
+        "description": "Step indicator min width"
+      },
+      "segment-color-pending": {
+        "value": "{base.lighter}",
+        "type": "color",
+        "description": "Step indicator segment color pending"
+      },
+      "segment-color-complete": {
+        "value": "{accent-cool.dark}",
+        "type": "color",
+        "description": "Step indicator segment color complete"
+      },
+      "segment-color-current": {
+        "value": "{secondary.base}",
+        "type": "color",
+        "description": "Step indicator segment color current"
+      },
+      "segment-gap": {
+        "value": "{spacing.0}",
+        "type": "spacing",
+        "description": "Step indicator segment gap"
+      },
+      "segment-height": {
+        "value": "{spacing.1}",
+        "type": "spacing",
+        "description": "Step indicator segment height"
+      },
+      "segment-max-width": {
+        "value": "{spacing.card-lg}",
+        "type": "spacing",
+        "description": "Step indicator segment max width"
+      },
+      "text-pending-color": {
+        "value": "{base.dark}",
+        "type": "color",
+        "description": "Step indicator text pending color"
+      },
+      "label-margin-top": {
+        "value": "{spacing.1}",
+        "type": "spacing",
+        "description": "Step indicator label margin top"
+      },
+      "margin-bottom": {
+        "value": "{spacing.4}",
+        "type": "spacing",
+        "description": "Step indicator margin bottom"
+      },
+      "header-margin-top": {
+        "value": "{spacing.4}",
+        "type": "spacing",
+        "description": "Step indicator header margin top"
+      },
+      "header-margin-top-sm": {
+        "value": "{spacing.2}",
+        "type": "spacing",
+        "description": "Step indicator header margin top small"
+      },
+      "segment-height-mobile": {
+        "value": "{spacing.1}",
+        "type": "spacing",
+        "description": "Step indicator segment height mobile"
+      },
+      "counter-size": {
+        "value": "{spacing.5}",
+        "type": "spacing",
+        "description": "Step indicator counter size"
+      },
+      "counter-size-sm": {
+        "value": "{spacing.3}",
+        "type": "spacing",
+        "description": "Step indicator counter size small"
+      }
+    },
+    "link": {
+      "reverse-active-color": {
+        "value": "{white}",
+        "type": "color",
+        "description": "Link reverse active color"
+      },
+      "visited-color": {
+        "value": "{violet.vivid.70}",
+        "type": "color",
+        "description": "Link visited color"
+      },
+      "reverse-hover-color": {
+        "value": "{base.lightest}",
+        "type": "color",
+        "description": "Link reverse hover color"
+      },
+      "reverse-color": {
+        "value": "{base.lighter}",
+        "type": "color",
+        "description": "Link reverse color"
+      },
+      "active-color": {
+        "value": "{primary.darker}",
+        "type": "color",
+        "description": "Link active color"
+      },
+      "hover-color": {
+        "value": "{primary.dark}",
+        "type": "color",
+        "description": "Link hover color"
+      },
+      "color": {
+        "value": "{primary.base}",
+        "type": "color",
+        "description": "Link color"
+      },
+      "focus-offset": {
+        "value": "{spacing.0}",
+        "type": "spacing",
+        "description": "Link focus offset"
+      }
+    },
+    "checkbox": {
+      "size": {
+        "value": "{spacing.205}",
+        "type": "size",
+        "description": "Size of checkbox itself"
+      },
+      "vertical-offset": {
+        "value": "{spacing.2px}",
+        "type": "size",
+        "description": "Checkbox vertical offset"
+      },
+      "gap": {
+        "value": "{spacing.1}",
+        "type": "size",
+        "description": "Gap between checkbox and label"
+      },
+      "margin-top": {
+        "value": "{spacing.05}",
+        "type": "size",
+        "description": "Margin top of checkbox"
+      },
+      "background-color": {
+        "value": "{input.background-color}",
+        "type": "color",
+        "description": "Checkbox background color"
+      },
+      "label-color": {
+        "value": "{ink}",
+        "type": "color",
+        "description": "Checkbox label color"
+      },
+      "border-color": {
+        "value": "{border.color.base}",
+        "type": "color",
+        "description": "Checkbox border color"
+      },
+      "border-width": {
+        "value": "{input.border-width}",
+        "type": "size",
+        "description": "Checkbox border width"
+      },
+      "border-radius": {
+        "value": "{input.border-radius}",
+        "type": "size",
+        "description": "Checkbox border radius"
+      },
+      "box-shadow": {
+        "value": "none",
+        "type": "shadow",
+        "description": "Checkbox box shadow"
+      },
+      "checked-background-color": {
+        "value": "{primary}",
+        "type": "color",
+        "description": "Checkbox checked background color"
+      },
+      "checked-border-color": {
+        "value": "{primary}",
+        "type": "color",
+        "description": "Checkbox checked border color"
+      },
+      "checked-box-shadow": {
+        "value": "none",
+        "type": "shadow",
+        "description": "Checkbox checked box shadow"
+      },
+      "focus-border-color": {
+        "value": "{input.focus-border-color}",
+        "type": "color",
+        "description": "Checkbox focus border color"
+      },
+      "focus-border-width": {
+        "value": "{input.focus-border-width}",
+        "type": "size",
+        "description": "Checkbox focus border width"
+      },
+      "focus-box-shadow": {
+        "value": "{input.focus-box-shadow}",
+        "type": "shadow",
+        "description": "Checkbox focus box shadow"
+      },
+      "disabled-background-color": {
+        "value": "{input.disabled-background-color}",
+        "type": "color",
+        "description": "Checkbox disabled background color"
+      },
+      "disabled-border-color": {
+        "value": "{input.disabled-border-color}",
+        "type": "color",
+        "description": "Checkbox disabled border color"
+      },
+      "disabled-box-shadow": {
+        "value": "none",
+        "type": "shadow",
+        "description": "Checkbox disabled box shadow"
+      },
+      "disabled-color": {
+        "value": "{input.disabled-color}",
+        "type": "color",
+        "description": "Checkbox disabled color"
+      },
+      "tile-padding-y": {
+        "value": "{spacing.2}",
+        "type": "size",
+        "description": "Checkbox tile padding y"
+      },
+      "tile-padding-x": {
+        "value": "{spacing.2}",
+        "type": "size",
+        "description": "Checkbox tile padding x"
+      },
+      "tile-background-color": {
+        "value": "{checkbox.background-color}",
+        "type": "color",
+        "description": "Checkbox tile background color"
+      },
+      "tile-label-color": {
+        "value": "{checkbox.label-color}",
+        "type": "color",
+        "description": "Checkbox tile label color"
+      },
+      "tile-border-radius": {
+        "value": "{input.border-radius}",
+        "type": "size",
+        "description": "Checkbox tile border radius"
+      },
+      "tile-border-color": {
+        "value": "{checkbox.border-color}",
+        "type": "color",
+        "description": "Checkbox tile border color"
+      },
+      "tile-border-width": {
+        "value": "{checkbox.border-width}",
+        "type": "size",
+        "description": "Checkbox tile border width"
+      },
+      "tile-checked-background-color": {
+        "value": "{primary.lightest}",
+        "type": "color",
+        "description": "Checkbox tile checked background color"
+      },
+      "tile-checked-border-color": {
+        "value": "{checkbox.checked-border-color}",
+        "type": "color",
+        "description": "Checkbox tile checked border color"
+      },
+      "check-icon": {
+        "value": "url(/assets/usa-icons/check.svg)",
+        "type": "image",
+        "description": "Checkbox check icon"
+      },
+      "check-icon-color": {
+        "value": "{white}",
+        "type": "color",
+        "description": "Checkbox check icon color"
+      },
+      "check-icon-size": {
+        "value": "{spacing.2}",
+        "type": "size",
+        "description": "Checkbox check icon size"
+      }
     }
   },
   "haystack": {
@@ -2903,6 +3259,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "button": {
+      "text-transform": {
+        "value": "none",
+        "type": "textTransform",
+        "description": "Button text transform"
+      },
       "color": {
         "value": "{base.darkest}",
         "type": "color",
@@ -3024,7 +3385,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Button margin right"
       },
       "icon-size": {
-        "value": "{spacing.205}",
+        "value": "{spacing.2}",
         "type": "sizing",
         "description": "Button icon size"
       },
@@ -3049,32 +3410,32 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Button outline active background"
       },
       "outline-color": {
-        "value": "{primary}",
+        "value": "{primary.light}",
         "type": "color",
         "description": "Button outline color"
       },
       "outline-hover-color": {
-        "value": "{primary.dark}",
+        "value": "{primary}",
         "type": "color",
         "description": "Button outline hover color"
       },
       "outline-active-color": {
-        "value": "{primary.darker}",
+        "value": "{primary.dark}",
         "type": "color",
         "description": "Button outline active color"
       },
       "outline-border-color": {
-        "value": "{primary}",
+        "value": "{primary.light}",
         "type": "color",
         "description": "Button outline border color"
       },
       "outline-border-hover-color": {
-        "value": "{primary.dark}",
+        "value": "{primary}",
         "type": "color",
         "description": "Button outline border hover color"
       },
       "outline-border-active-color": {
-        "value": "{primary.darker}",
+        "value": "{primary.dark}",
         "type": "color",
         "description": "Button outline border active color"
       }
@@ -3116,28 +3477,28 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "responsiveFont": true
       },
       "lg": {
-        "value": "20px",
+        "value": "18px",
         "type": "fontSizes",
         "description": "Large font size",
         "a11y": "--a11y-font-size-modifier",
         "responsiveFont": true
       },
       "xl": {
-        "value": "24px",
+        "value": "22px",
         "type": "fontSizes",
         "description": "Extra large font size",
         "a11y": "--a11y-font-size-modifier",
         "responsiveFont": true
       },
       "2xl": {
-        "value": "32px",
+        "value": "28px",
         "type": "fontSizes",
         "description": "Second largest font size",
         "a11y": "--a11y-font-size-modifier",
         "responsiveFont": true
       },
       "3xl": {
-        "value": "44px",
+        "value": "40px",
         "type": "fontSizes",
         "description": "Largest font size",
         "a11y": "--a11y-font-size-modifier",
@@ -3235,12 +3596,12 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Body font family"
       },
       "weight": {
-        "value": "{font-weight.normal}",
+        "value": "{font-weight.light}",
         "type": "fontWeights",
         "description": "Body font weight"
       },
       "line-height": {
-        "value": "{line-height.5}",
+        "value": "{line-height.4}",
         "type": "lineHeights",
         "description": "Body line height"
       },
@@ -3250,19 +3611,19 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Body letter spacing"
       },
       "paragraph-spacing": {
-        "value": "{spacing.2}",
+        "value": "{spacing.105}",
         "type": "spacing",
         "description": "Spacing between <p> elements with .usa-prose class"
       },
       "list-spacing": {
-        "value": "{spacing.1}",
+        "value": "{spacing.105}",
         "type": "spacing",
         "description": "Spacing between <ul> and <ol> child elements with .usa-prose class"
       }
     },
     "h1-font": {
       "size": {
-        "value": "{font-size.xl}",
+        "value": "{font-size.2xl}",
         "type": "fontSizes",
         "description": "H1 font size"
       },
@@ -3272,7 +3633,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H1 font family"
       },
       "weight": {
-        "value": "{font-weight.thin}",
+        "value": "{font-weight.normal}",
         "type": "fontWeights",
         "description": "H1 font weight"
       },
@@ -3287,14 +3648,14 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H1 letter spacing"
       },
       "paragraph-spacing": {
-        "value": "{spacing.3}",
+        "value": "{spacing.105}",
         "type": "spacing",
         "description": "Spacing between <h1> and other elements with .usa-prose class"
       }
     },
     "h2-font": {
       "size": {
-        "value": "{font-size.2xl}",
+        "value": "{font-size.xl}",
         "type": "fontSizes",
         "description": "H2 font size"
       },
@@ -3304,7 +3665,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H2 font family"
       },
       "weight": {
-        "value": "{font-weight.bold}",
+        "value": "{font-weight.normal}",
         "type": "fontWeights",
         "description": "H2 font weight"
       },
@@ -3319,14 +3680,14 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H2 letter spacing"
       },
       "paragraph-spacing": {
-        "value": "{spacing.3}",
+        "value": "{spacing.1}",
         "type": "spacing",
         "description": "Spacing between <h2> and other elements with .usa-prose class"
       }
     },
     "h3-font": {
       "size": {
-        "value": "{font-size.xl}",
+        "value": "{font-size.lg}",
         "type": "fontSizes",
         "description": "H3 font size"
       },
@@ -3336,7 +3697,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H3 font family"
       },
       "weight": {
-        "value": "{font-weight.bold}",
+        "value": "{font-weight.normal}",
         "type": "fontWeights",
         "description": "H3 font weight"
       },
@@ -3351,7 +3712,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H3 letter spacing"
       },
       "paragraph-spacing": {
-        "value": "{spacing.3}",
+        "value": "{spacing.1}",
         "type": "spacing",
         "description": "Spacing between <h3> and other elements with .usa-prose class"
       }
@@ -3368,7 +3729,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H4 font family"
       },
       "weight": {
-        "value": "{font-weight.bold}",
+        "value": "{font-weight.normal}",
         "type": "fontWeights",
         "description": "H4 font weight"
       },
@@ -3383,7 +3744,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H4 letter spacing"
       },
       "paragraph-spacing": {
-        "value": "{spacing.3}",
+        "value": "{spacing.1}",
         "type": "spacing",
         "description": "Spacing between <h4> and other elements with .usa-prose class"
       }
@@ -3576,32 +3937,32 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table cell padding x"
       },
       "cell-padding-y": {
-        "value": "{spacing.05}",
+        "value": "{spacing.1}",
         "type": "sizing",
         "description": "Table cell padding y"
       },
       "unsorted-icon-hover-color": {
-        "value": "{base.dark}",
+        "value": "{ink}",
         "type": "color",
         "description": "Table unsorted icon hover color"
       },
       "unsorted-icon-color": {
-        "value": "{base}",
+        "value": "{base.light}",
         "type": "color",
         "description": "Table unsorted icon color"
       },
       "sorted-stripe-background-color": {
-        "value": "{primary.light}",
+        "value": "{color.mint-cool.vivid.80}",
         "type": "color",
         "description": "Table sorted stripe background color"
       },
       "sorted-background-color": {
-        "value": "{primary}",
+        "value": "{color.mint-cool.90}",
         "type": "color",
         "description": "Table sorted background color"
       },
       "sorted-header-background-color": {
-        "value": "{primary.light}",
+        "value": "{color.mint-cool.vivid.80}",
         "type": "color",
         "description": "Table sorted header background color"
       },
@@ -3611,12 +3972,12 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table text hover color"
       },
       "stripe-background-color": {
-        "value": "{black}",
+        "value": "{base.darkest}",
         "type": "color",
         "description": "Table stripe background color"
       },
       "header-background-color": {
-        "value": "{black}",
+        "value": "{base.darkest}",
         "type": "color",
         "description": "Table header background color"
       },
@@ -3626,7 +3987,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table border color"
       },
       "sorted-icon-color": {
-        "value": "{table.text-color}",
+        "value": "{color.mint-cool.vivid.20}",
         "type": "color",
         "description": "Table sorted icon color"
       },
@@ -3646,7 +4007,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table stripe text color"
       },
       "header-text-color": {
-        "value": "{white}",
+        "value": "{ink}",
         "type": "color",
         "description": "Table header text color"
       },
@@ -3656,7 +4017,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table sorted text color"
       },
       "font-size": {
-        "value": "{font-size.sm}",
+        "value": "{font-size.xs}",
         "type": "fontSizes",
         "description": "Table font size"
       },
@@ -3666,7 +4027,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table font family"
       },
       "line-height": {
-        "value": "{line-height.2}",
+        "value": "{line-height.3}",
         "type": "lineHeights",
         "description": "Table line height"
       },
@@ -3676,7 +4037,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table font weight"
       },
       "header-font-size": {
-        "value": "{font-size.sm}",
+        "value": "{font-size.3xs}",
         "type": "fontSizes",
         "description": "Table header font size"
       },
@@ -3686,7 +4047,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table header font family"
       },
       "header-font-weight": {
-        "value": "{font-weight.semibold}",
+        "value": "{font-weight.normal}",
         "type": "fontWeights",
         "description": "Table header font weight"
       },
@@ -3696,7 +4057,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Table header line height"
       },
       "margin-y": {
-        "value": "{spacing.205}",
+        "value": "{spacing.05}",
         "type": "sizing",
         "description": "Table margin y"
       },
@@ -3729,6 +4090,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "value": "{line-height.3}",
         "type": "lineHeights",
         "description": "Table caption line height"
+      },
+      "background-color": {
+        "value": "{black}",
+        "type": "color",
+        "description": "Table background color"
       }
     },
     "sidenav": {
@@ -3952,6 +4318,608 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "spacing",
         "description": "Side navigation child padding left multiplier"
       }
+    },
+    "input": {
+      "icon-size": {
+        "value": "{spacing.205}",
+        "type": "sizing",
+        "description": "Icon size for input prefix and suffix items"
+      },
+      "font-family": {
+        "value": "{font.sans}",
+        "type": "fontFamilies",
+        "description": "Font family"
+      },
+      "font-size": {
+        "value": "{body-font.size}",
+        "type": "fontSizes",
+        "description": "Font size"
+      },
+      "font-weight": {
+        "value": "{body-font.weight}",
+        "type": "fontWeights",
+        "description": "Font weight"
+      },
+      "line-height": {
+        "value": "{line-height.4}",
+        "type": "lineHeights",
+        "description": "Line height"
+      },
+      "letter-spacing": {
+        "value": "{body-font.letter-spacing}",
+        "type": "letterSpacing",
+        "description": "Letter spacing"
+      },
+      "height": {
+        "value": "{spacing.5}",
+        "type": "sizes",
+        "description": "Height"
+      },
+      "select-icon": {
+        "value": "url(/assets/usa-icons/unfold_more.svg)",
+        "type": "urls",
+        "description": "Select icon"
+      },
+      "select-icon-size": {
+        "value": "{spacing.205}",
+        "type": "sizes",
+        "description": "Select size"
+      },
+      "select-icon-color": {
+        "value": "{base.light}",
+        "type": "colors",
+        "description": "Select icon color"
+      },
+      "max-width": {
+        "value": "{spacing.mobile-lg}",
+        "type": "sizes",
+        "description": "Max width"
+      },
+      "margin-top": {
+        "value": "{spacing.0}",
+        "type": "spacing",
+        "description": "Margin top"
+      },
+      "padding-x": {
+        "value": "{spacing.1}",
+        "type": "spacing",
+        "description": "Padding x"
+      },
+      "padding-y": {
+        "value": "{spacing.05}",
+        "type": "spacing",
+        "description": "Padding y"
+      },
+      "large-height": {
+        "value": "{spacing.5}",
+        "type": "spacing",
+        "description": "Large height"
+      },
+      "border-width": {
+        "value": "{border-width.0}",
+        "type": "borderWidths",
+        "description": "Border width"
+      },
+      "border-color": {
+        "value": "{black}",
+        "type": "colors",
+        "description": "Border color"
+      },
+      "border-color-hover": {
+        "value": "{ink}",
+        "type": "colors",
+        "description": "Border color hover"
+      },
+      "color": {
+        "value": "{ink}",
+        "type": "colors",
+        "description": "Color"
+      },
+      "placeholder-color": {
+        "value": "{base}",
+        "type": "colors",
+        "description": "Placeholder color"
+      },
+      "background-color": {
+        "value": "{base.darkest}",
+        "type": "colors",
+        "description": "Background color"
+      },
+      "border-radius": {
+        "value": "{border-radius.md}",
+        "type": "borderRadius",
+        "description": "Border radius"
+      },
+      "search-min-width": {
+        "value": "27ch",
+        "type": "sizes",
+        "description": "Search min width"
+      },
+      "disabled-border-color": {
+        "value": "{disabled.light}",
+        "type": "colors",
+        "description": "Disabled border color"
+      },
+      "disabled-border-color-hover": {
+        "value": "{input.disabled-border-color}",
+        "type": "colors",
+        "description": "Disabled border color hover"
+      },
+      "disabled-color": {
+        "value": "{disabled.light}",
+        "type": "colors",
+        "description": "Disabled color"
+      },
+      "disabled-background-color": {
+        "value": "{disabled.dark}",
+        "type": "colors",
+        "description": "Disabled background color"
+      },
+      "label-font-size": {
+        "value": "{font.size.sm}",
+        "type": "fontSizes",
+        "description": "Label font size"
+      },
+      "label-font-family": {
+        "value": "{body-font.family}",
+        "type": "fontFamilies",
+        "description": "Label font family"
+      },
+      "label-font-weight": {
+        "value": "{body-font.weight}",
+        "type": "fontWeights",
+        "description": "Label font weight"
+      },
+      "label-color": {
+        "value": "{ink}",
+        "type": "colors",
+        "description": "Label color"
+      },
+      "label-line-height": {
+        "value": "{body-font.line-height}",
+        "type": "lineHeights",
+        "description": "Label line height"
+      },
+      "label-letter-spacing": {
+        "value": "{body-font.letter-spacing}",
+        "type": "letterSpacing",
+        "description": "Label letter spacing"
+      },
+      "label-margin-bottom": {
+        "value": "{spacing.05}",
+        "type": "spacing",
+        "description": "Label margin bottom"
+      },
+      "label-margin-top": {
+        "value": "{spacing.0}",
+        "type": "spacing",
+        "description": "Label margin top"
+      }
+    },
+    "error": {
+      "lighter": {
+        "value": "{color.magenta.10}",
+        "type": "color",
+        "description": "Error lighter color"
+      },
+      "light": {
+        "value": "{color.magenta.30}",
+        "type": "color",
+        "description": "Error light color"
+      },
+      "base": {
+        "value": "{color.magenta.50}",
+        "type": "color",
+        "description": "Error color"
+      },
+      "dark": {
+        "value": "{color.magenta.60}",
+        "type": "color",
+        "description": "Error dark color"
+      },
+      "darker": {
+        "value": "{color.magenta.70}",
+        "type": "color",
+        "description": "Error darker color"
+      }
+    },
+    "border": {
+      "radius-0": {
+        "value": "{spacing.0}",
+        "type": "borderRadius",
+        "description": "No border radius"
+      },
+      "radius-sm": {
+        "value": "{spacing.2px}",
+        "type": "borderRadius",
+        "description": "Small border radius"
+      },
+      "radius-md": {
+        "value": "{spacing.05}",
+        "type": "borderRadius",
+        "description": "Medium border radius"
+      },
+      "radius-lg": {
+        "value": "{spacing.1}",
+        "type": "borderRadius",
+        "description": "Large border radius"
+      },
+      "radius-pill": {
+        "value": "{spacing.tablet}",
+        "type": "borderRadius",
+        "description": "Pill border radius"
+      },
+      "color-lighter": {
+        "value": "{base.lighter}",
+        "type": "color",
+        "description": "Border lighter color"
+      },
+      "color-light": {
+        "value": "{base.light}",
+        "type": "color",
+        "description": "Border light color"
+      },
+      "color-base": {
+        "value": "{base}",
+        "type": "color",
+        "description": "Border color"
+      },
+      "color-dark": {
+        "value": "{base.dark}",
+        "type": "color",
+        "description": "Border dark color"
+      },
+      "color-darker": {
+        "value": "{base.darker}",
+        "type": "color",
+        "description": "Border darker color"
+      },
+      "width-0": {
+        "value": "{spacing.0}",
+        "type": "borderWidth",
+        "description": "No border width"
+      },
+      "width-sm": {
+        "value": "{spacing.2px}",
+        "type": "borderWidth",
+        "description": "Small border width"
+      },
+      "width-md": {
+        "value": "{spacing.05}",
+        "type": "borderWidth",
+        "description": "Medium border width"
+      },
+      "width-lg": {
+        "value": "{spacing.1}",
+        "type": "borderWidth",
+        "description": "Large border width"
+      }
+    },
+    "color": {
+      "black": {
+        "value": "black",
+        "type": "color",
+        "description": "Black"
+      },
+      "white": {
+        "value": "white",
+        "type": "color",
+        "description": "White"
+      },
+      "red": {
+        "value": "#e52207",
+        "type": "color",
+        "description": "Red"
+      },
+      "red-warm": {
+        "value": "{color.red-warm.40}",
+        "type": "color",
+        "description": "Red warm"
+      },
+      "orange": {
+        "value": "#e66f0e",
+        "type": "color",
+        "description": "Orange"
+      },
+      "orange-warm": {
+        "value": "{color.orange-warm.40}",
+        "type": "color",
+        "description": "Orange warm"
+      },
+      "gold": {
+        "value": "#ffbe2e",
+        "type": "color",
+        "description": "Gold"
+      },
+      "yellow": {
+        "value": "#fee685",
+        "type": "color",
+        "description": "Yellow"
+      },
+      "green-warm": {
+        "value": "{color.green-warm.40}",
+        "type": "color",
+        "description": "Green warm"
+      },
+      "green": {
+        "value": "#538200",
+        "type": "color",
+        "description": "Green"
+      },
+      "green-cool": {
+        "value": "{color.green-cool.40}",
+        "type": "color",
+        "description": "Green cool"
+      },
+      "mint": {
+        "value": "#04c585",
+        "type": "color",
+        "description": "Mint"
+      },
+      "mint-cool": {
+        "value": "{color.mint-cool.40}",
+        "type": "color",
+        "description": "Mint cool"
+      },
+      "cyan": {
+        "value": "#009ec1",
+        "type": "color",
+        "description": "Cyan"
+      },
+      "blue": {
+        "value": "#0076d6",
+        "type": "color",
+        "description": "Blue"
+      },
+      "blue-warm": {
+        "value": "{color.blue-warm.40}",
+        "type": "color",
+        "description": "Blue warm"
+      },
+      "indigo-cool": {
+        "value": "{color.indigo-cool.40}",
+        "type": "color",
+        "description": "Indigo cool"
+      },
+      "indigo": {
+        "value": "#676cc8",
+        "type": "color",
+        "description": "Indigo"
+      },
+      "indigo-warm": {
+        "value": "{color.indigo-warm.40}",
+        "type": "color",
+        "description": "Indigo warm"
+      },
+      "violet": {
+        "value": "#8168b3",
+        "type": "color",
+        "description": "Violet"
+      },
+      "violet-warm": {
+        "value": "{color.violet-warm.40}",
+        "type": "color",
+        "description": "Violet warm"
+      },
+      "magenta": {
+        "value": "#d72d79",
+        "type": "color",
+        "description": "Magenta"
+      },
+      "gray-cool": {
+        "value": "{color.gray-cool.40}",
+        "type": "color",
+        "description": "Gray cool"
+      },
+      "gray": {
+        "value": "gray",
+        "type": "color",
+        "description": "Gray"
+      }
+    },
+    "link": {
+      "reverse-active-color": {
+        "value": "{white}",
+        "type": "color",
+        "description": "Link reverse active color"
+      },
+      "visited-color": {
+        "value": "{primary}",
+        "type": "color",
+        "description": "Link visited color"
+      },
+      "reverse-hover-color": {
+        "value": "{base.lightest}",
+        "type": "color",
+        "description": "Link reverse hover color"
+      },
+      "reverse-color": {
+        "value": "{base.lighter}",
+        "type": "color",
+        "description": "Link reverse color"
+      },
+      "active-color": {
+        "value": "{primary.light}",
+        "type": "color",
+        "description": "Link active color"
+      },
+      "hover-color": {
+        "value": "{primary.lighter}",
+        "type": "color",
+        "description": "Link hover color"
+      },
+      "color": {
+        "value": "{primary.light}",
+        "type": "color",
+        "description": "Link color"
+      },
+      "focus-offset": {
+        "value": "{spacing.0}",
+        "type": "spacing",
+        "description": "Link focus offset"
+      }
+    },
+    "checkbox": {
+      "size": {
+        "value": "{spacing.205}",
+        "type": "size",
+        "description": "Size of checkbox itself"
+      },
+      "vertical-offset": {
+        "value": "{spacing.2px}",
+        "type": "size",
+        "description": "Checkbox vertical offset"
+      },
+      "gap": {
+        "value": "{spacing.1}",
+        "type": "size",
+        "description": "Gap between checkbox and label"
+      },
+      "margin-top": {
+        "value": "{spacing.0}",
+        "type": "size",
+        "description": "Margin top of checkbox"
+      },
+      "background-color": {
+        "value": "{input.background-color}",
+        "type": "color",
+        "description": "Checkbox background color"
+      },
+      "label-color": {
+        "value": "{ink}",
+        "type": "color",
+        "description": "Checkbox label color"
+      },
+      "border-color": {
+        "value": "{input.background-color}",
+        "type": "color",
+        "description": "Checkbox border color"
+      },
+      "border-width": {
+        "value": "{input.border-width}",
+        "type": "size",
+        "description": "Checkbox border width"
+      },
+      "border-radius": {
+        "value": "{input.border-radius}",
+        "type": "size",
+        "description": "Checkbox border radius"
+      },
+      "box-shadow": {
+        "value": "none",
+        "type": "shadow",
+        "description": "Checkbox box shadow"
+      },
+      "checked-background-color": {
+        "value": "{primary.light}",
+        "type": "color",
+        "description": "Checkbox checked background color"
+      },
+      "checked-border-color": {
+        "value": "{primary.light}",
+        "type": "color",
+        "description": "Checkbox checked border color"
+      },
+      "checked-box-shadow": {
+        "value": "none",
+        "type": "shadow",
+        "description": "Checkbox checked box shadow"
+      },
+      "focus-border-color": {
+        "value": "{input.focus-border-color}",
+        "type": "color",
+        "description": "Checkbox focus border color"
+      },
+      "focus-border-width": {
+        "value": "{input.focus-border-width}",
+        "type": "size",
+        "description": "Checkbox focus border width"
+      },
+      "focus-box-shadow": {
+        "value": "{input.focus-box-shadow}",
+        "type": "shadow",
+        "description": "Checkbox focus box shadow"
+      },
+      "disabled-background-color": {
+        "value": "{input.disabled-background-color}",
+        "type": "color",
+        "description": "Checkbox disabled background color"
+      },
+      "disabled-border-color": {
+        "value": "{input.disabled-border-color}",
+        "type": "color",
+        "description": "Checkbox disabled border color"
+      },
+      "disabled-box-shadow": {
+        "value": "none",
+        "type": "shadow",
+        "description": "Checkbox disabled box shadow"
+      },
+      "disabled-color": {
+        "value": "{input.disabled-color}",
+        "type": "color",
+        "description": "Checkbox disabled color"
+      },
+      "tile-padding-y": {
+        "value": "{spacing.2}",
+        "type": "size",
+        "description": "Checkbox tile padding y"
+      },
+      "tile-padding-x": {
+        "value": "{spacing.2}",
+        "type": "size",
+        "description": "Checkbox tile padding x"
+      },
+      "tile-background-color": {
+        "value": "{checkbox.background-color}",
+        "type": "color",
+        "description": "Checkbox tile background color"
+      },
+      "tile-label-color": {
+        "value": "{checkbox.label-color}",
+        "type": "color",
+        "description": "Checkbox tile label color"
+      },
+      "tile-border-radius": {
+        "value": "{input.border-radius}",
+        "type": "size",
+        "description": "Checkbox tile border radius"
+      },
+      "tile-border-color": {
+        "value": "{checkbox.border-color}",
+        "type": "color",
+        "description": "Checkbox tile border color"
+      },
+      "tile-border-width": {
+        "value": "{checkbox.border-width}",
+        "type": "size",
+        "description": "Checkbox tile border width"
+      },
+      "tile-checked-background-color": {
+        "value": "{primary.lightest}",
+        "type": "color",
+        "description": "Checkbox tile checked background color"
+      },
+      "tile-checked-border-color": {
+        "value": "{checkbox.checked-border-color}",
+        "type": "color",
+        "description": "Checkbox tile checked border color"
+      },
+      "check-icon": {
+        "value": "url(/assets/check.svg)",
+        "type": "image",
+        "description": "Checkbox check icon"
+      },
+      "check-icon-color": {
+        "value": "{black}",
+        "type": "color",
+        "description": "Checkbox check icon color"
+      },
+      "check-icon-size": {
+        "value": "{spacing.105}",
+        "type": "size",
+        "description": "Checkbox check icon size"
+      }
     }
   },
   "coi": {
@@ -4100,6 +5068,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "button": {
+      "text-transform": {
+        "value": "none",
+        "type": "textTransform",
+        "description": "Button text transform"
+      },
       "color": {
         "value": "{ink}",
         "type": "color",
@@ -4926,6 +5899,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "value": "{line-height.3}",
         "type": "lineHeights",
         "description": "Table caption line height"
+      },
+      "background-color": {
+        "value": "{body.background}",
+        "type": "color",
+        "description": "Table background color"
       }
     },
     "sidenav": {
@@ -5151,6 +6129,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "input": {
+      "icon-size": {
+        "value": "{spacing.3}",
+        "type": "sizing",
+        "description": "Icon size for input prefix and suffix items"
+      },
       "font-family": {
         "value": "{font.ui}",
         "type": "fontFamilies",
@@ -5181,15 +6164,20 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "sizes",
         "description": "Height"
       },
-      "select-size": {
-        "value": "{spacing.3}",
+      "select-icon": {
+        "value": "url(/assets/usa-icons/unfold_more.svg)",
+        "type": "urls",
+        "description": "Select icon"
+      },
+      "select-icon-size": {
+        "value": "{spacing.205}",
         "type": "sizes",
         "description": "Select size"
       },
-      "select-caret-color": {
-        "value": "{input.color}",
+      "select-icon-color": {
+        "value": "{base.light}",
         "type": "colors",
-        "description": "Select caret color"
+        "description": "Select icon color"
       },
       "max-width": {
         "value": "{spacing.mobile-lg}",
@@ -5711,79 +6699,79 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
     },
     "primary": {
       "lightest": {
-        "value": "{color.blue.5}",
+        "value": "#cfe1ef",
         "type": "color",
         "description": "Primary lightest color"
       },
       "lighter": {
-        "value": "{color.indigo-cool.10}",
+        "value": "#9fc3df",
         "type": "color",
         "description": "Primary lighter color"
       },
       "light": {
-        "value": "{color.indigo-cool.30}",
+        "value": "#6fa4cf",
         "type": "color",
         "description": "Primary light color"
       },
       "base": {
-        "value": "{color.indigo-cool.vivid.70}",
+        "value": "#1f577c",
         "type": "color",
         "description": "Primary color"
       },
       "vivid": {
-        "value": "{color.indigo-cool.vivid.70}",
+        "value": "#1f577c",
         "type": "color",
         "description": "Vivid primary color"
       },
       "dark": {
-        "value": "{color.indigo-cool.vivid.80}",
+        "value": "#1a4c6a",
         "type": "color",
         "description": "Primary dark color"
       },
       "darker": {
-        "value": "{color.indigo-warm.90}",
+        "value": "#153e57",
         "type": "color",
         "description": "Primary darker color"
       },
       "darkest": {
-        "value": "{body.ink}",
+        "value": "#102e41",
         "type": "color",
         "description": "Primary darkest color"
       }
     },
     "accent-cool": {
       "lightest": {
-        "value": "{color.mint-cool.5}",
+        "value": "#f0cfe3",
         "type": "color",
         "description": "Accent cool lightest color"
       },
       "lighter": {
-        "value": "{color.mint-cool.vivid.5}",
+        "value": "#e19fc7",
         "type": "color",
         "description": "Accent cool lighter color"
       },
       "light": {
-        "value": "{color.mint-cool.vivid.20}",
+        "value": "#d26fab",
         "type": "color",
         "description": "Accent cool light color"
       },
       "base": {
-        "value": "{color.mint.vivid.30}",
+        "value": "#c33f8f",
         "type": "color",
         "description": "Accent cool color"
       },
       "dark": {
-        "value": "{color.mint-cool.vivid.40}",
+        "value": "#590046",
         "type": "color",
         "description": "Accent cool dark color"
       },
       "darker": {
-        "value": "{color.mint-cool.vivid.60}",
+        "value": "#480039",
         "type": "color",
         "description": "Accent cool darker color"
       },
       "darkest": {
-        "value": "{color.mint-cool.vivid.80}",
+        "value": "#37002c",
         "type": "color",
         "description": "Accent cool darkest color"
       }
@@ -5826,6 +6814,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "button": {
+      "text-transform": {
+        "value": "capitalize",
+        "type": "textTransform",
+        "description": "Button text transform"
+      },
       "color": {
         "value": "{white}",
         "type": "color",
@@ -6280,7 +7273,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H2 letter spacing"
       },
       "paragraph-spacing": {
-        "value": "{spacing.3}",
+        "value": "{spacing.1}",
         "type": "spacing",
         "description": "Spacing between <h2> and other elements with .usa-prose class"
       }
@@ -6312,14 +7305,14 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H3 letter spacing"
       },
       "paragraph-spacing": {
-        "value": "{spacing.3}",
+        "value": "{spacing.1}",
         "type": "spacing",
         "description": "Spacing between <h3> and other elements with .usa-prose class"
       }
     },
     "h4-font": {
       "size": {
-        "value": "{font-size.sm}",
+        "value": "{font-size.md}",
         "type": "fontSizes",
         "description": "H4 font size"
       },
@@ -6329,12 +7322,12 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H4 font family"
       },
       "weight": {
-        "value": "{font-weight.bold}",
+        "value": "{font-weight.medium}",
         "type": "fontWeights",
         "description": "H4 font weight"
       },
       "line-height": {
-        "value": "{line-height.3}",
+        "value": "{line-height.2}",
         "type": "lineHeights",
         "description": "H4 line height"
       },
@@ -6344,7 +7337,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "H4 letter spacing"
       },
       "paragraph-spacing": {
-        "value": "{spacing.3}",
+        "value": "{spacing.1}",
         "type": "spacing",
         "description": "Spacing between <h4> and other elements with .usa-prose class"
       }
@@ -6571,11 +7564,6 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "color",
         "description": "Table text hover color"
       },
-      "background-color": {
-        "value": "{body.background}",
-        "type": "color",
-        "description": "Table background color"
-      },
       "stripe-background-color": {
         "value": "{base.lighter}",
         "type": "color",
@@ -6695,6 +7683,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "value": "{line-height.5}",
         "type": "lineHeights",
         "description": "Table caption line height"
+      },
+      "background-color": {
+        "value": "{body.background}",
+        "type": "color",
+        "description": "Table background color"
       }
     },
     "sidenav": {
@@ -6920,6 +7913,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "input": {
+      "icon-size": {
+        "value": "{spacing.3}",
+        "type": "sizing",
+        "description": "Icon size for input prefix and suffix items"
+      },
       "font-family": {
         "value": "{font.ui}",
         "type": "fontFamilies",
@@ -6950,10 +7948,20 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "sizes",
         "description": "Height"
       },
-      "select-size": {
+      "select-icon": {
+        "value": "url(/assets/usa-icons/unfold_more.svg)",
+        "type": "urls",
+        "description": "Select icon"
+      },
+      "select-icon-size": {
         "value": "{spacing.205}",
         "type": "sizes",
         "description": "Select size"
+      },
+      "select-icon-color": {
+        "value": "{base.light}",
+        "type": "colors",
+        "description": "Select icon color"
       },
       "max-width": {
         "value": "{spacing.mobile-lg}",
@@ -7079,11 +8087,6 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "value": "{spacing.2}",
         "type": "spacing",
         "description": "Label margin top"
-      },
-      "select-caret-color": {
-        "value": "{input.color}",
-        "type": "colors",
-        "description": "Select caret color"
       }
     },
     "base": {
@@ -7521,7 +8524,7 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "description": "Black"
       },
       "white": {
-        "value": "#f7f7f7",
+        "value": "#fefefe",
         "type": "color",
         "description": "White"
       },
@@ -7910,6 +8913,143 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "colors",
         "description": "Focus color"
       }
+    },
+    "step-indicator": {
+      "background-color": {
+        "value": "{body.background}",
+        "type": "color",
+        "description": "Step indicator background color"
+      },
+      "counter-gap": {
+        "value": "{spacing.0}",
+        "type": "spacing",
+        "description": "Step indicator counter gap"
+      },
+      "counter-border-width": {
+        "value": "{spacing.05}",
+        "type": "spacing",
+        "description": "Step indicator counter border width"
+      },
+      "font-family": {
+        "value": "{font.ui}",
+        "type": "font",
+        "description": "Step indicator font family"
+      },
+      "heading-color": {
+        "value": "{text.color}",
+        "type": "color",
+        "description": "Step indicator heading color"
+      },
+      "heading-font-family": {
+        "value": "{font.ui}",
+        "type": "font",
+        "description": "Step indicator heading font family"
+      },
+      "heading-font-size": {
+        "value": "{font.size.lg}",
+        "type": "font",
+        "description": "Step indicator heading font size"
+      },
+      "heading-font-size-small": {
+        "value": "{font.size.md}",
+        "type": "font",
+        "description": "Step indicator heading font size small"
+      },
+      "label-font-size": {
+        "value": "{font.size.sm}",
+        "type": "font",
+        "description": "Step indicator label font size"
+      },
+      "label-line-height": {
+        "value": "{line-height.2}",
+        "type": "line-height",
+        "description": "Step indicator label line height"
+      },
+      "label-font-weight": {
+        "value": "{font.weight.normal}",
+        "type": "font",
+        "description": "Step indicator label font weight"
+      },
+      "label-font-weight-current": {
+        "value": "{font.weight.bold}",
+        "type": "font",
+        "description": "Step indicator label font weight current"
+      },
+      "min-width": {
+        "value": "{spacing.tablet}",
+        "type": "spacing",
+        "description": "Step indicator min width"
+      },
+      "segment-color-pending": {
+        "value": "{base.light}",
+        "type": "color",
+        "description": "Step indicator segment color pending"
+      },
+      "segment-color-complete": {
+        "value": "{primary.dark}",
+        "type": "color",
+        "description": "Step indicator segment color complete"
+      },
+      "segment-color-current": {
+        "value": "{primary.base}",
+        "type": "color",
+        "description": "Step indicator segment color current"
+      },
+      "segment-gap": {
+        "value": "{spacing.0}",
+        "type": "spacing",
+        "description": "Step indicator segment gap"
+      },
+      "segment-height": {
+        "value": "{spacing.1}",
+        "type": "spacing",
+        "description": "Step indicator segment height"
+      },
+      "segment-max-width": {
+        "value": "{spacing.card-lg}",
+        "type": "spacing",
+        "description": "Step indicator segment max width"
+      },
+      "text-pending-color": {
+        "value": "{base.dark}",
+        "type": "color",
+        "description": "Step indicator text pending color"
+      },
+      "label-margin-top": {
+        "value": "{spacing.1}",
+        "type": "spacing",
+        "description": "Step indicator label margin top"
+      },
+      "margin-bottom": {
+        "value": "{spacing.4}",
+        "type": "spacing",
+        "description": "Step indicator margin bottom"
+      },
+      "header-margin-top": {
+        "value": "{spacing.4}",
+        "type": "spacing",
+        "description": "Step indicator header margin top"
+      },
+      "header-margin-top-sm": {
+        "value": "{spacing.2}",
+        "type": "spacing",
+        "description": "Step indicator header margin top small"
+      },
+      "segment-height-mobile": {
+        "value": "{spacing.1}",
+        "type": "spacing",
+        "description": "Step indicator segment height mobile"
+      },
+      "counter-size": {
+        "value": "{spacing.5}",
+        "type": "spacing",
+        "description": "Step indicator counter size"
+      },
+      "counter-size-sm": {
+        "value": "{spacing.3}",
+        "type": "spacing",
+        "description": "Step indicator counter size small"
+      }
     }
   },
   "weiss": {
@@ -7993,6 +9133,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "button": {
+      "text-transform": {
+        "value": "none",
+        "type": "textTransform",
+        "description": "Button text transform"
+      },
       "color": {
         "value": "{white}",
         "type": "color",
@@ -8550,42 +9695,42 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
     },
     "letter-spacing": {
       "0": {
-        "value": "0%",
+        "value": "0em",
         "type": "letterSpacing",
         "description": "0 letter spacing"
       },
       "1": {
-        "value": "1%",
+        "value": "0.025em",
         "type": "letterSpacing",
         "description": "Slightly larger letter spacing",
         "a11y": "--a11y-letter-spacing-modifier"
       },
       "2": {
-        "value": "20%",
+        "value": "0.1em",
         "type": "letterSpacing",
         "description": "Large letter spacing",
         "a11y": "--a11y-letter-spacing-modifier"
       },
       "3": {
-        "value": "30%",
+        "value": "0.15em",
         "type": "letterSpacing",
         "description": "Largest letter spacing",
         "a11y": "--a11y-letter-spacing-modifier"
       },
       "neg-3": {
-        "value": "-3%",
+        "value": "-0.03em",
         "type": "letterSpacing",
         "description": "Smallest letter spacing",
         "a11y": "--a11y-letter-spacing-modifier"
       },
       "neg-2": {
-        "value": "-2%",
+        "value": "-0.02em",
         "type": "letterSpacing",
         "description": "Small letter spacing",
         "a11y": "--a11y-letter-spacing-modifier"
       },
       "neg-1": {
-        "value": "-1%",
+        "value": "-0.01em",
         "type": "letterSpacing",
         "description": "Slightly smaller letter spacing",
         "a11y": "--a11y-letter-spacing-modifier"
@@ -8646,6 +9791,11 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
       }
     },
     "input": {
+      "icon-size": {
+        "value": "{spacing.3}",
+        "type": "sizing",
+        "description": "Icon size for input prefix and suffix items"
+      },
       "font-family": {
         "value": "{font.sans}",
         "type": "fontFamilies",
@@ -8676,10 +9826,20 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "type": "sizes",
         "description": "Height"
       },
-      "select-size": {
+      "select-icon": {
+        "value": "url(/assets/usa-icons/unfold_more.svg)",
+        "type": "urls",
+        "description": "Select icon"
+      },
+      "select-icon-size": {
         "value": "{spacing.205}",
         "type": "sizes",
         "description": "Select size"
+      },
+      "select-icon-color": {
+        "value": "{base.light}",
+        "type": "colors",
+        "description": "Select icon color"
       },
       "max-width": {
         "value": "{spacing.mobile-lg}",
@@ -8805,11 +9965,6 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "value": "{spacing.2}",
         "type": "spacing",
         "description": "Label margin top"
-      },
-      "select-caret-color": {
-        "value": "{input.color}",
-        "type": "colors",
-        "description": "Select caret color"
       }
     },
     "base": {
@@ -9408,6 +10563,48 @@ export const aggregatedTokens: { [theme: string]: ThemeTokens } = {
         "value": "{color.black.transparent.70}",
         "type": "colors",
         "description": "Modal overlay background color"
+      }
+    },
+    "link": {
+      "reverse-active-color": {
+        "value": "{white}",
+        "type": "color",
+        "description": "Link reverse active color"
+      },
+      "visited-color": {
+        "value": "{violet.vivid.70}",
+        "type": "color",
+        "description": "Link visited color"
+      },
+      "reverse-hover-color": {
+        "value": "{base.lightest}",
+        "type": "color",
+        "description": "Link reverse hover color"
+      },
+      "reverse-color": {
+        "value": "{base.lighter}",
+        "type": "color",
+        "description": "Link reverse color"
+      },
+      "active-color": {
+        "value": "{primary.darker}",
+        "type": "color",
+        "description": "Link active color"
+      },
+      "hover-color": {
+        "value": "{primary.dark}",
+        "type": "color",
+        "description": "Link hover color"
+      },
+      "color": {
+        "value": "{primary.base}",
+        "type": "color",
+        "description": "Link color"
+      },
+      "focus-offset": {
+        "value": "{spacing.0}",
+        "type": "spacing",
+        "description": "Link focus offset"
       }
     }
   }

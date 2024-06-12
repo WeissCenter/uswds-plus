@@ -64,7 +64,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    console.log(aggregatedTokens);
+    // console.log(aggregatedTokens);
     // console.log(USWDS);
     // banner.on(document.body);
     inPageNavigation.on(document.body);
@@ -77,8 +77,8 @@ export class AppComponent {
     );
   }
 
-  openA11yPanel() {
-    this.accessibilityWidgetService.toggleWidgetVisibility();
+  openA11yPanel(event: any) {
+    this.accessibilityWidgetService.toggleWidgetVisibility(event ? event.target : null);
     document.documentElement.setAttribute('data-a11y-panel', 'open');
   }
 

@@ -1,4 +1,4 @@
-import {ThemeTokens} from '../../../../interfaces/tokens';
+import { ThemeTokens } from '../../../../interfaces/token-interface';
 
 export const key = 'link';
 
@@ -87,6 +87,48 @@ const tokens: ThemeTokens = {
     },
     'color': {
       value: '{primary.base}',
+      type: 'color',
+      description: 'Link color',
+    },
+    'focus-offset': {
+      value: '{spacing.0}',
+      type: 'spacing',
+      description: 'Link focus offset',
+    },
+  },
+  haystack: {
+    'reverse-active-color': {
+      value: '{white}',
+      type: 'color',
+      description: 'Link reverse active color',
+    },
+    'visited-color': {
+      value: '{primary}',
+      type: 'color',
+      description: 'Link visited color',
+    },
+    'reverse-hover-color': {
+      value: '{base.lightest}',
+      type: 'color',
+      description: 'Link reverse hover color',
+    },
+    'reverse-color': {
+      value: '{base.lighter}',
+      type: 'color',
+      description: 'Link reverse color',
+    },
+    'active-color': {
+      value: '{primary.light}',
+      type: 'color',
+      description: 'Link active color',
+    },
+    'hover-color': {
+      value: '{primary.lighter}',
+      type: 'color',
+      description: 'Link hover color',
+    },
+    'color': {
+      value: '{primary.light}',
       type: 'color',
       description: 'Link color',
     },

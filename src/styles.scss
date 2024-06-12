@@ -6,6 +6,7 @@
   @import "../src/app/styles/variables/generated";
   @import "../src/app/styles/variables/typography";
   @import "../src/app/styles/variables/colors";
+  @import "../src/app/styles/variables/core";
   @import "../src/app/styles/variables/spacing";
   // @import "../src/app/styles/variables/a11y";
   @import "../src/app/styles/core/uswds-focus";
@@ -16,6 +17,7 @@
   @import "../src/app/styles/components/uswds-alert";
   @import "../src/app/styles/components/uswds-hero";
   @import "../src/app/styles/components/uswds-card";
+  @import "../src/app/styles/components/data-rep";
   @import "../src/app/styles/components/uswds-accordion";
   @import "../src/app/styles/components/uswds-banner";
   @import "../src/app/styles/components/uswds-breadcrumb";
@@ -32,6 +34,7 @@
   @import "../src/app/styles/components/uswds-tag";
   @import "../src/app/styles/components/uswds-modal";
   @import "../src/app/styles/components/uswds-table";
+  @import "../src/app/styles/components/uswds-step-indicator";
   @import "../src/app/styles/components/uswds-side-navigation";
   @import "../src/app/styles/animations";
   @import "../src/app/styles/typography";
@@ -55,6 +58,14 @@
   :root {
     --#{$cssVarPrefix}-test-color: #000000; 
   }
+
+
+:root {
+  --a11y-font-size-modifier: 1;
+  --a11y-line-height-modifier: 1;
+  --a11y-letter-spacing-modifier: 1;
+  --a11y-spacing-modifier: 1;
+}
 
   .site-preview-heading, .usa-preview-heading {
     font-size: var(--usa-h6-font-size);

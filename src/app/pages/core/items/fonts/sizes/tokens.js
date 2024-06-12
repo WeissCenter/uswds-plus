@@ -105,28 +105,28 @@ var tokens = {
             responsiveFont: true
         },
         lg: {
-            value: '20px',
+            value: '18px',
             type: 'fontSizes',
             description: 'Large font size',
             'a11y': '--a11y-font-size-modifier',
             responsiveFont: true
         },
         xl: {
-            value: '24px',
+            value: '22px',
             type: 'fontSizes',
             description: 'Extra large font size',
             'a11y': '--a11y-font-size-modifier',
             responsiveFont: true
         },
         '2xl': {
-            value: '32px',
+            value: '28px',
             type: 'fontSizes',
             description: 'Second largest font size',
             'a11y': '--a11y-font-size-modifier',
             responsiveFont: true
         },
         '3xl': {
-            value: '44px',
+            value: '40px',
             type: 'fontSizes',
             description: 'Largest font size',
             'a11y': '--a11y-font-size-modifier',

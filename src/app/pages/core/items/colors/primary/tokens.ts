@@ -1,4 +1,4 @@
-import { ThemeTokens } from '../../../../../interfaces/tokens';
+import { ThemeTokens } from '../../../../../interfaces/token-interface';
 export const key = 'primary';
 const tokens: ThemeTokens = {
   base: {
@@ -129,42 +129,42 @@ const tokens: ThemeTokens = {
   },
   adapt: {
     lightest: {
-      value: '{color.blue.5}',
+      value: '#cfe1ef',
       type: 'color',
       description: 'Primary lightest color',
     },
     lighter: {
-      value: '{color.indigo-cool.10}',
+      value: '#9fc3df',
       type: 'color',
       description: 'Primary lighter color',
     },
     light: {
-      value: '{color.indigo-cool.30}',
+      value: '#6fa4cf',
       type: 'color',
       description: 'Primary light color',
     },
     base: {
-      value: '{color.indigo-cool.vivid.70}',
+      value: '#1f577c',
       type: 'color',
       description: 'Primary color',
     },
     vivid: {
-      value: '{color.indigo-cool.vivid.70}',
+      value: '#1f577c',
       type: 'color',
       description: 'Vivid primary color',
     },
     dark: {
-      value: '{color.indigo-cool.vivid.80}',
+      value: '#1a4c6a',
       type: 'color',
       description: 'Primary dark color',
     },
     darker: {
-      value: '{color.indigo-warm.90}',
+      value: '#153e57',
       type: 'color',
       description: 'Primary darker color',
     },
     darkest: {
-      value: '{body.ink}',
+      value: '#102e41',
       type: 'color',
       description: 'Primary darkest color',
     },

@@ -467,6 +467,11 @@
     }
   },
   "button": {
+    "text-transform": {
+      "value": "none",
+      "type": "textTransform",
+      "description": "Button text transform"
+    },
     "color": {
       "value": "{white}",
       "type": "color",
@@ -1162,11 +1167,6 @@
       "type": "sizing",
       "description": "Table border width"
     },
-    "background-color": {
-      "value": "{body.background}",
-      "type": "color",
-      "description": "Table background color"
-    },
     "cell-compact-padding-x": {
       "value": "{spacing.1}",
       "type": "sizing",
@@ -1336,6 +1336,11 @@
       "value": "{line-height.3}",
       "type": "lineHeights",
       "description": "Table caption line height"
+    },
+    "background-color": {
+      "value": "{body.background}",
+      "type": "color",
+      "description": "Table background color"
     }
   },
   "sidenav": {
@@ -1561,6 +1566,11 @@
     }
   },
   "input": {
+    "icon-size": {
+      "value": "{spacing.3}",
+      "type": "sizing",
+      "description": "Icon size for input prefix and suffix items"
+    },
     "font-family": {
       "value": "{font.ui}",
       "type": "fontFamilies",
@@ -1591,10 +1601,20 @@
       "type": "sizes",
       "description": "Height"
     },
-    "select-size": {
+    "select-icon": {
+      "value": "url(/assets/usa-icons/unfold_more.svg)",
+      "type": "urls",
+      "description": "Select icon"
+    },
+    "select-icon-size": {
       "value": "{spacing.205}",
       "type": "sizes",
       "description": "Select size"
+    },
+    "select-icon-color": {
+      "value": "{base.light}",
+      "type": "colors",
+      "description": "Select icon color"
     },
     "max-width": {
       "value": "{spacing.mobile-lg}",
@@ -1720,11 +1740,6 @@
       "value": "{spacing.2}",
       "type": "spacing",
       "description": "Label margin top"
-    },
-    "select-caret-color": {
-      "value": "{input.color}",
-      "type": "colors",
-      "description": "Select caret color"
     }
   },
   "base": {
@@ -2751,6 +2766,347 @@
       "value": "{color.black.transparent.70}",
       "type": "colors",
       "description": "Modal overlay background color"
+    }
+  },
+  "step-indicator": {
+    "background-color": {
+      "value": "{body.background}",
+      "type": "color",
+      "description": "Step indicator background color"
+    },
+    "counter-gap": {
+      "value": "{spacing.1}",
+      "type": "spacing",
+      "description": "Step indicator counter gap"
+    },
+    "counter-border-width": {
+      "value": "{spacing.05}",
+      "type": "spacing",
+      "description": "Step indicator counter border width"
+    },
+    "font-family": {
+      "value": "{font.ui}",
+      "type": "font",
+      "description": "Step indicator font family"
+    },
+    "heading-color": {
+      "value": "{text.color}",
+      "type": "color",
+      "description": "Step indicator heading color"
+    },
+    "heading-font-family": {
+      "value": "{font.ui}",
+      "type": "font",
+      "description": "Step indicator heading font family"
+    },
+    "heading-font-size": {
+      "value": "{font.size.lg}",
+      "type": "font",
+      "description": "Step indicator heading font size"
+    },
+    "heading-font-size-small": {
+      "value": "{font.size.md}",
+      "type": "font",
+      "description": "Step indicator heading font size small"
+    },
+    "label-font-size": {
+      "value": "{font.size.sm}",
+      "type": "font",
+      "description": "Step indicator label font size"
+    },
+    "label-line-height": {
+      "value": "{line-height.2}",
+      "type": "line-height",
+      "description": "Step indicator label line height"
+    },
+    "label-font-weight": {
+      "value": "{font.weight.normal}",
+      "type": "font",
+      "description": "Step indicator label font weight"
+    },
+    "label-font-weight-current": {
+      "value": "{font.weight.bold}",
+      "type": "font",
+      "description": "Step indicator label font weight current"
+    },
+    "min-width": {
+      "value": "{spacing.tablet}",
+      "type": "spacing",
+      "description": "Step indicator min width"
+    },
+    "segment-color-pending": {
+      "value": "{base.lighter}",
+      "type": "color",
+      "description": "Step indicator segment color pending"
+    },
+    "segment-color-complete": {
+      "value": "{accent-cool.dark}",
+      "type": "color",
+      "description": "Step indicator segment color complete"
+    },
+    "segment-color-current": {
+      "value": "{secondary.base}",
+      "type": "color",
+      "description": "Step indicator segment color current"
+    },
+    "segment-gap": {
+      "value": "{spacing.0}",
+      "type": "spacing",
+      "description": "Step indicator segment gap"
+    },
+    "segment-height": {
+      "value": "{spacing.1}",
+      "type": "spacing",
+      "description": "Step indicator segment height"
+    },
+    "segment-max-width": {
+      "value": "{spacing.card-lg}",
+      "type": "spacing",
+      "description": "Step indicator segment max width"
+    },
+    "text-pending-color": {
+      "value": "{base.dark}",
+      "type": "color",
+      "description": "Step indicator text pending color"
+    },
+    "label-margin-top": {
+      "value": "{spacing.1}",
+      "type": "spacing",
+      "description": "Step indicator label margin top"
+    },
+    "margin-bottom": {
+      "value": "{spacing.4}",
+      "type": "spacing",
+      "description": "Step indicator margin bottom"
+    },
+    "header-margin-top": {
+      "value": "{spacing.4}",
+      "type": "spacing",
+      "description": "Step indicator header margin top"
+    },
+    "header-margin-top-sm": {
+      "value": "{spacing.2}",
+      "type": "spacing",
+      "description": "Step indicator header margin top small"
+    },
+    "segment-height-mobile": {
+      "value": "{spacing.1}",
+      "type": "spacing",
+      "description": "Step indicator segment height mobile"
+    },
+    "counter-size": {
+      "value": "{spacing.5}",
+      "type": "spacing",
+      "description": "Step indicator counter size"
+    },
+    "counter-size-sm": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Step indicator counter size small"
+    }
+  },
+  "link": {
+    "reverse-active-color": {
+      "value": "{white}",
+      "type": "color",
+      "description": "Link reverse active color"
+    },
+    "visited-color": {
+      "value": "{violet.vivid.70}",
+      "type": "color",
+      "description": "Link visited color"
+    },
+    "reverse-hover-color": {
+      "value": "{base.lightest}",
+      "type": "color",
+      "description": "Link reverse hover color"
+    },
+    "reverse-color": {
+      "value": "{base.lighter}",
+      "type": "color",
+      "description": "Link reverse color"
+    },
+    "active-color": {
+      "value": "{primary.darker}",
+      "type": "color",
+      "description": "Link active color"
+    },
+    "hover-color": {
+      "value": "{primary.dark}",
+      "type": "color",
+      "description": "Link hover color"
+    },
+    "color": {
+      "value": "{primary.base}",
+      "type": "color",
+      "description": "Link color"
+    },
+    "focus-offset": {
+      "value": "{spacing.0}",
+      "type": "spacing",
+      "description": "Link focus offset"
+    }
+  },
+  "checkbox": {
+    "size": {
+      "value": "{spacing.205}",
+      "type": "size",
+      "description": "Size of checkbox itself"
+    },
+    "vertical-offset": {
+      "value": "{spacing.2px}",
+      "type": "size",
+      "description": "Checkbox vertical offset"
+    },
+    "gap": {
+      "value": "{spacing.1}",
+      "type": "size",
+      "description": "Gap between checkbox and label"
+    },
+    "margin-top": {
+      "value": "{spacing.05}",
+      "type": "size",
+      "description": "Margin top of checkbox"
+    },
+    "background-color": {
+      "value": "{input.background-color}",
+      "type": "color",
+      "description": "Checkbox background color"
+    },
+    "label-color": {
+      "value": "{ink}",
+      "type": "color",
+      "description": "Checkbox label color"
+    },
+    "border-color": {
+      "value": "{border.color.base}",
+      "type": "color",
+      "description": "Checkbox border color"
+    },
+    "border-width": {
+      "value": "{input.border-width}",
+      "type": "size",
+      "description": "Checkbox border width"
+    },
+    "border-radius": {
+      "value": "{input.border-radius}",
+      "type": "size",
+      "description": "Checkbox border radius"
+    },
+    "box-shadow": {
+      "value": "none",
+      "type": "shadow",
+      "description": "Checkbox box shadow"
+    },
+    "checked-background-color": {
+      "value": "{primary}",
+      "type": "color",
+      "description": "Checkbox checked background color"
+    },
+    "checked-border-color": {
+      "value": "{primary}",
+      "type": "color",
+      "description": "Checkbox checked border color"
+    },
+    "checked-box-shadow": {
+      "value": "none",
+      "type": "shadow",
+      "description": "Checkbox checked box shadow"
+    },
+    "focus-border-color": {
+      "value": "{input.focus-border-color}",
+      "type": "color",
+      "description": "Checkbox focus border color"
+    },
+    "focus-border-width": {
+      "value": "{input.focus-border-width}",
+      "type": "size",
+      "description": "Checkbox focus border width"
+    },
+    "focus-box-shadow": {
+      "value": "{input.focus-box-shadow}",
+      "type": "shadow",
+      "description": "Checkbox focus box shadow"
+    },
+    "disabled-background-color": {
+      "value": "{input.disabled-background-color}",
+      "type": "color",
+      "description": "Checkbox disabled background color"
+    },
+    "disabled-border-color": {
+      "value": "{input.disabled-border-color}",
+      "type": "color",
+      "description": "Checkbox disabled border color"
+    },
+    "disabled-box-shadow": {
+      "value": "none",
+      "type": "shadow",
+      "description": "Checkbox disabled box shadow"
+    },
+    "disabled-color": {
+      "value": "{input.disabled-color}",
+      "type": "color",
+      "description": "Checkbox disabled color"
+    },
+    "tile-padding-y": {
+      "value": "{spacing.2}",
+      "type": "size",
+      "description": "Checkbox tile padding y"
+    },
+    "tile-padding-x": {
+      "value": "{spacing.2}",
+      "type": "size",
+      "description": "Checkbox tile padding x"
+    },
+    "tile-background-color": {
+      "value": "{checkbox.background-color}",
+      "type": "color",
+      "description": "Checkbox tile background color"
+    },
+    "tile-label-color": {
+      "value": "{checkbox.label-color}",
+      "type": "color",
+      "description": "Checkbox tile label color"
+    },
+    "tile-border-radius": {
+      "value": "{input.border-radius}",
+      "type": "size",
+      "description": "Checkbox tile border radius"
+    },
+    "tile-border-color": {
+      "value": "{checkbox.border-color}",
+      "type": "color",
+      "description": "Checkbox tile border color"
+    },
+    "tile-border-width": {
+      "value": "{checkbox.border-width}",
+      "type": "size",
+      "description": "Checkbox tile border width"
+    },
+    "tile-checked-background-color": {
+      "value": "{primary.lightest}",
+      "type": "color",
+      "description": "Checkbox tile checked background color"
+    },
+    "tile-checked-border-color": {
+      "value": "{checkbox.checked-border-color}",
+      "type": "color",
+      "description": "Checkbox tile checked border color"
+    },
+    "check-icon": {
+      "value": "url(/assets/usa-icons/check.svg)",
+      "type": "image",
+      "description": "Checkbox check icon"
+    },
+    "check-icon-color": {
+      "value": "{white}",
+      "type": "color",
+      "description": "Checkbox check icon color"
+    },
+    "check-icon-size": {
+      "value": "{spacing.2}",
+      "type": "size",
+      "description": "Checkbox check icon size"
     }
   }
 }

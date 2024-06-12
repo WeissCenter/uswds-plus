@@ -54,6 +54,8 @@ import { LinksComponent } from './pages/core/items/links/links.component';
 import { KitchenSinkComponent } from './pages/kitchen-sink/kitchen-sink.component';
 import { AccessibilityWidgetComponent } from './accessibility-widget/accessibility-widget.component';
 import { ModalComponent } from './pages/components/items/modal/modal.component';
+import { DataRepComponent } from './site-components/data-rep/data-rep.component';
+import { StepIndicatorComponent } from './pages/components/items/step-indicator/step-indicator.component';
 
 @NgModule({
   declarations: [
@@ -107,7 +109,8 @@ import { ModalComponent } from './pages/components/items/modal/modal.component';
     LinksComponent,
     KitchenSinkComponent,
     ModalComponent,
-    
+    DataRepComponent,
+    StepIndicatorComponent
   ],
   imports: [
     BrowserModule,

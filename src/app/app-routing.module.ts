@@ -43,6 +43,7 @@ import { RadioButtonComponent } from './pages/components/items/radio-button/radi
 import { BasicComponent } from './pages/core/items/colors/basic/basic.component';
 import { SpacingComponent } from './pages/core/items/spacing/spacing.component';
 import { KitchenSinkComponent } from './pages/kitchen-sink/kitchen-sink.component';
+import { StepIndicatorComponent } from './pages/components/items/step-indicator/step-indicator.component';
 
 import { NgModule } from '@angular/core';
 
@@ -100,6 +101,11 @@ export const appRoutes: Route[] = [
             path: 'table',
             component: TableComponent,
             data: { breadcrumbLabel: 'Table' },
+          },
+          {
+            path: 'step-indicator',
+            component: StepIndicatorComponent,
+            data: { breadcrumbLabel: 'Step Indicator' },
           },
           {
             path: 'side-navigation',

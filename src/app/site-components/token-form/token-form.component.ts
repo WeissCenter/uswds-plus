@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnChanges, OnInit, Renderer2, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TokenToCssService } from 'src/app/services/token-to-css.service';
-import {ThemeTokens} from '../../interfaces/tokens';
+import {ThemeTokens} from '../../interfaces/token-interface';
 
 /**
  * Represents the TokenFormComponent class.

@@ -1,4 +1,4 @@
-adapt-accessibility-widget {
+aem-accessibility-widget {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -99,7 +99,7 @@ button.bg-a11y-active,
 }
 
 @media (min-width: 40em) {
-    adapt-accessibility-widget {
+    aem-accessibility-widget {
         position: sticky;
     }
 }
@@ -924,7 +924,8 @@ html[data-a11y-color-theme="nord"] {
     --usa-base-darker: #2E3440;
     --usa-base-darkest: #0c0d10;
 
-
+    --usa-modal-border-width: var(--usa-border-width-sm);
+    --dr-container-border-width: var(--usa-border-width-sm);
 
     --usa-border-color-lighter: var(--usa-base-lightest);
     --usa-border-color-light: var(--usa-base-lighter);
@@ -984,101 +985,43 @@ html[data-a11y-color-theme="nord"] {
     --usa-disabled-light: var(--usa-base-light);
     --usa-disabled-lightest: var(--usa-base-lighter);
 
-    --usa-combo-box-option-hover-background-color: var(--usa-primary-darkest);
-
-    --usa-modal-background-color: var(--usa-base-darkest);
-    --usa-modal-border-color: var(--usa-base-darker);
-
-    article.data-rep-wrapper {
-        --dr-container-background: var(--usa-black);
-        --dr-action-bar-item-hover-background: var(--usa-base-darkest);
-        --dr-plain-language-background: var(--usa-primary-darkest);
-        --dr-series-percentage-background:var(--usa-primary-darkest);
-        --dr-container-border-color: var(--usa-base-darker);
-
-    }
-
-    article.modal {
-        --dr-table-stripe-background: var(--usa-black);
-        --dr-table-header-background: var(--usa-black);
-        --dr-modal-close-button-color: var(--usa-base-lighter);
-        --dr-modal-close-button-hover-background:var(--usa-black);
-    }
-
-    .bg-accent-warm-lighter {
-        background-color: var(--usa-accent-warm-darker);
-    }
-
-    .usa-banner {
-        --usa-banner-background: var(--usa-black);
-    }
-
-    .usa-hint {
-        color: var(--usa-base-light);
-    }
-
-
-    .usa-select, .usa-combo-box__toggle-list {
-        /* background-image: url(../../../assets/unfold.svg), linear-gradient(transparent, transparent); */
-    }
-
-    .adapt-expandable-list-item {
-        --adapt-expandable-list-item-background: var(--usa-base-darkest);
-        --usa-accordion-border-color: var(--usa-base-darker);
-
-        .text-base {
-            color: var(--usa-base-lighter);
-        }
-
-        .usa-tag {
-            background-color: var(--usa-base-light);
-            color: var(--usa-black);
-        }
-    }
-
-
-    aside.display-flex {
-
-        .site-nav {
-
-            &.active-nav {
-                color: var(--usa-button-color);
-                background-color: var(--usa-primary);
-                font-weight: var(--usa-font-weight-semibold);
-            }
-
-            &:hover {
-                color: var(--usa-primary-lightest);
-                background-color: var(--usa-primary-darker);
-                text-decoration: none;
-            }
-        }
-    }
-
-
-    .bg-info-lighter {
-        background-color: var(--usa-info-darker);
-    }
-
-    .bg-base-lightest {
-        background-color: var(--usa-base-darkest);
-    }
-
-
-    .usa-hero__callout,
-    .usa-section--dark {
-        background-color: var(--usa-primary-darkest);
-    }
-
-    .usa-footer__secondary-section,
-    .usa-footer__primary-section,
-    .bg-white {
-        background-color: var(--usa-black);
-    }
-
-    .border-base-lighter {
-        border-color: var(--usa-base-darker);
-    }
+    --dr-modal-background: var(--usa-base-darker);
+    --dr-modal-content-background: var(--usa-base-lightest);
+    --dr-modal-content-border-color: var(--usa-base-lighter);
+    --dr-modal-content-ink: var(--usa-base-dark);
+    --dr-modal-heading-ink: var(--usa-base-darker);
+    --dr-modal-close-button-color: var(--usa-base-dark);
+    --dr-modal-close-button-background-color: var(--usa-base-lightest);
+    --dr-modal-close-button-hover-background: var(--usa-primary-lighter);
+    --dr-modal-close-button-hover-color: var(--usa-base-dark);
+    
+    --dr-table-background: var(--usa-white);
+    --dr-table-stripe-background: var(--usa-accent-cool-lightest);
+    --dr-table-border-color: var(--usa-base-lighter);
+    --dr-table-ink: var(--usa-base-dark);
+    --dr-table-stripe-ink: var(--usa-base-dark);
+    --dr-table-header-background: var(--usa-accent-cool-lighter);
+    --dr-table-header-ink: var(--usa-base-dark);
+    --dr-table-footer-background: var(--usa-accent-cool-lighter);
+    --dr-table-footer-ink: var(--usa-base-dark);
+    
+    --dr-container-background: var(--usa-white);
+    --dr-container-ink: var(--usa-base-dark);
+    --dr-container-border-color: var(--usa-base-lighter);
+    
+    --dr-action-bar-item-hover-background: var(--usa-accent-cool-lightest);
+    --dr-action-bar-button-color: var(--usa-primary);
+    --dr-action-bar-toggle-indicator-background: var(--usa-white);
+    --dr-action-bar-toggle-track-background: var(--usa-base-light);
+    --dr-action-bar-toggle-track-border-color: var(--usa-base-light);
+    --dr-action-bar-toggle-track-active-background: var(--usa-primary);
+    --dr-action-bar-toggle-track-active-border-color: var(--usa-primary);
+    
+    --dr-series-item-background: var(--usa-primary);
+    --dr-series-percentage-background: var(--usa-accent-cool-lighter);
+    
+    --dr-plain-language-background: var(--usa-primary-lightest);
+    --dr-plain-language-color: var(--usa-base-dark);
 
 }
 
@@ -1275,101 +1218,43 @@ html[data-a11y-color-theme="solarized"] {
     --usa-disabled-light: var(--usa-base-light);
     --usa-disabled-lightest: var(--usa-base-lighter);
 
-    --usa-combo-box-option-hover-background-color: var(--usa-primary-darkest);
+    --dr-modal-background: var(--usa-base-darker);
+--dr-modal-content-background: var(--usa-input-background-color);
+--dr-modal-content-border-color: var(--usa-border-color-base);
+--dr-modal-content-ink: var(--usa-body-ink);
+--dr-modal-heading-ink: var(--usa-base-darkest);
+--dr-modal-close-button-color: var(--usa-base-darkest);
+--dr-modal-close-button-background-color: var(--usa-input-background-color);
+--dr-modal-close-button-hover-background: var(--usa-primary-lighter);
+--dr-modal-close-button-hover-color: var(--usa-base-darkest);
 
-    --usa-modal-background-color: var(--usa-base-darkest);
-    --usa-modal-border-color: var(--usa-border-color-base);
+--dr-table-background: var(--usa-input-background-color);
+--dr-table-stripe-background: var(--usa-accent-cool-lightest);
+--dr-table-border-color: var(--usa-border-color-base);
+--dr-table-ink: var(--usa-body-ink);
+--dr-table-stripe-ink: var(--usa-body-ink);
+--dr-table-header-background: var(--usa-accent-cool-lighter);
+--dr-table-header-ink: var(--usa-base-darkest);
+--dr-table-footer-background: var(--usa-accent-cool-lighter);
+--dr-table-footer-ink: var(--usa-base-darkest);
 
-    article.data-rep-wrapper {
-        --dr-container-background: var(--usa-black);
-        --dr-action-bar-item-hover-background: var(--usa-base-darkest);
-        --dr-plain-language-background: var(--usa-primary-darkest);
-        --dr-series-percentage-background:var(--usa-primary-darkest);
-        --dr-container-border-color: var(--usa-border-color-base);
+--dr-container-background: var(--usa-input-background-color);
+--dr-container-ink: var(--usa-body-ink);
+--dr-container-border-color: var(--usa-border-color-base);
 
-    }
+--dr-action-bar-item-hover-background: var(--usa-white);
+--dr-action-bar-button-color: var(--usa-primary);
+--dr-action-bar-toggle-indicator-background: var(--usa-input-background-color);
+--dr-action-bar-toggle-track-background: var(--usa-base-light);
+--dr-action-bar-toggle-track-border-color: var(--usa-base-light);
+--dr-action-bar-toggle-track-active-background: var(--usa-primary);
+--dr-action-bar-toggle-track-active-border-color: var(--usa-primary);
 
-    article.modal {
-        --dr-table-stripe-background: var(--usa-black);
-        --dr-table-header-background: var(--usa-black);
-        --dr-modal-close-button-color: var(--usa-base-lighter);
-        --dr-modal-close-button-hover-background:var(--usa-black);
-    }
+--dr-series-item-background: var(--usa-primary);
+--dr-series-percentage-background: var(--usa-accent-cool-lighter);
 
-    .bg-accent-warm-lighter {
-        background-color: var(--usa-accent-warm-darker);
-    }
-
-    .usa-banner {
-        --usa-banner-background: var(--usa-black);
-    }
-
-    .usa-hint {
-        color: var(--usa-base-light);
-    }
-
-
-    .usa-select, .usa-combo-box__toggle-list {
-        /* background-image: url(../../../assets/unfold.svg), linear-gradient(transparent, transparent); */
-    }
-
-    .adapt-expandable-list-item {
-        --adapt-expandable-list-item-background: var(--usa-base-darkest);
-        --usa-accordion-border-color: var(--usa-border-color-base);
-
-        .text-base {
-            color: var(--usa-base-lighter);
-        }
-
-        .usa-tag {
-            background-color: var(--usa-base-light);
-            color: var(--usa-black);
-        }
-    }
-
-
-    aside.display-flex {
-
-        .site-nav {
-
-            &.active-nav {
-                color: var(--usa-button-color);
-                background-color: var(--usa-primary);
-                font-weight: var(--usa-font-weight-semibold);
-            }
-
-            &:hover {
-                color: var(--usa-primary-lightest);
-                background-color: var(--usa-primary-darker);
-                text-decoration: none;
-            }
-        }
-    }
-
-
-    .bg-info-lighter {
-        background-color: var(--usa-info-darker);
-    }
-
-    .bg-base-lightest {
-        background-color: var(--usa-base-darkest);
-    }
-
-
-    .usa-hero__callout,
-    .usa-section--dark {
-        background-color: var(--usa-primary-darkest);
-    }
-
-    .usa-footer__secondary-section,
-    .usa-footer__primary-section,
-    .bg-white {
-        background-color: var(--usa-black);
-    }
-
-    .border-base-lighter {
-        border-color: var(--usa-border-color-base);
-    }
+--dr-plain-language-background: var(--usa-primary-lightest);
+--dr-plain-language-color: var(--usa-base-darkest);
 
 }
 
@@ -1596,25 +1481,43 @@ html[data-a11y-color-theme="solarized-dark"] {
 
     --usa-combo-box-option-hover-background-color: var(--usa-primary-darkest);
 
-    --usa-modal-background-color: var(--usa-base-darkest);
-    --usa-modal-border-color: var(--usa-base-darker);
-
-    article.data-rep-wrapper {
-        --dr-container-background: var(--usa-black);
-        --dr-action-bar-item-hover-background: var(--usa-base-darkest);
-        --dr-plain-language-background: var(--usa-primary-darkest);
-        --dr-series-percentage-background:var(--usa-primary-darkest);
-        --dr-container-border-color: var(--usa-base-darker);
-
-    }
-
-    article.modal {
-        --dr-table-stripe-background: var(--usa-black);
-        --dr-table-header-background: var(--usa-black);
-        --dr-modal-close-button-color: var(--usa-base-lighter);
-        --dr-modal-close-button-hover-background:var(--usa-black);
-    }
-
+    --dr-modal-background: var(--usa-base-darkest);
+    --dr-modal-content-background: var(--usa-base-darkest);
+    --dr-modal-content-border-color: var(--usa-border-color-base);
+    --dr-modal-content-ink: var(--usa-body-ink);
+    --dr-modal-heading-ink: var(--usa-body-ink);
+    --dr-modal-close-button-color: var(--usa-base-light);
+    --dr-modal-close-button-background-color: var(--usa-base-darkest);
+    --dr-modal-close-button-hover-background: var(--usa-primary-darkest);
+    --dr-modal-close-button-hover-color: var(--usa-body-ink);
+    
+    --dr-table-background: var(--usa-base-darkest);
+    --dr-table-stripe-background: var(--usa-base-darker);
+    --dr-table-border-color: var(--usa-border-color-base);
+    --dr-table-ink: var(--usa-body-ink);
+    --dr-table-stripe-ink: var(--usa-body-ink);
+    --dr-table-header-background: var(--usa-base-darker);
+    --dr-table-header-ink: var(--usa-base-lightest);
+    --dr-table-footer-background: var(--usa-base-darker);
+    --dr-table-footer-ink: var(--usa-base-lightest);
+    
+    --dr-container-background: var(--usa-input-background-color);
+    --dr-container-ink: var(--usa-body-ink);
+    --dr-container-border-color: var(--usa-border-color-base);
+    
+    --dr-action-bar-item-hover-background: var(--usa-base-darker);
+    --dr-action-bar-button-color: var(--usa-primary-base);
+    --dr-action-bar-toggle-indicator-background: var(--usa-base-darkest);
+    --dr-action-bar-toggle-track-background: var(--usa-body-ink);
+    --dr-action-bar-toggle-track-border-color: var(--usa-body-ink);
+    --dr-action-bar-toggle-track-active-background: var(--usa-primary-base);
+    --dr-action-bar-toggle-track-active-border-color: var(--usa-primary-base);
+    
+    --dr-series-item-background: var(--usa-primary-base);
+    --dr-series-percentage-background: var(--usa-base-darker);
+    
+    --dr-plain-language-background: var(--usa-primary-darkest);
+    --dr-plain-language-color: var(--usa-body-ink);
     .bg-accent-warm-lighter {
         background-color: var(--usa-accent-warm-darker);
     }
@@ -1915,24 +1818,44 @@ html[data-a11y-color-theme="monokai"] {
 
     --usa-combo-box-option-hover-background-color: var(--usa-primary-darkest);
 
-    --usa-modal-background-color: var(--usa-base-darkest);
-    --usa-modal-border-color: var(--usa-base-darker);
+    --dr-modal-background: var(--usa-base-darkest);
+    --dr-modal-content-background: var(--usa-base-darkest);
+    --dr-modal-content-border-color: var(--usa-border-color-base);
+    --dr-modal-content-ink: var(--usa-body-ink);
+    --dr-modal-heading-ink: var(--usa-body-ink);
+    --dr-modal-close-button-color: var(--usa-base-light);
+    --dr-modal-close-button-background-color: var(--usa-base-darkest);
+    --dr-modal-close-button-hover-background: var(--usa-primary-darkest);
+    --dr-modal-close-button-hover-color: var(--usa-body-ink);
+    
+    --dr-table-background: var(--usa-base-darkest);
+    --dr-table-stripe-background: var(--usa-base-darker);
+    --dr-table-border-color: var(--usa-border-color-base);
+    --dr-table-ink: var(--usa-body-ink);
+    --dr-table-stripe-ink: var(--usa-body-ink);
+    --dr-table-header-background: var(--usa-base-darker);
+    --dr-table-header-ink: var(--usa-base-lightest);
+    --dr-table-footer-background: var(--usa-base-darker);
+    --dr-table-footer-ink: var(--usa-base-lightest);
+    
+    --dr-container-background: var(--usa-base-darkest);
+    --dr-container-ink: var(--usa-body-ink);
+    --dr-container-border-color: var(--usa-border-color-base);
+    
+    --dr-action-bar-item-hover-background: var(--usa-base-darker);
+    --dr-action-bar-button-color: var(--usa-primary-base);
+    --dr-action-bar-toggle-indicator-background: var(--usa-base-darkest);
+    --dr-action-bar-toggle-track-background: var(--usa-body-ink);
+    --dr-action-bar-toggle-track-border-color: var(--usa-body-ink);
+    --dr-action-bar-toggle-track-active-background: var(--usa-primary-base);
+    --dr-action-bar-toggle-track-active-border-color: var(--usa-primary-base);
+    
+    --dr-series-item-background: var(--usa-primary-base);
+    --dr-series-percentage-background: var(--usa-base-darker);
+    
+    --dr-plain-language-background: var(--usa-primary-darkest);
+    --dr-plain-language-color: var(--usa-body-ink);
 
-    article.data-rep-wrapper {
-        --dr-container-background: var(--usa-black);
-        --dr-action-bar-item-hover-background: var(--usa-base-darkest);
-        --dr-plain-language-background: var(--usa-primary-darkest);
-        --dr-series-percentage-background:var(--usa-primary-darkest);
-        --dr-container-border-color: var(--usa-base-darker);
-
-    }
-
-    article.modal {
-        --dr-table-stripe-background: var(--usa-black);
-        --dr-table-header-background: var(--usa-black);
-        --dr-modal-close-button-color: var(--usa-base-lighter);
-        --dr-modal-close-button-hover-background:var(--usa-black);
-    }
 
     .bg-accent-warm-lighter {
         background-color: var(--usa-accent-warm-darker);

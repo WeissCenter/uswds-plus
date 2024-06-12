@@ -14,6 +14,7 @@
 --usa-accent-cool-dark: var(--usa-color-mint-cool-vivid-40);
 --usa-accent-cool-darker: var(--usa-color-mint-cool-vivid-60);
 --usa-accent-cool-darkest: var(--usa-color-mint-cool-vivid-80);
+--usa-button-text-transform: none;
 --usa-button-color: var(--usa-white);
 --usa-button-color-hover: var(--usa-white);
 --usa-button-color-active: var(--usa-white);
@@ -116,13 +117,13 @@
 --usa-h6-font-letter-spacing: var(--usa-letter-spacing-2);
 --usa-h6-font-text-transform: uppercase;
 --usa-h6-font-paragraph-spacing: var(--usa-spacing-05);
---usa-letter-spacing-0: 0%;
---usa-letter-spacing-1: calc(1% * var(--a11y-letter-spacing-modifier));
---usa-letter-spacing-2: calc(20% * var(--a11y-letter-spacing-modifier));
---usa-letter-spacing-3: calc(30% * var(--a11y-letter-spacing-modifier));
---usa-letter-spacing-neg-3: calc(-3% * var(--a11y-letter-spacing-modifier));
---usa-letter-spacing-neg-2: calc(-2% * var(--a11y-letter-spacing-modifier));
---usa-letter-spacing-neg-1: calc(-1% * var(--a11y-letter-spacing-modifier));
+--usa-letter-spacing-0: 0em;
+--usa-letter-spacing-1: calc(0.025em * var(--a11y-letter-spacing-modifier));
+--usa-letter-spacing-2: calc(0.1em * var(--a11y-letter-spacing-modifier));
+--usa-letter-spacing-3: calc(0.15em * var(--a11y-letter-spacing-modifier));
+--usa-letter-spacing-neg-3: calc(-0.03em * var(--a11y-letter-spacing-modifier));
+--usa-letter-spacing-neg-2: calc(-0.02em * var(--a11y-letter-spacing-modifier));
+--usa-letter-spacing-neg-1: calc(-0.01em * var(--a11y-letter-spacing-modifier));
 --usa-letter-spacing-auto: initial;
 --usa-lead-font-size: var(--usa-font-size-lg);
 --usa-lead-font-family: var(--usa-body-font-family);
@@ -133,13 +134,16 @@
 --usa-lead-font-paragraph-spacing: var(--usa-spacing-3);
 --usa-body-background: var(--usa-color-gray-2);
 --usa-body-ink: var(--usa-base-darkest);
+--usa-input-icon-size: var(--usa-spacing-3);
 --usa-input-font-family: var(--usa-font-sans);
 --usa-input-font-size: var(--usa-body-font-size);
 --usa-input-font-weight: var(--usa-font-weight-normal);
 --usa-input-line-height: var(--usa-line-height-4);
 --usa-input-letter-spacing: var(--usa-body-font-letter-spacing);
 --usa-input-height: var(--usa-spacing-5);
---usa-input-select-size: var(--usa-spacing-205);
+--usa-input-select-icon: url(/assets/usa-icons/unfold_more.svg);
+--usa-input-select-icon-size: var(--usa-spacing-205);
+--usa-input-select-icon-color: var(--usa-base-light);
 --usa-input-max-width: var(--usa-spacing-mobile-lg);
 --usa-input-margin-top: var(--usa-spacing-1);
 --usa-input-padding-x: var(--usa-spacing-1);
@@ -165,7 +169,6 @@
 --usa-input-label-letter-spacing: var(--usa-body-font-letter-spacing);
 --usa-input-label-margin-bottom: var(--usa-spacing-05);
 --usa-input-label-margin-top: var(--usa-spacing-2);
---usa-input-select-caret-color: var(--usa-input-color);
 --usa-base-lightest: var(--usa-color-gray-5);
 --usa-base-lighter: var(--usa-color-gray-cool-10);
 --usa-base-light: var(--usa-color-gray-cool-30);
@@ -275,5 +278,13 @@
 --usa-modal-text-color: var(--usa-ink);
 --usa-modal-border-radius: var(--usa-border-radius-lg);
 --usa-modal-overlay-background-color: var(--usa-color-black-transparent-70);
+--usa-link-reverse-active-color: var(--usa-white);
+--usa-link-visited-color: var(--usa-violet-vivid-70);
+--usa-link-reverse-hover-color: var(--usa-base-lightest);
+--usa-link-reverse-color: var(--usa-base-lighter);
+--usa-link-active-color: var(--usa-primary-darker);
+--usa-link-hover-color: var(--usa-primary-dark);
+--usa-link-color: var(--usa-primary-base);
+--usa-link-focus-offset: var(--usa-spacing-0);
 
 }

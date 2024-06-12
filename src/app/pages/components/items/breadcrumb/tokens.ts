@@ -1,4 +1,4 @@
-import {ThemeTokens} from '../../../../interfaces/tokens';
+import {ThemeTokens} from '../../../../interfaces/token-interface';
 
 // --usa-breadcrumb-icon-spacing: var(--usa-spacing-05);
 // --usa-breadcrumb-padding-x: var(--usa-spacing-2);

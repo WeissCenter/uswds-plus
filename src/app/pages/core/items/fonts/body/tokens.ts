@@ -1,4 +1,4 @@
-import { ThemeTokens } from '../../../../../interfaces/tokens';
+import { ThemeTokens } from '../../../../../interfaces/token-interface';
 export const key = 'body-font';
 const tokens: ThemeTokens = {
   base: {
@@ -50,12 +50,12 @@ const tokens: ThemeTokens = {
       description: 'Body font family',
     },
     weight: {
-      value: '{font-weight.normal}',
+      value: '{font-weight.light}',
       type: 'fontWeights',
       description: 'Body font weight',
     },
     'line-height': {
-      value: '{line-height.5}',
+      value: '{line-height.4}',
       type: 'lineHeights',
       description: 'Body line height',
     },
@@ -65,12 +65,12 @@ const tokens: ThemeTokens = {
       description: 'Body letter spacing',
     },
     'paragraph-spacing': {
-      value: '{spacing.2}',
+      value: '{spacing.105}',
       type: 'spacing',
       description: 'Spacing between <p> elements with .usa-prose class',
     },
     'list-spacing': {
-      value: '{spacing.1}',
+      value: '{spacing.105}',
       type: 'spacing',
       description: 'Spacing between <ul> and <ol> child elements with .usa-prose class',
     },

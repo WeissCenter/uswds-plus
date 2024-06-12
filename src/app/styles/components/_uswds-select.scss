@@ -1,18 +1,68 @@
 :root {
-    --usa-input-select-border-width: var( --usa-input-border-width);
+    --usa-input-select-border-width: var(--usa-input-border-width);
+    --usa-input-select-icon: url('#{$assetFilePath}usa-icons/unfold_more.svg');
+    --usa-input-select-icon-size: var(--usa-spacing-205);
+    --usa-input-select-icon-color: var(--usa-base-light);
 }
 
 .usa-select {
-    background-image: url($assetFilePath + 'usa-icons/unfold_more.svg'), linear-gradient(transparent, transparent);
+    background-image: var(--usa-input-select-icon), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     -webkit-appearance: none;
     appearance: none;
     background-color: var(--usa-input-background-color);
     background-position: right var(--usa-spacing-05) center;
-    background-size:  var(--usa-input-select-size);
-    padding-right:  var(--usa-spacing-4);
+    background-size: var(--usa-input-select-icon-size);
+    padding-right: calc(var(--usa-input-select-icon-size) + (var(--usa-input-padding-x) * 2));
     position: relative;
-    border: var( --usa-input-select-border-width) solid var(--usa-input-border-color);
+    border: var(--usa-input-select-border-width) solid var(--usa-input-border-color);
+}
+
+.usa-select-wrapper {
+    position: relative;
+    display: flex;
+}
+
+@supports ((-webkit-mask: url()) or (mask: url())) {
+
+    .usa-select-wrapper {
+        .usa-select {
+            background-image: none;
+            background-size: 0;
+            &:focus, &:hover {
+                z-index:0;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            right: var(--usa-input-padding-x);
+            top: calc(50% - (var(--usa-input-select-icon-size) / 2));
+            position: absolute;
+            height: var(--usa-input-select-icon-size);
+            background-color: var(--usa-input-select-icon-color);
+            width: var(--usa-input-select-icon-size);
+            mask-image: var(--usa-input-select-icon), linear-gradient(transparent, transparent);
+            -webkit-mask-position: center center;
+            mask-position: center center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: var(--usa-input-select-icon-size) var(--usa-input-select-icon-size);
+            mask-size: var(--usa-input-select-icon-size) var(--usa-input-select-icon-size);
+        }
+        &:hover {
+            .usa-select {
+                z-index:1;
+            }
+            &:after {
+                z-index:1;
+            }
+        }
+    }
+
+
+    
 }
 
 

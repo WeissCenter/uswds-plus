@@ -19,6 +19,7 @@
     --usa-button-font-size: var(--usa-font-size-xs);
     --usa-button-font-family: var(--usa-font-ui);
     --usa-button-line-height: var(--usa-line-height-2);
+    --usa-button-letter-spacing: var(--usa-letter-spacing-1);
     --usa-button-gap: var(--usa-spacing-1);
     --usa-button-color: var(--usa-white);
     --usa-button-color-hover: var(--usa-white);
@@ -57,6 +58,8 @@
     --usa-button-box-shadow-active: none;
 
     --usa-button-cursor: pointer;
+
+    --usa-button-text-transform: none;
 }
 
 .usa-button {
@@ -64,6 +67,7 @@
     font-size: var(--usa-button-font-size);
     line-height: var(--usa-button-line-height);
     font-weight: var(--usa-button-font-weight);
+    letter-spacing: var(--usa-button-letter-spacing);
     color: var(--usa-button-color);
     background-color: var( --usa-button-background);
     -webkit-appearance: none;
@@ -85,6 +89,7 @@
     transition-property: var(--usa-button-transition-property);
     transition-timing-function: var(--usa-button-transition-timing-function);
     box-shadow: var(--usa-button-box-shadow);
+    text-transform: var(--usa-button-text-transform);
 
     .fas, .fal, .far, .icon {
         font-size: var(--usa-button-icon-size);

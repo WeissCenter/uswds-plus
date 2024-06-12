@@ -1,4 +1,4 @@
-import { ThemeTokens } from '../../../../interfaces/tokens';
+import { ThemeTokens } from '../../../../interfaces/token-interface';
 
 //     --usa-sidenav-item-font-size: var(--usa-font-size-sm);
 //     --usa-sidenav-item-font-family: var(--usa-font-sans);

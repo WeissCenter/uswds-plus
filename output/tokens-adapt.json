@@ -103,79 +103,79 @@
   },
   "primary": {
     "lightest": {
-      "value": "{color.blue.5}",
+      "value": "#cfe1ef",
       "type": "color",
       "description": "Primary lightest color"
     },
     "lighter": {
-      "value": "{color.indigo-cool.10}",
+      "value": "#9fc3df",
       "type": "color",
       "description": "Primary lighter color"
     },
     "light": {
-      "value": "{color.indigo-cool.30}",
+      "value": "#6fa4cf",
       "type": "color",
       "description": "Primary light color"
     },
     "base": {
-      "value": "{color.indigo-cool.vivid.70}",
+      "value": "#1f577c",
       "type": "color",
       "description": "Primary color"
     },
     "vivid": {
-      "value": "{color.indigo-cool.vivid.70}",
+      "value": "#1f577c",
       "type": "color",
       "description": "Vivid primary color"
     },
     "dark": {
-      "value": "{color.indigo-cool.vivid.80}",
+      "value": "#1a4c6a",
       "type": "color",
       "description": "Primary dark color"
     },
     "darker": {
-      "value": "{color.indigo-warm.90}",
+      "value": "#153e57",
       "type": "color",
       "description": "Primary darker color"
     },
     "darkest": {
-      "value": "{body.ink}",
+      "value": "#102e41",
       "type": "color",
       "description": "Primary darkest color"
     }
   },
   "accent-cool": {
     "lightest": {
-      "value": "{color.mint-cool.5}",
+      "value": "#f0cfe3",
       "type": "color",
       "description": "Accent cool lightest color"
     },
     "lighter": {
-      "value": "{color.mint-cool.vivid.5}",
+      "value": "#e19fc7",
       "type": "color",
       "description": "Accent cool lighter color"
     },
     "light": {
-      "value": "{color.mint-cool.vivid.20}",
+      "value": "#d26fab",
       "type": "color",
       "description": "Accent cool light color"
     },
     "base": {
-      "value": "{color.mint.vivid.30}",
+      "value": "#c33f8f",
       "type": "color",
       "description": "Accent cool color"
     },
     "dark": {
-      "value": "{color.mint-cool.vivid.40}",
+      "value": "#590046",
       "type": "color",
       "description": "Accent cool dark color"
     },
     "darker": {
-      "value": "{color.mint-cool.vivid.60}",
+      "value": "#480039",
       "type": "color",
       "description": "Accent cool darker color"
     },
     "darkest": {
-      "value": "{color.mint-cool.vivid.80}",
+      "value": "#37002c",
       "type": "color",
       "description": "Accent cool darkest color"
     }
@@ -218,6 +218,11 @@
     }
   },
   "button": {
+    "text-transform": {
+      "value": "capitalize",
+      "type": "textTransform",
+      "description": "Button text transform"
+    },
     "color": {
       "value": "{white}",
       "type": "color",
@@ -672,7 +677,7 @@
       "description": "H2 letter spacing"
     },
     "paragraph-spacing": {
-      "value": "{spacing.3}",
+      "value": "{spacing.1}",
       "type": "spacing",
       "description": "Spacing between <h2> and other elements with .usa-prose class"
     }
@@ -704,14 +709,14 @@
       "description": "H3 letter spacing"
     },
     "paragraph-spacing": {
-      "value": "{spacing.3}",
+      "value": "{spacing.1}",
       "type": "spacing",
       "description": "Spacing between <h3> and other elements with .usa-prose class"
     }
   },
   "h4-font": {
     "size": {
-      "value": "{font-size.sm}",
+      "value": "{font-size.md}",
       "type": "fontSizes",
       "description": "H4 font size"
     },
@@ -721,12 +726,12 @@
       "description": "H4 font family"
     },
     "weight": {
-      "value": "{font-weight.bold}",
+      "value": "{font-weight.medium}",
       "type": "fontWeights",
       "description": "H4 font weight"
     },
     "line-height": {
-      "value": "{line-height.3}",
+      "value": "{line-height.2}",
       "type": "lineHeights",
       "description": "H4 line height"
     },
@@ -736,7 +741,7 @@
       "description": "H4 letter spacing"
     },
     "paragraph-spacing": {
-      "value": "{spacing.3}",
+      "value": "{spacing.1}",
       "type": "spacing",
       "description": "Spacing between <h4> and other elements with .usa-prose class"
     }
@@ -963,11 +968,6 @@
       "type": "color",
       "description": "Table text hover color"
     },
-    "background-color": {
-      "value": "{body.background}",
-      "type": "color",
-      "description": "Table background color"
-    },
     "stripe-background-color": {
       "value": "{base.lighter}",
       "type": "color",
@@ -1087,6 +1087,11 @@
       "value": "{line-height.5}",
       "type": "lineHeights",
       "description": "Table caption line height"
+    },
+    "background-color": {
+      "value": "{body.background}",
+      "type": "color",
+      "description": "Table background color"
     }
   },
   "sidenav": {
@@ -1312,6 +1317,11 @@
     }
   },
   "input": {
+    "icon-size": {
+      "value": "{spacing.3}",
+      "type": "sizing",
+      "description": "Icon size for input prefix and suffix items"
+    },
     "font-family": {
       "value": "{font.ui}",
       "type": "fontFamilies",
@@ -1342,10 +1352,20 @@
       "type": "sizes",
       "description": "Height"
     },
-    "select-size": {
+    "select-icon": {
+      "value": "url(/assets/usa-icons/unfold_more.svg)",
+      "type": "urls",
+      "description": "Select icon"
+    },
+    "select-icon-size": {
       "value": "{spacing.205}",
       "type": "sizes",
       "description": "Select size"
+    },
+    "select-icon-color": {
+      "value": "{base.light}",
+      "type": "colors",
+      "description": "Select icon color"
     },
     "max-width": {
       "value": "{spacing.mobile-lg}",
@@ -1471,11 +1491,6 @@
       "value": "{spacing.2}",
       "type": "spacing",
       "description": "Label margin top"
-    },
-    "select-caret-color": {
-      "value": "{input.color}",
-      "type": "colors",
-      "description": "Select caret color"
     }
   },
   "base": {
@@ -1913,7 +1928,7 @@
       "description": "Black"
     },
     "white": {
-      "value": "#f7f7f7",
+      "value": "#fefefe",
       "type": "color",
       "description": "White"
     },
@@ -2301,6 +2316,143 @@
       "value": "{color.mint.vivid.30}",
       "type": "colors",
       "description": "Focus color"
+    }
+  },
+  "step-indicator": {
+    "background-color": {
+      "value": "{body.background}",
+      "type": "color",
+      "description": "Step indicator background color"
+    },
+    "counter-gap": {
+      "value": "{spacing.0}",
+      "type": "spacing",
+      "description": "Step indicator counter gap"
+    },
+    "counter-border-width": {
+      "value": "{spacing.05}",
+      "type": "spacing",
+      "description": "Step indicator counter border width"
+    },
+    "font-family": {
+      "value": "{font.ui}",
+      "type": "font",
+      "description": "Step indicator font family"
+    },
+    "heading-color": {
+      "value": "{text.color}",
+      "type": "color",
+      "description": "Step indicator heading color"
+    },
+    "heading-font-family": {
+      "value": "{font.ui}",
+      "type": "font",
+      "description": "Step indicator heading font family"
+    },
+    "heading-font-size": {
+      "value": "{font.size.lg}",
+      "type": "font",
+      "description": "Step indicator heading font size"
+    },
+    "heading-font-size-small": {
+      "value": "{font.size.md}",
+      "type": "font",
+      "description": "Step indicator heading font size small"
+    },
+    "label-font-size": {
+      "value": "{font.size.sm}",
+      "type": "font",
+      "description": "Step indicator label font size"
+    },
+    "label-line-height": {
+      "value": "{line-height.2}",
+      "type": "line-height",
+      "description": "Step indicator label line height"
+    },
+    "label-font-weight": {
+      "value": "{font.weight.normal}",
+      "type": "font",
+      "description": "Step indicator label font weight"
+    },
+    "label-font-weight-current": {
+      "value": "{font.weight.bold}",
+      "type": "font",
+      "description": "Step indicator label font weight current"
+    },
+    "min-width": {
+      "value": "{spacing.tablet}",
+      "type": "spacing",
+      "description": "Step indicator min width"
+    },
+    "segment-color-pending": {
+      "value": "{base.light}",
+      "type": "color",
+      "description": "Step indicator segment color pending"
+    },
+    "segment-color-complete": {
+      "value": "{primary.dark}",
+      "type": "color",
+      "description": "Step indicator segment color complete"
+    },
+    "segment-color-current": {
+      "value": "{primary.base}",
+      "type": "color",
+      "description": "Step indicator segment color current"
+    },
+    "segment-gap": {
+      "value": "{spacing.0}",
+      "type": "spacing",
+      "description": "Step indicator segment gap"
+    },
+    "segment-height": {
+      "value": "{spacing.1}",
+      "type": "spacing",
+      "description": "Step indicator segment height"
+    },
+    "segment-max-width": {
+      "value": "{spacing.card-lg}",
+      "type": "spacing",
+      "description": "Step indicator segment max width"
+    },
+    "text-pending-color": {
+      "value": "{base.dark}",
+      "type": "color",
+      "description": "Step indicator text pending color"
+    },
+    "label-margin-top": {
+      "value": "{spacing.1}",
+      "type": "spacing",
+      "description": "Step indicator label margin top"
+    },
+    "margin-bottom": {
+      "value": "{spacing.4}",
+      "type": "spacing",
+      "description": "Step indicator margin bottom"
+    },
+    "header-margin-top": {
+      "value": "{spacing.4}",
+      "type": "spacing",
+      "description": "Step indicator header margin top"
+    },
+    "header-margin-top-sm": {
+      "value": "{spacing.2}",
+      "type": "spacing",
+      "description": "Step indicator header margin top small"
+    },
+    "segment-height-mobile": {
+      "value": "{spacing.1}",
+      "type": "spacing",
+      "description": "Step indicator segment height mobile"
+    },
+    "counter-size": {
+      "value": "{spacing.5}",
+      "type": "spacing",
+      "description": "Step indicator counter size"
+    },
+    "counter-size-sm": {
+      "value": "{spacing.3}",
+      "type": "spacing",
+      "description": "Step indicator counter size small"
     }
   }
 }

@@ -38,7 +38,7 @@ function convertDotNotation(value: string, globalPrefix: string): string {
 export const convertTokensToCssVars = (
   variables: JsonObject,
   globalPrefix: string,
-  componentPrefix: string
+  componentPrefix: string,
 ): string => {
   /**
    * Generates CSS variables based on the provided object.

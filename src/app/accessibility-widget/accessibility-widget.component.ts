@@ -5,6 +5,7 @@ import {
   ViewChild,
   ViewEncapsulation,
   HostListener,
+  OnInit,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -34,23 +35,24 @@ export class AccessibilitySettings {
 }
 
 @Component({
-  selector: 'adapt-accessibility-widget',
+  selector: 'aem-accessibility-widget',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './accessibility-widget.component.html',
   styleUrls: [
     './accessibility-widget.component.scss',
     './css/accessibility-font-sizes.css',
-    // './css/accessibility-spacing.css',
     './css/accessibility-color-themes.css',
     './css/accessibility-layout.css',
   ],
   encapsulation: ViewEncapsulation.None,
 })
-export class AccessibilityWidgetComponent {
+export class AccessibilityWidgetComponent implements OnInit {
   @Input() show_accessibility_widget = false;
   @ViewChild('accessibilityPanel') panel?: ElementRef<HTMLElement>;
   @ViewChild('closeButton') close_button?: ElementRef<HTMLDivElement>;
+
+  @Input() saveAs: string = 'aem-accessibility-settings'
 
   current_view = 'text';
   ref: HTMLElement;
@@ -70,13 +72,11 @@ export class AccessibilityWidgetComponent {
     this.ref = document.body;
     // Check for presence of localStorage saved accessibility variables
     const saved = JSON.parse(
-      localStorage.getItem('adapt-accessibility-settings') || '{}'
+      localStorage.getItem(this.saveAs) || '{}'
     );
     if (saved.fontSize) this.accessibility_settings = saved;
     console.log('Saved settings:', saved);
-    console.log('Accessibility settings:', this.accessibility_settings);
-    this.applySettings();
-
+    
     this.accessibilityWidgetService.showAccessibilityWidget$.subscribe(
       (show) => {
         this.show_accessibility_widget = show;
@@ -87,6 +87,10 @@ export class AccessibilityWidgetComponent {
         }
       }
     );
+  }
+
+  ngOnInit() {
+    this.applySettings(); // Apply the saved settings on component initialization
   }
 
   availableFontSizes = ['default', 'large', 'larger', 'largest'];
@@ -131,11 +135,14 @@ export class AccessibilityWidgetComponent {
 
   applyColorTheme() {
     this.accessibility_settings.color = this.color_theme;
-    console.log('Color set:', this.accessibility_settings.color);
-    document.documentElement.setAttribute(
-      'data-a11y-color-theme',
-      this.accessibility_settings.color
-    );
+    if (this.accessibility_settings.color !== 'default') {
+      document.documentElement.setAttribute(
+        'data-a11y-color-theme',
+        this.accessibility_settings.color
+      );
+    } else {
+      document.documentElement.removeAttribute('data-a11y-color-theme');
+    }
     this.saveSettingsLocally();
   }
 
@@ -155,13 +162,14 @@ export class AccessibilityWidgetComponent {
   }
 
   applyFontFamily() {
-
     this.accessibility_settings.family = this.family;
-    document.documentElement.setAttribute(
-      'data-a11y-font-family',
-      this.accessibility_settings.family.toString()
-    );
-    this.saveSettingsLocally();
+    if (this.family) {
+      document.documentElement.setAttribute(
+        'data-a11y-font-family',
+        this.accessibility_settings.family.toString()
+      );
+      this.saveSettingsLocally();
+    }
   }
 
   availableLayouts = ['default', 'single'];
@@ -178,7 +186,6 @@ export class AccessibilityWidgetComponent {
     this.statusMessage = `Site column layout set to ${this.layout}`;
     this.applyLayout();
   }
-
 
   applyLayout() {
     this.accessibility_settings.layout = this.layout;
@@ -227,9 +234,6 @@ export class AccessibilityWidgetComponent {
     }
   }
 
-
-
-
   close() {
     this.accessibilityWidgetService.toggleWidgetVisibility();
   }
@@ -258,7 +262,7 @@ export class AccessibilityWidgetComponent {
 
   saveSettingsLocally() {
     localStorage.setItem(
-      'adapt-accessibility-settings',
+      this.saveAs,
       JSON.stringify(this.accessibility_settings)
     );
   }

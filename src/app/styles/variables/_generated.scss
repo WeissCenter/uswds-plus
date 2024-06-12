@@ -55,7 +55,6 @@
   --usa-summary-box-font-weight: var(--usa-font-weight-normal);
   --usa-summary-box-border-width: var(--usa-spacing-1px);
 
-  --usa-step-indicator-segment-gap: var(--usa-spacing-2px);
   
   --usa-process-list-counter-gap-color: var(--usa-color-global-white);
   --usa-process-list-counter-background-color: var(--usa-color-global-white);
@@ -94,23 +93,6 @@
   --usa-summary-box-line-height: 1.2;
   --usa-summary-box-border-color: var(--usa-info-light);
   --usa-summary-box-background-color: var(--usa-info-lighter);
-  --usa-step-indicator-counter-size-sm: calc(var(--usa-spacing-3));
-  --usa-step-indicator-counter-size: calc(var(--usa-spacing-5));
-  --usa-step-indicator-segment-height-mobile: var(--usa-spacing-1);
-  --usa-step-indicator-header-margin-top-sm: calc(var(--usa-spacing-2));
-  --usa-step-indicator-header-margin-top: calc(var(--usa-spacing-4));
-  --usa-step-indicator-margin-bottom: calc(var(--usa-spacing-4));
-  --usa-step-indicator-label-margin-top: var(--usa-spacing-1);
-  --usa-step-indicator-text-pending-color: var(--usa-base-dark);
-  --usa-step-indicator-segment-max-width: calc(var(--usa-spacing-card-lg));
-  --usa-step-indicator-segment-height: var(--usa-spacing-1);
-  --usa-step-indicator-segment-color-current: var(--usa-accent-cool-dark);
-  --usa-step-indicator-segment-color-complete: var(--usa-secondary-darker);
-  --usa-step-indicator-segment-color-pending: var(--usa-base-lighter);
-  --usa-step-indicator-min-width: calc(var(--usa-spacing-tablet));
-  --usa-step-indicator-counter-border-width: calc(var(--usa-spacing-05));
-  --usa-step-indicator-counter-gap: calc(var(--usa-spacing-05));
-  --usa-step-indicator-background-color: var(--usa-body-background);
 
   --usa-process-list-connector-width: var(--usa-spacing-1);
   --usa-process-list-connector-color: var(--usa-primary-lighter);
@@ -194,10 +176,6 @@
   --usa-summary-box-heading-font-size: calc(var(--usa-font-size-lg));
   --usa-summary-box-font-size: var(--usa-font-size-sm);
   --usa-summary-box-border-radius: var(--usa-border-radius-0);
-  --usa-step-indicator-label-font-size: var(--usa-font-size-sm);
-  --usa-step-indicator-heading-font-size-small: calc(var(--usa-font-size-md));
-  --usa-step-indicator-heading-font-size: calc(var(--usa-font-size-lg));
-  --usa-step-indicator-heading-color: var(--usa-text-color);
   --usa-process-list-heading-font-size: calc(var(--usa-font-size-lg));
   --usa-process-list-heading-color: var(--usa-text-color);
   --usa-process-list-font-size: var(--usa-font-size-sm);
@@ -232,8 +210,6 @@
   --usa-alert-heading-font-size: calc(var(--usa-font-size-lg));
 
   --usa-summary-box-font-family: var(--usa-font-ui);
-  --usa-step-indicator-heading-font-family: var(--usa-font-ui);
-  --usa-step-indicator-font-family: var(--usa-font-ui);
   --usa-process-list-heading-font-family: var(--usa-font-ui);
   --usa-process-list-font-family: var(--usa-font-ui);
   --usa-process-list-counter-font-family: var(--usa-font-ui);

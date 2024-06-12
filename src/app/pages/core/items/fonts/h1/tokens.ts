@@ -1,4 +1,4 @@
-import { ThemeTokens } from '../../../../../interfaces/tokens';
+import { ThemeTokens } from '../../../../../interfaces/token-interface';
 export const key = 'h1-font';
 export const a11y = null;
 const tokens: ThemeTokens = {
@@ -36,7 +36,7 @@ const tokens: ThemeTokens = {
   },
   haystack: {
     size: {
-      value: '{font-size.xl}',
+      value: '{font-size.2xl}',
       type: 'fontSizes',
       description: 'H1 font size',
     },
@@ -46,7 +46,7 @@ const tokens: ThemeTokens = {
       description: 'H1 font family',
     },
     weight: {
-      value: '{font-weight.thin}',
+      value: '{font-weight.normal}',
       type: 'fontWeights',
       description: 'H1 font weight',
     },
@@ -61,7 +61,7 @@ const tokens: ThemeTokens = {
       description: 'H1 letter spacing',
     },
     'paragraph-spacing': {
-      value: '{spacing.3}',
+      value: '{spacing.105}',
       type: 'spacing',
       description: 'Spacing between <h1> and other elements with .usa-prose class',
     },

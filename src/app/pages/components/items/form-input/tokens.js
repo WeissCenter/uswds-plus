@@ -7,9 +7,8 @@ exports.key = 'input';
 //     --usa-input-font-weight: var(--usa-font-weight-normal);
 //     --usa-input-line-height: var(--usa-line-height-3);
 // --usa-input-letter-spacing: var(--usa-body-font-letter-spacing);
-//     --usa-input-height: var(--usa-sizing-5);
-//     --usa-input-select-size: var(--usa-sizing-205);
-//     --usa-input-max-width: var(--usa-sizing-mobile-lg);
+//     --usa-input-height: var(--usa-spacing-5);
+//     --usa-input-max-width: var(--usa-spacing-mobile-lg);
 //     --usa-input-margin-top: var(--usa-spacing-1);
 //     --usa-input-padding-x: var(--usa-spacing-1);
 //     --usa-input-padding-y: var(--usa-spacing-05);
@@ -33,9 +32,17 @@ exports.key = 'input';
 // --usa-input-label-line-height: var(--usa-line-height-3);
 // --usa-input-label-margin-bottom: var(--usa-spacing-05);
 // --usa-input-label-margin-top: var(--usa-spacing-1);
-// --usa-input-select-caret-color: var(--usa-input-color);
+// --usa-input-icon-size: var(--usa-spacing-3);
+// --usa-input-select-icon: url('#{$assetFilePath}usa-icons/unfold_more.svg');
+// --usa-input-select-icon-size: var(--usa-spacing-205);
+// --usa-input-select-icon-color: var(--usa-base-light);
 var tokens = {
     base: {
+        'icon-size': {
+            value: '{spacing.3}',
+            type: 'sizing',
+            description: 'Icon size for input prefix and suffix items',
+        },
         'font-family': {
             value: '{font.ui}',
             type: 'fontFamilies',
@@ -66,10 +73,20 @@ var tokens = {
             type: 'sizes',
             description: 'Height',
         },
-        'select-size': {
+        'select-icon': {
+            value: 'url(/assets/usa-icons/unfold_more.svg)',
+            type: 'urls',
+            description: 'Select icon',
+        },
+        'select-icon-size': {
             value: '{spacing.205}',
             type: 'sizes',
             description: 'Select size',
+        },
+        'select-icon-color': {
+            value: '{base.light}',
+            type: 'colors',
+            description: 'Select icon color',
         },
         'max-width': {
             value: '{spacing.mobile-lg}',
@@ -195,14 +212,14 @@ var tokens = {
             value: '{spacing.2}',
             type: 'spacing',
             description: 'Label margin top',
-        },
-        'select-caret-color': {
-            value: '{input.color}',
-            type: 'colors',
-            description: 'Select caret color',
-        },
+        }
     },
     adapt: {
+        'icon-size': {
+            value: '{spacing.3}',
+            type: 'sizing',
+            description: 'Icon size for input prefix and suffix items',
+        },
         'font-family': {
             value: '{font.ui}',
             type: 'fontFamilies',
@@ -233,10 +250,20 @@ var tokens = {
             type: 'sizes',
             description: 'Height',
         },
-        'select-size': {
+        'select-icon': {
+            value: 'url(/assets/usa-icons/unfold_more.svg)',
+            type: 'urls',
+            description: 'Select icon',
+        },
+        'select-icon-size': {
             value: '{spacing.205}',
             type: 'sizes',
             description: 'Select size',
+        },
+        'select-icon-color': {
+            value: '{base.light}',
+            type: 'colors',
+            description: 'Select icon color',
         },
         'max-width': {
             value: '{spacing.mobile-lg}',
@@ -362,14 +389,14 @@ var tokens = {
             value: '{spacing.2}',
             type: 'spacing',
             description: 'Label margin top',
-        },
-        'select-caret-color': {
-            value: '{input.color}',
-            type: 'colors',
-            description: 'Select caret color',
-        },
+        }
     },
     coi: {
+        'icon-size': {
+            value: '{spacing.3}',
+            type: 'sizing',
+            description: 'Icon size for input prefix and suffix items',
+        },
         'font-family': {
             value: '{font.ui}',
             type: 'fontFamilies',
@@ -400,15 +427,20 @@ var tokens = {
             type: 'sizes',
             description: 'Height',
         },
-        'select-size': {
-            value: '{spacing.3}',
+        'select-icon': {
+            value: 'url(/assets/usa-icons/unfold_more.svg)',
+            type: 'urls',
+            description: 'Select icon',
+        },
+        'select-icon-size': {
+            value: '{spacing.205}',
             type: 'sizes',
             description: 'Select size',
         },
-        'select-caret-color': {
-            value: '{input.color}',
+        'select-icon-color': {
+            value: '{base.light}',
             type: 'colors',
-            description: 'Select caret color',
+            description: 'Select icon color',
         },
         'max-width': {
             value: '{spacing.mobile-lg}',
@@ -532,6 +564,11 @@ var tokens = {
         },
     },
     weiss: {
+        'icon-size': {
+            value: '{spacing.3}',
+            type: 'sizing',
+            description: 'Icon size for input prefix and suffix items',
+        },
         'font-family': {
             value: '{font.sans}',
             type: 'fontFamilies',
@@ -562,10 +599,20 @@ var tokens = {
             type: 'sizes',
             description: 'Height',
         },
-        'select-size': {
+        'select-icon': {
+            value: 'url(/assets/usa-icons/unfold_more.svg)',
+            type: 'urls',
+            description: 'Select icon',
+        },
+        'select-icon-size': {
             value: '{spacing.205}',
             type: 'sizes',
             description: 'Select size',
+        },
+        'select-icon-color': {
+            value: '{base.light}',
+            type: 'colors',
+            description: 'Select icon color',
         },
         'max-width': {
             value: '{spacing.mobile-lg}',
@@ -691,12 +738,184 @@ var tokens = {
             value: '{spacing.2}',
             type: 'spacing',
             description: 'Label margin top',
+        }
+    },
+    haystack: {
+        'icon-size': {
+            value: '{spacing.205}',
+            type: 'sizing',
+            description: 'Icon size for input prefix and suffix items',
         },
-        'select-caret-color': {
-            value: '{input.color}',
+        'font-family': {
+            value: '{font.sans}',
+            type: 'fontFamilies',
+            description: 'Font family',
+        },
+        'font-size': {
+            value: '{body-font.size}',
+            type: 'fontSizes',
+            description: 'Font size',
+        },
+        'font-weight': {
+            value: '{body-font.weight}',
+            type: 'fontWeights',
+            description: 'Font weight',
+        },
+        'line-height': {
+            value: '{line-height.4}',
+            type: 'lineHeights',
+            description: 'Line height',
+        },
+        'letter-spacing': {
+            value: '{body-font.letter-spacing}',
+            type: 'letterSpacing',
+            description: 'Letter spacing',
+        },
+        height: {
+            value: '{spacing.5}',
+            type: 'sizes',
+            description: 'Height',
+        },
+        'select-icon': {
+            value: 'url(/assets/usa-icons/unfold_more.svg)',
+            type: 'urls',
+            description: 'Select icon',
+        },
+        'select-icon-size': {
+            value: '{spacing.205}',
+            type: 'sizes',
+            description: 'Select size',
+        },
+        'select-icon-color': {
+            value: '{base.light}',
             type: 'colors',
-            description: 'Select caret color',
+            description: 'Select icon color',
         },
+        'max-width': {
+            value: '{spacing.mobile-lg}',
+            type: 'sizes',
+            description: 'Max width',
+        },
+        'margin-top': {
+            value: '{spacing.0}',
+            type: 'spacing',
+            description: 'Margin top',
+        },
+        'padding-x': {
+            value: '{spacing.1}',
+            type: 'spacing',
+            description: 'Padding x',
+        },
+        'padding-y': {
+            value: '{spacing.05}',
+            type: 'spacing',
+            description: 'Padding y',
+        },
+        'large-height': {
+            value: '{spacing.5}',
+            type: 'spacing',
+            description: 'Large height',
+        },
+        'border-width': {
+            value: '{border-width.0}',
+            type: 'borderWidths',
+            description: 'Border width',
+        },
+        'border-color': {
+            value: '{black}',
+            type: 'colors',
+            description: 'Border color',
+        },
+        'border-color-hover': {
+            value: '{ink}',
+            type: 'colors',
+            description: 'Border color hover',
+        },
+        color: {
+            value: '{ink}',
+            type: 'colors',
+            description: 'Color',
+        },
+        'placeholder-color': {
+            value: '{base}',
+            type: 'colors',
+            description: 'Placeholder color',
+        },
+        'background-color': {
+            value: '{base.darkest}',
+            type: 'colors',
+            description: 'Background color',
+        },
+        'border-radius': {
+            value: '{border-radius.md}',
+            type: 'borderRadius',
+            description: 'Border radius',
+        },
+        'search-min-width': {
+            value: '27ch',
+            type: 'sizes',
+            description: 'Search min width',
+        },
+        'disabled-border-color': {
+            value: '{disabled.light}',
+            type: 'colors',
+            description: 'Disabled border color',
+        },
+        'disabled-border-color-hover': {
+            value: '{input.disabled-border-color}',
+            type: 'colors',
+            description: 'Disabled border color hover',
+        },
+        'disabled-color': {
+            value: '{disabled.light}',
+            type: 'colors',
+            description: 'Disabled color',
+        },
+        'disabled-background-color': {
+            value: '{disabled.dark}',
+            type: 'colors',
+            description: 'Disabled background color',
+        },
+        'label-font-size': {
+            value: '{font.size.sm}',
+            type: 'fontSizes',
+            description: 'Label font size',
+        },
+        'label-font-family': {
+            value: '{body-font.family}',
+            type: 'fontFamilies',
+            description: 'Label font family',
+        },
+        'label-font-weight': {
+            value: '{body-font.weight}',
+            type: 'fontWeights',
+            description: 'Label font weight',
+        },
+        'label-color': {
+            value: '{ink}',
+            type: 'colors',
+            description: 'Label color',
+        },
+        'label-line-height': {
+            value: '{body-font.line-height}',
+            type: 'lineHeights',
+            description: 'Label line height',
+        },
+        'label-letter-spacing': {
+            value: '{body-font.letter-spacing}',
+            type: 'letterSpacing',
+            description: 'Label letter spacing',
+        },
+        'label-margin-bottom': {
+            value: '{spacing.05}',
+            type: 'spacing',
+            description: 'Label margin bottom',
+        },
+        'label-margin-top': {
+            value: '{spacing.0}',
+            type: 'spacing',
+            description: 'Label margin top',
+        }
     },
 };
 exports.default = tokens;

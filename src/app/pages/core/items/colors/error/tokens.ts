@@ -1,4 +1,4 @@
-import { ThemeTokens } from '../../../../../interfaces/tokens';
+import { ThemeTokens } from '../../../../../interfaces/token-interface';
 export const key = 'error';
 const tokens: ThemeTokens = {
   base: {
@@ -51,6 +51,33 @@ const tokens: ThemeTokens = {
     },
     darker: {
       value: '{color.red.70}',
+      type: 'color',
+      description: 'Error darker color',
+    },
+  },
+  haystack: {
+    lighter: {
+      value: '{color.magenta.10}',
+      type: 'color',
+      description: 'Error lighter color',
+    },
+    light: {
+      value: '{color.magenta.30}',
+      type: 'color',
+      description: 'Error light color',
+    },
+    base: {
+      value: '{color.magenta.50}',
+      type: 'color',
+      description: 'Error color',
+    },
+    dark: {
+      value: '{color.magenta.60}',
+      type: 'color',
+      description: 'Error dark color',
+    },
+    darker: {
+      value: '{color.magenta.70}',
       type: 'color',
       description: 'Error darker color',
     },

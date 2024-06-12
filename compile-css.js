@@ -25,9 +25,9 @@ const defaultOptions = {
         minify: true,
         postcssPresetEnv: {
             stage: 3,
-            features: {
-                'custom-properties': true,
-            },
+            // features: {
+            //     'custom-properties': true,
+            // },
         },
     },
     // Change SCSS variables in the main Sass file, "modify" is a boolean that determines whether the variable should be checked for quotes and slashes (like a file path)

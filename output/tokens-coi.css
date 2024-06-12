@@ -27,6 +27,7 @@
 --usa-primary-dark: #4247AC;
 --usa-primary-darker: #1D1F49;
 --usa-primary-darkest: #1E1E1E;
+--usa-button-text-transform: none;
 --usa-button-color: var(--usa-ink);
 --usa-button-color-hover: var(--usa-ink);
 --usa-button-color-active: var(--usa-ink);
@@ -182,6 +183,7 @@
 --usa-table-caption-font-weight: var(--usa-font-weight-bold);
 --usa-table-caption-text-align: left;
 --usa-table-caption-line-height: var(--usa-line-height-3);
+--usa-table-background-color: var(--usa-body-background);
 --usa-sidenav-item-font-size: var(--usa-font-size-sm);
 --usa-sidenav-item-font-family: var(--usa-font-sans);
 --usa-sidenav-item-font-weight: var(--usa-font-weight-normal);
@@ -226,14 +228,16 @@
 --usa-sidenav-child-padding-left: var(--usa-spacing-0);
 --usa-sidenav-child-padding-right: var(--usa-spacing-105);
 --usa-sidenav-child-padding-multiplier: 2;
+--usa-input-icon-size: var(--usa-spacing-3);
 --usa-input-font-family: var(--usa-font-ui);
 --usa-input-font-size: var(--usa-body-font-size);
 --usa-input-font-weight: var(--usa-font-weight-medium);
 --usa-input-line-height: var(--usa-line-height-3);
 --usa-input-letter-spacing: var(--usa-body-font-letter-spacing);
 --usa-input-height: var(--usa-spacing-6);
---usa-input-select-size: var(--usa-spacing-3);
---usa-input-select-caret-color: var(--usa-input-color);
+--usa-input-select-icon: url(/assets/usa-icons/unfold_more.svg);
+--usa-input-select-icon-size: var(--usa-spacing-205);
+--usa-input-select-icon-color: var(--usa-base-light);
 --usa-input-max-width: var(--usa-spacing-mobile-lg);
 --usa-input-margin-top: var(--usa-spacing-1);
 --usa-input-padding-x: var(--usa-spacing-2);

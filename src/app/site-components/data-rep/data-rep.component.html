@@ -1,0 +1,149 @@
+<article class="data-rep-wrapper" [attr.aria-labelledby]="id + '-title'"
+    [attr.aria-describedby]="id + '-insight' + id + '-total'">
+    <h1 class="title" *ngIf="useH1">{{header}}</h1>
+    <h2 class="title" *ngIf="!useH1">{{header}}</h2>
+    <p class="insight" [innerHTML]="insight"></p>
+    <div class="action-bar">
+        <ul role="group">
+            <li>
+                <button (click)="togglePlainLanguage()" #explanationSwitch [attr.aria-controls]="id + '-explanation-region'" aria-pressed="false" [id]="id + '-explanation-switch'">
+                    <i class="far" [ngClass]="{'fa-toggle-off': !showPlainLanguage, 'fa-toggle-on': showPlainLanguage}"
+                        aria-hidden="true"></i>
+                    <label [for]="id + '-explanation-switch'">Explain</label>
+                </button>
+            </li>
+            <li>
+                <button (click)="toggleGlossary()" #glossarySwitch [attr.aria-controls]="glossaryIdsString" aria-pressed="false" [id]="id + '-glossary-switch'">
+                    <i class="far" [ngClass]="{'fa-toggle-off': !showGlossary, 'fa-toggle-on': showGlossary}"
+                        aria-hidden="true"></i>
+                    <label [for]="id + '-glossary-switch'">Glossary</label>
+                </button>
+            </li>
+            <li>
+                <button #dataModalSwitch [id]="id + '-data-modal-button'" (click)="openDataModal()">
+                    <i class="far fa-table" aria-hidden="true"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                    <label [for]="id + '-data-modal-button'">Data</label>
+                </button>
+            </li>
+        <!-- <button>
+            <i class="fal fa-share"></i>
+            Share
+        </button> -->
+        </ul>
+
+    </div>
+    <div class="plain-language" #explainationRegion [attr.aria-expanded]="false" hidden tabindex="-1">
+        <h2 class="plain-language-title" *ngIf="useH1">Plain language summary</h2>
+        <h3 class="plain-language-title" *ngIf="!useH1">Plain language summary</h3>
+        <span [innerHTML]="plainLanguage"></span>
+    </div>
+    <ol #bars class="series">
+
+      <ng-container *ngFor="let item of data; index as index" >
+      
+        <li tabindex="0" *ngIf="item.value > 0"  [id]="id + '-series-item-' + index">
+          <span class="content">
+              <p class="label" [id]="id + '-series-item-label-' + index">{{item.label}}</p>
+              <p class="definition" hidden [attr.aria-expanded]="false" [id]="id + '-series-item-definition-' + index"><span
+                      [innerHTML]="item.label"></span></p>
+              </span>
+          <div class="bar-wrapper">
+              <div class="bar" [ngStyle]="{'--dr-series-item-flex-amount':item.flexAmount}" aria-hidden="true"></div>
+              <ul class="details">
+                  <li class="percentage" [id]="id + '-series-item-percentage-' + index">{{item.percentage?.toLocaleString(this.localization, {
+                      minimumFractionDigits: 2,
+                      maximumFractionDigits: 2,
+                      })}}%</li>
+                  <li class="value"  [id]="id + '-series-item-value-' + index">{{item.value.toLocaleString(this.localization, {
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 0,
+                      })}}</li>
+              </ul>
+          </div>
+      </li>
+      
+      </ng-container>
+
+
+
+    </ol>
+    <p class="total" tabindex="0" [id]="id + 'total'">Total: <strong>{{this.total.toLocaleString(this.localization, {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+            })}}</strong></p>
+</article>
+
+<article
+[id]="id + '-data-modal'"
+class="modal"
+role="dialog"
+aria-modal="true"
+[attr.aria-labelledby]="id + '-data-modal-title'"
+hidden
+#dataModal
+>
+<span [id]="id + '-data-modal-dismissal'" class="dismissal" aria-hidden="true" (click)="closeModal()"></span>
+<section class="modal-content" role="document">
+  <button
+    [id]="id + '-close-modal-button'"
+    #dataModalCloseBtn
+    class="close-modal"
+    (click)="closeModal()"
+  >
+    Close
+    <i class="fas fa-times" aria-hidden="true"></i>
+  </button>
+  <h2 id="${{this.uniqueIdPrefix}}data-modal-title" class="modal-title">
+    {{header}}
+  </h2>
+  <p class="description" [innerHTML]="insight"></p>
+  <table
+    class="data-table"
+    [attr.aria-label]="header + '-data table'"
+  >
+    <thead>
+      <tr class="header-row">
+        <th class="th percentage">%</th>
+        <th class="th label">Label</th>
+        <th class="th value">Value</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr tabindex="0" class="flex-row" *ngFor="let item of data">
+            <td class="td percentage">
+              {{item.percentage
+                ? item.percentage.toLocaleString(
+                    this.localization,
+                    {
+                      minimumFractionDigits: 2,
+                      maximumFractionDigits: 2,
+                    }
+                  )
+                : 0}}%
+            </td>
+            <td class="td label">{{item.label}}</td>
+            <td class="td value">
+              {{item.value.toLocaleString(this.localization, {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}}
+            </td>
+          </tr>
+    </tbody>
+    <tfoot>
+      <tr class="footer-row" tabindex="0">
+        <td colspan="3" class="tf">
+          Total:
+          <strong>
+            {{this.total.toLocaleString(this.localization, {
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
+            })}}
+          </strong>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</section>
+</article>

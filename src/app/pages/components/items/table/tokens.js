@@ -19,6 +19,7 @@ exports.key = 'table';
 // --usa-table-sorted-icon-color: var(--usa-text-color);
 // --usa-table-sorted-header-text-color: var(--usa-text-color);
 // --usa-table-text-color: var(--usa-text-color);
+// --usa-table-backlgound-color: var(--usa-body-background);
 // --usa-table-stripe-text-color: var(--usa-text-color);
 // --usa-table-header-text-color: var(--usa-text-color);
 // --usa-table-sorted-text-color: var(--usa-text-color);
@@ -43,11 +44,6 @@ var tokens = {
             value: '{spacing.2px}',
             type: 'sizing',
             description: 'Table border width',
-        },
-        'background-color': {
-            value: '{body.background}',
-            type: 'color',
-            description: 'Table background color',
         },
         'cell-compact-padding-x': {
             value: '{spacing.1}',
@@ -219,6 +215,11 @@ var tokens = {
             type: 'lineHeights',
             description: 'Table caption line height',
         },
+        'background-color': {
+            value: '{body.background}',
+            type: 'color',
+            description: 'Table background color',
+        },
     },
     adapt: {
         'border-width': {
@@ -275,11 +276,6 @@ var tokens = {
             value: '{base.dark}',
             type: 'color',
             description: 'Table text hover color',
-        },
-        'background-color': {
-            value: '{body.background}',
-            type: 'color',
-            description: 'Table background color',
         },
         'stripe-background-color': {
             value: '{base.lighter}',
@@ -401,6 +397,11 @@ var tokens = {
             type: 'lineHeights',
             description: 'Table caption line height',
         },
+        'background-color': {
+            value: '{body.background}',
+            type: 'color',
+            description: 'Table background color',
+        },
     },
     haystack: {
         'border-width': {
@@ -424,32 +425,32 @@ var tokens = {
             description: 'Table cell padding x',
         },
         'cell-padding-y': {
-            value: '{spacing.05}',
+            value: '{spacing.1}',
             type: 'sizing',
             description: 'Table cell padding y',
         },
         'unsorted-icon-hover-color': {
-            value: '{base.dark}',
+            value: '{ink}',
             type: 'color',
             description: 'Table unsorted icon hover color',
         },
         'unsorted-icon-color': {
-            value: '{base}',
+            value: '{base.light}',
             type: 'color',
             description: 'Table unsorted icon color',
         },
         'sorted-stripe-background-color': {
-            value: '{primary.light}',
+            value: '{color.mint-cool.vivid.80}',
             type: 'color',
             description: 'Table sorted stripe background color',
         },
         'sorted-background-color': {
-            value: '{primary}',
+            value: '{color.mint-cool.90}',
             type: 'color',
             description: 'Table sorted background color',
         },
         'sorted-header-background-color': {
-            value: '{primary.light}',
+            value: '{color.mint-cool.vivid.80}',
             type: 'color',
             description: 'Table sorted header background color',
         },
@@ -459,12 +460,12 @@ var tokens = {
             description: 'Table text hover color',
         },
         'stripe-background-color': {
-            value: '{black}',
+            value: '{base.darkest}',
             type: 'color',
             description: 'Table stripe background color',
         },
         'header-background-color': {
-            value: '{black}',
+            value: '{base.darkest}',
             type: 'color',
             description: 'Table header background color',
         },
@@ -474,7 +475,7 @@ var tokens = {
             description: 'Table border color',
         },
         'sorted-icon-color': {
-            value: '{table.text-color}',
+            value: '{color.mint-cool.vivid.20}',
             type: 'color',
             description: 'Table sorted icon color',
         },
@@ -494,7 +495,7 @@ var tokens = {
             description: 'Table stripe text color',
         },
         'header-text-color': {
-            value: '{white}',
+            value: '{ink}',
             type: 'color',
             description: 'Table header text color',
         },
@@ -504,7 +505,7 @@ var tokens = {
             description: 'Table sorted text color',
         },
         'font-size': {
-            value: '{font-size.sm}',
+            value: '{font-size.xs}',
             type: 'fontSizes',
             description: 'Table font size',
         },
@@ -514,7 +515,7 @@ var tokens = {
             description: 'Table font family',
         },
         'line-height': {
-            value: '{line-height.2}',
+            value: '{line-height.3}',
             type: 'lineHeights',
             description: 'Table line height',
         },
@@ -524,7 +525,7 @@ var tokens = {
             description: 'Table font weight',
         },
         'header-font-size': {
-            value: '{font-size.sm}',
+            value: '{font-size.3xs}',
             type: 'fontSizes',
             description: 'Table header font size',
         },
@@ -534,7 +535,7 @@ var tokens = {
             description: 'Table header font family',
         },
         'header-font-weight': {
-            value: '{font-weight.semibold}',
+            value: '{font-weight.normal}',
             type: 'fontWeights',
             description: 'Table header font weight',
         },
@@ -544,7 +545,7 @@ var tokens = {
             description: 'Table header line height',
         },
         'margin-y': {
-            value: '{spacing.205}',
+            value: '{spacing.05}',
             type: 'sizing',
             description: 'Table margin y',
         },
@@ -577,6 +578,11 @@ var tokens = {
             value: '{line-height.3}',
             type: 'lineHeights',
             description: 'Table caption line height',
+        },
+        'background-color': {
+            value: '{black}',
+            type: 'color',
+            description: 'Table background color',
         },
     },
     coi: {
@@ -754,6 +760,11 @@ var tokens = {
             value: '{line-height.3}',
             type: 'lineHeights',
             description: 'Table caption line height',
+        },
+        'background-color': {
+            value: '{body.background}',
+            type: 'color',
+            description: 'Table background color',
         },
     },
 };

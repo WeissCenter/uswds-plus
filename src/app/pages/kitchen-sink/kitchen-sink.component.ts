@@ -13,7 +13,6 @@ export class KitchenSinkComponent {
     accordion.on(document.body);
     password.on(document.body);
     table.on(document.body);
-    this.setTheme(this.currentTheme);
   }
 
   lowVisionActive = false;
@@ -50,7 +49,7 @@ export class KitchenSinkComponent {
     }
   }
 
-  currentTheme = 'monokai';
+  currentTheme = '';
 
   setTheme(theme: string) {
     this.currentTheme = theme;

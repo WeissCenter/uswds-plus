@@ -1,4 +1,35 @@
-import {ThemeTokens} from '../../../../interfaces/tokens';
+import {ThemeTokens} from '../../../../interfaces/token-interface';
+
+// --usa-button-stroke-width: var(--usa-border-width-md);
+// --usa-button-width: auto;
+// --usa-button-width-mobile: 100%;
+// --usa-button-font-weight: var(--usa-font-weight-medium);
+// --usa-button-margin-right: var(--usa-spacing-0);
+// --usa-button-lg-padding-y: var(--usa-spacing-2);
+// --usa-button-lg-padding-x: var(--usa-spacing-3);
+// --usa-button-padding-y: var(--usa-spacing-1);
+// --usa-button-padding-x: var(--usa-spacing-2);
+// --usa-button-outline-offset: var(--usa-focus-offset);
+// --usa-button-small-width: var(--usa-spacing-6);
+// --usa-button-inverse-active-color: var(--usa-link-reverse-active-color);
+// --usa-button-border-radius: var(--usa-border-radius-md);
+// --usa-button-lg-font-size: var(--usa-font-size-lg);
+// --usa-button-inverse-hover-color: var(--usa-link-reverse-hover-color);
+// --usa-button-inverse-color: var(--usa-link-reverse-color);
+// --usa-button-lg-border-radius: var(--usa-border-radius-md);
+// --usa-button-font-size: var(--usa-font-size-xs);
+// --usa-button-font-family: var(--usa-font-ui);
+// --usa-button-line-height: var(--usa-line-height-2);
+// --usa-button-gap: var(--usa-spacing-1);
+// --usa-button-color: var(--usa-white);
+// --usa-button-color-hover: var(--usa-white);
+// --usa-button-color-active: var(--usa-white);
+// --usa-button-color-visited: var(--usa-primary-lighter);
+// --usa-button-background: var(--usa-primary-dark);
+// --usa-button-background-hover: var(--usa-primary-darker);
+// --usa-button-background-active: var(--usa-primary-darker);
+// --usa-button-icon-size: var(--usa-spacing-3);
+// --usa-button-lg-icon-size: var(--usa-spacing-4);
 
 // --usa-button-outline-background: var(--usa-transparent);
 // --usa-button-outline-background-hover: var(--usa-transparent);
@@ -10,10 +41,35 @@ import {ThemeTokens} from '../../../../interfaces/tokens';
 // --usa-button-outline-border-hover-color: var(--usa-primary-dark);
 // --usa-button-outline-border-active-color: var(--usa-primary-darker);
 
+// --usa-button-flex-direction: row;
+// --usa-button-flex-align: center;
+
+// --usa-button-transition-duration: var(--usa-transition-duration-sm);
+// --usa-button-transition-timing-function: var(--usa-transition-timing-function);
+// --usa-button-transition-property: all;
+
+// --usa-button-text-decoration: none;
+// --usa-button-text-decoration-unstyled: none;
+// --usa-button-text-decoration-hover: none;
+// --usa-button-text-decoration-active: none;
+
+// --usa-button-box-shadow: none;
+// --usa-button-box-shadow-hover: none;
+// --usa-button-box-shadow-active: none;
+
+// --usa-button-cursor: pointer;
+
+// --usa-button-text-transform: none;
+
 export const key = 'button';
 
 const tokens: ThemeTokens = {
   base: {
+    'text-transform': {
+      value: 'none',
+      type: 'textTransform',
+      description: 'Button text transform',
+    },
     'color': {
       value: '{white}',
       type: 'color',
@@ -192,6 +248,11 @@ const tokens: ThemeTokens = {
 
   },
   haystack: {
+    'text-transform': {
+      value: 'none',
+      type: 'textTransform',
+      description: 'Button text transform',
+    },
     'color': {
       value: '{base.darkest}',
       type: 'color',
@@ -313,7 +374,7 @@ const tokens: ThemeTokens = {
       description: 'Button margin right',
     },
     'icon-size': {
-      value: '{spacing.205}',
+      value: '{spacing.2}',
       type: 'sizing',
       description: 'Button icon size',
     },
@@ -338,37 +399,42 @@ const tokens: ThemeTokens = {
       description: 'Button outline active background',
     },
     'outline-color': {
-      value: '{primary}',
+      value: '{primary.light}',
       type: 'color',
       description: 'Button outline color',
     },
     'outline-hover-color': {
-      value: '{primary.dark}',
+      value: '{primary}',
       type: 'color',
       description: 'Button outline hover color',
     },
     'outline-active-color': {
-      value: '{primary.darker}',
+      value: '{primary.dark}',
       type: 'color',
       description: 'Button outline active color',
     },
     'outline-border-color': {
-      value: '{primary}',
+      value: '{primary.light}',
       type: 'color',
       description: 'Button outline border color',
     },
     'outline-border-hover-color': {
-      value: '{primary.dark}',
+      value: '{primary}',
       type: 'color',
       description: 'Button outline border hover color',
     },
     'outline-border-active-color': {
-      value: '{primary.darker}',
+      value: '{primary.dark}',
       type: 'color',
       description: 'Button outline border active color',
     },
   },
   coi: {
+    'text-transform': {
+      value: 'none',
+      type: 'textTransform',
+      description: 'Button text transform',
+    },
     'color': {
       value: '{ink}',
       type: 'color',
@@ -546,6 +612,11 @@ const tokens: ThemeTokens = {
     },
   },
   adapt: {
+    'text-transform': {
+      value: 'capitalize',
+      type: 'textTransform',
+      description: 'Button text transform',
+    },
     'color': {
       value: '{white}',
       type: 'color',
@@ -724,6 +795,11 @@ const tokens: ThemeTokens = {
 
   },
   weiss: {
+    'text-transform': {
+      value: 'none',
+      type: 'textTransform',
+      description: 'Button text transform',
+    },
     'color': {
       value: '{white}',
       type: 'color',

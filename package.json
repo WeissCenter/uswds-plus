@@ -24,7 +24,9 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
-    "inquirer": "^9.2.17",
+    "@types/inquirer": "^9.0.7",
+    "crypto": "^1.0.1",
+    "inquirer": "^9.2.21",
     "ora": "^8.0.1",
     "postcss-scss": "^4.0.9",
     "readline-sync": "^1.4.10",
@@ -57,7 +59,7 @@
     "nodemon": "^3.0.3",
     "postcss-cli": "^11.0.0",
     "postcss-preset-env": "^9.3.0",
-    "sass": "^1.70.0",
+    "sass": "^1.77.1",
     "ts-node": "^10.9.2",
     "typescript": "~5.1.5"
   }

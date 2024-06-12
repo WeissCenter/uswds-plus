@@ -25,10 +25,12 @@
     --usa-table-font-family: var(--usa-font-body);
     --usa-table-line-height: var(--usa-line-height-2);
     --usa-table-font-weight: var(--usa-font-weight-normal);
+    --usa-table-letter-spacing: var(--usa-letter-spacing-1);
     --usa-table-header-font-size: var(--usa-font-size-sm);
     --usa-table-header-font-family: var(--usa-font-body);
     --usa-table-header-font-weight: var(--usa-font-weight-semibold);
     --usa-table-header-line-height: var(--usa-line-height-3);
+    --usa-table-header-letter-spacing: var(--usa-letter-spacing-1);
 
     --usa-table-margin-y: var(--usa-spacing-205);
 
@@ -38,6 +40,7 @@
     --usa-table-caption-font-weight: var(--usa-font-weight-bold);
     --usa-table-caption-text-align: left;
     --usa-table-caption-line-height: var(--usa-line-height-3);
+    --usa-table-caption-letter-spacing: var(--usa-letter-spacing-1);
 
 
 }
@@ -47,6 +50,7 @@
     font-family: var(--usa-table-font-family);
     line-height: var(--usa-table-line-height);
     font-weight: var(--usa-table-font-weight);
+    letter-spacing: var(--usa-table-letter-spacing);
     border-collapse: collapse;
     border-spacing: 0;
     color: var(--usa-table-text-color);
@@ -61,6 +65,7 @@
     line-height: var(--usa-table-header-line-height);
     font-family: var(--usa-table-header-font-family);
     font-size: var(--usa-table-header-font-size);
+    letter-spacing: var(--usa-table-header-letter-spacing);
 }
 
 .usa-table thead th,
@@ -87,7 +92,7 @@
     font-size: var(--usa-table-caption-font-size);
     font-weight: var(--usa-table-caption-font-weight);
     line-height: var(--usa-table-caption-line-height);
-    letter-spacing: var(--usa-letter-spacing-1);
+    letter-spacing: var(--usa-table-caption-letter-spacing);
     margin-bottom: var(--usa-table-caption-margin-bottom);
     text-align: var(--usa-table-caption-text-align);
 }
@@ -280,7 +285,7 @@
     width: var(--usa-spacing-4);
     background-position: center center;
     background-size: var(--usa-spacing-3);
-    color: var(--usa-table-unsorted-icon-color);
+    color: var(--usa-table-sorted-icon-color);
     cursor: pointer;
     display: inline-block;
     margin: 0;
@@ -293,15 +298,15 @@
 }
 
 .usa-table th[data-sortable][aria-sort=descending] .usa-table__header__button:visited {
-    color: var(--usa-link-visited-color)
+    color: var(--usa-table-sorted-icon-color);
 }
 
 .usa-table th[data-sortable][aria-sort=descending] .usa-table__header__button:hover {
-    color: var(--usa-link-hover-color)
+    color: var(--usa-table-unsorted-icon-hover-color);
 }
 
 .usa-table th[data-sortable][aria-sort=descending] .usa-table__header__button:active {
-    color: var(--usa-link-active-color)
+    color: var(--usa-table-sorted-icon-color);
 }
 
 .usa-table th[data-sortable][aria-sort=descending] .usa-table__header__button:focus {
@@ -334,11 +339,11 @@
 }
 
 .usa-table th[data-sortable][aria-sort=descending] .usa-table__header__button.usa-button--hover {
-    color: var(--usa-link-hover-color)
+    color: var(--usa-table-unsorted-icon-hover-color);
 }
 
 .usa-table th[data-sortable][aria-sort=descending] .usa-table__header__button.usa-button--active {
-    color: var(--usa-link-active-color)
+    color: var(--usa-table-sorted-icon-color);
 }
 
 .usa-table th[data-sortable][aria-sort=descending] .usa-table__header__button:disabled,
@@ -388,7 +393,7 @@
     width: var(--usa-spacing-4);
     background-position: center center;
     background-size: var(--usa-spacing-3);
-    color: var(--usa-table-unsorted-icon-color);
+    color: var(--usa-table-sorted-icon-color);
     cursor: pointer;
     display: inline-block;
     margin: 0;
@@ -405,16 +410,16 @@
 }
 
 .usa-table th[data-sortable][aria-sort=ascending] .usa-table__header__button:hover {
-    color: var(--usa-link-hover-color)
+    color: var(--usa-table-unsorted-icon-hover-color);
 }
 
 .usa-table th[data-sortable][aria-sort=ascending] .usa-table__header__button:active {
-    color: var(--usa-link-active-color)
+    color: var(--usa-table-sorted-icon-color);
 }
 
 .usa-table th[data-sortable][aria-sort=ascending] .usa-table__header__button:focus {
     outline: var(--usa-focus-width) var(--usa-focus-style) var(--usa-focus-color);
-    outline-offset: var(--usa-focus-offset)
+    outline-offset: var(--usa-focus-offset);
 }
 
 .usa-table th[data-sortable][aria-sort=ascending] .usa-table__header__button:hover,
@@ -442,11 +447,11 @@
 }
 
 .usa-table th[data-sortable][aria-sort=ascending] .usa-table__header__button.usa-button--hover {
-    color: var(--usa-link-hover-color)
+    color: var(--usa-table-unsorted-icon-hover-color);
 }
 
 .usa-table th[data-sortable][aria-sort=ascending] .usa-table__header__button.usa-button--active {
-    color: var(--usa-link-active-color)
+    color: var(--usa-table-sorted-icon-color);
 }
 
 .usa-table th[data-sortable][aria-sort=ascending] .usa-table__header__button:disabled,

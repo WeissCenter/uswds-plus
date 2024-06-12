@@ -38,7 +38,7 @@ var tokens = {
     },
     haystack: {
         size: {
-            value: '{font-size.xl}',
+            value: '{font-size.2xl}',
             type: 'fontSizes',
             description: 'H1 font size',
         },
@@ -48,7 +48,7 @@ var tokens = {
             description: 'H1 font family',
         },
         weight: {
-            value: '{font-weight.thin}',
+            value: '{font-weight.normal}',
             type: 'fontWeights',
             description: 'H1 font weight',
         },
@@ -63,7 +63,7 @@ var tokens = {
             description: 'H1 letter spacing',
         },
         'paragraph-spacing': {
-            value: '{spacing.3}',
+            value: '{spacing.105}',
             type: 'spacing',
             description: 'Spacing between <h1> and other elements with .usa-prose class',
         },

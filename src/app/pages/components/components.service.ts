@@ -43,6 +43,11 @@ export class ComponentsService {
       desc: 'Tables display sets of data across rows and columns.',
     },
     {
+      name: 'Step Indicator',
+      route: 'step-indicator',
+      desc: 'A step indicator shows users where they are in a multi-step process and how many steps are left.',
+    },
+    {
       name: 'Side Navigation',
       route: 'side-navigation',
       desc: 'Side navigation provides a list of links to important content on a website.',

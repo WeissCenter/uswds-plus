@@ -42,37 +42,37 @@ var tokens = {
     },
     adapt: {
         lightest: {
-            value: '{color.mint-cool.5}',
+            value: '#f0cfe3',
             type: 'color',
             description: 'Accent cool lightest color',
         },
         lighter: {
-            value: '{color.mint-cool.vivid.5}',
+            value: '#e19fc7',
             type: 'color',
             description: 'Accent cool lighter color',
         },
         light: {
-            value: '{color.mint-cool.vivid.20}',
+            value: '#d26fab',
             type: 'color',
             description: 'Accent cool light color',
         },
         base: {
-            value: '{color.mint.vivid.30}',
+            value: '#c33f8f',
             type: 'color',
             description: 'Accent cool color',
         },
         dark: {
-            value: '{color.mint-cool.vivid.40}',
+            value: '#590046',
             type: 'color',
             description: 'Accent cool dark color',
         },
         darker: {
-            value: '{color.mint-cool.vivid.60}',
+            value: '#480039',
             type: 'color',
             description: 'Accent cool darker color',
         },
         darkest: {
-            value: '{color.mint-cool.vivid.80}',
+            value: '#37002c',
             type: 'color',
             description: 'Accent cool darkest color',
         },

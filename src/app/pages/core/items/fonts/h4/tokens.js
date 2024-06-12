@@ -48,7 +48,7 @@ var tokens = {
             description: 'H4 font family',
         },
         'weight': {
-            value: '{font-weight.bold}',
+            value: '{font-weight.normal}',
             type: 'fontWeights',
             description: 'H4 font weight',
         },
@@ -63,14 +63,14 @@ var tokens = {
             description: 'H4 letter spacing',
         },
         'paragraph-spacing': {
-            value: '{spacing.3}',
+            value: '{spacing.1}',
             type: 'spacing',
             description: 'Spacing between <h4> and other elements with .usa-prose class',
         },
     },
     adapt: {
         'size': {
-            value: '{font-size.sm}',
+            value: '{font-size.md}',
             type: 'fontSizes',
             description: 'H4 font size',
         },
@@ -80,12 +80,12 @@ var tokens = {
             description: 'H4 font family',
         },
         'weight': {
-            value: '{font-weight.bold}',
+            value: '{font-weight.medium}',
             type: 'fontWeights',
             description: 'H4 font weight',
         },
         'line-height': {
-            value: '{line-height.3}',
+            value: '{line-height.2}',
             type: 'lineHeights',
             description: 'H4 line height',
         },
@@ -95,7 +95,7 @@ var tokens = {
             description: 'H4 letter spacing',
         },
         'paragraph-spacing': {
-            value: '{spacing.3}',
+            value: '{spacing.1}',
             type: 'spacing',
             description: 'Spacing between <h4> and other elements with .usa-prose class',
         },

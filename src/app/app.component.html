@@ -36,7 +36,7 @@
           <img src="/assets/usa-icons/close.svg" role="img" alt="Close" />
         </button>
         <ul class="usa-nav__primary usa-accordion">
-          <!-- <li class="usa-nav__primary-item">
+          <li class="usa-nav__primary-item">
             <a routerLink="components" routerLinkActive="usa-current" class="usa-nav-link">
               <span>
                 Components
@@ -56,30 +56,10 @@
                 Kitchen Sink
               </span>
             </a>
-          </li> -->
-          <li class="usa-nav__primary-item" (click)="mobileMenuOpen = false">
-            <a class="usa-nav-link">
-              <span>
-               Home
-              </span>
-            </a>
-          </li>
-          <li class="usa-nav__primary-item" (click)="mobileMenuOpen = false">
-            <a class="usa-nav-link">
-              <span>
-                Topics
-              </span>
-            </a>
-          </li>
-          <li class="usa-nav__primary-item" (click)="mobileMenuOpen = false">
-            <a class="usa-nav-link">
-              <span>
-                Agenda
-              </span>
-            </a>
-          </li>
+          </li> 
+         
           <li class="usa-nav__primary-item margin-left-auto">
-            <button class="usa-nav-link cursor-pointer display-flex gap-1 flex-align-center" id="accessibilityCenterBtn" style="display:flex" (click)="mobileMenuOpen = false;openA11yPanel()" aria-controls="accessibilityCenter" [attr.aria-expanded]="a11yPanelOpen" [ngClass]="{'a11y-active':a11yPanelOpen}">
+            <button class="usa-nav-link cursor-pointer display-flex gap-1 flex-align-center" id="accessibilityCenterBtn" style="display:flex" (click)="mobileMenuOpen = false;openA11yPanel($event)" aria-controls="accessibilityCenter" [attr.aria-expanded]="a11yPanelOpen" [ngClass]="{'a11y-active':a11yPanelOpen}">
               <svg width="32" height="32" style="height:var(--usa-spacing-3);width:var(--usa-spacing-3)" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs></defs>
                 <path d="M16 0.5C24.5 0.5 31.5 7.5 31.5 16C31.5 24.5625 24.5 31.5 16 31.5C7.4375 31.5 0.5 24.5625 0.5 16C0.5 7.5 7.4375 0.5 16 0.5ZM16 29.5C23.4375 29.5 29.5 23.4375 29.5 16C29.5 8.5625 23.375 2.5 16 2.5C8.5 2.5 2.5 8.625 2.5 16C2.5 23.5 8.5625 29.5 16 29.5ZM24.6875 10.8125C24.8125 11.3125 24.5 11.875 23.9375 12C22 12.4375 20.1875 12.875 18.4375 13.0625C18.4375 20.25 19.25 21.8125 20.125 24.0625C20.375 24.75 20.0625 25.4375 19.4375 25.6875C18.75 25.9375 18.0625 25.625 17.8125 25C17.1875 23.5 16.625 22.1875 16.25 19.5H15.6875C15.3125 22.1875 14.75 23.5 14.125 25C13.875 25.625 13.1875 25.9375 12.5 25.6875C11.875 25.4375 11.5625 24.75 11.8125 24.0625C12.6875 21.8125 13.5 20.25 13.5 13.0625C11.75 12.875 9.9375 12.4375 8 12C7.4375 11.875 7.125 11.3125 7.25 10.8125C7.375 10.25 7.875 9.9375 8.4375 10.0625C15 11.625 16.9375 11.625 23.5 10.0625C24.0625 9.9375 24.5625 10.25 24.6875 10.8125ZM13.5625 8.125C13.5625 6.8125 14.625 5.75 16 5.75C17.3125 5.75 18.375 6.8125 18.375 8.125C18.375 9.4375 17.3125 10.5 16 10.5C14.625 10.5 13.5625 9.4375 13.5625 8.125Z" style="fill:currentColor"></path>
@@ -258,7 +238,7 @@
   </div>
 
 
-  <adapt-accessibility-widget [ngClass]="{'open':a11yPanelOpen}"></adapt-accessibility-widget>
+  <aem-accessibility-widget [ngClass]="{'open':a11yPanelOpen}"></aem-accessibility-widget>
 
 </div>
 

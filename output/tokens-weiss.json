@@ -79,6 +79,11 @@
     }
   },
   "button": {
+    "text-transform": {
+      "value": "none",
+      "type": "textTransform",
+      "description": "Button text transform"
+    },
     "color": {
       "value": "{white}",
       "type": "color",
@@ -636,42 +641,42 @@
   },
   "letter-spacing": {
     "0": {
-      "value": "0%",
+      "value": "0em",
       "type": "letterSpacing",
       "description": "0 letter spacing"
     },
     "1": {
-      "value": "1%",
+      "value": "0.025em",
       "type": "letterSpacing",
       "description": "Slightly larger letter spacing",
       "a11y": "--a11y-letter-spacing-modifier"
     },
     "2": {
-      "value": "20%",
+      "value": "0.1em",
       "type": "letterSpacing",
       "description": "Large letter spacing",
       "a11y": "--a11y-letter-spacing-modifier"
     },
     "3": {
-      "value": "30%",
+      "value": "0.15em",
       "type": "letterSpacing",
       "description": "Largest letter spacing",
       "a11y": "--a11y-letter-spacing-modifier"
     },
     "neg-3": {
-      "value": "-3%",
+      "value": "-0.03em",
       "type": "letterSpacing",
       "description": "Smallest letter spacing",
       "a11y": "--a11y-letter-spacing-modifier"
     },
     "neg-2": {
-      "value": "-2%",
+      "value": "-0.02em",
       "type": "letterSpacing",
       "description": "Small letter spacing",
       "a11y": "--a11y-letter-spacing-modifier"
     },
     "neg-1": {
-      "value": "-1%",
+      "value": "-0.01em",
       "type": "letterSpacing",
       "description": "Slightly smaller letter spacing",
       "a11y": "--a11y-letter-spacing-modifier"
@@ -732,6 +737,11 @@
     }
   },
   "input": {
+    "icon-size": {
+      "value": "{spacing.3}",
+      "type": "sizing",
+      "description": "Icon size for input prefix and suffix items"
+    },
     "font-family": {
       "value": "{font.sans}",
       "type": "fontFamilies",
@@ -762,10 +772,20 @@
       "type": "sizes",
       "description": "Height"
     },
-    "select-size": {
+    "select-icon": {
+      "value": "url(/assets/usa-icons/unfold_more.svg)",
+      "type": "urls",
+      "description": "Select icon"
+    },
+    "select-icon-size": {
       "value": "{spacing.205}",
       "type": "sizes",
       "description": "Select size"
+    },
+    "select-icon-color": {
+      "value": "{base.light}",
+      "type": "colors",
+      "description": "Select icon color"
     },
     "max-width": {
       "value": "{spacing.mobile-lg}",
@@ -891,11 +911,6 @@
       "value": "{spacing.2}",
       "type": "spacing",
       "description": "Label margin top"
-    },
-    "select-caret-color": {
-      "value": "{input.color}",
-      "type": "colors",
-      "description": "Select caret color"
     }
   },
   "base": {
@@ -1494,6 +1509,48 @@
       "value": "{color.black.transparent.70}",
       "type": "colors",
       "description": "Modal overlay background color"
+    }
+  },
+  "link": {
+    "reverse-active-color": {
+      "value": "{white}",
+      "type": "color",
+      "description": "Link reverse active color"
+    },
+    "visited-color": {
+      "value": "{violet.vivid.70}",
+      "type": "color",
+      "description": "Link visited color"
+    },
+    "reverse-hover-color": {
+      "value": "{base.lightest}",
+      "type": "color",
+      "description": "Link reverse hover color"
+    },
+    "reverse-color": {
+      "value": "{base.lighter}",
+      "type": "color",
+      "description": "Link reverse color"
+    },
+    "active-color": {
+      "value": "{primary.darker}",
+      "type": "color",
+      "description": "Link active color"
+    },
+    "hover-color": {
+      "value": "{primary.dark}",
+      "type": "color",
+      "description": "Link hover color"
+    },
+    "color": {
+      "value": "{primary.base}",
+      "type": "color",
+      "description": "Link color"
+    },
+    "focus-offset": {
+      "value": "{spacing.0}",
+      "type": "spacing",
+      "description": "Link focus offset"
     }
   }
 }

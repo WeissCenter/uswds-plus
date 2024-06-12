@@ -144,6 +144,11 @@
     }
   },
   "button": {
+    "text-transform": {
+      "value": "none",
+      "type": "textTransform",
+      "description": "Button text transform"
+    },
     "color": {
       "value": "{ink}",
       "type": "color",
@@ -970,6 +975,11 @@
       "value": "{line-height.3}",
       "type": "lineHeights",
       "description": "Table caption line height"
+    },
+    "background-color": {
+      "value": "{body.background}",
+      "type": "color",
+      "description": "Table background color"
     }
   },
   "sidenav": {
@@ -1195,6 +1205,11 @@
     }
   },
   "input": {
+    "icon-size": {
+      "value": "{spacing.3}",
+      "type": "sizing",
+      "description": "Icon size for input prefix and suffix items"
+    },
     "font-family": {
       "value": "{font.ui}",
       "type": "fontFamilies",
@@ -1225,15 +1240,20 @@
       "type": "sizes",
       "description": "Height"
     },
-    "select-size": {
-      "value": "{spacing.3}",
+    "select-icon": {
+      "value": "url(/assets/usa-icons/unfold_more.svg)",
+      "type": "urls",
+      "description": "Select icon"
+    },
+    "select-icon-size": {
+      "value": "{spacing.205}",
       "type": "sizes",
       "description": "Select size"
     },
-    "select-caret-color": {
-      "value": "{input.color}",
+    "select-icon-color": {
+      "value": "{base.light}",
       "type": "colors",
-      "description": "Select caret color"
+      "description": "Select icon color"
     },
     "max-width": {
       "value": "{spacing.mobile-lg}",
